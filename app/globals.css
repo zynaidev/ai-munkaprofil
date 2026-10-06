@@ -34,6 +34,12 @@
   --szin-kevert: #e8b43c;
   --szin-vedett: #3fd0bb;
 
+  /* Órabontás (kiváltható / felgyorsul / emberi mag): Okabe–Ito alapú, színtévesztő-barát paletta.
+     A jelentést mintázat is hordozza (csíkos / pöttyös / tömör), és mindig felirat kíséri. */
+  --szin-kivalthato: #e69f00;
+  --szin-felgyorsul: #56b4e9;
+  --szin-emberi: #d4d4d8;
+
   --szin-hiba: #ffb4a6;
   --szin-hiba-hatter: rgba(255, 90, 60, 0.1);
 
@@ -74,6 +80,9 @@
   --color-felerosodo: var(--szin-felerosodo);
   --color-kevert: var(--szin-kevert);
   --color-vedett: var(--szin-vedett);
+  --color-kivalthato: var(--szin-kivalthato);
+  --color-felgyorsul: var(--szin-felgyorsul);
+  --color-emberi: var(--szin-emberi);
   --color-hiba: var(--szin-hiba);
   --color-hiba-hatter: var(--szin-hiba-hatter);
 
@@ -168,6 +177,20 @@ body {
   border-radius: 999px;
   background: var(--accent);
   opacity: 0;
+}
+
+/* Órabontás mintázatai – a szín mellett a minta is jelzi a kategóriát */
+.minta-kivalthato {
+  background-color: var(--szin-kivalthato);
+  background-image: repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.32) 0 2px, transparent 2px 7px);
+}
+.minta-felgyorsul {
+  background-color: var(--szin-felgyorsul);
+  background-image: radial-gradient(rgba(0, 0, 0, 0.38) 1.1px, transparent 1.5px);
+  background-size: 6px 6px;
+}
+.minta-emberi {
+  background-color: var(--szin-emberi);
 }
 
 /* Típuskártya: felül 1 px-es lime csík, hoveren kinő */
