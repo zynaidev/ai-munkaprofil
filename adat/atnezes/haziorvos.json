@@ -1,0 +1,212 @@
+{
+  "ellenorizve": false,
+  "slug": "haziorvos",
+  "nev": "Háziorvos",
+  "aliasok": [
+    "orvos",
+    "általános orvos",
+    "doktor",
+    "körzeti orvos",
+    "gyakorló orvos",
+    "belgyógyász",
+    "rezidens"
+  ],
+  "feor_kod": "2211",
+  "isco_kod": "2211",
+  "soc_kodok": [
+    "29-1215.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "háziorvosok",
+  "fekek": {
+    "fizikai": {
+      "ertek": 2,
+      "indoklas": "A fizikális vizsgálat, az oltás és a kisebb beavatkozások személyes jelenlétet és kézügyességet kívánnak, a rendelői munka nagy része nem távolítható el."
+    },
+    "felelosseg": {
+      "ertek": 3,
+      "indoklas": "A diagnózis, a gyógyszerfelírás és a beutalás jogilag az orvos felelőssége, a receptet és az igazolásokat orvosnak kell aláírnia és vállalnia."
+    },
+    "szabalyozas": {
+      "ertek": 3,
+      "indoklas": "Az EU AI Act az egészségügyi AI-t magas kockázatúnak minősíti, emellett az egészségügyi adatkezelés és az ágazati szabályok (GDPR, egészségügyi törvény) szigorú emberi felügyeletet várnak el."
+    },
+    "bizalom": {
+      "ertek": 3,
+      "indoklas": "A betegek, főleg a magyar háziorvosi praxisokban, személyes, hosszú távú kapcsolatot várnak a saját orvosuktól, és érzékeny döntésekben az emberi jelenlétben bíznak."
+    }
+  },
+  "teendo_szoveg": "Építs arra, amit az AI nem tud átvenni: a beteggel kialakított bizalmi kapcsolatra, a nehéz beszélgetésekre és a felelős döntéshozatalra. Tanuld meg magabiztosan használni az AI-alapú dokumentációs és döntéstámogató eszközöket, hogy az adminisztrációra fordított időt a betegekre tudd fordítani. A megelőzésben és a krónikus betegek hosszú távú gondozásában is érdemes mélyülnöd, mert ott a legnagyobb az emberi szerepvállalás értéke.",
+  "csoportok": [
+    {
+      "leiras": "Kezelés, gyógyszerelés és oltás: terápia felírása és beadása, betegek állapotának nyomon követése",
+      "task_idk": [
+        "7771",
+        "7773"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Kivizsgálás és diagnózis: vizsgálatok elrendelése, elvégzése és az eredmények értékelése",
+      "task_idk": [
+        "7772"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Beteg-dokumentáció és hivatalos jelentések: kórelőzmény, leletek rögzítése, statisztikák és igazolások készítése",
+      "task_idk": [
+        "7774",
+        "20121"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Beszélgetés a beteggel: az eredmények és a kezelés elmagyarázása, életmódi tanácsadás",
+      "task_idk": [
+        "7775",
+        "7776"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Szakorvosi beutalás és együttműködés az ellátásban részt vevő szakemberekkel",
+      "task_idk": [
+        "7777",
+        "7779"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Rendelő és asszisztensek irányítása, rezidensek és hallgatók oktatása",
+      "task_idk": [
+        "7778",
+        "20120"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Szűrő- és megelőzési programok szervezése a közösségben",
+      "task_idk": [
+        "7782"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Kezelés, gyógyszerelés és oltás: terápia felírása és beadása, betegek állapotának nyomon követése",
+      "task_idk": [
+        "7771",
+        "7773"
+      ],
+      "idoArany": 0.2082,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.104,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Kivizsgálás és diagnózis: vizsgálatok elrendelése, elvégzése és az eredmények értékelése",
+      "task_idk": [
+        "7772"
+      ],
+      "idoArany": 0.104,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.206,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Beteg-dokumentáció és hivatalos jelentések: kórelőzmény, leletek rögzítése, statisztikák és igazolások készítése",
+      "task_idk": [
+        "7774",
+        "20121"
+      ],
+      "idoArany": 0.1278,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.245,
+      "horizont": "1-3ev",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Beszélgetés a beteggel: az eredmények és a kezelés elmagyarázása, életmódi tanácsadás",
+      "task_idk": [
+        "7775",
+        "7776"
+      ],
+      "idoArany": 0.2022,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.109,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Szakorvosi beutalás és együttműködés az ellátásban részt vevő szakemberekkel",
+      "task_idk": [
+        "7777",
+        "7779"
+      ],
+      "idoArany": 0.1688,
+      "kitettseg": 0.253,
+      "kivaltasArany": 0.206,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Rendelő és asszisztensek irányítása, rezidensek és hallgatók oktatása",
+      "task_idk": [
+        "7778",
+        "20120"
+      ],
+      "idoArany": 0.1234,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.206,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Szűrő- és megelőzési programok szervezése a közösségben",
+      "task_idk": [
+        "7782"
+      ],
+      "idoArany": 0.0656,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.396,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 39%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "7771": "Prescribe or administer treatment, therapy, medication, vaccination, and other specialized medical care to treat or prevent illness, disease, or injury.",
+    "7774": "Collect, record, and maintain patient information, such as medical history, reports, or examination results.",
+    "7772": "Order, perform, and interpret tests and analyze records, reports, and examination information to diagnose patients' condition.",
+    "7775": "Explain procedures and discuss test results or prescribed treatments with patients.",
+    "7773": "Monitor patients' conditions and progress and reevaluate treatments as necessary.",
+    "7776": "Advise patients and community members concerning diet, activity, hygiene, and disease prevention.",
+    "7778": "Direct and coordinate activities of nurses, students, assistants, specialists, therapists, and other medical staff.",
+    "7777": "Refer patients to medical specialists or other practitioners when necessary.",
+    "7779": "Coordinate work with nurses, social workers, rehabilitation therapists, pharmacists, psychologists, and other health care providers.",
+    "7782": "Plan, implement, or administer health programs or standards in hospitals, businesses, or communities for prevention or treatment of injury or illness.",
+    "20120": "Train residents, medical students, and other health care professionals.",
+    "20121": "Prepare government or organizational reports which include birth, death, and disease statistics, workforce evaluations, or medical status of individuals."
+  }
+}

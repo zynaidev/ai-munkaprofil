@@ -1,0 +1,221 @@
+{
+  "ellenorizve": false,
+  "slug": "hazi-gondozo",
+  "nev": "Házi gondozó",
+  "aliasok": [
+    "gondozó",
+    "idősgondozó",
+    "szociális gondozó",
+    "betegápoló otthon",
+    "házi segítő",
+    "gondozónő",
+    "szociális segítő"
+  ],
+  "feor_kod": "5223",
+  "isco_kod": "5322",
+  "soc_kodok": [
+    "31-1121.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "házi gondozók",
+  "fekek": {
+    "fizikai": {
+      "ertek": 3,
+      "indoklas": "A munka szinte teljes egészében az otthonban végzett fizikai jelenlétet és kézügyességet igényel (emelés, fürdetés, főzés, takarítás), amit gépek ma nem tudnak kiváltani."
+    },
+    "felelosseg": {
+      "ertek": 2,
+      "indoklas": "A gyógyszeradásért, a gondozott biztonságáért és a megfigyelések pontos jelentéséért a gondozó és a szolgáltató felel, a szakmai döntések viszont ápolóhoz vagy orvoshoz tartoznak."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "A szociális és egészségügyi ellátásra szakmai képesítési és adatvédelmi előírások vonatkoznak, az EU AI Act pedig az egészségügyi és gondozási célú AI-t szigorúbban kezeli."
+    },
+    "bizalom": {
+      "ertek": 3,
+      "indoklas": "A gondozottak és családjuk az otthonukba, intim helyzetekbe és a mindennapi életükbe csak ismerős, megbízható embert engednek be."
+    }
+  },
+  "teendo_szoveg": "A munkád lényege a személyes jelenlét és a bizalom, ezért érdemes erre építeni: tanulj meg minél többet az idősgondozás szakmai alapjairól, például a demenciával élők gondozásáról, a mozgatási technikákról és az elsősegélyről. A gondozási napló és a jelentések digitális eszközeit is vedd a magadévá, mert ezek időt szabadíthatnak fel a gondozottakra. Ha emellett erősíted a kommunikációs és a családokkal való együttműködési készségeidet, még értékesebb társa leszel a gondozottaknak.",
+  "csoportok": [
+    {
+      "leiras": "Mozgatás, fürdetés, öltözködés és tisztálkodás segítése",
+      "task_idk": [
+        "4241",
+        "20577"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Étkeztetés: bevásárlás, főzés, étrend szerinti ételek felszolgálása",
+      "task_idk": [
+        "4245"
+      ],
+      "emberi_mag": false,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Háztartási teendők: ágynemű, mosás, vasalás, takarítás, bevásárlás és ügyintézés",
+      "task_idk": [
+        "18694",
+        "4249"
+      ],
+      "emberi_mag": false,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Gondozási napló vezetése és jelentés a koordinátornak",
+      "task_idk": [
+        "4240"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Társaság, beszélgetés, érzelmi támogatás és tanácsadás a gondozottnak és családjának",
+      "task_idk": [
+        "4244",
+        "4242"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Egészségügyi alapfeladatok: életjelek mérése, gyógyszeradás, sebkötözés, masszázs, mozgásgyakorlatok",
+      "task_idk": [
+        "4247",
+        "18695",
+        "4246",
+        "4253",
+        "4248"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Kísérés orvoshoz és programokra, fogyatékkal élő gyermekek gondozása",
+      "task_idk": [
+        "4250",
+        "4252"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Mozgatás, fürdetés, öltözködés és tisztálkodás segítése",
+      "task_idk": [
+        "4241",
+        "20577"
+      ],
+      "idoArany": 0.1736,
+      "kitettseg": 0.0,
+      "kivaltasArany": 1.0,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Étkeztetés: bevásárlás, főzés, étrend szerinti ételek felszolgálása",
+      "task_idk": [
+        "4245"
+      ],
+      "idoArany": 0.0907,
+      "kitettseg": 0.0,
+      "kivaltasArany": 1.0,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Háztartási teendők: ágynemű, mosás, vasalás, takarítás, bevásárlás és ügyintézés",
+      "task_idk": [
+        "18694",
+        "4249"
+      ],
+      "idoArany": 0.1497,
+      "kitettseg": 0.0,
+      "kivaltasArany": 1.0,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Gondozási napló vezetése és jelentés a koordinátornak",
+      "task_idk": [
+        "4240"
+      ],
+      "idoArany": 0.0871,
+      "kitettseg": 1.0,
+      "kivaltasArany": 1.0,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Társaság, beszélgetés, érzelmi támogatás és tanácsadás a gondozottnak és családjának",
+      "task_idk": [
+        "4244",
+        "4242"
+      ],
+      "idoArany": 0.1576,
+      "kitettseg": 0.0,
+      "kivaltasArany": 1.0,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Egészségügyi alapfeladatok: életjelek mérése, gyógyszeradás, sebkötözés, masszázs, mozgásgyakorlatok",
+      "task_idk": [
+        "4247",
+        "18695",
+        "4246",
+        "4253",
+        "4248"
+      ],
+      "idoArany": 0.2682,
+      "kitettseg": 0.0,
+      "kivaltasArany": 1.0,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Kísérés orvoshoz és programokra, fogyatékkal élő gyermekek gondozása",
+      "task_idk": [
+        "4250",
+        "4252"
+      ],
+      "idoArany": 0.0731,
+      "kitettseg": 0.0,
+      "kivaltasArany": 1.0,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 6%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "4241": "Provide patients with help moving in and out of beds, baths, wheelchairs, or automobiles and with dressing and grooming.",
+    "4245": "Plan, purchase, prepare, or serve meals to patients or other family members, according to prescribed diets.",
+    "4240": "Maintain records of patient care, condition, progress, or problems to report and discuss observations with supervisor or case manager.",
+    "18694": "Care for patients by changing bed linens, washing and ironing laundry, cleaning, or assisting with their personal care.",
+    "20577": "Bathe patients.",
+    "4244": "Entertain, converse with, or read aloud to patients to keep them mentally healthy and alert.",
+    "4242": "Provide patients and families with emotional support and instruction in areas such as caring for infants, preparing healthy meals, living independently, or adapting to disability or illness.",
+    "4247": "Check patients' pulse, temperature, and respiration.",
+    "18695": "Administer prescribed oral medications, under the written direction of physician or as directed by home care nurse or aide, and ensure patients take their medicine.",
+    "4246": "Direct patients in simple prescribed exercises or in the use of braces or artificial limbs.",
+    "4249": "Perform a variety of duties as requested by client, such as obtaining household supplies or running errands.",
+    "4250": "Accompany clients to doctors' offices or on other trips outside the home, providing transportation, assistance, and companionship.",
+    "4252": "Care for children with disabilities or who have sick parents or parents with disabilities.",
+    "4253": "Massage patients or apply preparations or treatments, such as liniment, alcohol rubs, or heat-lamp stimulation.",
+    "4248": "Change dressings."
+  }
+}

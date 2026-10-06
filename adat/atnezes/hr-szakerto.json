@@ -1,0 +1,253 @@
+{
+  "ellenorizve": false,
+  "slug": "hr-szakerto",
+  "nev": "HR-szakértő",
+  "aliasok": [
+    "Személyzeti és pályaválasztási szakértő",
+    "hr",
+    "hr-es",
+    "személyzeti szakember",
+    "munkaerő-közvetítő",
+    "pályaválasztási tanácsadó",
+    "toborzó",
+    "humánerőforrás szakértő",
+    "karrier tanácsadó"
+  ],
+  "feor_kod": "2523",
+  "isco_kod": "2423",
+  "soc_kodok": [
+    "13-1071.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "HR-szakértők",
+  "fekek": {
+    "fizikai": {
+      "ertek": 0,
+      "indoklas": "A munka döntően irodai és digitális, kézügyességet vagy helyszíni fizikai jelenlétet alig igényel."
+    },
+    "felelosseg": {
+      "ertek": 2,
+      "indoklas": "A felvételi, felmondási és fegyelmi döntések munkajogi következményekkel járnak (Mt.), ezért a végső döntést és az aláírást ember viszi."
+    },
+    "szabalyozas": {
+      "ertek": 3,
+      "indoklas": "Az EU AI Act a toborzásban és munkavállalói értékelésben használt AI-t magas kockázatúnak minősíti, emellett a GDPR és az egyenlő bánásmód szabályai is szigorú emberi felügyeletet várnak."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "Panaszoknál, kilépéseknél és fizetési egyeztetéseknél a munkavállalók és a vezetők személyes, megbízható beszélgetőpartnert várnak."
+    }
+  },
+  "teendo_szoveg": "Építs a jelenlétet és ítélőképességet igénylő részekre: konfliktuskezelés, interjúvezetés, vezetők támogatása és munkajogi döntések előkészítése. Tanuld meg magabiztosan használni az AI-alapú toborzási és HR-adminisztrációs eszközöket, hogy a rutinfeladatokra kevesebb időd menjen. Ismerd az AI Act és a GDPR HR-re vonatkozó szabályait, mert aki ezeket érti, abból megbízható szakember lehet a csapatában.",
+  "csoportok": [
+    {
+      "leiras": "Jelöltkeresés és toborzási stratégia (adatbázisok, közösségi oldalak, állásbörzék, kölcsönzőcégek)",
+      "task_idk": [
+        "18865",
+        "18858",
+        "18873"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Önéletrajzok szűrése, interjúk, tesztek, referenciaellenőrzés és jelöltválasztás",
+      "task_idk": [
+        "18868",
+        "18871",
+        "18862",
+        "18869",
+        "18855",
+        "18874"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Jelentkezők és munkatársak tájékoztatása, szabályok és jogszabályok magyarázata",
+      "task_idk": [
+        "18860",
+        "18857",
+        "18861",
+        "18864"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "HR-nyilvántartás, dokumentumok és kilépési papírok vezetése",
+      "task_idk": [
+        "18866",
+        "18863",
+        "18854",
+        "18876"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Felvétel, beléptetés, juttatások ügyintézése és HR-jelentések",
+      "task_idk": [
+        "18859",
+        "21097",
+        "18870",
+        "18853"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Munkavállalói panaszok és konfliktusok kezelése",
+      "task_idk": [
+        "18852"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Vezetők tanácsadása és képzése, HR-szabályzatok kialakítása",
+      "task_idk": [
+        "18872",
+        "18856",
+        "18867"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Jelöltkeresés és toborzási stratégia (adatbázisok, közösségi oldalak, állásbörzék, kölcsönzőcégek)",
+      "task_idk": [
+        "18865",
+        "18858",
+        "18873"
+      ],
+      "idoArany": 0.1054,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.482,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Önéletrajzok szűrése, interjúk, tesztek, referenciaellenőrzés és jelöltválasztás",
+      "task_idk": [
+        "18868",
+        "18871",
+        "18862",
+        "18869",
+        "18855",
+        "18874"
+      ],
+      "idoArany": 0.2252,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.596,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Jelentkezők és munkatársak tájékoztatása, szabályok és jogszabályok magyarázata",
+      "task_idk": [
+        "18860",
+        "18857",
+        "18861",
+        "18864"
+      ],
+      "idoArany": 0.2026,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.432,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "HR-nyilvántartás, dokumentumok és kilépési papírok vezetése",
+      "task_idk": [
+        "18866",
+        "18863",
+        "18854",
+        "18876"
+      ],
+      "idoArany": 0.1479,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.512,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Felvétel, beléptetés, juttatások ügyintézése és HR-jelentések",
+      "task_idk": [
+        "18859",
+        "21097",
+        "18870",
+        "18853"
+      ],
+      "idoArany": 0.1672,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.512,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Munkavállalói panaszok és konfliktusok kezelése",
+      "task_idk": [
+        "18852"
+      ],
+      "idoArany": 0.0388,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.512,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Vezetők tanácsadása és képzése, HR-szabályzatok kialakítása",
+      "task_idk": [
+        "18872",
+        "18856",
+        "18867"
+      ],
+      "idoArany": 0.1127,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.512,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 28%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "18861": "Interpret and explain human resources policies, procedures, laws, standards, or regulations.",
+    "18859": "Hire employees and process hiring-related paperwork.",
+    "18868": "Review employment applications and job orders to match applicants with job requirements.",
+    "18866": "Prepare or maintain employment records related to events, such as hiring, termination, leaves, transfers, or promotions, using human resources management system software.",
+    "18871": "Select qualified job applicants or refer them to managers, making hiring recommendations when appropriate.",
+    "18860": "Inform job applicants of details such as duties and responsibilities, compensation, benefits, schedules, working conditions, or promotion opportunities.",
+    "18865": "Perform searches for qualified job candidates, using sources such as computer databases, networking, Internet recruiting resources, media advertisements, job fairs, recruiting firms, or employee referrals.",
+    "18857": "Contact job applicants to inform them of the status of their applications.",
+    "18864": "Maintain current knowledge of Equal Employment Opportunity (EEO) and affirmative action guidelines and laws, such as the Americans with Disabilities Act (ADA).",
+    "18862": "Interview job applicants to obtain information on work history, training, education, or job skills.",
+    "18872": "Advise management on organizing, preparing, or implementing recruiting or retention programs.",
+    "18853": "Analyze employment-related data and prepare required reports.",
+    "18870": "Schedule or conduct new employee orientations.",
+    "18858": "Develop or implement recruiting strategies to meet current or anticipated staffing needs.",
+    "18852": "Address employee relations issues, such as harassment allegations, work complaints, or other employee concerns.",
+    "18863": "Maintain and update human resources documents, such as organizational charts, employee handbooks or directories, or performance evaluation forms.",
+    "18867": "Provide management with information or training related to interviewing, performance appraisals, counseling techniques, or documentation of performance issues.",
+    "18856": "Confer with management to develop or implement personnel policies or procedures.",
+    "18854": "Conduct exit interviews and ensure that necessary employment termination paperwork is completed.",
+    "18876": "Review and evaluate applicant qualifications or eligibility for specified licensing, according to established guidelines and designated licensing codes.",
+    "21097": "Administer employee benefit plans.",
+    "18869": "Schedule or administer skill, intelligence, psychological, or drug tests for current or prospective employees.",
+    "18874": "Evaluate recruitment or selection criteria to ensure conformance to professional, statistical, or testing standards, recommending revisions, as needed.",
+    "18855": "Conduct reference or background checks on job applicants.",
+    "18873": "Coordinate with outside staffing agencies to secure temporary employees, based on departmental needs."
+  }
+}

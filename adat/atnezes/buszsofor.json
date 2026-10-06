@@ -1,0 +1,200 @@
+{
+  "ellenorizve": false,
+  "slug": "buszsofor",
+  "nev": "Buszsofőr",
+  "aliasok": [
+    "Autóbuszvezető",
+    "buszvezető",
+    "autóbusz-sofőr",
+    "menetrend szerinti buszsofőr",
+    "távolsági buszsofőr",
+    "városi buszos",
+    "autóbusz vezető"
+  ],
+  "feor_kod": "8418",
+  "isco_kod": "8331",
+  "soc_kodok": [
+    "53-3052.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "buszsofőrök",
+  "fekek": {
+    "fizikai": {
+      "ertek": 3,
+      "indoklas": "A munka egy valódi, forgalomban közlekedő busz vezetését, a járműben való fizikai jelenlétet és a csomagok kezelését igényli."
+    },
+    "felelosseg": {
+      "ertek": 3,
+      "indoklas": "A sofőr felel az utasok biztonságáért és a közlekedési szabályok betartásáért, baleset esetén jogi felelőssége van."
+    },
+    "szabalyozas": {
+      "ertek": 3,
+      "indoklas": "A hivatásos járművezetésre szigorú előírások vonatkoznak (GKI-képesítés, pihenőidő, menetíró), az önvezető buszok engedélyezése pedig lassú és szabályozott."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "Az utasok, különösen az idősek és a mozgássérültek, elvárják, hogy egy ember segítsen és kezelje a rendkívüli helyzeteket."
+    }
+  },
+  "teendo_szoveg": "Az utasokkal való törődés és a krízishelyzetek nyugodt kezelése az a része a munkádnak, ami a legnehezebben pótolható, ezért érdemes ezt tudatosan fejleszteni, például elsősegély- és konfliktuskezelő képzésekkel. Ismerkedj meg a fedélzeti jegyrendszerekkel, a digitális menetrend- és utastájékoztató eszközökkel, hogy ezek a rutinfeladatok kevesebb időt vegyenek el tőled. Ha szeretnél előrelépni, a gyakorlott sofőrök számára nyitva állhat az oktatói, ellenőri vagy diszpécseri irány is.",
+  "csoportok": [
+    {
+      "leiras": "Vezetés a menetrend és az útvonal szerint, megállóban beállás",
+      "task_idk": [
+        "18794",
+        "3146"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Utasok segítése fel- és leszálláskor, csomagok be- és kirakodása",
+      "task_idk": [
+        "18795",
+        "3151"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Rendbontás, vészhelyzet és váratlan helyzetek kezelése az utastérben",
+      "task_idk": [
+        "3149",
+        "18796"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Jegyek és viteldíj kezelése, pénztári nyilvántartás vezetése",
+      "task_idk": [
+        "18798",
+        "18797"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Megállók bemondása, késések és balesetek jelentése, útvonaltervezés térkép alapján",
+      "task_idk": [
+        "21085",
+        "3148",
+        "21086"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Jármű indulás előtti ellenőrzése, tisztán tartása, utastér klímájának beállítása",
+      "task_idk": [
+        "3144",
+        "18799",
+        "3150"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Vezetés a menetrend és az útvonal szerint, megállóban beállás",
+      "task_idk": [
+        "18794",
+        "3146"
+      ],
+      "idoArany": 0.1836,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Utasok segítése fel- és leszálláskor, csomagok be- és kirakodása",
+      "task_idk": [
+        "18795",
+        "3151"
+      ],
+      "idoArany": 0.1092,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Rendbontás, vészhelyzet és váratlan helyzetek kezelése az utastérben",
+      "task_idk": [
+        "3149",
+        "18796"
+      ],
+      "idoArany": 0.1432,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Jegyek és viteldíj kezelése, pénztári nyilvántartás vezetése",
+      "task_idk": [
+        "18798",
+        "18797"
+      ],
+      "idoArany": 0.1561,
+      "kitettseg": 0.471,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Megállók bemondása, késések és balesetek jelentése, útvonaltervezés térkép alapján",
+      "task_idk": [
+        "21085",
+        "3148",
+        "21086"
+      ],
+      "idoArany": 0.1923,
+      "kitettseg": 0.912,
+      "kivaltasArany": 0.357,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Jármű indulás előtti ellenőrzése, tisztán tartása, utastér klímájának beállítása",
+      "task_idk": [
+        "3144",
+        "18799",
+        "3150"
+      ],
+      "idoArany": 0.2156,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 0%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "18794": "Drive vehicles over specified routes or to specified destinations according to time schedules, complying with traffic regulations to ensure that passengers have a smooth and safe ride.",
+    "3146": "Park vehicles at loading areas so that passengers can board.",
+    "21085": "Announce stops to passengers.",
+    "18798": "Collect tickets or cash fares from passengers.",
+    "18795": "Assist passengers, such as elderly or individuals with disabilities, on and off bus, ensure they are seated properly, help carry baggage, and answer questions about bus schedules or routes.",
+    "3150": "Regulate heating, lighting, and ventilating systems for passenger comfort.",
+    "3149": "Advise passengers to be seated and orderly while on vehicles.",
+    "3144": "Inspect vehicles and check gas, oil, and water levels prior to departure.",
+    "18797": "Record information, such as cash receipts and ticket fares, and maintain log book.",
+    "3148": "Report delays or accidents.",
+    "18796": "Handle passenger emergencies or disruptions.",
+    "18799": "Maintain cleanliness of bus or motor coach.",
+    "21086": "Read maps to plan bus routes.",
+    "3151": "Load and unload baggage in baggage compartments."
+  }
+}

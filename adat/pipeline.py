@@ -41,6 +41,7 @@ GYOKER = Path(__file__).resolve().parent
 ALAP_MODELL = os.environ.get("MUNKAPROFIL_MODELL", "claude-sonnet-5-5")
 MAX_NYERS_FELADAT = 25          # ennyi legsúlyosabb O*NET-feladat megy tovább munkakörönként
 CORE_SULY, SUPPLEMENTAL_SULY = 1.0, 0.5
+EI_ELOZETES_SULY = 0.25         # a globális kiváltási átlag "előzetes súlya" a hiányzó Economic Index adat pótlásánál
 
 # O*NET FT (gyakoriság) kategóriák → becsült alkalom / év
 FT_ALKALOM = {1: 1, 2: 6, 3: 24, 4: 100, 5: 250, 6: 750, 7: 2000}
@@ -61,6 +62,12 @@ def figyel(uzenet: str) -> None:
 def norm_nev(s: str) -> str:
     """Oszlopnév-normalizálás: kisbetű, csak alfanumerikus."""
     return re.sub(r"[^a-z0-9]", "", str(s).lower())
+
+
+def norm_id(s) -> str:
+    """Feladat-azonosító: '8823.0' (GPTs-are-GPTs) és '8823' (O*NET) ugyanaz."""
+    s = str(s).strip()
+    return s[:-2] if s.endswith(".0") else s
 
 
 def norm_szoveg(s: str) -> str:
@@ -209,7 +216,7 @@ def betolt_kitettseg(utvonal: str, oszlop_nev: str | None) -> tuple[dict, dict, 
         if e is None:
             continue
         if id_c and r[id_c].strip():
-            id_map[r[id_c].strip()] = e
+            id_map[norm_id(r[id_c])] = e
         if txt_c:
             txt_map[norm_szoveg(r[txt_c])] = e
     return id_map, txt_map, cimke_c
@@ -290,7 +297,7 @@ def elokeszit(args) -> None:
 
         sorok, ei_talalt = [], []
         for _, r in t.iterrows():
-            e = kit_id.get(r.task_id) or kit_txt.get(norm_szoveg(r.task))
+            e = kit_id.get(norm_id(r.task_id)) or kit_txt.get(norm_szoveg(r.task))
             kitettseg_forras = "gpts-are-gpts" if e else "hianyzik"
             sorok.append({
                 "task_id": r.task_id, "soc": r.soc, "task": r.task, "arany": float(r.arany),
@@ -316,12 +323,16 @@ def elokeszit(args) -> None:
             figyelmeztetesek.append(f"{len(hianyzo_kit)} feladatnál nincs kitettségi adat (munkakör-átlag használva).")
 
         # hiányzó kiváltási arány → munkakör-átlag → globális átlag
+        # A munkakör-átlag csak annyira számít, amennyire az Economic Index lefedi a munkaidőt; a maradék a
+        # globális átlag felé simul (EI_ELOZETES_SULY = hány "munkaidő-egységnyi" előzetes tudást adunk a globális átlagnak).
         mk_ei = sum(ei_talalt) / len(ei_talalt) if ei_talalt else None
+        lefedett_elore = sum(s["arany"] for s in sorok if s["kivaltas_arany"] is not None)
         for s in sorok:
             if s["kivaltas_arany"] is not None:
                 s["kivaltas_forras"] = "economic-index"
             elif mk_ei is not None:
-                s["kivaltas_arany"], s["kivaltas_forras"] = round(mk_ei, 3), "munkakor-atlag"
+                simitott = (lefedett_elore * mk_ei + EI_ELOZETES_SULY * ei_globalis) / (lefedett_elore + EI_ELOZETES_SULY)
+                s["kivaltas_arany"], s["kivaltas_forras"] = round(simitott, 3), "munkakor-atlag"
             else:
                 s["kivaltas_arany"], s["kivaltas_forras"] = round(ei_globalis, 3), "globalis-atlag"
         lefedett = sum(s["arany"] for s in sorok if s["kivaltas_forras"] == "economic-index")
@@ -632,6 +643,8 @@ def main(argv: list[str] | None = None) -> None:
     v.add_argument("--meglevo", help="Meglévő munkakorok.csv – a sorai változatlanul megmaradnak")
     v.add_argument("--kimenet", default=None, help="Alapból: <mappa>/munkakorok.javaslat.csv")
     v.add_argument("--biztos-kuszob", type=float, default=0.75, help="E fölött a státusz 'auto' (alap: 0,75)")
+    v.add_argument("--kodok", help="Csak ezek a FEOR-kódok: vesszős lista vagy szövegfájl (pl. elso50.txt)")
+    v.add_argument("--felulirasok", help="Kézi javítások CSV (feor_kod,nev,tobbes,onet_soc_kodok,aliasok) – újrafutáskor is érvényes")
     v.add_argument("--limit", type=int, help="Csak az első N új sor (próbához)")
     v.add_argument("--nincs-claude", action="store_true", help="Claude nélkül: csak keresztkapcsolat")
     v.add_argument("--modell", default=ALAP_MODELL)

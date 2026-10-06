@@ -1,0 +1,228 @@
+{
+  "ellenorizve": false,
+  "slug": "szoftverfejleszto",
+  "nev": "Szoftverfejlesztő",
+  "aliasok": [
+    "programozó",
+    "fejlesztő",
+    "webfejlesztő",
+    "szoftvermérnök",
+    "kódoló",
+    "developer",
+    "coder",
+    "appfejlesztő"
+  ],
+  "feor_kod": "2142",
+  "isco_kod": "2512",
+  "soc_kodok": [
+    "15-1252.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "szoftverfejlesztők",
+  "fekek": {
+    "fizikai": {
+      "ertek": 1,
+      "indoklas": "A munka döntően képernyő előtt zajlik, csak a hardverbeállításnál és a helyszíni bevezetésnél kell fizikai jelenlét."
+    },
+    "felelosseg": {
+      "ertek": 2,
+      "indoklas": "A kritikus rendszerek hibájáért, biztonságáért és a kódért végül szakmailag és szerződésileg is egy ember felel."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "Az EU AI Act, a GDPR, az NIS2 és az ágazati előírások (pl. pénzügy, egészségügy) emberi felügyeletet és nyomon követhető fejlesztést várnak el."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "Az ügyfelek és a vezetők a követelmények tisztázásánál és a fontos döntéseknél továbbra is emberi partnert várnak, a rutinkódolásnál kevésbé."
+    }
+  },
+  "teendo_szoveg": "Használd az AI-eszközöket a kódírásban, tesztelésben és dokumentálásban, hogy több időd maradjon a követelmények megértésére és a tervezési döntésekre. Építsd a rendszertervezési, biztonsági és ügyfélkommunikációs készségeidet, mert ezekben az emberi ítélőképesség a legfontosabb. Ha kell, vállalj csapatvezetői vagy mentori szerepet, ahol az AI által gyorsított munkát te tereled jó irányba.",
+  "csoportok": [
+    {
+      "leiras": "Igényfelmérés, megvalósíthatósági elemzés és rendszerkövetelmények meghatározása",
+      "task_idk": [
+        "21662",
+        "21668",
+        "21661",
+        "21672",
+        "21676"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Szoftvertervezés, programozás és meglévő rendszerek módosítása, hibajavítása",
+      "task_idk": [
+        "21667",
+        "21670"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Tesztelés, dokumentáció és projektjelentések készítése",
+      "task_idk": [
+        "21669",
+        "21673"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Rendszerek telepítése, bevezetése és működésük figyelése",
+      "task_idk": [
+        "21666",
+        "21671"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Egyeztetés ügyfelekkel, elemzőkkel és projektvezetőkkel",
+      "task_idk": [
+        "21665",
+        "21663",
+        "21664"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Fejlesztők munkájának irányítása és kiosztása",
+      "task_idk": [
+        "21678",
+        "21677"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Felhasználók betanítása az új vagy módosított rendszerekre",
+      "task_idk": [
+        "21679"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Igényfelmérés, megvalósíthatósági elemzés és rendszerkövetelmények meghatározása",
+      "task_idk": [
+        "21662",
+        "21668",
+        "21661",
+        "21672",
+        "21676"
+      ],
+      "idoArany": 0.3202,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.31,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Szoftvertervezés, programozás és meglévő rendszerek módosítása, hibajavítása",
+      "task_idk": [
+        "21667",
+        "21670"
+      ],
+      "idoArany": 0.1619,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.306,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Tesztelés, dokumentáció és projektjelentések készítése",
+      "task_idk": [
+        "21669",
+        "21673"
+      ],
+      "idoArany": 0.1472,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.318,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Rendszerek telepítése, bevezetése és működésük figyelése",
+      "task_idk": [
+        "21666",
+        "21671"
+      ],
+      "idoArany": 0.0806,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.306,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Egyeztetés ügyfelekkel, elemzőkkel és projektvezetőkkel",
+      "task_idk": [
+        "21665",
+        "21663",
+        "21664"
+      ],
+      "idoArany": 0.2005,
+      "kitettseg": 0.698,
+      "kivaltasArany": 0.296,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Fejlesztők munkájának irányítása és kiosztása",
+      "task_idk": [
+        "21678",
+        "21677"
+      ],
+      "idoArany": 0.064,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.306,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Felhasználók betanítása az új vagy módosított rendszerekre",
+      "task_idk": [
+        "21679"
+      ],
+      "idoArany": 0.0257,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.306,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 36%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "21662": "Analyze user needs and software requirements to determine feasibility of design within time and cost constraints.",
+    "21670": "Modify existing software to correct errors, adapt it to new hardware, or upgrade interfaces and improve performance.",
+    "21664": "Confer with systems analysts, engineers, programmers and others to design systems and to obtain information on project limitations and capabilities, performance requirements and interfaces.",
+    "21667": "Design, develop and modify software systems, using scientific analysis and mathematical models to predict and measure outcomes and consequences of design.",
+    "21669": "Develop or direct software system testing or validation procedures, programming, or documentation.",
+    "21676": "Store, retrieve, and manipulate data for analysis of system capabilities and requirements.",
+    "21673": "Prepare reports or correspondence concerning project specifications, activities, or status.",
+    "21668": "Determine system performance standards.",
+    "21661": "Analyze information to determine, recommend, and plan installation of a new system or modification of an existing system.",
+    "21665": "Consult with customers or other departments on project status, proposals, or technical issues, such as software system design or maintenance.",
+    "21663": "Confer with data processing or project managers to obtain information on limitations or capabilities for data processing projects.",
+    "21671": "Monitor functioning of equipment to ensure system operates in conformance with specifications.",
+    "21678": "Supervise the work of programmers, technologists and technicians and other engineering and scientific personnel.",
+    "21666": "Coordinate installation of software system.",
+    "21677": "Supervise and assign work to programmers, designers, technologists, technicians, or other engineering or scientific personnel.",
+    "21672": "Obtain and evaluate information on factors such as reporting formats required, costs, or security needs to determine hardware configuration.",
+    "21679": "Train users to use new or modified equipment."
+  }
+}

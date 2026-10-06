@@ -1,0 +1,250 @@
+{
+  "ellenorizve": false,
+  "slug": "kozepiskolai-tanar",
+  "nev": "Középiskolai tanár",
+  "aliasok": [
+    "gimnáziumi tanár",
+    "szakközépiskolai tanár",
+    "tanár",
+    "szaktanár",
+    "középiskolai oktató"
+  ],
+  "feor_kod": "2421",
+  "isco_kod": "2330",
+  "soc_kodok": [
+    "25-2031.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "középiskolai tanárok",
+  "fekek": {
+    "fizikai": {
+      "ertek": 2,
+      "indoklas": "Az osztályteremben való jelenlét, a felügyelet és a kísérleti eszközök kezelése fizikai jelenlétet kíván."
+    },
+    "felelosseg": {
+      "ertek": 3,
+      "indoklas": "A tanár felel a gyerekek testi épségéért, az osztályzatok és a hivatalos nyilvántartások (pl. e-napló) szakmai helyességéért."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "A köznevelési törvény, a NAT, az érettségi szabályai, az adatvédelem és az EU AI Act oktatásra vonatkozó kockázati előírásai kötik az AI használatát."
+    },
+    "bizalom": {
+      "ertek": 3,
+      "indoklas": "A szülők és a diákok elvárják, hogy kiskorúak nevelését és értékelését ember végezze, akiben megbízhatnak."
+    }
+  },
+  "teendo_szoveg": "Használd az AI-t az órai anyagok, feladatsorok és differenciált gyakorlók gyors elkészítésére, így több időd marad a diákokra. Fejleszd azt, amit gép nem pótol: a motiválást, a csoport vezetését, a nehéz helyzetek kezelését és a szülőkkel való őszinte kommunikációt. Tanuld meg, hogyan taníts a diákokat az AI-eszközök kritikus és etikus használatára, mert ebben hamar az iskola szakértője lehetsz.",
+  "csoportok": [
+    {
+      "leiras": "Órák megtartása, magyarázat, beszélgetés, bemutatás és kísérletezés",
+      "task_idk": [
+        "6640",
+        "6649",
+        "6654",
+        "6665"
+      ],
+      "emberi_mag": false,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Tanmenet, óravázlat és tananyag tervezése, differenciálás, felzárkóztatás",
+      "task_idk": [
+        "6641",
+        "6657",
+        "6653",
+        "6644",
+        "6659"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Dolgozatok, házi feladatok javítása, osztályozás és adminisztráció",
+      "task_idk": [
+        "6646",
+        "6642",
+        "6645",
+        "6663"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Rend és fegyelem fenntartása, házirend betartatása",
+      "task_idk": [
+        "6639",
+        "6648"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Diákok motiválása, megfigyelése és személyes tanácsadása",
+      "task_idk": [
+        "6650",
+        "6651",
+        "6647"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Terem és eszközök előkészítése, balesetvédelem, segítség sérült diákoknak",
+      "task_idk": [
+        "6643",
+        "6652",
+        "6670"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Egyeztetés szülőkkel, kollégákkal és szakemberekkel",
+      "task_idk": [
+        "6656",
+        "6658",
+        "6661",
+        "6662"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Órák megtartása, magyarázat, beszélgetés, bemutatás és kísérletezés",
+      "task_idk": [
+        "6640",
+        "6649",
+        "6654",
+        "6665"
+      ],
+      "idoArany": 0.1703,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.392,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Tanmenet, óravázlat és tananyag tervezése, differenciálás, felzárkóztatás",
+      "task_idk": [
+        "6641",
+        "6657",
+        "6653",
+        "6644",
+        "6659"
+      ],
+      "idoArany": 0.1972,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.512,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Dolgozatok, házi feladatok javítása, osztályozás és adminisztráció",
+      "task_idk": [
+        "6646",
+        "6642",
+        "6645",
+        "6663"
+      ],
+      "idoArany": 0.1572,
+      "kitettseg": 0.601,
+      "kivaltasArany": 0.582,
+      "horizont": "1-3ev",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Rend és fegyelem fenntartása, házirend betartatása",
+      "task_idk": [
+        "6639",
+        "6648"
+      ],
+      "idoArany": 0.0965,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.557,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Diákok motiválása, megfigyelése és személyes tanácsadása",
+      "task_idk": [
+        "6650",
+        "6651",
+        "6647"
+      ],
+      "idoArany": 0.1352,
+      "kitettseg": 0.355,
+      "kivaltasArany": 0.691,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Terem és eszközök előkészítése, balesetvédelem, segítség sérült diákoknak",
+      "task_idk": [
+        "6643",
+        "6652",
+        "6670"
+      ],
+      "idoArany": 0.1241,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.534,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Egyeztetés szülőkkel, kollégákkal és szakemberekkel",
+      "task_idk": [
+        "6656",
+        "6658",
+        "6661",
+        "6662"
+      ],
+      "idoArany": 0.1196,
+      "kitettseg": 0.259,
+      "kivaltasArany": 0.557,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    }
+  ],
+  "_figyelmeztetesek": [
+    "A kis súlyú feladatok elhagyása a munkaidő 13%-át érinti.",
+    "Az Economic Index a munkaidő csak 49%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "6639": "Establish and enforce rules for behavior and procedures for maintaining order among students.",
+    "6640": "Instruct through lectures, discussions, and demonstrations in one or more subjects, such as English, mathematics, or social studies.",
+    "6650": "Prepare students for later grades by encouraging them to explore learning opportunities and to persevere with challenging tasks.",
+    "6643": "Prepare materials and classrooms for class activities.",
+    "6644": "Adapt teaching methods and instructional materials to meet students' varying needs and interests.",
+    "6654": "Use computers, audio-visual aids, and other equipment and materials to supplement presentations.",
+    "6641": "Establish clear objectives for all lessons, units, and projects, and communicate those objectives to students.",
+    "6647": "Observe and evaluate students' performance, behavior, social development, and physical health.",
+    "6648": "Enforce all administration policies and rules governing students.",
+    "6649": "Plan and conduct activities for a balanced program of instruction, demonstration, and work time that provides students with opportunities to observe, question, and investigate.",
+    "6646": "Assign and grade class work and homework.",
+    "6642": "Prepare, administer, and grade tests and assignments to evaluate students' progress.",
+    "6645": "Maintain accurate and complete student records as required by laws, district policies, and administrative regulations.",
+    "6651": "Guide and counsel students with adjustments, academic problems, or special academic interests.",
+    "6657": "Prepare objectives and outlines for courses of study, following curriculum guidelines or requirements of states and schools.",
+    "6670": "Provide students with disabilities with assistive devices, supportive technology, and assistance accessing facilities such as restrooms.",
+    "6652": "Instruct and monitor students in the use of equipment and materials to prevent injuries and damage.",
+    "6661": "Confer with other staff members to plan and schedule lessons promoting learning, following approved curricula.",
+    "6653": "Prepare for assigned classes, and show written evidence of preparation upon request of immediate supervisors.",
+    "6659": "Prepare and implement remedial programs for students requiring extra help.",
+    "6663": "Prepare reports on students and activities as required by administration.",
+    "6656": "Confer with parents or guardians, other teachers, counselors, and administrators to resolve students' behavioral and academic problems.",
+    "6658": "Meet with other professionals to discuss individual students' needs and progress.",
+    "6665": "Plan and supervise class projects, field trips, visits by guest speakers, or other experiential activities, and guide students in learning from those activities.",
+    "6662": "Collaborate with other teachers and administrators in the development, evaluation, and revision of secondary school programs."
+  }
+}

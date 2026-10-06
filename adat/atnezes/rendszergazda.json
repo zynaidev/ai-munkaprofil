@@ -1,0 +1,218 @@
+{
+  "ellenorizve": false,
+  "slug": "rendszergazda",
+  "nev": "Rendszergazda",
+  "aliasok": [
+    "it rendszergazda",
+    "hálózati rendszergazda",
+    "sysadmin",
+    "informatikus",
+    "it support",
+    "hálózatüzemeltető",
+    "szerver üzemeltető"
+  ],
+  "feor_kod": "2152",
+  "isco_kod": "2522",
+  "soc_kodok": [
+    "15-1244.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "rendszergazdák",
+  "fekek": {
+    "fizikai": {
+      "ertek": 1,
+      "indoklas": "A szerverterem, a kábelezés és a hibás alkatrészek cseréje helyszíni jelenlétet kíván, de a feladatok nagy része távolról is elvégezhető."
+    },
+    "felelosseg": {
+      "ertek": 2,
+      "indoklas": "Egy rendszerleállás vagy adatvesztés komoly üzleti és jogi következményekkel jár, ezért a döntések és a jogosultságok kezelése felelős emberi szakembert igényel."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "A GDPR, az NIS2 irányelv és az EU AI Act, valamint az ágazati (pl. pénzügyi, egészségügyi) előírások szigorú keretek közé teszik az automatizálást és az adatkezelést."
+    },
+    "bizalom": {
+      "ertek": 1,
+      "indoklas": "A cégek elfogadják az automatizált eszközöket a rutinfeladatoknál, de a kritikus rendszerekhez és a biztonsági kérdésekhez megbízható, ismert szakembert várnak el."
+    }
+  },
+  "teendo_szoveg": "A rutin üzemeltetési és hibakeresési feladatokat egyre inkább automatizált eszközök viszik, ezért érdemes a felügyeletük, hangolásuk és ellenőrzésük felé fordulnod. Mélyítsd el a kiberbiztonsági, felhő- és automatizálási (pl. szkriptelés, infrastruktúra kódként) tudásodat, mert ezeknél kell a legjobban a felelős, gondolkodó szakember. Tartsd ápolt kapcsolatban a kollégákat és az ügyfeleket: aki jól elmagyarázza a műszaki döntéseket, és megérti az üzleti igényeket, az nehezen pótolható.",
+  "csoportok": [
+    {
+      "leiras": "Napi rendszerüzemeltetés, felügyelet és naplózás (hálózat, e-mail, mentések, indítás/leállítás)",
+      "task_idk": [
+        "1318",
+        "15206",
+        "1320",
+        "1321",
+        "1330",
+        "1317"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Hibaelhárítás és hibaelemzés (hardver, szoftver, hálózat)",
+      "task_idk": [
+        "15205",
+        "1329"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Rendszerek tervezése, beállítása és fejlesztési javaslatok",
+      "task_idk": [
+        "1322",
+        "1323"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Informatikai biztonság, teljesítménytervezés és új technológiák bevezetése",
+      "task_idk": [
+        "1319",
+        "1325",
+        "15207"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Felhasználók segítése, oktatása és igényeik felmérése",
+      "task_idk": [
+        "1324",
+        "1326",
+        "1328"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Eszközök, alkatrészkészlet, beszerzés és telefonrendszerek kezelése",
+      "task_idk": [
+        "1332",
+        "1327",
+        "1333",
+        "15208"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Napi rendszerüzemeltetés, felügyelet és naplózás (hálózat, e-mail, mentések, indítás/leállítás)",
+      "task_idk": [
+        "1318",
+        "15206",
+        "1320",
+        "1321",
+        "1330",
+        "1317"
+      ],
+      "idoArany": 0.3855,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.292,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Hibaelhárítás és hibaelemzés (hardver, szoftver, hálózat)",
+      "task_idk": [
+        "15205",
+        "1329"
+      ],
+      "idoArany": 0.1111,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.37,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Rendszerek tervezése, beállítása és fejlesztési javaslatok",
+      "task_idk": [
+        "1322",
+        "1323"
+      ],
+      "idoArany": 0.0819,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.464,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Informatikai biztonság, teljesítménytervezés és új technológiák bevezetése",
+      "task_idk": [
+        "1319",
+        "1325",
+        "15207"
+      ],
+      "idoArany": 0.1528,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.247,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Felhasználók segítése, oktatása és igényeik felmérése",
+      "task_idk": [
+        "1324",
+        "1326",
+        "1328"
+      ],
+      "idoArany": 0.1558,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.295,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Eszközök, alkatrészkészlet, beszerzés és telefonrendszerek kezelése",
+      "task_idk": [
+        "1332",
+        "1327",
+        "1333",
+        "15208"
+      ],
+      "idoArany": 0.1128,
+      "kitettseg": 0.246,
+      "kivaltasArany": 0.295,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 35%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "1318": "Maintain and administer computer networks and related computing environments, including computer hardware, systems software, applications software, and all configurations.",
+    "15206": "Configure, monitor, and maintain email applications or virus protection software.",
+    "15205": "Diagnose, troubleshoot, and resolve hardware, software, or other network and system problems, and replace defective components when necessary.",
+    "1319": "Plan, coordinate, and implement network security measures to protect data, software, and hardware.",
+    "1320": "Operate master consoles to monitor the performance of computer systems and networks and to coordinate computer network access and use.",
+    "1324": "Confer with network users about solutions to existing system problems.",
+    "1330": "Maintain logs related to network functions, as well as maintenance and repair records.",
+    "1317": "Perform data backups and disaster recovery operations.",
+    "1325": "Monitor network performance to determine whether adjustments are needed and where changes will be needed in the future.",
+    "1326": "Train people in computer system use.",
+    "1322": "Design, configure, and test computer hardware, networking software and operating system software.",
+    "1321": "Perform routine network startup and shutdown procedures, and maintain control records.",
+    "1328": "Gather data pertaining to customer needs, and use the information to identify, predict, interpret, and evaluate system and network requirements.",
+    "1329": "Analyze equipment performance records to determine the need for repair or replacement.",
+    "1332": "Maintain an inventory of parts for emergency repairs.",
+    "1333": "Coordinate with vendors and with company personnel to facilitate purchases.",
+    "1323": "Recommend changes to improve systems and network configurations, and determine hardware or software requirements related to such changes.",
+    "15207": "Research new technologies by attending seminars, reading trade articles, or taking classes, and implement or recommend the implementation of new technologies.",
+    "15208": "Implement and provide technical support for voice services and equipment, such as private branch exchange, voice mail system, and telecom system.",
+    "1327": "Load computer tapes and disks, and install software and printer paper or forms."
+  }
+}

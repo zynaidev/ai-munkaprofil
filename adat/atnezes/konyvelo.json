@@ -1,0 +1,256 @@
+{
+  "ellenorizve": false,
+  "slug": "konyvelo",
+  "nev": "Könyvelő",
+  "aliasok": [
+    "mérlegképes könyvelő",
+    "főkönyvi könyvelő",
+    "analitikus könyvelő",
+    "könyvelő asszisztens",
+    "analitikus",
+    "számviteli ügyintéző",
+    "főkönyvelő",
+    "pénzügyi ügyintéző",
+    "számlázó",
+    "adminisztrátor könyvelő"
+  ],
+  "feor_kod": "4121",
+  "isco_kod": "4311",
+  "soc_kodok": [
+    "13-2011.00",
+    "43-3031.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "könyvelők",
+  "fekek": {
+    "fizikai": {
+      "ertek": 1,
+      "indoklas": "A munka döntően számítógépen zajlik, csak a készpénzkezelés és az iratok átvétele kíván fizikai jelenlétet."
+    },
+    "felelosseg": {
+      "ertek": 3,
+      "indoklas": "A számviteli törvény szerint a beszámolókért és bevallásokért a könyvelő és a vezető személyesen felel, az aláírást nem lehet gépre hárítani."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "A számviteli és adójogi szabályok, a NAV online számlázás és adatszolgáltatás, valamint az EU AI Act dokumentálási elvárásai kötik az automatizálást."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "A kisvállalkozók és magánszemélyek a pénzügyeikkel szívesen bíznak meg egy ismert szakembert, de a rutinfeladatoknál elfogadják a gépi megoldást."
+    }
+  },
+  "teendo_szoveg": "Tanuld meg magabiztosan használni az automatizált könyvelő- és számlafeldolgozó eszközöket, hogy a rutinmunkát ők végezzék, te pedig az ellenőrzésre és a kivételek kezelésére fókuszálhass. Építs szakértelmet az adózásban, a megfelelésben és a pénzügyi elemzésben, mert ott a felelősséged és a döntéseid számítanak. Fejleszd az ügyfélkapcsolati készségeidet is: ha érthetően elmagyarázod a számokat és tanácsot adsz, az hosszú távon is felértékel.",
+  "csoportok": [
+    {
+      "leiras": "Tételek rögzítése és könyvelése a programban",
+      "task_idk": [
+        "2487",
+        "2489",
+        "2490",
+        "2495",
+        "2493",
+        "2509",
+        "21515"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Számítások, adatok ellenőrzése és jelentések készítése",
+      "task_idk": [
+        "2486",
+        "2497",
+        "21505"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Általános ügyintézés, levelezés és ügyfélkérdések",
+      "task_idk": [
+        "2498",
+        "2494"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Számlák feldolgozása, pénztár és banki tételek",
+      "task_idk": [
+        "21533",
+        "2500"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Egyeztetés, eltérések feltárása, kimutatások elemzése",
+      "task_idk": [
+        "21516",
+        "2496",
+        "21514",
+        "21534"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Adóbevallás és adókötelezettségek megállapítása",
+      "task_idk": [
+        "21526",
+        "21522"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Belső ellenőrzés, szabályoknak való megfelelés, rendszerek kialakítása",
+      "task_idk": [
+        "21508",
+        "21525",
+        "21513",
+        "2488",
+        "21521"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Tételek rögzítése és könyvelése a programban",
+      "task_idk": [
+        "2487",
+        "2489",
+        "2490",
+        "2495",
+        "2493",
+        "2509",
+        "21515"
+      ],
+      "idoArany": 0.2969,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.612,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Számítások, adatok ellenőrzése és jelentések készítése",
+      "task_idk": [
+        "2486",
+        "2497",
+        "21505"
+      ],
+      "idoArany": 0.1247,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.567,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Általános ügyintézés, levelezés és ügyfélkérdések",
+      "task_idk": [
+        "2498",
+        "2494"
+      ],
+      "idoArany": 0.0857,
+      "kitettseg": 0.767,
+      "kivaltasArany": 0.573,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Számlák feldolgozása, pénztár és banki tételek",
+      "task_idk": [
+        "21533",
+        "2500"
+      ],
+      "idoArany": 0.0882,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.573,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Egyeztetés, eltérések feltárása, kimutatások elemzése",
+      "task_idk": [
+        "21516",
+        "2496",
+        "21514",
+        "21534"
+      ],
+      "idoArany": 0.1585,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.573,
+      "horizont": "1-3ev",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Adóbevallás és adókötelezettségek megállapítása",
+      "task_idk": [
+        "21526",
+        "21522"
+      ],
+      "idoArany": 0.0697,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.573,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Belső ellenőrzés, szabályoknak való megfelelés, rendszerek kialakítása",
+      "task_idk": [
+        "21508",
+        "21525",
+        "21513",
+        "2488",
+        "21521"
+      ],
+      "idoArany": 0.1761,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.551,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    }
+  ],
+  "_figyelmeztetesek": [
+    "A kis súlyú feladatok elhagyása a munkaidő 39%-át érinti.",
+    "Az Economic Index a munkaidő csak 24%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "2487": "Operate computers programmed with accounting software to record, store, and analyze information.",
+    "2495": "Operate 10-key calculators, typewriters, and copy machines to perform calculations and produce documents.",
+    "2486": "Check figures, postings, and documents for correct entry, mathematical accuracy, and proper codes.",
+    "21533": "Process invoices for payment.",
+    "2488": "Comply with federal, state, and company policies, procedures, and regulations.",
+    "2498": "Perform general office duties, such as filing, answering telephones, and handling routine correspondence.",
+    "21514": "Prepare, examine, or analyze accounting records, financial statements, or other financial reports to assess accuracy, completeness, and conformance to reporting and procedural standards.",
+    "2493": "Code documents according to company procedures.",
+    "21516": "Review accounts for discrepancies and reconcile differences.",
+    "2497": "Perform financial calculations, such as amounts due, interest charges, balances, discounts, equity, and principal.",
+    "2500": "Receive, record, and bank cash, checks, and vouchers.",
+    "2494": "Access computerized financial information to answer general questions as well as those related to specific accounts.",
+    "2509": "Match order forms with invoices, and record the necessary information.",
+    "21515": "Prepare adjusting journal entries.",
+    "2496": "Reconcile or note and report discrepancies found in records.",
+    "2489": "Debit, credit, and total accounts on computer spreadsheets and databases, using specialized accounting software.",
+    "2490": "Classify, record, and summarize numerical and financial data to compile and keep financial records, using journals and ledgers or computers.",
+    "21526": "Compute taxes owed and prepare tax returns, ensuring compliance with payment, reporting, or other tax requirements.",
+    "21508": "Inspect account books and accounting systems for efficiency, effectiveness, and use of accepted accounting procedures to record transactions.",
+    "21505": "Prepare detailed reports on audit findings.",
+    "21534": "Review data about material assets, net worth, liabilities, capital stock, surplus, income, or expenditures.",
+    "21522": "Evaluate taxpayer finances to determine tax liability, using knowledge of interest and discount rates, annuities, valuation of stocks and bonds, and amortization valuation of depletable assets.",
+    "21525": "Review taxpayer accounts, and conduct audits on-site, by correspondence, or by summoning taxpayer to office.",
+    "21521": "Develop, implement, modify, and document recordkeeping and accounting systems, making use of current computer technology.",
+    "21513": "Examine records and interview workers to ensure recording of transactions and compliance with laws and regulations."
+  }
+}

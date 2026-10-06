@@ -1,0 +1,255 @@
+{
+  "ellenorizve": false,
+  "slug": "banki-ugyintezo",
+  "nev": "Banki ügyintéző",
+  "aliasok": [
+    "bankos",
+    "bankfiókos",
+    "bank ügyintéző",
+    "Pénzintézeti ügyintéző",
+    "pénztáros a bankban",
+    "banki ügyfélkapcsolati munkatárs",
+    "hitelügyintéző",
+    "bankpénztáros",
+    "pénzintézeti dolgozó"
+  ],
+  "feor_kod": "3612",
+  "isco_kod": "3312",
+  "soc_kodok": [
+    "43-4141.00",
+    "43-4131.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "banki ügyintézők",
+  "fekek": {
+    "fizikai": {
+      "ertek": 1,
+      "indoklas": "A pénztári munka és a széfhez való hozzáférés fizikai jelenlétet igényel, de a feladatok többsége képernyő előtt végezhető."
+    },
+    "felelosseg": {
+      "ertek": 2,
+      "indoklas": "A hitelezési és utalási döntések, valamint az ügyfél-azonosítás szakmai felelősséggel és aláírással járnak, ezért a végső jóváhagyás emberi kézben marad."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "A pénzmosás elleni szabályok, a GDPR, az MNB előírásai és az EU AI Act (a hitelbírálat magas kockázatú terület) szigorú kereteket szabnak az automatizálásnak."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "Sok ügyfél, különösen az idősebbek és a nagyobb tétet mozgatók, pénzügyi ügyeiben továbbra is személyes kapcsolatot és emberi megerősítést vár."
+    }
+  },
+  "teendo_szoveg": "A rutinszerű adatrögzítés és ügyfél-tájékoztatás egyre inkább automatizálható, ezért érdemes a személyes ügyfélkapcsolat és a tanácsadás felé fejlődnöd. Tanuld meg alaposan a hitel- és megtakarítási termékeket, hogy komplex kérdésekben is segíteni tudj. Ismerd meg az AI-alapú banki rendszereket is, mert ha te tudod ellenőrizni és javítani a kimenetüket, az értékes többlet a csapatodban.",
+  "csoportok": [
+    {
+      "leiras": "Pénztári műveletek és széfkezelés",
+      "task_idk": [
+        "4730",
+        "4733"
+      ],
+      "emberi_mag": false,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Befizetések, utalások és számlabefizetések kezelése",
+      "task_idk": [
+        "4728",
+        "4731",
+        "11304"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Ügyfeleknek szóló tájékoztatás a bank szolgáltatásairól",
+      "task_idk": [
+        "4722",
+        "4726"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Személyes ügyfélkapcsolat, igényfelmérés és hitel-tanácsadás",
+      "task_idk": [
+        "4725",
+        "4724",
+        "11292",
+        "11294",
+        "11298",
+        "11295"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Adatrögzítés, számlanyitási és hiteldokumentumok elkészítése",
+      "task_idk": [
+        "4723",
+        "11296",
+        "11297",
+        "11299"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Hitelkérelmek ellenőrzése és jóváhagyásra előkészítése",
+      "task_idk": [
+        "11291",
+        "11293",
+        "11300",
+        "11301",
+        "11305",
+        "11302"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Hibajavítás és ügyfélszámlák nyomon követése",
+      "task_idk": [
+        "4729",
+        "11307"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Pénztári műveletek és széfkezelés",
+      "task_idk": [
+        "4730",
+        "4733"
+      ],
+      "idoArany": 0.0979,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.433,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Befizetések, utalások és számlabefizetések kezelése",
+      "task_idk": [
+        "4728",
+        "4731",
+        "11304"
+      ],
+      "idoArany": 0.1297,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.433,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Ügyfeleknek szóló tájékoztatás a bank szolgáltatásairól",
+      "task_idk": [
+        "4722",
+        "4726"
+      ],
+      "idoArany": 0.1098,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.433,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Személyes ügyfélkapcsolat, igényfelmérés és hitel-tanácsadás",
+      "task_idk": [
+        "4725",
+        "4724",
+        "11292",
+        "11294",
+        "11298",
+        "11295"
+      ],
+      "idoArany": 0.2393,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.433,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Adatrögzítés, számlanyitási és hiteldokumentumok elkészítése",
+      "task_idk": [
+        "4723",
+        "11296",
+        "11297",
+        "11299"
+      ],
+      "idoArany": 0.1597,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.425,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Hitelkérelmek ellenőrzése és jóváhagyásra előkészítése",
+      "task_idk": [
+        "11291",
+        "11293",
+        "11300",
+        "11301",
+        "11305",
+        "11302"
+      ],
+      "idoArany": 0.191,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.439,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Hibajavítás és ügyfélszámlák nyomon követése",
+      "task_idk": [
+        "4729",
+        "11307"
+      ],
+      "idoArany": 0.0726,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.433,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "A kis súlyú feladatok elhagyása a munkaidő 13%-át érinti.",
+    "Az Economic Index a munkaidő csak 6%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "4728": "Collect and record customer deposits and fees and issue receipts, using computers.",
+    "4730": "Perform teller duties as required.",
+    "4723": "Compile information about new accounts, enter account information into computers, and file related forms or other documents.",
+    "4726": "Inform customers of procedures for applying for services, such as ATM cards, direct deposit of checks, and certificates of deposit.",
+    "4722": "Answer customers' questions and explain available services, such as deposit accounts, bonds, and securities.",
+    "4725": "Interview customers to obtain information needed for opening accounts or renting safe-deposit boxes.",
+    "4724": "Refer customers to appropriate bank personnel to meet their financial needs.",
+    "4729": "Investigate and correct errors upon customers' request, according to customer and bank records.",
+    "4733": "Issue initial and replacement safe-deposit keys to customers, and admit customers to vaults.",
+    "4731": "Execute wire transfers of funds.",
+    "11292": "Interview loan applicants to obtain personal and financial data and to assist in completing applications.",
+    "11294": "Answer questions and advise customers regarding loans and transactions.",
+    "11296": "Record applications for loan and credit, loan information, and disbursements of funds, using computers.",
+    "11291": "Verify and examine information and accuracy of loan application and closing documents.",
+    "11300": "Check value of customer collateral to be held as loan security.",
+    "11299": "Calculate, review, and correct errors on interest, principal, payment, and closing costs, using computers or calculators.",
+    "11305": "Submit loan applications with recommendation for underwriting approval.",
+    "11297": "Prepare and type loan applications, closing documents, legal documents, letters, forms, government notices, and checks, using computers.",
+    "11298": "Present loan and repayment schedules to customers.",
+    "11304": "Accept payment on accounts.",
+    "11307": "Review customer accounts to determine whether payments are made on time and that other loan terms are being followed.",
+    "11295": "Contact customers by mail, telephone, or in person concerning acceptance or rejection of applications.",
+    "11301": "Contact credit bureaus, employers, and other sources to check applicants' credit and personal references.",
+    "11293": "Assemble and compile documents for loan closings, such as title abstracts, insurance forms, loan forms, and tax receipts.",
+    "11302": "File and maintain loan records."
+  }
+}

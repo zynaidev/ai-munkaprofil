@@ -1,0 +1,237 @@
+{
+  "ellenorizve": false,
+  "slug": "irodai-adminisztrator",
+  "nev": "Irodai adminisztrátor",
+  "aliasok": [
+    "Általános irodai adminisztrátor",
+    "adminisztrátor",
+    "irodai dolgozó",
+    "ügyintéző",
+    "irodai ügyintéző",
+    "admin",
+    "irodista",
+    "adminisztratív munkatárs"
+  ],
+  "feor_kod": "4112",
+  "isco_kod": "4110",
+  "soc_kodok": [
+    "43-9061.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "irodai adminisztrátorok",
+  "fekek": {
+    "fizikai": {
+      "ertek": 1,
+      "indoklas": "A postázás, a pénzkezelés, a készletek mozgatása és az irodai gépek kezelése fizikai jelenlétet igényel, de a feladatok többsége képernyő előtt végezhető."
+    },
+    "felelosseg": {
+      "ertek": 1,
+      "indoklas": "A munka többnyire belső felelősséggel jár, csak a pénzkezelésnél, a számláknál és a szerződéseknél van aláírási vagy elszámolási kockázat."
+    },
+    "szabalyozas": {
+      "ertek": 1,
+      "indoklas": "Az adatkezelésre (GDPR) és a számviteli bizonylatokra vonatkoznak előírások, az irodai adminisztrációt viszont nem védi külön ágazati szabályozás."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "Az ügyfelek és kollégák a panaszkezelésnél, az egyeztetéseknél és a kényes ügyeknél szívesebben fordulnak emberhez, a rutin adminisztrációban viszont ez kevésbé számít."
+    }
+  },
+  "teendo_szoveg": "Tanuld meg magabiztosan használni az AI-asszisztenseket a levelezéshez, a dokumentumkészítéshez és az adatrendezéshez, hogy a rutinfeladatokra kevesebb időd menjen el. Építs a kapcsolattartásra, a problémamegoldásra és a koordinálásra, mert ezeknél az emberi ítélőképesség értékes marad. Érdemes folyamatszervezést, adatkezelést (GDPR) vagy irodai rendszerek üzemeltetését is tanulnod, így a csapatod nélkülözhetetlen támasza lehetsz.",
+  "csoportok": [
+    {
+      "leiras": "Dokumentumok gépelése, szerkesztése és átnézése",
+      "task_idk": [
+        "840",
+        "831",
+        "843"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Nyilvántartások, iratok és adatbázisok vezetése, rendezése",
+      "task_idk": [
+        "832",
+        "828",
+        "838",
+        "829"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Telefonok fogadása, hívások átadása, üzenetfelvétel",
+      "task_idk": [
+        "827"
+      ],
+      "emberi_mag": false,
+      "csatorna": "telefon"
+    },
+    {
+      "leiras": "Ügyfelek és kollégák kérdéseinek megválaszolása, panaszkezelés",
+      "task_idk": [
+        "826",
+        "834"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Levelezés, posta, naptár- és időpontkezelés",
+      "task_idk": [
+        "833",
+        "837"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Készletek, eszközök és irodai gépek kezelése, megrendelések intézése",
+      "task_idk": [
+        "830",
+        "836",
+        "841",
+        "844"
+      ],
+      "emberi_mag": false,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Pénzkezelés, futárfeladatok, kollégák betanítása és irányítása",
+      "task_idk": [
+        "825",
+        "835",
+        "839",
+        "842"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Dokumentumok gépelése, szerkesztése és átnézése",
+      "task_idk": [
+        "840",
+        "831",
+        "843"
+      ],
+      "idoArany": 0.1449,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.325,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Nyilvántartások, iratok és adatbázisok vezetése, rendezése",
+      "task_idk": [
+        "832",
+        "828",
+        "838",
+        "829"
+      ],
+      "idoArany": 0.1951,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.415,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Telefonok fogadása, hívások átadása, üzenetfelvétel",
+      "task_idk": [
+        "827"
+      ],
+      "idoArany": 0.0824,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.5,
+      "horizont": "1-3ev",
+      "csatorna": "telefon",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Ügyfelek és kollégák kérdéseinek megválaszolása, panaszkezelés",
+      "task_idk": [
+        "826",
+        "834"
+      ],
+      "idoArany": 0.1391,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.251,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Levelezés, posta, naptár- és időpontkezelés",
+      "task_idk": [
+        "833",
+        "837"
+      ],
+      "idoArany": 0.1231,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.392,
+      "horizont": "1-3ev",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Készletek, eszközök és irodai gépek kezelése, megrendelések intézése",
+      "task_idk": [
+        "830",
+        "836",
+        "841",
+        "844"
+      ],
+      "idoArany": 0.1726,
+      "kitettseg": 0.235,
+      "kivaltasArany": 0.37,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Pénzkezelés, futárfeladatok, kollégák betanítása és irányítása",
+      "task_idk": [
+        "825",
+        "835",
+        "839",
+        "842"
+      ],
+      "idoArany": 0.1428,
+      "kitettseg": 0.105,
+      "kivaltasArany": 0.392,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 41%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "830": "Operate office machines, such as photocopiers and scanners, facsimile machines, voice mail systems, and personal computers.",
+    "827": "Answer telephones, direct calls, and take messages.",
+    "826": "Communicate with customers, employees, and other individuals to answer questions, disseminate or explain information, take orders, and address complaints.",
+    "832": "Maintain and update filing, inventory, mailing, and database systems, either manually or using a computer.",
+    "828": "Compile, copy, sort, and file records of office activities, business transactions, and other activities.",
+    "834": "Review files, records, and other documents to obtain information to respond to requests.",
+    "831": "Compute, record, and proofread data and other information, such as records or reports.",
+    "833": "Open, sort, and route incoming mail, answer correspondence, and prepare outgoing mail.",
+    "837": "Complete work schedules, manage calendars, and arrange appointments.",
+    "835": "Deliver messages and run errands.",
+    "840": "Type, format, proofread, and edit correspondence and other documents, from notes or dictating machines, using computers or typewriters.",
+    "836": "Inventory and order materials, supplies, and services.",
+    "825": "Collect, count, and disburse money, do basic bookkeeping, and complete banking transactions.",
+    "829": "Complete and mail bills, contracts, policies, invoices, or checks.",
+    "839": "Monitor and direct the work of lower-level clerks.",
+    "838": "Process and prepare documents, such as business or government forms and expense reports.",
+    "843": "Prepare meeting agendas, attend meetings, and record and transcribe minutes.",
+    "841": "Count, weigh, measure, or organize materials.",
+    "842": "Train other staff members to perform work activities, such as using computer applications.",
+    "844": "Troubleshoot problems involving office equipment, such as computer hardware and software."
+  }
+}

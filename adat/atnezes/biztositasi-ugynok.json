@@ -1,0 +1,217 @@
+{
+  "ellenorizve": false,
+  "slug": "biztositasi-ugynok",
+  "nev": "Biztosítási ügynök",
+  "aliasok": [
+    "Biztosítási ügynök, ügyintéző",
+    "biztosításközvetítő",
+    "biztosítási tanácsadó",
+    "biztosítási ügyintéző",
+    "biztosító ügynök",
+    "kötvénykezelő",
+    "kárugyintéző",
+    "biztosításkötő",
+    "biztosítási alkusz"
+  ],
+  "feor_kod": "3621",
+  "isco_kod": "3321",
+  "soc_kodok": [
+    "41-3021.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "biztosítási ügynökök",
+  "fekek": {
+    "fizikai": {
+      "ertek": 1,
+      "indoklas": "A munka nagy része asztal mellett vagy online megy, de az ingatlanszemle és az ügyfélnél tett látogatások fizikai jelenlétet kívánnak."
+    },
+    "felelosseg": {
+      "ertek": 2,
+      "indoklas": "Az ügynök felel a megfelelő tájékoztatásért és az ügyfél igényeinek megfelelő termékajánlásért, a szerződést pedig ő köti és írja alá az ügyféllel."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "A biztosításközvetítést az IDD-t átültető magyar szabályok, az MNB felügyelete és a GDPR szigorúan szabályozza, az EU AI Act pedig az automatizált tanácsadásra is korlátokat hozhat."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "Sok magyar ügyfél, főleg életbiztosításnál és vállalati kockázatoknál, személyes ügynökkel szeret egyeztetni, miközben az egyszerű termékeknél már elterjedtek az online összehasonlítók."
+    }
+  },
+  "teendo_szoveg": "Építs arra, amit a gép nehezen pótol: az ügyfél élethelyzetének megértésére, a bizalomra és a bonyolultabb esetek, például kárügyek vagy céges csomagok kísérésére. Az adminisztrációt, a díjszámítást és a nyilvántartást érdemes AI-eszközökkel gyorsítani, így több időd marad a személyes tanácsadásra. Tanulj meg digitális csatornákon is hatékonyan kapcsolatot tartani, és specializálódj egy területre, például vállalati vagy mezőgazdasági biztosításra, hogy szakértőként kereshessenek.",
+  "csoportok": [
+    {
+      "leiras": "Adminisztráció, díjszámítás és nyilvántartás vezetése",
+      "task_idk": [
+        "728",
+        "719",
+        "734"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Igényfelmérés, kockázatbecslés és személyre szabott ajánlat",
+      "task_idk": [
+        "722",
+        "720",
+        "724",
+        "733"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Kötvényértékesítés, biztosítóválasztás és szerződéskötés",
+      "task_idk": [
+        "721",
+        "729",
+        "725",
+        "726"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Ügyfélszerzés, marketing és szakmai fejlődés",
+      "task_idk": [
+        "723",
+        "731",
+        "732"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Meglévő ügyfelek gondozása és segítség kárügyeknél",
+      "task_idk": [
+        "718",
+        "727",
+        "730"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Csoportos biztosítás bevezetése a cégeknél",
+      "task_idk": [
+        "735",
+        "736"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Adminisztráció, díjszámítás és nyilvántartás vezetése",
+      "task_idk": [
+        "728",
+        "719",
+        "734"
+      ],
+      "idoArany": 0.1523,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.182,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Igényfelmérés, kockázatbecslés és személyre szabott ajánlat",
+      "task_idk": [
+        "722",
+        "720",
+        "724",
+        "733"
+      ],
+      "idoArany": 0.2301,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.23,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Kötvényértékesítés, biztosítóválasztás és szerződéskötés",
+      "task_idk": [
+        "721",
+        "729",
+        "725",
+        "726"
+      ],
+      "idoArany": 0.2512,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.182,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Ügyfélszerzés, marketing és szakmai fejlődés",
+      "task_idk": [
+        "723",
+        "731",
+        "732"
+      ],
+      "idoArany": 0.1656,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.255,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Meglévő ügyfelek gondozása és segítség kárügyeknél",
+      "task_idk": [
+        "718",
+        "727",
+        "730"
+      ],
+      "idoArany": 0.148,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.11,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Csoportos biztosítás bevezetése a cégeknél",
+      "task_idk": [
+        "735",
+        "736"
+      ],
+      "idoArany": 0.0528,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.106,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 21%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "720": "Customize insurance programs to suit individual customers, often covering a variety of risks.",
+    "721": "Sell various types of insurance policies to businesses and individuals on behalf of insurance companies, including automobile, fire, life, property, medical and dental insurance, or specialized policies, such as marine, farm/crop, and medical malpractice.",
+    "728": "Perform administrative tasks, such as maintaining records and handling policy renewals.",
+    "724": "Explain features, advantages, and disadvantages of various policies to promote sale of insurance plans.",
+    "729": "Select company that offers type of coverage requested by client to underwrite policy.",
+    "723": "Seek out new clients and develop clientele by networking to find new customers and generate lists of prospective clients.",
+    "718": "Call on policyholders to deliver and explain policy, to analyze insurance program and suggest additions or changes, or to change beneficiaries.",
+    "719": "Calculate premiums and establish payment method.",
+    "725": "Contact underwriter and submit forms to obtain binder coverage.",
+    "722": "Interview prospective clients to obtain data about their financial resources and needs, the physical condition of the person or property to be insured, and to discuss any existing coverage.",
+    "727": "Confer with clients to obtain and provide information when claims are made on a policy.",
+    "731": "Develop marketing strategies to compete with other individuals or companies who sell insurance.",
+    "726": "Ensure that policy requirements are fulfilled, including any necessary medical examinations and the completion of appropriate forms.",
+    "732": "Attend meetings, seminars, and programs to learn about new products and services, learn new skills, and receive technical assistance in developing new accounts.",
+    "735": "Plan and oversee incorporation of insurance program into bookkeeping system of company.",
+    "730": "Monitor insurance claims to ensure they are settled equitably for both the client and the insurer.",
+    "733": "Inspect property, examining its general condition, type of construction, age, and other characteristics, to decide if it is a good insurance risk.",
+    "736": "Explain necessary bookkeeping requirements for customer to implement and provide group insurance program.",
+    "734": "Install bookkeeping systems and resolve system problems."
+  }
+}

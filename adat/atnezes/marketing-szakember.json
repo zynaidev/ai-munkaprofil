@@ -1,0 +1,197 @@
+{
+  "ellenorizve": false,
+  "slug": "marketing-szakember",
+  "nev": "Marketing-szakember",
+  "aliasok": [
+    "marketinges",
+    "marketing menedzser",
+    "marketing szakértő",
+    "piackutató",
+    "reklámszakember",
+    "marketingtervező",
+    "kampánytervező",
+    "brand manager",
+    "reklámszervező"
+  ],
+  "feor_kod": "2531",
+  "isco_kod": "2431",
+  "soc_kodok": [
+    "13-1161.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "marketing-szakemberek",
+  "fekek": {
+    "fizikai": {
+      "ertek": 0,
+      "indoklas": "A munka főként irodai, számítógépes jellegű, fizikai jelenlét vagy kézügyesség nem szükséges hozzá."
+    },
+    "felelosseg": {
+      "ertek": 1,
+      "indoklas": "A marketingdöntések üzleti felelősséggel járnak, de jogi aláírás vagy kamarai szakmai felelősség általában nem kapcsolódik hozzájuk."
+    },
+    "szabalyozas": {
+      "ertek": 1,
+      "indoklas": "A GDPR és az adatkezelési szabályok, valamint az EU AI Act átláthatósági előírásai korlátozzák az ügyféladatok automatizált elemzését."
+    },
+    "bizalom": {
+      "ertek": 1,
+      "indoklas": "Az elemzések gépi előállítását sokan elfogadják, de a stratégiai javaslatoknál a vezetők továbbra is emberi értelmezést és magyarázatot várnak."
+    }
+  },
+  "teendo_szoveg": "Építs arra, amiben az ember erős: a számokból született felismerések üzleti történetté formálására és a vezetők meggyőzésére. Az adatgyűjtést és a riportkészítést bátran bízd AI-eszközökre, te pedig a megfelelő kérdések feltevésére, az eredmények kritikus ellenőrzésére és a stratégiai javaslatokra fókuszálj. Érdemes jól megismerned az adatvédelmi szabályokat és a kutatásmódszertani alapokat, mert ezekkel az AI-eredményeket biztonsággal tudod felhasználni.",
+  "csoportok": [
+    {
+      "leiras": "Vásárlói és piaci adatok gyűjtése, elemzése, versenytársak figyelése",
+      "task_idk": [
+        "5433",
+        "5437",
+        "5441",
+        "5442"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Kutatási módszerek, kérdőívek és felmérések megtervezése",
+      "task_idk": [
+        "5439",
+        "5443"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Felmérők irányítása és az elégedettség mérése",
+      "task_idk": [
+        "5445",
+        "5435"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Trendek előrejelzése és a marketingkampányok hatékonyságának mérése",
+      "task_idk": [
+        "5436",
+        "5438"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Jelentések, riportok és grafikonok készítése az eredményekről",
+      "task_idk": [
+        "5434"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Javaslatok bemutatása a vezetésnek, hirdetési igények felmérése",
+      "task_idk": [
+        "5440",
+        "5444"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Vásárlói és piaci adatok gyűjtése, elemzése, versenytársak figyelése",
+      "task_idk": [
+        "5433",
+        "5437",
+        "5441",
+        "5442"
+      ],
+      "idoArany": 0.399,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.41,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Kutatási módszerek, kérdőívek és felmérések megtervezése",
+      "task_idk": [
+        "5439",
+        "5443"
+      ],
+      "idoArany": 0.1914,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.545,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Felmérők irányítása és az elégedettség mérése",
+      "task_idk": [
+        "5445",
+        "5435"
+      ],
+      "idoArany": 0.1389,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.441,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Trendek előrejelzése és a marketingkampányok hatékonyságának mérése",
+      "task_idk": [
+        "5436",
+        "5438"
+      ],
+      "idoArany": 0.1284,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.45,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Jelentések, riportok és grafikonok készítése az eredményekről",
+      "task_idk": [
+        "5434"
+      ],
+      "idoArany": 0.0926,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.339,
+      "horizont": "1-3ev",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Javaslatok bemutatása a vezetésnek, hirdetési igények felmérése",
+      "task_idk": [
+        "5440",
+        "5444"
+      ],
+      "idoArany": 0.0498,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.441,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    }
+  ],
+  "_figyelmeztetesek": [],
+  "_eredeti_feladatok": {
+    "5433": "Collect and analyze data on customer demographics, preferences, needs, and buying habits to identify potential markets and factors affecting product demand.",
+    "5437": "Seek and provide information to help companies determine their position in the marketplace.",
+    "5439": "Conduct research on consumer opinions and marketing strategies, collaborating with marketing professionals, statisticians, pollsters, and other professionals.",
+    "5442": "Monitor industry statistics and follow trends in trade literature.",
+    "5443": "Devise and evaluate methods and procedures for collecting data, such as surveys, opinion polls, or questionnaires, or arrange to obtain existing data.",
+    "5434": "Prepare reports of findings, illustrating data graphically and translating complex findings into written text.",
+    "5441": "Gather data on competitors and analyze their prices, sales, and method of marketing and distribution.",
+    "5435": "Measure and assess customer and employee satisfaction.",
+    "5445": "Direct trained survey interviewers.",
+    "5436": "Forecast and track marketing and sales trends, analyzing collected data.",
+    "5438": "Measure the effectiveness of marketing, advertising, and communications programs and strategies.",
+    "5440": "Attend staff conferences to provide management with information and proposals concerning the promotion, distribution, design, and pricing of company products or services.",
+    "5444": "Develop and implement procedures for identifying advertising needs."
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "ellenorizve": false,
+  "slug": "autoszerelo",
+  "nev": "Autószerelő",
+  "aliasok": [
+    "Gépjármű- és motorkarbantartó, -javító",
+    "autójavító",
+    "gépjárműszerelő",
+    "autómechanikus",
+    "motorszerelő",
+    "szerelő autószerviz",
+    "karosszéria szerelő",
+    "autóműszerész",
+    "autóvillamossági szerelő"
+  ],
+  "feor_kod": "7331",
+  "isco_kod": "7231",
+  "soc_kodok": [
+    "49-3023.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "autószerelők",
+  "fekek": {
+    "fizikai": {
+      "ertek": 3,
+      "indoklas": "A munka nagy része emelőn, műhelyben, kézzel és szerszámokkal végzett, változó járműtípusokon, amit gép egyelőre nem tud kiváltani."
+    },
+    "felelosseg": {
+      "ertek": 2,
+      "indoklas": "A fékek, a kormány és a futómű javítása közvetlenül közlekedésbiztonsági kérdés, a szerelő és a műhely szavatolással tartozik a munkájáért."
+    },
+    "szabalyozas": {
+      "ertek": 1,
+      "indoklas": "A műszaki vizsga, a kibocsátási előírások és a gyártói javítási utasítások kötik a munkát, de kifejezetten az AI-t nem korlátozzák."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "Az ügyfelek jellemzően azt várják, hogy egy ember nézze meg és mondja meg, mi a baj az autójukkal, és ő vállaljon felelősséget a javításért."
+    }
+  },
+  "teendo_szoveg": "Építs a kézügyességedre, és tanuld meg a modern diagnosztikai műszereket, mert a hibakeresésben a tapasztalat és a műszer együtt számít. Érdemes az elektromos és hibrid járművek rendszereire is rászánni időt, mert ott a legtöbb új tudásra van szükség. A tervezést és a hibafelvételt hagyd, hogy digitális eszközök segítsék, te pedig az ügyfelekkel való egyeztetésre és a minőségi javításra fókuszálj.",
+  "csoportok": [
+    {
+      "leiras": "Ügyfélfogadás, hibaleírás és munkalap egyeztetése",
+      "task_idk": [
+        "23529",
+        "23527"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Kárfelvétel, állapotrögzítés és munkaterv készítése",
+      "task_idk": [
+        "23523",
+        "23535"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Rendszeres karbantartás, szervizelés és műhelyrend",
+      "task_idk": [
+        "23533",
+        "23534",
+        "23542",
+        "23536"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Műszeres hibakeresés, tesztelés és beállítás",
+      "task_idk": [
+        "23522",
+        "23531",
+        "23528",
+        "23549",
+        "23524"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Fék, futómű, kormányszerkezet javítása és beállítása",
+      "task_idk": [
+        "23525",
+        "23537",
+        "23530",
+        "23532"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Motor- és alkatrészjavítás, szétszerelés, felújítás",
+      "task_idk": [
+        "23543",
+        "23539",
+        "23544",
+        "23541",
+        "23538"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Elektromos, klíma- és kényelmi rendszerek szerelése",
+      "task_idk": [
+        "23540",
+        "23546",
+        "23545"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Ügyfélfogadás, hibaleírás és munkalap egyeztetése",
+      "task_idk": [
+        "23529",
+        "23527"
+      ],
+      "idoArany": 0.0857,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.0,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Kárfelvétel, állapotrögzítés és munkaterv készítése",
+      "task_idk": [
+        "23523",
+        "23535"
+      ],
+      "idoArany": 0.0864,
+      "kitettseg": 0.736,
+      "kivaltasArany": 0.0,
+      "horizont": "1-3ev",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Rendszeres karbantartás, szervizelés és műhelyrend",
+      "task_idk": [
+        "23533",
+        "23534",
+        "23542",
+        "23536"
+      ],
+      "idoArany": 0.1677,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.0,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Műszeres hibakeresés, tesztelés és beállítás",
+      "task_idk": [
+        "23522",
+        "23531",
+        "23528",
+        "23549",
+        "23524"
+      ],
+      "idoArany": 0.2048,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.0,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Fék, futómű, kormányszerkezet javítása és beállítása",
+      "task_idk": [
+        "23525",
+        "23537",
+        "23530",
+        "23532"
+      ],
+      "idoArany": 0.1564,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.0,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Motor- és alkatrészjavítás, szétszerelés, felújítás",
+      "task_idk": [
+        "23543",
+        "23539",
+        "23544",
+        "23541",
+        "23538"
+      ],
+      "idoArany": 0.1901,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.0,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Elektromos, klíma- és kényelmi rendszerek szerelése",
+      "task_idk": [
+        "23540",
+        "23546",
+        "23545"
+      ],
+      "idoArany": 0.1088,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.0,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": true
+    }
+  ],
+  "_figyelmeztetesek": [
+    "A kis súlyú feladatok elhagyása a munkaidő 9%-át érinti.",
+    "Az Economic Index a munkaidő csak 4%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "23523": "Inspect vehicles for damage and record findings so that necessary repairs can be made.",
+    "23533": "Perform routine and scheduled maintenance services, such as oil changes, lubrications, and tune-ups.",
+    "23534": "Follow checklists to ensure all important parts are examined, including belts, hoses, steering systems, spark plugs, brake and fuel systems, wheel bearings, and other potentially troublesome areas.",
+    "23527": "Review work orders and discuss work with supervisors.",
+    "23524": "Test and adjust repaired systems to meet manufacturers' performance specifications.",
+    "23536": "Maintain cleanliness of work area.",
+    "23529": "Confer with customers to obtain descriptions of vehicle problems and to discuss work to be performed and future repair requirements.",
+    "23522": "Test drive vehicles and test components and systems, using equipment such as infrared engine analyzers, compression gauges, and computerized diagnostic devices.",
+    "23535": "Plan work procedures, using charts, technical manuals, and experience.",
+    "23531": "Test electronic computer components in automobiles to ensure proper operation.",
+    "23537": "Align wheels, axles, frames, torsion bars, and steering mechanisms of automobiles, using special alignment equipment and wheel-balancing machines.",
+    "23528": "Troubleshoot fuel, ignition, and emissions control systems, using electronic testing equipment.",
+    "23525": "Repair, reline, replace, and adjust brakes.",
+    "23540": "Repair and service air conditioning, heating, engine cooling, and electrical systems.",
+    "23530": "Align vehicles' front ends.",
+    "23549": "Diagnose and replace or repair engine management systems or related sensors for flexible fuel vehicles (FFVs) with ignition timing, fuel rate, alcohol concentration, or air-to-fuel ratio malfunctions.",
+    "23538": "Tune automobile engines to ensure proper and efficient functioning.",
+    "23543": "Overhaul or replace carburetors, blowers, generators, distributors, starters, and pumps.",
+    "23539": "Repair, replace, or adjust defective fuel injectors, carburetor parts, and gasoline filters.",
+    "23544": "Repair or replace parts such as pistons, rods, gears, valves, and bearings.",
+    "23541": "Disassemble units and inspect parts for wear, using micrometers, calipers, and gauges.",
+    "23532": "Tear down, repair, and rebuild faulty assemblies, such as power systems, steering systems, and linkages.",
+    "23542": "Change spark plugs, fuel filters, air filters, and batteries in hybrid electric vehicles.",
+    "23546": "Install, adjust, or repair hydraulic or electromagnetic automatic lift mechanisms used to raise and lower automobile windows, seats, and tops.",
+    "23545": "Rewire ignition systems, lights, and instrument panels."
+  }
+}

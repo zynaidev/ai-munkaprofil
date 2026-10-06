@@ -1,0 +1,252 @@
+{
+  "ellenorizve": false,
+  "slug": "szamviteli-ugyintezo",
+  "nev": "Számviteli ügyintéző",
+  "aliasok": [
+    "könyvelő asszisztens",
+    "számlázó",
+    "pénzügyi ügyintéző",
+    "analitikus könyvelő",
+    "kontírozó",
+    "főkönyvi könyvelő",
+    "pénzügyi asszisztens",
+    "számviteli asszisztens"
+  ],
+  "feor_kod": "3614",
+  "isco_kod": "3313",
+  "soc_kodok": [
+    "43-3031.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "számviteli ügyintézők",
+  "fekek": {
+    "fizikai": {
+      "ertek": 1,
+      "indoklas": "A munka nagyrészt gépen zajlik, csak a készpénzkezelés és az iratok fizikai kezelése köt helyhez."
+    },
+    "felelosseg": {
+      "ertek": 2,
+      "indoklas": "A számviteli törvény szerint a bizonylatokért és a beszámolókért az ügyvezető és a megbízott könyvelő felel, ezért kell valaki, aki ellenőrzi és aláírja őket."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "A számviteli törvény, az áfa- és adószabályok, a NAV online számlázás és az adatvédelem szoros keretet ad, ami lassítja az ellenőrzés nélküli automatizálást."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "A kisvállalkozók és a cégvezetők többnyire megbíznak egy ismerős könyvelőben, és vitás vagy adóhatósági ügyben emberi egyeztetést várnak."
+    }
+  },
+  "teendo_szoveg": "A rutinszerű adatrögzítést és egyeztetést egyre inkább a szoftverek végzik, ezért érdemes az eltérések megértésére, az ellenőrzésre és a magyarázatadásra összpontosítanod. Tanuld meg jól használni az automatizált könyvelő- és számlázórendszereket, és mélyítsd el az adó-, áfa- és bérszabályok ismeretét. Ha tanácsot is tudsz adni az ügyfeleknek vagy a vezetőknek, nem csak rögzíteni tudsz, akkor nehezen helyettesíthető szakember leszel.",
+  "csoportok": [
+    {
+      "leiras": "Tételek rögzítése a könyvelőprogramban és a főkönyvi átvezetések",
+      "task_idk": [
+        "2487",
+        "2489",
+        "2490",
+        "2506",
+        "2493"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Adatok, bizonylatok és bankmozgások ellenőrzése, egyeztetése",
+      "task_idk": [
+        "2486",
+        "2502",
+        "2503"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Számítások, rendelések és kifizetések előkészítése",
+      "task_idk": [
+        "2497",
+        "2501",
+        "2508",
+        "2514",
+        "2509"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Készpénzkezelés, bankba küldés, számlázás és bérszámfejtés",
+      "task_idk": [
+        "2500",
+        "2499",
+        "2491",
+        "18561"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Eltérések tisztázása, ügyféllekérdezések és szabálykövetés",
+      "task_idk": [
+        "2496",
+        "2494",
+        "2488",
+        "2505"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Pénzügyi kimutatások és költségvetési anyagok összeállítása",
+      "task_idk": [
+        "2507",
+        "2492"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Általános irodai teendők: iratkezelés, levelezés, telefon",
+      "task_idk": [
+        "2498",
+        "2495"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Tételek rögzítése a könyvelőprogramban és a főkönyvi átvezetések",
+      "task_idk": [
+        "2487",
+        "2489",
+        "2490",
+        "2506",
+        "2493"
+      ],
+      "idoArany": 0.2402,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.643,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Adatok, bizonylatok és bankmozgások ellenőrzése, egyeztetése",
+      "task_idk": [
+        "2486",
+        "2502",
+        "2503"
+      ],
+      "idoArany": 0.1105,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.597,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Számítások, rendelések és kifizetések előkészítése",
+      "task_idk": [
+        "2497",
+        "2501",
+        "2508",
+        "2514",
+        "2509"
+      ],
+      "idoArany": 0.1758,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.589,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Készpénzkezelés, bankba küldés, számlázás és bérszámfejtés",
+      "task_idk": [
+        "2500",
+        "2499",
+        "2491",
+        "18561"
+      ],
+      "idoArany": 0.125,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.604,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Eltérések tisztázása, ügyféllekérdezések és szabálykövetés",
+      "task_idk": [
+        "2496",
+        "2494",
+        "2488",
+        "2505"
+      ],
+      "idoArany": 0.1851,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.597,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Pénzügyi kimutatások és költségvetési anyagok összeállítása",
+      "task_idk": [
+        "2507",
+        "2492"
+      ],
+      "idoArany": 0.0413,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.548,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Általános irodai teendők: iratkezelés, levelezés, telefon",
+      "task_idk": [
+        "2498",
+        "2495"
+      ],
+      "idoArany": 0.122,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.597,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 30%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "2487": "Operate computers programmed with accounting software to record, store, and analyze information.",
+    "2495": "Operate 10-key calculators, typewriters, and copy machines to perform calculations and produce documents.",
+    "2486": "Check figures, postings, and documents for correct entry, mathematical accuracy, and proper codes.",
+    "2488": "Comply with federal, state, and company policies, procedures, and regulations.",
+    "2498": "Perform general office duties, such as filing, answering telephones, and handling routine correspondence.",
+    "2493": "Code documents according to company procedures.",
+    "2497": "Perform financial calculations, such as amounts due, interest charges, balances, discounts, equity, and principal.",
+    "2500": "Receive, record, and bank cash, checks, and vouchers.",
+    "2494": "Access computerized financial information to answer general questions as well as those related to specific accounts.",
+    "2509": "Match order forms with invoices, and record the necessary information.",
+    "2496": "Reconcile or note and report discrepancies found in records.",
+    "2489": "Debit, credit, and total accounts on computer spreadsheets and databases, using specialized accounting software.",
+    "2490": "Classify, record, and summarize numerical and financial data to compile and keep financial records, using journals and ledgers or computers.",
+    "2501": "Calculate and prepare checks for utilities, taxes, and other payments.",
+    "2502": "Compare computer printouts to manually maintained journals to determine if they match.",
+    "2505": "Monitor status of loans and accounts to ensure that payments are up to date.",
+    "2499": "Prepare bank deposits by compiling data from cashiers, verifying and balancing receipts, and sending cash, checks, or other forms of payment to banks.",
+    "2491": "Calculate, prepare, and issue bills, invoices, account statements, and other financial statements according to established procedures.",
+    "2508": "Calculate costs of materials, overhead, and other expenses, based on estimates, quotations and price lists.",
+    "2506": "Transfer details from separate journals to general ledgers or data processing sheets.",
+    "18561": "Prepare and process payroll information.",
+    "2503": "Reconcile records of bank transactions.",
+    "2514": "Prepare purchase orders and expense reports.",
+    "2507": "Compile budget data and documents, based on estimated revenues and expenses and previous budgets.",
+    "2492": "Compile statistical, financial, accounting, or auditing reports and tables pertaining to such matters as cash receipts, expenditures, accounts payable and receivable, and profits and losses."
+  }
+}

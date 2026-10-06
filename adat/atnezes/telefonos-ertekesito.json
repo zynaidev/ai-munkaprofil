@@ -1,0 +1,214 @@
+{
+  "ellenorizve": false,
+  "slug": "telefonos-ertekesito",
+  "nev": "Telefonos értékesítő",
+  "aliasok": [
+    "Telefonos értékesítési ügynök",
+    "multimédiás",
+    "telemarketing",
+    "telefonos eladó",
+    "telemarketer",
+    "call center értékesítő",
+    "telefonos ügynök",
+    "telefonos tanácsadó",
+    "telesales"
+  ],
+  "feor_kod": "5123",
+  "isco_kod": "5244",
+  "soc_kodok": [
+    "41-9041.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "telefonos értékesítők",
+  "fekek": {
+    "fizikai": {
+      "ertek": 0,
+      "indoklas": "A munka telefonon és számítógépen zajlik, fizikai jelenlétet vagy kézügyességet nem igényel."
+    },
+    "felelosseg": {
+      "ertek": 1,
+      "indoklas": "Az értékesítő nem visel különösebb szakmai felelősséget, de a szerződéskötéskor pontos tájékoztatásra van szükség."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "A GDPR, a telefonos megkeresésekre vonatkozó fogyasztóvédelmi és direkt marketing szabályok, valamint az EU AI Act átláthatósági előírásai (például a mesterséges hang jelzése) érdemben korlátozzák az automatizálást."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "Sok magyar ügyfél bizalmatlan a nem kért telefonos megkeresésekkel szemben, ezért a meggyőzésnél és a bonyolultabb döntéseknél még számít az élő, hiteles ember."
+    }
+  },
+  "teendo_szoveg": "Az adatrögzítést és a szkriptes beszélgetéseket egyre inkább gépek viszik, ezért érdemes a tanácsadó jellegű értékesítés felé fejlődnöd: ügyféligények feltárása, érvelés, ellenvetések kezelése. Tanuld meg használni az AI-asszisztenseket a jegyzeteléshez, a CRM-frissítéshez és a hívások előkészítéséhez, így több időd marad a valódi beszélgetésekre. Építs ki szakmai területet (például biztosítás, B2B szolgáltatások), ahol a bizalom és a szaktudásod versenyelőnyt ad.",
+  "csoportok": [
+    {
+      "leiras": "Ügyfelek felhívása és megkeresése telefonon (értékesítés, adománygyűjtés)",
+      "task_idk": [
+        "4619",
+        "4624"
+      ],
+      "emberi_mag": false,
+      "csatorna": "telefon"
+    },
+    {
+      "leiras": "Termékek, szolgáltatások és árak elmagyarázása, ügyfélkérdések megválaszolása",
+      "task_idk": [
+        "4620"
+      ],
+      "emberi_mag": true,
+      "csatorna": "telefon"
+    },
+    {
+      "leiras": "Beszélgetés közbeni értékesítési szöveg előadása, szkript követése és az ügyfélhez igazítása",
+      "task_idk": [
+        "4618",
+        "4623"
+      ],
+      "emberi_mag": false,
+      "csatorna": "telefon"
+    },
+    {
+      "leiras": "Beérkező hívások fogadása hirdetésekre jelentkező érdeklődőktől",
+      "task_idk": [
+        "4625"
+      ],
+      "emberi_mag": false,
+      "csatorna": "telefon"
+    },
+    {
+      "leiras": "Utánkövetés: levelezés és visszahívás az ügyfelekkel, első megkeresések folytatása",
+      "task_idk": [
+        "4626"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Ügyféladatok felvétele, rendelések rögzítése és nyilvántartás vezetése",
+      "task_idk": [
+        "4621",
+        "4627",
+        "4622"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Piackutatás, felmérések és időpont-egyeztetés az értékesítőknek",
+      "task_idk": [
+        "4629",
+        "4628"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Ügyfelek felhívása és megkeresése telefonon (értékesítés, adománygyűjtés)",
+      "task_idk": [
+        "4619",
+        "4624"
+      ],
+      "idoArany": 0.1548,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.152,
+      "horizont": "1-3ev",
+      "csatorna": "telefon",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Termékek, szolgáltatások és árak elmagyarázása, ügyfélkérdések megválaszolása",
+      "task_idk": [
+        "4620"
+      ],
+      "idoArany": 0.11,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.303,
+      "horizont": "1-3ev",
+      "csatorna": "telefon",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Beszélgetés közbeni értékesítési szöveg előadása, szkript követése és az ügyfélhez igazítása",
+      "task_idk": [
+        "4618",
+        "4623"
+      ],
+      "idoArany": 0.1514,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.104,
+      "horizont": "ma",
+      "csatorna": "telefon",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Beérkező hívások fogadása hirdetésekre jelentkező érdeklődőktől",
+      "task_idk": [
+        "4625"
+      ],
+      "idoArany": 0.0999,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.152,
+      "horizont": "ma",
+      "csatorna": "telefon",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Utánkövetés: levelezés és visszahívás az ügyfelekkel, első megkeresések folytatása",
+      "task_idk": [
+        "4626"
+      ],
+      "idoArany": 0.0952,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.152,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Ügyféladatok felvétele, rendelések rögzítése és nyilvántartás vezetése",
+      "task_idk": [
+        "4621",
+        "4627",
+        "4622"
+      ],
+      "idoArany": 0.3222,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.152,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Piackutatás, felmérések és időpont-egyeztetés az értékesítőknek",
+      "task_idk": [
+        "4629",
+        "4628"
+      ],
+      "idoArany": 0.0664,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.152,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 16%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "4619": "Contact businesses or private individuals by telephone to solicit sales for goods or services, or to request donations for charitable causes.",
+    "4620": "Explain products or services and prices, and answer questions from customers.",
+    "4621": "Obtain customer information such as name, address, and payment method, and enter orders into computers.",
+    "4627": "Maintain records of contacts, accounts, and orders.",
+    "4622": "Record names, addresses, purchases, and reactions of prospects contacted.",
+    "4618": "Deliver prepared sales talks, reading from scripts that describe products or services, to persuade potential customers to purchase a product or service or to make a donation.",
+    "4625": "Answer telephone calls from potential customers who have been solicited through advertisements.",
+    "4626": "Telephone or write letters to respond to correspondence from customers or to follow up initial sales contacts.",
+    "4623": "Adjust sales scripts to better target the needs and interests of specific individuals.",
+    "4624": "Obtain names and telephone numbers of potential customers from sources such as telephone directories, magazine reply cards, and lists purchased from other organizations.",
+    "4629": "Conduct client or market surveys to obtain information about potential customers.",
+    "4628": "Schedule appointments for sales representatives to meet with prospective customers or for customers to attend sales presentations."
+  }
+}

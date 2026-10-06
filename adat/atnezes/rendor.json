@@ -1,0 +1,252 @@
+{
+  "ellenorizve": false,
+  "slug": "rendor",
+  "nev": "Rendőr",
+  "aliasok": [
+    "rendőrtiszt",
+    "járőr",
+    "zsaru",
+    "közrendész",
+    "rendőrségi nyomozó",
+    "közlekedési rendőr",
+    "rendőrség"
+  ],
+  "feor_kod": "5251",
+  "isco_kod": "5412",
+  "soc_kodok": [
+    "33-3051.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "rendőrök",
+  "fekek": {
+    "fizikai": {
+      "ertek": 3,
+      "indoklas": "A járőrözés, intézkedés, elfogás és elsősegélynyújtás fizikai jelenlétet, erőnlétet és helyszíni helyzetkezelést igényel."
+    },
+    "felelosseg": {
+      "ertek": 3,
+      "indoklas": "A rendőr kényszerítő eszközt alkalmazhat, szabadságot korlátozhat, intézkedéseiért pedig jogi és szakmai felelősséggel tartozik."
+    },
+    "szabalyozas": {
+      "ertek": 3,
+      "indoklas": "A rendőri intézkedéseket szigorú jogszabályok (Rendőrségi törvény, büntetőeljárási szabályok) és az EU AI Act magas kockázatú rendészeti szabályai is korlátozzák."
+    },
+    "bizalom": {
+      "ertek": 3,
+      "indoklas": "A közbiztonság és az állam erőszak-monopóliuma miatt a társadalom elvárja, hogy a döntéseket és intézkedéseket ember hozza és vállalja."
+    }
+  },
+  "teendo_szoveg": "A helyszíni jelenlét, a helyzetfelismerés és a higgadt kommunikáció marad a munkád legfontosabb része. Ismerkedj meg a digitális eszközökkel, például a jelentéskészítő, adatelemző és térinformatikai rendszerekkel, hogy az adminisztrációra kevesebb időd menjen. Fejleszd a konfliktuskezelést, az elsősegély-ismereteidet és a nyomozati készségeidet, mert ezekben az ember jelenléte nélkülözhetetlen.",
+  "csoportok": [
+    {
+      "leiras": "Közterületi járőrözés és közbiztonság fenntartása",
+      "task_idk": [
+        "23052",
+        "23059",
+        "23066",
+        "23057",
+        "23072",
+        "23071"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Elfogás, őrizetbe vétel és fogvatartottak szállítása",
+      "task_idk": [
+        "23051",
+        "23065",
+        "23079",
+        "23073"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Közlekedés ellenőrzése és forgalomirányítás",
+      "task_idk": [
+        "23060",
+        "23068"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Elsősegélynyújtás és segítség a bajba jutottaknak",
+      "task_idk": [
+        "23054"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Nyomozás, helyszínelés és tényállás-értékelés",
+      "task_idk": [
+        "23055",
+        "23062",
+        "23056",
+        "23067",
+        "23063"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Bejelentések fogadása, értékelése és továbbítása",
+      "task_idk": [
+        "23061",
+        "23064",
+        "23069"
+      ],
+      "emberi_mag": false,
+      "csatorna": "telefon"
+    },
+    {
+      "leiras": "Jelentések írása, tájékoztatás és bírósági tanúskodás",
+      "task_idk": [
+        "23053",
+        "23074",
+        "23076",
+        "23058"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Közterületi járőrözés és közbiztonság fenntartása",
+      "task_idk": [
+        "23052",
+        "23059",
+        "23066",
+        "23057",
+        "23072",
+        "23071"
+      ],
+      "idoArany": 0.267,
+      "kitettseg": 0.082,
+      "kivaltasArany": 0.323,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Elfogás, őrizetbe vétel és fogvatartottak szállítása",
+      "task_idk": [
+        "23051",
+        "23065",
+        "23079",
+        "23073"
+      ],
+      "idoArany": 0.1503,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.323,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Közlekedés ellenőrzése és forgalomirányítás",
+      "task_idk": [
+        "23060",
+        "23068"
+      ],
+      "idoArany": 0.0787,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.323,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Elsősegélynyújtás és segítség a bajba jutottaknak",
+      "task_idk": [
+        "23054"
+      ],
+      "idoArany": 0.0388,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.323,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Nyomozás, helyszínelés és tényállás-értékelés",
+      "task_idk": [
+        "23055",
+        "23062",
+        "23056",
+        "23067",
+        "23063"
+      ],
+      "idoArany": 0.2105,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.323,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Bejelentések fogadása, értékelése és továbbítása",
+      "task_idk": [
+        "23061",
+        "23064",
+        "23069"
+      ],
+      "idoArany": 0.1208,
+      "kitettseg": 0.686,
+      "kivaltasArany": 0.323,
+      "horizont": "1-3ev",
+      "csatorna": "telefon",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Jelentések írása, tájékoztatás és bírósági tanúskodás",
+      "task_idk": [
+        "23053",
+        "23074",
+        "23076",
+        "23058"
+      ],
+      "idoArany": 0.1339,
+      "kitettseg": 0.578,
+      "kivaltasArany": 0.287,
+      "horizont": "1-3ev",
+      "csatorna": "irasos",
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "A kis súlyú feladatok elhagyása a munkaidő 8%-át érinti.",
+    "Az Economic Index a munkaidő csak 8%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "23052": "Provide for public safety by maintaining order, responding to emergencies, protecting people and property, enforcing motor vehicle and criminal laws, and promoting good community relations.",
+    "23059": "Drive vehicles or patrol specific areas to detect law violators, issue citations, and make arrests.",
+    "23051": "Identify, pursue, and arrest suspects and perpetrators of criminal acts.",
+    "23053": "Record facts to prepare reports that document incidents and activities.",
+    "23055": "Investigate illegal or suspicious activities.",
+    "23062": "Verify that the proper legal charges have been made against law offenders.",
+    "23060": "Monitor traffic to ensure motorists observe traffic regulations and exhibit safe driving procedures.",
+    "23066": "Patrol specific area on foot, horseback, or motorized conveyance, responding promptly to calls for assistance.",
+    "23056": "Review facts of incidents to determine if criminal act or statute violations were involved.",
+    "23061": "Relay complaint and emergency-request information to appropriate agency dispatchers.",
+    "23057": "Monitor, note, report, and investigate suspicious persons and situations, safety hazards, and unusual or illegal activity in patrol area.",
+    "23072": "Patrol and guard courthouses, grand jury rooms, or assigned areas to provide security, enforce laws, maintain order, and arrest violators.",
+    "23064": "Evaluate complaint and emergency-request information to determine response requirements.",
+    "23067": "Investigate traffic accidents and other accidents to determine causes and to determine if a crime has been committed.",
+    "23054": "Render aid to accident survivors and other persons requiring first aid for physical injuries.",
+    "23065": "Execute arrest warrants, locating and taking persons into custody.",
+    "23069": "Notify patrol units to take violators into custody or to provide needed assistance or medical aid.",
+    "23079": "Place people in protective custody.",
+    "23071": "Question individuals entering secured areas to determine their business, directing and rerouting individuals as necessary.",
+    "23063": "Photograph or draw diagrams of crime or accident scenes and interview principals and eyewitnesses.",
+    "23068": "Direct traffic flow and reroute traffic in case of emergencies.",
+    "23073": "Transport or escort prisoners and defendants en route to courtrooms, prisons or jails, attorneys' offices, or medical facilities.",
+    "23074": "Inform citizens of community services and recommend options to facilitate longer-term problem resolution.",
+    "23076": "Provide road information to assist motorists.",
+    "23058": "Testify in court to present evidence or act as witness in traffic and criminal cases."
+  }
+}

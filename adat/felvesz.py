@@ -28,10 +28,10 @@ from pathlib import Path
 
 import pandas as pd
 
-CSV_OSZLOPOK = ["slug", "nev", "aliasok", "feor_kod", "isco_kod", "onet_soc_kodok", "heti_ora",
+CSV_OSZLOPOK = ["slug", "nev", "feor_nev", "aliasok", "feor_kod", "isco_kod", "onet_soc_kodok", "heti_ora",
                 "indexelheto", "tobbes", "bizonyossag", "statusz", "forras", "indoklas"]
 
-GYUJTO_MINTAK = ("máshova nem sorolt", "másutt nem sorolt", "m.n.s.", "egyéb ", " egyéb")
+GYUJTO_MINTAK = ("máshova nem sorolt", "másutt nem sorolt", "m.n.s.")   # + az "Egyéb…"-gyel kezdődő nevek
 MAX_JELOLT = 15
 KOTEG_1, KOTEG_2 = 25, 10
 ANGOL_STOP = {"and", "of", "the", "for", "in", "to", "all", "other", "workers", "worker", "except", "a", "an"}
@@ -42,19 +42,17 @@ _MAGYAR_ASCII = str.maketrans({"ö": "o", "ő": "o", "ü": "u", "ű": "u", "Ö":
 # ───────────────────────── névtisztítás, slug ─────────────────────────
 
 def gyujto_e(nev: str) -> bool:
-    n = " " + nev.lower() + " "
-    return any(m in n for m in GYUJTO_MINTAK)
+    n = nev.lower().strip()
+    return n.startswith("egyéb") or any(m in n for m in GYUJTO_MINTAK)
 
 
 def tisztit_nev(nyers: str) -> tuple[str, list[str]]:
-    """'Számviteli (könyvelői) ügyintéző' → ('Számviteli ügyintéző', ['Számviteli könyvelői ügyintéző', 'könyvelői'])"""
+    """'Gazdasági szervezet vezetője (igazgató, elnök)' → ('Gazdasági szervezet vezetője', ['igazgató', 'elnök'])"""
     nyers = re.sub(r"\s+", " ", nyers).strip()
-    zarojelesek = re.findall(r"\(([^)]*)\)", nyers)
     nev = re.sub(r"\s*\([^)]*\)", "", nyers).strip(" ,;-")
     extra = []
-    if zarojelesek:
-        extra.append(re.sub(r"[()]", "", nyers).replace("  ", " ").strip())
-        extra += [z.strip() for z in zarojelesek if z.strip()]
+    for z in re.findall(r"\(([^)]*)\)", nyers):
+        extra += [x.strip() for x in re.split(r"[,;]", z) if x.strip()]
     return nev, extra
 
 
@@ -80,6 +78,55 @@ def egyedi_slug(nev: str, feor: str, foglalt: set[str]) -> str:
 
 # ───────────────────────── forrásfájlok ─────────────────────────
 
+def felulirasok_beolvas(ut, beolvas) -> dict[str, dict]:
+    """Kézi javítások: feor_kod → {nev, tobbes, onet_soc_kodok, aliasok} (csak a kitöltött mezők)."""
+    if not ut or not Path(ut).exists():
+        return {}
+    df = beolvas(ut)
+    ered = {}
+    for _, r in df.iterrows():
+        kod = _kod(r.get("feor_kod", ""))
+        if kod:
+            ered[kod] = {k: str(r[k]).strip() for k in ("nev", "tobbes", "onet_soc_kodok", "aliasok")
+                         if k in df.columns and str(r[k]).strip()}
+    return ered
+
+
+def kodok_beolvas(forras: str) -> list[str]:
+    """'4114,4225' vagy egy szövegfájl útvonala (soronként egy kód, # utáni rész megjegyzés)."""
+    p = Path(forras)
+    szoveg = p.read_text(encoding="utf-8-sig") if p.exists() else forras
+    kodok = []
+    for sor in szoveg.splitlines():
+        sor = sor.split("#", 1)[0]
+        kodok += re.findall(r"\b\d{4}\b", sor)
+    return list(dict.fromkeys(kodok))
+
+
+def _kod(x) -> str:
+    """Csak számjegyek; az Excelből jövő '1111.0' alakot is védi."""
+    t = str(x).strip()
+    if t.endswith(".0"):
+        t = t[:-2]
+    return re.sub(r"\D", "", t)
+
+
+def beolvas_fejleces(ut, kulcsparok, beolvas) -> pd.DataFrame:
+    """Excel, amelynek tetején címsorok vannak (BLS): megkeresi azt a sort, ahol minden kulcspár
+    ((szó1, szó2), ...) előfordul valamelyik cellában, és azt használja fejlécnek."""
+    p = Path(ut)
+    if p.suffix.lower() in {".xls", ".xlsx"}:
+        nyers = pd.read_excel(p, sheet_name=0, header=None, dtype=str).fillna("")
+        for i in range(min(60, len(nyers))):
+            sor = [str(c).strip() for c in nyers.iloc[i]]
+            if all(any(all(k in c.lower() for k in par) for c in sor) for par in kulcsparok):
+                df = nyers.iloc[i + 1:].copy()
+                df.columns = sor
+                return df.reset_index(drop=True)
+        sys.exit(f"{p.name}: nem találom a fejlécsort ({kulcsparok}).")
+    return beolvas(p)
+
+
 def feor_lista(df: pd.DataFrame, oszlop, szint: int = 4) -> list[tuple[str, str]]:
     """→ [(kód, név)] – csak a kért jegyszámú kódok."""
     kod_c = oszlop(df, ["FEOR-08", "FEOR08", "FEOR", "feor_kod", "Kód", "Kod", "code"], kotelezo=False)
@@ -95,7 +142,7 @@ def feor_lista(df: pd.DataFrame, oszlop, szint: int = 4) -> list[tuple[str, str]
             if m:
                 par.append((m.group(1), m.group(2)))
     for kod, nev in par:
-        kod = re.sub(r"\D", "", kod.strip())
+        kod = _kod(kod)
         nev = nev.strip()
         if len(kod) != szint or not nev or kod in latott:
             continue
@@ -112,14 +159,14 @@ def kereszt_kapcsolat(feor_isco: pd.DataFrame | None, isco_soc: pd.DataFrame | N
         f = oszlop(feor_isco, ["FEOR-08", "FEOR08", "FEOR", "feor_kod"])
         i = oszlop(feor_isco, ["ISCO-08", "ISCO08", "ISCO", "isco_kod"])
         for a, b in zip(feor_isco[f], feor_isco[i]):
-            a, b = re.sub(r"\D", "", str(a)), re.sub(r"\D", "", str(b))
+            a, b = _kod(a), _kod(b)
             if a and b and b not in f2i.setdefault(a, []):
                 f2i[a].append(b)
     if isco_soc is not None:
         i = oszlop(isco_soc, ["ISCO-08 Code", "ISCO08", "ISCO-08", "isco_kod"])
         s = oszlop(isco_soc, ["2010 SOC Code", "SOC 2010", "SOC", "soc_kod"])
         for a, b in zip(isco_soc[i], isco_soc[s]):
-            a = re.sub(r"\D", "", str(a))
+            a = _kod(a)
             m = re.search(r"\d{2}-\d{4}", str(b))
             if a and m and m.group(0) not in i2s.setdefault(a, []):
                 i2s[a].append(m.group(0))
@@ -154,13 +201,17 @@ def hasonlo_cimek(angol: str, cimek: dict[str, str], n: int = MAX_JELOLT) -> lis
 
 PROMPT_1 = """Magyar foglalkozásnevekből (FEOR-08) készítesz keresőadatot egy nyilvános "AI-Munkaprofil" oldalhoz.
 Minden bemeneti foglalkozáshoz add vissza:
+- "rovid_nev": a foglalkozás rövid, hétköznapi magyar neve egyes számban, ahogy az emberek mondanák, és ahogy
+  egy weboldal címében jól mutat (max. 40 karakter, nagy kezdőbetűvel, hivatali körülírás nélkül). Ha a kód több
+  rokon munkát fed le, a leggyakoribb vagy az átfogó nevet add (pl. "Polgármester", nem "Helyi önkormányzat
+  választott vezetője"). Maradjon megkülönböztethető a többi bemeneti foglalkozástól.
 - "en": a legközelebbi angol (US/O*NET) foglalkozáscím, rövid, tőszámnévi/általános alakban (pl. "Accountant")
 - "aliasok": 3–8 olyan keresőkifejezés, amit magyar emberek ténylegesen beírnának erre a munkára (hétköznapi
   és szakmai változatok, szleng, gyakori rövidítés). Ne ismételd a hivatalos nevet, ne legyenek általános
   szavak ("dolgozó"), kisbetűvel írd őket, kivéve a tulajdonneveket.
-- "tobbes": a foglalkozás többes szám alanyesete kisbetűvel, hogy ez illjen: "Elveszi az AI a ____ munkáját?"
+- "tobbes": a "rovid_nev" többes szám alanyesete kisbetűvel, hogy ez illjen: "Elveszi az AI a ____ munkáját?"
   (pl. "könyvelők", "villanyszerelők").
-Csak érvényes JSON-t adj vissza: {"munkakorok":[{"feor":"2411","en":"...","aliasok":["..."],"tobbes":"..."}]}
+Csak érvényes JSON-t adj vissza: {"munkakorok":[{"feor":"2411","rovid_nev":"...","en":"...","aliasok":["..."],"tobbes":"..."}]}
 Minden bemeneti "feor" pontosan egyszer szerepeljen."""
 
 PROMPT_2 = """Foglalkozásokat feleltetsz meg O*NET-SOC kódoknak egy munkaerőpiaci eszközhöz.
@@ -233,13 +284,16 @@ def _kotegelt(elemek: list[dict], meret: int, rendszer: str, kulcs_mezo: str, va
 
 def _ellenoriz_1(x: dict, _bemenet: dict) -> dict:
     en = str(x.get("en", "")).strip()
+    rovid = re.sub(r"\s+", " ", str(x.get("rovid_nev", ""))).strip()
+    if not rovid or len(rovid) > 45:
+        raise ValueError("a 'rovid_nev' hiányzik vagy 45 karakternél hosszabb")
     aliasok = [str(a).strip() for a in x.get("aliasok") or [] if str(a).strip()]
     tobbes = str(x.get("tobbes", "")).strip()
     if not en or not tobbes:
         raise ValueError("hiányzik az 'en' vagy a 'tobbes'")
     if not 1 <= len(aliasok) <= 12:
         raise ValueError("az aliasok száma 1–12 kell legyen")
-    return {"en": en, "aliasok": aliasok, "tobbes": tobbes}
+    return {"en": en, "rovid_nev": rovid[0].upper() + rovid[1:], "aliasok": aliasok, "tobbes": tobbes}
 
 
 def _ellenoriz_2(x: dict, bemenet: dict) -> dict:
@@ -257,6 +311,7 @@ def _ellenoriz_2(x: dict, bemenet: dict) -> dict:
 
 def felvesz(args, gyoker: Path, beolvas, oszlop, figyel, hivas=None) -> dict:
     hivas = hivas or claude_json
+    ov = felulirasok_beolvas(getattr(args, "felulirasok", None), beolvas)
     feor = feor_lista(beolvas(args.feor), oszlop, args.feor_szint)
     if not feor:
         sys.exit(f"Nem találtam {args.feor_szint} jegyű FEOR-kódot a fájlban.")
@@ -271,7 +326,8 @@ def felvesz(args, gyoker: Path, beolvas, oszlop, figyel, hivas=None) -> dict:
     if args.onet_feladatok:
         cimek = onet_cimek(beolvas(args.onet_feladatok), oszlop)
     f2i, i2s = kereszt_kapcsolat(beolvas(args.feor_isco) if args.feor_isco else None,
-                                 beolvas(args.isco_soc) if args.isco_soc else None, oszlop)
+                                 beolvas_fejleces(args.isco_soc, (("isco", "code"), ("soc", "code")), beolvas)
+                                 if args.isco_soc else None, oszlop)
     onet_elotag: dict[str, list[str]] = {}
     for kod in cimek:
         onet_elotag.setdefault(kod[:7], []).append(kod)
@@ -285,8 +341,13 @@ def felvesz(args, gyoker: Path, beolvas, oszlop, figyel, hivas=None) -> dict:
             kihagyott.append(f"{kod} {nyers_nev}")
             continue
         nev, extra = tisztit_nev(nyers_nev)
-        sorok.append({"feor_kod": kod, "nev": nev, "extra_aliasok": extra,
-                      "slug": egyedi_slug(nev, kod, foglalt)})
+        sorok.append({"feor_kod": kod, "nev": nev, "extra_aliasok": extra})
+    if getattr(args, "kodok", None):
+        kert = kodok_beolvas(args.kodok)
+        hianyzo = [k for k in kert if k not in {x["feor_kod"] for x in sorok}]
+        if hianyzo:
+            figyel(f"Ezek a kért kódok nincsenek az új sorok közt (nincs a listában, gyűjtőkategória vagy már meglévő): {hianyzo}")
+        sorok = [x for x in sorok if x["feor_kod"] in set(kert)]
     if args.limit:
         sorok = sorok[:args.limit]
     print(f"  {len(feor)} FEOR-sor, {len(sorok)} új munkakör, {len(kihagyott)} gyűjtőkategória kihagyva")
@@ -297,6 +358,15 @@ def felvesz(args, gyoker: Path, beolvas, oszlop, figyel, hivas=None) -> dict:
     else:
         info = _kotegelt([{"feor": s["feor_kod"], "nev": s["nev"]} for s in sorok], KOTEG_1, PROMPT_1,
                          "feor", "munkakorok", _ellenoriz_1, args.modell, gyoker / "claude_cache", hivas)
+
+    # megjelenített név és slug: Claude rövid neve, ennek hiányában a hivatalos
+    for s_ in sorok:
+        s_["feor_nev"] = s_["nev"]
+        o = ov.get(s_["feor_kod"], {})
+        s_["nev"] = o.get("nev") or (info.get(s_["feor_kod"]) or {}).get("rovid_nev") or s_["feor_nev"]
+        if o.get("nev") and not o.get("tobbes"):
+            figyel(f"{s_['feor_kod']}: kézi 'nev' van, de 'tobbes' nincs – a többes szám a régi névből marad.")
+        s_["slug"] = egyedi_slug(s_["nev"], s_["feor_kod"], foglalt)
 
     # SOC-jelöltek: keresztkapcsolat + hasonlóság
     jeloltek: dict[str, list[dict]] = {}
@@ -329,6 +399,7 @@ def felvesz(args, gyoker: Path, beolvas, oszlop, figyel, hivas=None) -> dict:
     for s in sorok:
         k = s["feor_kod"]
         i = info.get(k) or {}
+        o = ov.get(k, {})
         v = valasztas.get(k)
         if v is not None:
             kodok, biz, ind = v["kodok"], v["bizonyossag"], v["indoklas"]
@@ -337,12 +408,26 @@ def felvesz(args, gyoker: Path, beolvas, oszlop, figyel, hivas=None) -> dict:
             kodok, biz, ind, forras = kereszt[k][:2], 0.5, "keresztkapcsolat, Claude nélkül", "keresztkapcsolat"
         else:
             kodok, biz, ind, forras = [], 0.0, "nincs jelölt", "nincs"
-        statusz = ("hianyzik" if not kodok else "auto" if biz >= args.biztos_kuszob else "atnezendo")
-        aliasok = list(dict.fromkeys(s["extra_aliasok"] + i.get("aliasok", [])))
-        aliasok = [a for a in aliasok if a.lower() != s["nev"].lower()]
-        uj.append({"slug": s["slug"], "nev": s["nev"], "aliasok": ";".join(aliasok), "feor_kod": k,
+        if o.get("onet_soc_kodok"):
+            kodok = [x.strip() for x in o["onet_soc_kodok"].split(";") if x.strip()]
+            ismeretlen = [x for x in kodok if cimek and x not in cimek]
+            if ismeretlen:
+                figyel(f"{k}: kézi SOC-kód nincs az O*NET-adatban: {ismeretlen}")
+            biz, ind, forras = 1.0, "kézi felülírás", "kezi"
+        statusz = ("kezi" if forras == "kezi" else "hianyzik" if not kodok
+                   else "auto" if biz >= args.biztos_kuszob else "atnezendo")
+        hivatalos = [s["feor_nev"]] if len(s["feor_nev"]) <= 60 else []
+        kezi_alias = [a for a in o.get("aliasok", "").split(";") if a.strip()]
+        jeloltek_alias = kezi_alias + hivatalos + s["extra_aliasok"] + i.get("aliasok", [])
+        aliasok, latott_alias = [], {s["nev"].lower()}
+        for a in jeloltek_alias:
+            a = a.strip()
+            if a and len(a) <= 60 and a.lower() not in latott_alias:
+                latott_alias.add(a.lower())
+                aliasok.append(a)
+        uj.append({"slug": s["slug"], "nev": s["nev"], "feor_nev": s["feor_nev"], "aliasok": ";".join(aliasok), "feor_kod": k,
                    "isco_kod": ";".join(f2i.get(k, [])), "onet_soc_kodok": ";".join(kodok), "heti_ora": 40,
-                   "indexelheto": "false", "tobbes": i.get("tobbes", ""), "bizonyossag": biz,
+                   "indexelheto": "false", "tobbes": o.get("tobbes") or i.get("tobbes", ""), "bizonyossag": biz,
                    "statusz": statusz, "forras": forras, "indoklas": ind})
 
     kimenet = Path(args.kimenet)
@@ -351,9 +436,13 @@ def felvesz(args, gyoker: Path, beolvas, oszlop, figyel, hivas=None) -> dict:
     teljes = pd.concat([regi, pd.DataFrame(uj, columns=CSV_OSZLOPOK)], ignore_index=True)
     teljes.to_csv(kimenet, index=False, encoding="utf-8-sig")
 
-    riport = {"osszes_feor_sor": len(feor), "uj": len(uj), "meglevo": len(regi),
+    nevek = [u["nev"].lower() for u in uj]
+    duplikalt = sorted({n for n in nevek if nevek.count(n) > 1})
+    if duplikalt:
+        figyel(f"Azonos megjelenített név több sorban (kézzel különböztesd meg): {duplikalt}")
+    riport = {"duplikalt_nevek": duplikalt, "osszes_feor_sor": len(feor), "uj": len(uj), "meglevo": len(regi),
               "gyujtokategoria_kihagyva": kihagyott,
-              "statusz": {n: sum(1 for u in uj if u["statusz"] == n) for n in ("auto", "atnezendo", "hianyzik")},
+              "statusz": {n: sum(1 for u in uj if u["statusz"] == n) for n in ("auto", "atnezendo", "hianyzik", "kezi")},
               "claude_nelkul_aliasok": sum(1 for u in uj if not u["tobbes"])}
     Path(str(kimenet) + ".riport.json").write_text(json.dumps(riport, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"✓ {len(teljes)} sor → {kimenet}  ({riport['statusz']})")

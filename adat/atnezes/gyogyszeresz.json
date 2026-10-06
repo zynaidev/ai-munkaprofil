@@ -1,0 +1,257 @@
+{
+  "ellenorizve": false,
+  "slug": "gyogyszeresz",
+  "nev": "Gyógyszerész",
+  "aliasok": [
+    "Gyógyszerész, szakgyógyszerész",
+    "patikus",
+    "szakgyógyszerész",
+    "gyógyszertári gyógyszerész",
+    "kórházi gyógyszerész",
+    "gyógyszertár vezető",
+    "patikai dolgozó"
+  ],
+  "feor_kod": "2214",
+  "isco_kod": "2262",
+  "soc_kodok": [
+    "29-1051.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "gyógyszerészek",
+  "fekek": {
+    "fizikai": {
+      "ertek": 2,
+      "indoklas": "A gyógyszerkészítéshez, steril munkához és a készletkezeléshez fizikai jelenlét és kézügyesség kell, bár a feladatok egy része automatizálható."
+    },
+    "felelosseg": {
+      "ertek": 3,
+      "indoklas": "A gyógyszerkiadásért a gyógyszerész jogilag és szakmailag felel, a receptek ellenőrzése és kiadása az ő aláírásához és kamarai nyilvántartásához kötött."
+    },
+    "szabalyozas": {
+      "ertek": 3,
+      "indoklas": "A gyógyszertárakat szigorú ágazati előírások (gyógyszerészeti törvények, kábítószer-nyilvántartás, receptkezelés) szabályozzák, és az EU AI Act is magas kockázatúként kezelheti az egészségügyi AI-t."
+    },
+    "bizalom": {
+      "ertek": 3,
+      "indoklas": "A magyar betegek a gyógyszerészt megbízható, személyes egészségügyi tanácsadónak tartják, és érzékeny egészségügyi kérdésekben embert várnak."
+    }
+  },
+  "teendo_szoveg": "A rutinellenőrzéseket és a nyilvántartást egyre inkább szoftverek támogatják, ezért használd ki ezt: az így felszabaduló időt fordítsd személyes tanácsadásra és betegekkel való kapcsolatra. Építs szaktudást a krónikus betegek gondozásában (például cukorbetegség, asztma, magas vérnyomás), és vállalj aktív szerepet az orvosokkal való együttműködésben. Ismerd meg a gyógyszertári AI- és ellenőrző eszközöket is, mert aki biztosan használja őket, annak gyorsabb és pontosabb lesz a munkája.",
+  "csoportok": [
+    {
+      "leiras": "Receptek ellenőrzése, gyógyszerszedési minták és kölcsönhatások figyelése",
+      "task_idk": [
+        "1808",
+        "1810"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Betegek és vásárlók tájékoztatása, tanácsadás gyógyszerekről és termékekről",
+      "task_idk": [
+        "1809",
+        "1814",
+        "1818"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Szakmai együttműködés orvosokkal, kórházi és klinikai gyógyszerészi munka",
+      "task_idk": [
+        "1823",
+        "1815"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Krónikus betegek gondozása és egészségmegőrzési programok",
+      "task_idk": [
+        "1813",
+        "20404"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Gyógyszerkészítés, steril oldatok, hatóanyag-vizsgálat és kiadás",
+      "task_idk": [
+        "1819",
+        "1824",
+        "1816",
+        "1821"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Gyártási, csomagolási és címkézési eljárások felügyelete, minőségbiztosítás",
+      "task_idk": [
+        "1820"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Nyilvántartások, rendelés, készletkezelés, adatbázisok és számlázás",
+      "task_idk": [
+        "1812",
+        "1811",
+        "20406",
+        "20405"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Patika vezetése, munkatársak irányítása, hallgatók oktatása és szakmai publikálás",
+      "task_idk": [
+        "1822",
+        "1825",
+        "1826"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Receptek ellenőrzése, gyógyszerszedési minták és kölcsönhatások figyelése",
+      "task_idk": [
+        "1808",
+        "1810"
+      ],
+      "idoArany": 0.1308,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.099,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Betegek és vásárlók tájékoztatása, tanácsadás gyógyszerekről és termékekről",
+      "task_idk": [
+        "1809",
+        "1814",
+        "1818"
+      ],
+      "idoArany": 0.1385,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.092,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Szakmai együttműködés orvosokkal, kórházi és klinikai gyógyszerészi munka",
+      "task_idk": [
+        "1823",
+        "1815"
+      ],
+      "idoArany": 0.1374,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.099,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Krónikus betegek gondozása és egészségmegőrzési programok",
+      "task_idk": [
+        "1813",
+        "20404"
+      ],
+      "idoArany": 0.0918,
+      "kitettseg": 0.314,
+      "kivaltasArany": 0.099,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Gyógyszerkészítés, steril oldatok, hatóanyag-vizsgálat és kiadás",
+      "task_idk": [
+        "1819",
+        "1824",
+        "1816",
+        "1821"
+      ],
+      "idoArany": 0.2051,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.129,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Gyártási, csomagolási és címkézési eljárások felügyelete, minőségbiztosítás",
+      "task_idk": [
+        "1820"
+      ],
+      "idoArany": 0.0529,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.099,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Nyilvántartások, rendelés, készletkezelés, adatbázisok és számlázás",
+      "task_idk": [
+        "1812",
+        "1811",
+        "20406",
+        "20405"
+      ],
+      "idoArany": 0.1452,
+      "kitettseg": 0.6,
+      "kivaltasArany": 0.099,
+      "horizont": "1-3ev",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Patika vezetése, munkatársak irányítása, hallgatók oktatása és szakmai publikálás",
+      "task_idk": [
+        "1822",
+        "1825",
+        "1826"
+      ],
+      "idoArany": 0.0983,
+      "kitettseg": 0.802,
+      "kivaltasArany": 0.077,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": true
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 19%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "1808": "Review prescriptions to assure accuracy, to ascertain the needed ingredients, and to evaluate their suitability.",
+    "1823": "Work in hospitals or clinics or for Health Management Organizations (HMOs), dispensing prescriptions, serving as a medical team consultant, or specializing in specific drug therapy areas, such as oncology or nuclear pharmacotherapy.",
+    "1815": "Collaborate with other health care professionals to plan, monitor, review, or evaluate the quality or effectiveness of drugs or drug regimens, providing advice on drug applications or characteristics.",
+    "1809": "Provide information and advice regarding drug interactions, side effects, dosage, and proper medication storage.",
+    "1810": "Analyze prescribing trends to monitor patient compliance and to prevent excessive usage or harmful interactions.",
+    "1813": "Provide specialized services to help patients manage conditions, such as diabetes, asthma, smoking cessation, or high blood pressure.",
+    "1819": "Prepare sterile solutions or infusions for use in surgical procedures, emergency rooms, or patients' homes.",
+    "1824": "Assess the identity, strength, or purity of medications.",
+    "1816": "Compound and dispense medications as prescribed by doctors and dentists, by calculating, weighing, measuring, and mixing ingredients, or oversee these activities.",
+    "1812": "Maintain records, such as pharmacy files, patient profiles, charge system files, inventories, control records for radioactive nuclei, or registries of poisons, narcotics, or controlled drugs.",
+    "1820": "Plan, implement, or maintain procedures for mixing, packaging, or labeling pharmaceuticals, according to policy and legal requirements, to ensure quality, security, and proper disposal.",
+    "1825": "Teach pharmacy students serving as interns in preparation for their graduation or licensure.",
+    "1821": "Assay radiopharmaceuticals, verify rates of disintegration, and calculate the volume required to produce the desired results, to ensure proper dosages.",
+    "1811": "Order and purchase pharmaceutical supplies, medical supplies, or drugs, maintaining stock and storing and handling it properly.",
+    "1814": "Advise customers on the selection of medication brands, medical equipment, or healthcare supplies.",
+    "1822": "Manage pharmacy operations, hiring or supervising staff, performing administrative duties, or buying or selling non-pharmaceutical merchandise.",
+    "1818": "Refer patients to other health professionals or agencies when appropriate.",
+    "20404": "Offer health promotion or prevention activities, such as training people to use blood pressure devices or diabetes monitors.",
+    "20406": "Update or troubleshoot pharmacy information databases.",
+    "20405": "Contact insurance companies to resolve billing issues.",
+    "1826": "Publish educational information for other pharmacists, doctors, or patients."
+  }
+}

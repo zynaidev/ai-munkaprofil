@@ -1,0 +1,240 @@
+{
+  "ellenorizve": false,
+  "slug": "takarito",
+  "nev": "Takarító",
+  "aliasok": [
+    "Intézményi takarító és kisegítő",
+    "takarítónő",
+    "intézményi takarító",
+    "épülettakarító",
+    "irodai takarító",
+    "takarítónéni",
+    "segédmunkás takarító",
+    "kisegítő"
+  ],
+  "feor_kod": "9112",
+  "isco_kod": "9112",
+  "soc_kodok": [
+    "37-2011.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "takarítók",
+  "fekek": {
+    "fizikai": {
+      "ertek": 3,
+      "indoklas": "A munka szinte teljes egészében fizikai jelenlétet és kézi munkát igényel változó, rendezetlen környezetben, ahol a robotok még nehezen boldogulnak."
+    },
+    "felelosseg": {
+      "ertek": 1,
+      "indoklas": "Általában nincs aláírást igénylő felelősség, de a vegyszerhasználat, az elektromos és gépészeti beavatkozások és az épület zárása szakmai felelősséggel járnak."
+    },
+    "szabalyozas": {
+      "ertek": 1,
+      "indoklas": "A munkavédelmi, vegyszerkezelési és kártevőirtási előírások kötik a munkát, az AI-szabályozás azonban közvetlenül alig érinti."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "A megbízók elvárják, hogy megbízható ember járjon az irodáikban és otthonaikban, ahol kulcsot és hozzáférést kap, ezért a személyes bizalom fontos."
+    }
+  },
+  "teendo_szoveg": "A takarítás kézi, helyszínhez kötött munka, ezért a szakmai tudásod jól kamatoztatható. Tanulj meg professzionális gépeket és vegyszereket használni, és szerezz szakmai bizonyítványt például mélytisztításból, padlóápolásból vagy kártevőirtásból. Aki épületfelügyelethez vagy kisebb karbantartáshoz is ért, és megbízhatóan dolgozik, sokoldalúbb és keresettebb munkaerő lesz.",
+  "csoportok": [
+    {
+      "leiras": "Napi takarítás: szemétgyűjtés, mosdók rendben tartása, padlók felmosása és porszívózása",
+      "task_idk": [
+        "9539",
+        "9538",
+        "9540"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Ablakok, bútorok és felületek tisztítása, pormentesítése",
+      "task_idk": [
+        "9546",
+        "9550",
+        "9549"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Szőnyegek és padlók mélytisztítása, felújítása",
+      "task_idk": [
+        "9547",
+        "9543"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Tisztítószerek keverése, vegyszerek és gépek biztonságos használata",
+      "task_idk": [
+        "9541",
+        "9542"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Épület őrzése, hibák jelzése, anyagok megrendelése",
+      "task_idk": [
+        "20590",
+        "9544",
+        "9545"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Kisebb épületgépészeti javítások, kéménytisztítás, rovar- és rágcsálóirtás",
+      "task_idk": [
+        "9555",
+        "9559",
+        "9554"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Nehéz tárgyak mozgatása, rendezvények előkészítése, kerti munkák, hóeltakarítás, vezetés",
+      "task_idk": [
+        "9551",
+        "20592",
+        "9548",
+        "20591",
+        "9552"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Napi takarítás: szemétgyűjtés, mosdók rendben tartása, padlók felmosása és porszívózása",
+      "task_idk": [
+        "9539",
+        "9538",
+        "9540"
+      ],
+      "idoArany": 0.2361,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Ablakok, bútorok és felületek tisztítása, pormentesítése",
+      "task_idk": [
+        "9546",
+        "9550",
+        "9549"
+      ],
+      "idoArany": 0.1899,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Szőnyegek és padlók mélytisztítása, felújítása",
+      "task_idk": [
+        "9547",
+        "9543"
+      ],
+      "idoArany": 0.0332,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Tisztítószerek keverése, vegyszerek és gépek biztonságos használata",
+      "task_idk": [
+        "9541",
+        "9542"
+      ],
+      "idoArany": 0.1388,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Épület őrzése, hibák jelzése, anyagok megrendelése",
+      "task_idk": [
+        "20590",
+        "9544",
+        "9545"
+      ],
+      "idoArany": 0.1939,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Kisebb épületgépészeti javítások, kéménytisztítás, rovar- és rágcsálóirtás",
+      "task_idk": [
+        "9555",
+        "9559",
+        "9554"
+      ],
+      "idoArany": 0.0693,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Nehéz tárgyak mozgatása, rendezvények előkészítése, kerti munkák, hóeltakarítás, vezetés",
+      "task_idk": [
+        "9551",
+        "20592",
+        "9548",
+        "20591",
+        "9552"
+      ],
+      "idoArany": 0.1388,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 0%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "9539": "Gather and empty trash.",
+    "9538": "Service, clean, or supply restrooms.",
+    "9540": "Clean building floors by sweeping, mopping, scrubbing, or vacuuming.",
+    "20590": "Monitor building security and safety by performing tasks such as locking doors after operating hours or checking electrical appliance use to ensure that hazards are not created.",
+    "9541": "Follow procedures for the use of chemical cleaners and power equipment to prevent damage to floors and fixtures.",
+    "9542": "Mix water and detergents or acids in containers to prepare cleaning solutions, according to specifications.",
+    "9546": "Clean windows, glass partitions, or mirrors, using soapy water or other cleaners, sponges, or squeegees.",
+    "9544": "Notify managers concerning the need for major repairs or additions to building operating systems.",
+    "9550": "Dust furniture, walls, machines, or equipment.",
+    "9549": "Clean and polish furniture and fixtures.",
+    "9545": "Requisition supplies or equipment needed for cleaning and maintenance duties.",
+    "9551": "Move heavy furniture, equipment, or supplies, either manually or with hand trucks.",
+    "20592": "Drive vans, industrial trucks, or other vehicles required to travel to, or to perform, cleaning work.",
+    "9555": "Make adjustments or minor repairs to heating, cooling, ventilating, plumbing, or electrical systems.",
+    "9559": "Clean chimneys, flues, and connecting pipes, using power or hand tools.",
+    "9548": "Set up, arrange, or remove decorations, tables, chairs, ladders, or scaffolding to prepare facilities for events, such as banquets or meetings.",
+    "9554": "Spray insecticides or fumigants to prevent insect or rodent infestation.",
+    "20591": "Mow or trim lawns or shrubbery, using mowers or hand or power trimmers, and clear debris from grounds.",
+    "9552": "Remove snow from sidewalks, driveways, or parking areas, using snowplows, snow blowers, or snow shovels, or spread snow-melting chemicals.",
+    "9547": "Steam-clean or shampoo carpets.",
+    "9543": "Strip, seal, finish, and polish floors."
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "ellenorizve": false,
+  "slug": "komuves",
+  "nev": "Kőműves",
+  "aliasok": [
+    "kőműves segéd",
+    "kőműves brigád",
+    "építőmunkás",
+    "falazó",
+    "vakoló",
+    "házépítő",
+    "kőművesmester"
+  ],
+  "feor_kod": "7511",
+  "isco_kod": "7112",
+  "soc_kodok": [
+    "47-2021.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "kőművesek",
+  "fekek": {
+    "fizikai": {
+      "ertek": 3,
+      "indoklas": "A munka teljes egészében helyszíni, kétkezi, változó terepen és időjárásban végzett kézügyességet igényel, amit robotok egyelőre alig tudnak kiváltani."
+    },
+    "felelosseg": {
+      "ertek": 2,
+      "indoklas": "A falazat teherbírásáért és minőségéért a kivitelező és a felelős műszaki vezető felel, a kőműves pedig a szakmai minőségért áll jót."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "Az építési előírások, a munkavédelmi szabályok és a szerkezeti szabványok kötik a munkát, az AI-ra vonatkozó külön szabályozás itt kevésbé meghatározó."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "A megrendelők jellemzően ajánlás alapján választanak mestert, és a látható, kézzel készített munka minősége számít nekik, nem az eszköz."
+    }
+  },
+  "teendo_szoveg": "A kézi falazás és a helyszíni munka a te erősséged, ezt érdemes tovább mélyíteni például díszítő falazással, tűzálló szerkezetekkel vagy műemléki felújítással. Ismerkedj meg a digitális mérőeszközökkel, lézeres szintezővel és az anyagszámoló appokkal, mert ezek gyorsítják a munkát és pontosabbá teszik az árajánlatokat. Ha tapasztaltabb leszel, a csapatvezetés és a minőségellenőrzés is jó irány lehet.",
+  "csoportok": [
+    {
+      "leiras": "Kitűzés, mérés és szintezés: a munka vonalainak, szögeinek és sorainak pontos kijelölése",
+      "task_idk": [
+        "4769",
+        "4770"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Tervrajz értelmezése és anyagszükséglet kiszámítása",
+      "task_idk": [
+        "4774"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Falazás: sarkok kiépítése, téglák, blokkok és csempék lerakása, igazítása és rögzítése",
+      "task_idk": [
+        "4768",
+        "4771",
+        "4779"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Habarcs felhordása, elsimítása, fugázás és a felesleg eltávolítása",
+      "task_idk": [
+        "4775",
+        "4773"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Téglák, blokkok és lapok méretre vágása vagy törése",
+      "task_idk": [
+        "4772"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Habarcs és tűzálló keverékek összekeverése, tűzálló anyag felvitele",
+      "task_idk": [
+        "4776",
+        "4781"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Felújítás: falazat felmérése, sérült tégla és habarcs bontása, munkafelület tisztítása",
+      "task_idk": [
+        "4777",
+        "4780",
+        "4778"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Kitűzés, mérés és szintezés: a munka vonalainak, szögeinek és sorainak pontos kijelölése",
+      "task_idk": [
+        "4769",
+        "4770"
+      ],
+      "idoArany": 0.1863,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Tervrajz értelmezése és anyagszükséglet kiszámítása",
+      "task_idk": [
+        "4774"
+      ],
+      "idoArany": 0.082,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.357,
+      "horizont": "1-3ev",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Falazás: sarkok kiépítése, téglák, blokkok és csempék lerakása, igazítása és rögzítése",
+      "task_idk": [
+        "4768",
+        "4771",
+        "4779"
+      ],
+      "idoArany": 0.1997,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Habarcs felhordása, elsimítása, fugázás és a felesleg eltávolítása",
+      "task_idk": [
+        "4775",
+        "4773"
+      ],
+      "idoArany": 0.1878,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Téglák, blokkok és lapok méretre vágása vagy törése",
+      "task_idk": [
+        "4772"
+      ],
+      "idoArany": 0.0889,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Habarcs és tűzálló keverékek összekeverése, tűzálló anyag felvitele",
+      "task_idk": [
+        "4776",
+        "4781"
+      ],
+      "idoArany": 0.0819,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Felújítás: falazat felmérése, sérült tégla és habarcs bontása, munkafelület tisztítása",
+      "task_idk": [
+        "4777",
+        "4780",
+        "4778"
+      ],
+      "idoArany": 0.1733,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 0%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "4769": "Measure distance from reference points and mark guidelines to lay out work, using plumb bobs and levels.",
+    "4775": "Apply and smooth mortar or other mixture over work surface.",
+    "4768": "Construct corners by fastening in plumb position a corner pole or building a corner pyramid of bricks, and filling in between the corners using a line from corner to corner to guide each course, or layer, of brick.",
+    "4773": "Remove excess mortar with trowels and hand tools, and finish mortar joints with jointing tools, for a sealed, uniform appearance.",
+    "4772": "Break or cut bricks, tiles, or blocks to size, using trowel edge, hammer, or power saw.",
+    "4770": "Calculate angles and courses and determine vertical and horizontal alignment of courses.",
+    "4774": "Interpret blueprints and drawings to determine specifications and to calculate the materials required.",
+    "4771": "Fasten or fuse brick or other building material to structure with wire clamps, anchor holes, torch, or cement.",
+    "4778": "Clean working surface to remove scale, dust, soot, or chips of brick and mortar, using broom, wire brush, or scraper.",
+    "4776": "Mix specified amounts of sand, clay, dirt, or mortar powder with water to form refractory mixtures.",
+    "4777": "Examine brickwork or structure to determine need for repair.",
+    "4780": "Remove burned or damaged brick or mortar, using sledgehammer, crowbar, chipping gun, or chisel.",
+    "4779": "Lay and align bricks, blocks, or tiles to build or repair structures or high temperature equipment, such as cupola, kilns, ovens, or furnaces.",
+    "4781": "Spray or spread refractory material over brickwork to protect against deterioration."
+  }
+}

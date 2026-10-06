@@ -1,0 +1,254 @@
+{
+  "ellenorizve": false,
+  "slug": "ujsagiro",
+  "nev": "Újságíró",
+  "aliasok": [
+    "Újságíró, rádióműsor-, televízióműsor-szerkesztő",
+    "riporter",
+    "szerkesztő",
+    "tévés szerkesztő",
+    "rádiós szerkesztő",
+    "hírszerkesztő",
+    "műsorszerkesztő",
+    "tudósító",
+    "publicista"
+  ],
+  "feor_kod": "2716",
+  "isco_kod": "2642",
+  "soc_kodok": [
+    "27-3023.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "újságírók",
+  "fekek": {
+    "fizikai": {
+      "ertek": 1,
+      "indoklas": "A helyszíni tudósításhoz, fotózáshoz és forrásokkal való találkozáshoz fizikai jelenlét kell, de az írásmunka nagy része asztal mellett végezhető."
+    },
+    "felelosseg": {
+      "ertek": 2,
+      "indoklas": "A megjelent tartalomért a szerkesztőség és a szerző felel (sajtó-helyreigazítás, személyiségi jogok), ezért a tényellenőrzés és a szignó emberi feladat marad."
+    },
+    "szabalyozas": {
+      "ertek": 1,
+      "indoklas": "Az EU AI Act átláthatósági szabályai és a médiaszabályozás megjelennek, de a hírszerkesztésben az AI használatát jelenleg nem tiltják."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "A források és az olvasók hitelességet várnak, ezért az interjúkban és a tényfeltáró munkában az emberi újságíró bizalmi tényező, a rutinszövegeknél kevésbé."
+    }
+  },
+  "teendo_szoveg": "Építs a saját forrásaidra, a helyszíni jelenlétre és az oknyomozó munkára, mert ezeket nehéz átvenni. Tanuld meg az AI-eszközöket a kutatásban, az átiratok készítésében és a vázlatok előkészítésében használni, de a tényellenőrzést és a végső szöveget tartsd a saját kezedben. Válassz egy szakterületet, amelyben igazán mélyen otthon vagy, mert a szakértelem és a hitelesség lesz a legfontosabb megkülönböztető erőd.",
+  "csoportok": [
+    {
+      "leiras": "Témakeresés, ötletek értékelése és háttérkutatás",
+      "task_idk": [
+        "22627",
+        "22625",
+        "22628",
+        "22642",
+        "22630",
+        "22626"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Interjúk szervezése és készítése, forráskapcsolatok ápolása",
+      "task_idk": [
+        "22629",
+        "22633",
+        "22647"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Helyszíni tudósítás, friss hírek és szakterületi riportok",
+      "task_idk": [
+        "22637",
+        "22634",
+        "22639",
+        "22641"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Fotózás és videózás eseményeken",
+      "task_idk": [
+        "22646",
+        "22644"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Cikkek, jegyzetek, publicisztika és blogbejegyzések írása",
+      "task_idk": [
+        "22623",
+        "22648",
+        "22650"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Szerkesztés, javítás, egyeztetés a szerkesztővel és az olvasókkal",
+      "task_idk": [
+        "22636",
+        "22638",
+        "22635",
+        "22643",
+        "22649"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Anyag válogatása, felépítése és a cikk terjedelmének meghatározása",
+      "task_idk": [
+        "22631",
+        "22640"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Témakeresés, ötletek értékelése és háttérkutatás",
+      "task_idk": [
+        "22627",
+        "22625",
+        "22628",
+        "22642",
+        "22630",
+        "22626"
+      ],
+      "idoArany": 0.2509,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.27,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Interjúk szervezése és készítése, forráskapcsolatok ápolása",
+      "task_idk": [
+        "22629",
+        "22633",
+        "22647"
+      ],
+      "idoArany": 0.1252,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.319,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Helyszíni tudósítás, friss hírek és szakterületi riportok",
+      "task_idk": [
+        "22637",
+        "22634",
+        "22639",
+        "22641"
+      ],
+      "idoArany": 0.164,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.319,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Fotózás és videózás eseményeken",
+      "task_idk": [
+        "22646",
+        "22644"
+      ],
+      "idoArany": 0.0721,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.319,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Cikkek, jegyzetek, publicisztika és blogbejegyzések írása",
+      "task_idk": [
+        "22623",
+        "22648",
+        "22650"
+      ],
+      "idoArany": 0.1149,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.319,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Szerkesztés, javítás, egyeztetés a szerkesztővel és az olvasókkal",
+      "task_idk": [
+        "22636",
+        "22638",
+        "22635",
+        "22643",
+        "22649"
+      ],
+      "idoArany": 0.1909,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.348,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Anyag válogatása, felépítése és a cikk terjedelmének meghatározása",
+      "task_idk": [
+        "22631",
+        "22640"
+      ],
+      "idoArany": 0.082,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.406,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "A kis súlyú feladatok elhagyása a munkaidő 9%-át érinti.",
+    "Az Economic Index a munkaidő csak 12%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "22630": "Gather information and develop perspectives about news subjects through research, interviews, observation, and experience.",
+    "22634": "Report news stories for publication or broadcast, describing the background and details of events.",
+    "22628": "Research a story's background information to provide complete and accurate information.",
+    "22629": "Arrange interviews with people who can provide information about a story.",
+    "22633": "Establish and maintain relationships with individuals who are credible sources of information.",
+    "22631": "Select material most pertinent to presentation, and organize this material into appropriate formats.",
+    "22639": "Report on specialized fields such as medicine, green technology, environmental issues, science, politics, sports, arts, consumer affairs, business, religion, crime, or education.",
+    "22637": "Investigate breaking news developments, such as disasters, crimes, or human-interest stories.",
+    "22623": "Write commentaries, columns, or scripts, using computers.",
+    "22636": "Review and evaluate notes taken about news events to isolate pertinent facts and details.",
+    "22626": "Analyze and interpret news and information received from various sources to broadcast the information.",
+    "22627": "Receive assignments or evaluate leads or tips to develop story ideas.",
+    "22640": "Determine a published or broadcasted story's emphasis, length, and format, organizing material accordingly.",
+    "22625": "Examine news items of local, national, and international significance to determine topics to address, or obtain assignments from editorial staff members.",
+    "22638": "Review written, audio, or video copy, and correct errors in content, grammar, or punctuation, following prescribed editorial style and formatting guidelines.",
+    "22647": "Conduct taped or filmed interviews or narratives.",
+    "22642": "Check reference materials, such as books, news files, or public records, to obtain relevant facts.",
+    "22646": "Take pictures or video, and process them for inclusion in a story.",
+    "22648": "Develop ideas or material for columns or commentaries by analyzing and interpreting news, current issues, or personal experiences.",
+    "22635": "Revise work to meet editorial approval or to fit time or space requirements.",
+    "22649": "Communicate with readers, viewers, advertisers, or the general public via mail, email, or telephone.",
+    "22650": "Write online blog entries that address news developments or offer additional information, opinions, or commentary on news events.",
+    "22643": "Discuss issues with editors to establish priorities or positions.",
+    "22641": "Transmit news stories or reporting information from remote locations, using equipment such as satellite phones, telephones, fax machines, or modems.",
+    "22644": "Photograph or videotape news events."
+  }
+}

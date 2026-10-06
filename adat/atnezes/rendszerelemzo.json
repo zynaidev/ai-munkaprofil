@@ -1,0 +1,224 @@
+{
+  "ellenorizve": false,
+  "slug": "rendszerelemzo",
+  "nev": "Rendszerelemző",
+  "aliasok": [
+    "informatikai",
+    "it elemző",
+    "üzleti elemző",
+    "információs rendszer elemző",
+    "szoftverelemző",
+    "rendszertervező",
+    "it business analyst"
+  ],
+  "feor_kod": "2141",
+  "isco_kod": "2511",
+  "soc_kodok": [
+    "15-1211.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "rendszerelemzők",
+  "fekek": {
+    "fizikai": {
+      "ertek": 0,
+      "indoklas": "A munka döntően számítógépen, gyakran távolról végezhető, fizikai jelenlét vagy kézügyesség ritkán kell hozzá."
+    },
+    "felelosseg": {
+      "ertek": 2,
+      "indoklas": "A rendszerek működéséért és az üzleti folyamatok folytonosságáért valakinek felelnie kell, de kötelező szakmai aláírás vagy kamarai felelősség általában nincs."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "Az EU AI Act, a GDPR és az ágazati előírások (pl. pénzügyi vagy egészségügyi rendszereknél) megkövetelik az emberi felügyeletet és a dokumentált, auditálható működést."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "A belső és külső megrendelők a követelmények tisztázásánál és a nagy rendszerváltásoknál elvárják, hogy egy ember vállaljon felelősséget a döntésekért."
+    }
+  },
+  "teendo_szoveg": "Használd az AI-eszközöket a kódolásban, a hibakeresésben és a dokumentálásban, és tanuld meg ellenőrizni, hogy mit állítanak elő. Építsd azokat a készségeidet, amelyeket nehezebb automatizálni: az igények feltárását, a vezetőkkel való egyeztetést, a rendszerek összehangolását és a projektvezetést. Ismerd meg az adatvédelmi és AI-szabályozási alapokat is, mert a megfelelőséget értő elemzőre egyre nagyobb szükség lesz.",
+  "csoportok": [
+    {
+      "leiras": "Hibakeresés, tesztelés és rendszerüzemeltetés",
+      "task_idk": [
+        "20950",
+        "3465",
+        "3478"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Programozás és szoftverfejlesztés",
+      "task_idk": [
+        "3466",
+        "3480",
+        "3470",
+        "3475"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Rendszertervezés, folyamatleírás és dokumentáció",
+      "task_idk": [
+        "3474",
+        "3484",
+        "3472",
+        "3477",
+        "3476",
+        "3482"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Igényfelmérés és egyeztetés ügyfelekkel, vezetőkkel",
+      "task_idk": [
+        "3467",
+        "3469",
+        "3471"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Felhasználók támogatása és oktatása",
+      "task_idk": [
+        "3464",
+        "3473"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Projektvezetés, rendszerek összehangolása és döntés-előkészítés",
+      "task_idk": [
+        "3468",
+        "3479",
+        "3483",
+        "3481"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Hibakeresés, tesztelés és rendszerüzemeltetés",
+      "task_idk": [
+        "20950",
+        "3465",
+        "3478"
+      ],
+      "idoArany": 0.1746,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.409,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Programozás és szoftverfejlesztés",
+      "task_idk": [
+        "3466",
+        "3480",
+        "3470",
+        "3475"
+      ],
+      "idoArany": 0.1858,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.173,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Rendszertervezés, folyamatleírás és dokumentáció",
+      "task_idk": [
+        "3474",
+        "3484",
+        "3472",
+        "3477",
+        "3476",
+        "3482"
+      ],
+      "idoArany": 0.284,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.358,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Igényfelmérés és egyeztetés ügyfelekkel, vezetőkkel",
+      "task_idk": [
+        "3467",
+        "3469",
+        "3471"
+      ],
+      "idoArany": 0.1056,
+      "kitettseg": 0.201,
+      "kivaltasArany": 0.285,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Felhasználók támogatása és oktatása",
+      "task_idk": [
+        "3464",
+        "3473"
+      ],
+      "idoArany": 0.1173,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.312,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Projektvezetés, rendszerek összehangolása és döntés-előkészítés",
+      "task_idk": [
+        "3468",
+        "3479",
+        "3483",
+        "3481"
+      ],
+      "idoArany": 0.1328,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.297,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 42%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "20950": "Troubleshoot program and system malfunctions to restore normal functioning.",
+    "3464": "Provide staff and users with assistance solving computer-related problems, such as malfunctions and program problems.",
+    "3466": "Use object-oriented programming languages, as well as client and server applications development processes and multimedia and Internet technology.",
+    "3465": "Test, maintain, and monitor computer programs and systems, including coordinating the installation of computer programs and systems.",
+    "3482": "Use the computer in the analysis and solution of business problems, such as development of integrated production and inventory control and cost analysis systems.",
+    "3474": "Analyze information processing or computation needs and plan and design computer systems, using techniques such as structured analysis, data modeling, and information engineering.",
+    "3468": "Coordinate and link the computer systems within an organization to increase compatibility so that information can be shared.",
+    "3484": "Specify inputs accessed by the system and plan the distribution and use of the results.",
+    "3472": "Determine computer software or hardware needed to set up or alter systems.",
+    "3473": "Train staff and users to work with computer systems and programs.",
+    "3467": "Confer with clients regarding the nature of the information processing or computation needs a computer program is to address.",
+    "3469": "Consult with management to ensure agreement on system principles.",
+    "3475": "Assess the usefulness of pre-developed application packages and adapt them to a user environment.",
+    "3470": "Expand or modify system to serve new purposes or improve work flow.",
+    "3480": "Read manuals, periodicals, and technical reports to learn how to develop programs that meet staff and user requirements.",
+    "3477": "Develop, document, and revise system design procedures, test procedures, and quality standards.",
+    "3476": "Define the goals of the system and devise flow charts and diagrams describing logical operational steps of programs.",
+    "3478": "Review and analyze computer printouts and performance indicators to locate code problems, and correct errors by correcting codes.",
+    "3479": "Recommend new equipment or software packages.",
+    "3481": "Supervise computer programmers or other systems analysts or serve as project leaders for particular systems projects.",
+    "3471": "Interview or survey workers, observe job performance, or perform the job to determine what information is processed and how it is processed.",
+    "3483": "Prepare cost-benefit and return-on-investment analyses to aid in decisions on system implementation."
+  }
+}

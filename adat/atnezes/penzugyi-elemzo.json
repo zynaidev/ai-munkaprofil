@@ -1,0 +1,234 @@
+{
+  "ellenorizve": false,
+  "slug": "penzugyi-elemzo",
+  "nev": "Pénzügyi elemző",
+  "aliasok": [
+    "Pénzügyi elemző és befektetési tanácsadó",
+    "befektetési tanácsadó",
+    "pénzügyi tanácsadó",
+    "befektetési elemző",
+    "portfóliókezelő",
+    "részvényelemző",
+    "pénzügyi szakértő",
+    "brókerelemző"
+  ],
+  "feor_kod": "2511",
+  "isco_kod": "2412;2413",
+  "soc_kodok": [
+    "13-2051.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "pénzügyi elemzők",
+  "fekek": {
+    "fizikai": {
+      "ertek": 0,
+      "indoklas": "A munka döntően irodai, számítógépes; legfeljebb egy-egy telephelylátogatás igényel fizikai jelenlétet."
+    },
+    "felelosseg": {
+      "ertek": 2,
+      "indoklas": "A befektetési ajánlásokért és az elemzések pontosságáért szakmai és jogi felelősség terheli az elemzőt vagy a cégét, ezt az AI nem veheti át."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "A MiFID II, az MNB felügyeleti előírásai és az EU AI Act (például hitelképesség-értékelésnél) szigorú követelményeket támasztanak az automatizált döntésekre."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "Az ügyfelek jelentős összegekről döntenek, ezért a tőkeszerkezeti és befektetési kérdésekben többnyire elvárják a személyes tanácsadót."
+    }
+  },
+  "teendo_szoveg": "Az adatgyűjtést, a modellezést és a riportok első változatát egyre inkább az AI-eszközök gyorsítják, ezért tanuld meg tudatosan használni őket, és mindig ellenőrizd az eredményeiket. Építs azokra a készségekre, amelyek emberiek maradnak: ügyfélkapcsolat, bizalomépítés, a számok mögötti üzleti történet megértése és magyarázata. Ismerd a szabályozási környezetet is, a MiFID-et és az AI Act elveit, mert ez a tudás a felelős döntéshozatalban versenyelőnyt ad.",
+  "csoportok": [
+    {
+      "leiras": "Gazdasági és piaci hírek, adatok követése, előrejelzések",
+      "task_idk": [
+        "21593",
+        "21594",
+        "21595",
+        "21596",
+        "21580"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Pénzügyi modellezés és értékpapírok értékelése",
+      "task_idk": [
+        "21584",
+        "21587",
+        "21590",
+        "21591",
+        "21597"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Befektetési tervek, ajánlások és ügyletek előkészítése",
+      "task_idk": [
+        "21598",
+        "21599",
+        "21601",
+        "21602",
+        "21603"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Ügyfélkapcsolat és tőkeszerkezeti tanácsadás",
+      "task_idk": [
+        "21579",
+        "21585",
+        "21588",
+        "21592",
+        "21581"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Prezentációk, grafikonok és elemzői riportok készítése",
+      "task_idk": [
+        "21586",
+        "21589",
+        "21600"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Együttműködés jogászokkal, könyvelőkkel és befektetési bankárokkal",
+      "task_idk": [
+        "21582",
+        "21583"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Gazdasági és piaci hírek, adatok követése, előrejelzések",
+      "task_idk": [
+        "21593",
+        "21594",
+        "21595",
+        "21596",
+        "21580"
+      ],
+      "idoArany": 0.2,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.281,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Pénzügyi modellezés és értékpapírok értékelése",
+      "task_idk": [
+        "21584",
+        "21587",
+        "21590",
+        "21591",
+        "21597"
+      ],
+      "idoArany": 0.2,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.389,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Befektetési tervek, ajánlások és ügyletek előkészítése",
+      "task_idk": [
+        "21598",
+        "21599",
+        "21601",
+        "21602",
+        "21603"
+      ],
+      "idoArany": 0.2,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.433,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Ügyfélkapcsolat és tőkeszerkezeti tanácsadás",
+      "task_idk": [
+        "21579",
+        "21585",
+        "21588",
+        "21592",
+        "21581"
+      ],
+      "idoArany": 0.2,
+      "kitettseg": 0.4,
+      "kivaltasArany": 0.368,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Prezentációk, grafikonok és elemzői riportok készítése",
+      "task_idk": [
+        "21586",
+        "21589",
+        "21600"
+      ],
+      "idoArany": 0.12,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.371,
+      "horizont": "1-3ev",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Együttműködés jogászokkal, könyvelőkkel és befektetési bankárokkal",
+      "task_idk": [
+        "21582",
+        "21583"
+      ],
+      "idoArany": 0.08,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.368,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 48%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "21579": "Advise clients on aspects of capitalization, such as amounts, sources, or timing.",
+    "21580": "Analyze financial or operational performance of companies facing financial difficulties to identify or recommend remedies.",
+    "21581": "Assess companies as investments for clients by examining company facilities.",
+    "21582": "Collaborate on projects with other professionals, such as lawyers, accountants, or public relations experts.",
+    "21583": "Collaborate with investment bankers to attract new corporate clients.",
+    "21584": "Conduct financial analyses related to investments in green construction or green retrofitting projects.",
+    "21585": "Confer with clients to restructure debt, refinance debt, or raise new debt.",
+    "21586": "Create client presentations of plan details.",
+    "21587": "Determine the prices at which securities should be syndicated and offered to the public.",
+    "21588": "Develop and maintain client relationships.",
+    "21589": "Draw charts and graphs, using computer spreadsheets, to illustrate technical reports.",
+    "21590": "Employ financial models to develop solutions to financial problems or to assess the financial or capital impact of transactions.",
+    "21591": "Evaluate and compare the relative quality of various securities in a given industry.",
+    "21592": "Evaluate capital needs of clients and assess market conditions to inform structuring of financial packages.",
+    "21593": "Inform investment decisions by analyzing financial information to forecast business, industry, or economic conditions.",
+    "21594": "Interpret data on price, yield, stability, future investment-risk trends, economic influences, and other factors affecting investment programs.",
+    "21595": "Monitor developments in the fields of industrial technology, business, finance, and economic theory.",
+    "21596": "Monitor fundamental economic, industrial, and corporate developments by analyzing information from financial publications and services, investment banking firms, government agencies, trade publications, company sources, or personal interviews.",
+    "21597": "Perform securities valuation or pricing.",
+    "21598": "Prepare all materials for transactions or execution of deals.",
+    "21599": "Prepare plans of action for investment, using financial analyses.",
+    "21600": "Present oral or written reports on general economic trends, individual corporations, and entire industries.",
+    "21601": "Purchase investments for companies in accordance with company policy.",
+    "21602": "Recommend investments and investment timing to companies, investment firm staff, or the public.",
+    "21603": "Specialize in green financial instruments, such as socially responsible mutual funds or exchange-traded funds (ETF) that are comprised of green companies."
+  }
+}

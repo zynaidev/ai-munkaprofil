@@ -1,0 +1,253 @@
+{
+  "ellenorizve": false,
+  "slug": "penztaros",
+  "nev": "Pénztáros",
+  "aliasok": [
+    "Bolti pénztáros, jegypénztáros",
+    "boltos pénztáros",
+    "kasszás",
+    "pénztárosnő",
+    "jegyárus",
+    "jegypénztáros",
+    "szupermarket pénztáros",
+    "kasszához"
+  ],
+  "feor_kod": "5117",
+  "isco_kod": "5230",
+  "soc_kodok": [
+    "41-2011.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "pénztárosok",
+  "fekek": {
+    "fizikai": {
+      "ertek": 2,
+      "indoklas": "A csomagolás, a polcfeltöltés, a pénzkezelés és a takarítás fizikai jelenlétet és kézügyességet kíván a boltban."
+    },
+    "felelosseg": {
+      "ertek": 1,
+      "indoklas": "A pénztáros felel a kassza egyenlegéért és a helyes nyugtaadásért, de ez a felelősség nem jár aláírásköteles szakmai döntéssel."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "A nyugtaadási kötelezettség és az online pénztárgépekre vonatkozó NAV-előírások kötik a kasszázást, az AI Act viszont itt kevéssé releváns."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "A vásárlók többsége a panaszoknál és a segítségkérésnél még embert vár, a rutinfizetésnél viszont egyre inkább elfogadják az önkiszolgáló kasszát."
+    }
+  },
+  "teendo_szoveg": "A rutinszerű kasszázás és az elszámolás egyre inkább gépesíthető, ezért érdemes az ügyfélkapcsolati oldaladat erősíteni: a panaszkezelést, a termékismeretet és a vásárlók eligazítását. Tanulj meg magabiztosan bánni az önkiszolgáló kasszák felügyeletével és a digitális fizetési rendszerekkel, mert ott gyorsan segíteni tudó emberre lesz szükség. Ha vezetői irányba nézel, a kasszák szervezése és a napi zárás ellenőrzése jó lépcsőfok lehet.",
+  "csoportok": [
+    {
+      "leiras": "Kasszázás: fizetés fogadása, árazás, nyugta, visszajáró, jegy- és kuponkezelés",
+      "task_idk": [
+        "2400",
+        "2401",
+        "2405",
+        "2410",
+        "2413",
+        "2406",
+        "2409"
+      ],
+      "emberi_mag": false,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Kasszafiók számolása, készpénz előkészítése és a kasszák felügyelete",
+      "task_idk": [
+        "2402",
+        "2416",
+        "2422"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Napi zárás, elszámolás és nyilvántartások vezetése",
+      "task_idk": [
+        "2412",
+        "2411",
+        "2414",
+        "2421",
+        "2423"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Telefonhívások fogadása",
+      "task_idk": [
+        "21073"
+      ],
+      "emberi_mag": false,
+      "csatorna": "telefon"
+    },
+    {
+      "leiras": "Vásárlók köszöntése, eligazítása és tájékoztatása",
+      "task_idk": [
+        "2403",
+        "2408",
+        "21072",
+        "2419"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Visszáru, csere és panaszkezelés",
+      "task_idk": [
+        "2417",
+        "18765"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Csomagolás, polcfeltöltés és a kassza környékének rendben tartása",
+      "task_idk": [
+        "2415",
+        "21074",
+        "18766"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Kasszázás: fizetés fogadása, árazás, nyugta, visszajáró, jegy- és kuponkezelés",
+      "task_idk": [
+        "2400",
+        "2401",
+        "2405",
+        "2410",
+        "2413",
+        "2406",
+        "2409"
+      ],
+      "idoArany": 0.2884,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.272,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Kasszafiók számolása, készpénz előkészítése és a kasszák felügyelete",
+      "task_idk": [
+        "2402",
+        "2416",
+        "2422"
+      ],
+      "idoArany": 0.1041,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.236,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Napi zárás, elszámolás és nyilvántartások vezetése",
+      "task_idk": [
+        "2412",
+        "2411",
+        "2414",
+        "2421",
+        "2423"
+      ],
+      "idoArany": 0.1308,
+      "kitettseg": 0.901,
+      "kivaltasArany": 0.236,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Telefonhívások fogadása",
+      "task_idk": [
+        "21073"
+      ],
+      "idoArany": 0.0577,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.236,
+      "horizont": "ma",
+      "csatorna": "telefon",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Vásárlók köszöntése, eligazítása és tájékoztatása",
+      "task_idk": [
+        "2403",
+        "2408",
+        "21072",
+        "2419"
+      ],
+      "idoArany": 0.2217,
+      "kitettseg": 0.122,
+      "kivaltasArany": 0.216,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Visszáru, csere és panaszkezelés",
+      "task_idk": [
+        "2417",
+        "18765"
+      ],
+      "idoArany": 0.0981,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.289,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Csomagolás, polcfeltöltés és a kassza környékének rendben tartása",
+      "task_idk": [
+        "2415",
+        "21074",
+        "18766"
+      ],
+      "idoArany": 0.0991,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.236,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "A kis súlyú feladatok elhagyása a munkaidő 7%-át érinti.",
+    "Az Economic Index a munkaidő csak 23%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "2400": "Receive payment by cash, check, credit cards, vouchers, or automatic debits.",
+    "2403": "Greet customers entering establishments.",
+    "2401": "Issue receipts, refunds, credits, or change due to customers.",
+    "21073": "Answer incoming phone calls.",
+    "2405": "Establish or identify prices of goods, services, or admission, and tabulate bills, using calculators, cash registers, or optical price scanners.",
+    "2408": "Answer customers' questions, and provide information on procedures or policies.",
+    "18765": "Assist customers by providing information and resolving their complaints.",
+    "2419": "Request information or assistance, using paging systems.",
+    "21072": "Help customers find the location of products.",
+    "2422": "Monitor checkout stations to ensure they have adequate cash available and are staffed appropriately.",
+    "18766": "Maintain clean and orderly checkout areas, and complete other general cleaning duties, such as mopping floors and emptying trash cans.",
+    "2417": "Process merchandise returns and exchanges.",
+    "2406": "Issue trading stamps, and redeem food stamps and coupons.",
+    "2412": "Compute and record totals of transactions.",
+    "2410": "Weigh items sold by weight to determine prices.",
+    "2413": "Sell tickets and other items to customers.",
+    "2415": "Bag, box, wrap, or gift-wrap merchandise, and prepare packages for shipment.",
+    "2402": "Count money in cash drawers at the beginning of shifts to ensure that amounts are correct and that there is adequate change.",
+    "2411": "Calculate total payments received during a time period, and reconcile this with total sales.",
+    "2423": "Post charges against guests' or patients' accounts.",
+    "2416": "Sort, count, and wrap currency and coins.",
+    "2421": "Compile and maintain non-monetary reports and records.",
+    "2414": "Keep periodic balance sheets of amounts and numbers of transactions.",
+    "21074": "Stock shelves, sort and reshelve returned items, and mark prices on items and shelves.",
+    "2409": "Cash checks for customers."
+  }
+}

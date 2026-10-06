@@ -1,0 +1,253 @@
+{
+  "ellenorizve": false,
+  "slug": "ingatlanugynok",
+  "nev": "Ingatlanügynök",
+  "aliasok": [
+    "Ingatlanügynök, ingatlanforgalmazási ügyintéző",
+    "ingatlanközvetítő",
+    "ingatlanos",
+    "ingatlan tanácsadó",
+    "lakásügynök",
+    "ingatlanértékesítő",
+    "ingatlan referens"
+  ],
+  "feor_kod": "3633",
+  "isco_kod": "3334",
+  "soc_kodok": [
+    "41-9022.00",
+    "41-9021.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "ingatlanügynökök",
+  "fekek": {
+    "fizikai": {
+      "ertek": 2,
+      "indoklas": "A helyszíni szemle, a kulcsátadás és az ingatlanbemutatás személyes jelenlétet kíván, bár a virtuális túrák ezt részben kiválthatják."
+    },
+    "felelosseg": {
+      "ertek": 2,
+      "indoklas": "Magyarországon az ingatlan-adásvételi szerződést ügyvédnek kell ellenjegyeznie, a közvetítő felelőssége a tájékoztatásra, az adatok pontosságára és a megbízási szerződésre terjed ki."
+    },
+    "szabalyozas": {
+      "ertek": 1,
+      "indoklas": "Az ingatlanközvetítésre a pénzmosás elleni, az adatvédelmi (GDPR) és a fogyasztóvédelmi előírások vonatkoznak, de az AI használatát külön ágazati tiltás nem korlátozza."
+    },
+    "bizalom": {
+      "ertek": 3,
+      "indoklas": "Az ingatlanvásárlás vagy -eladás a legtöbb család legnagyobb pénzügyi döntése, ezért az ügyfelek személyes kapcsolatot és megbízható tanácsadót várnak."
+    }
+  },
+  "teendo_szoveg": "Építs arra, amiben az ember erősebb: ügyfeleid élethelyzetének megértésére, a tárgyalásra és a bizalmi kapcsolatra. Használj AI-eszközöket az értékbecsléshez, a hirdetések megírásához és az ügyintézéshez, így több időd marad az ügyfelekre. Tanuld meg ellenőrizni az AI által adott adatokat és ajánlásokat, mert ezzel tudsz megbízható szakember maradni.",
+  "csoportok": [
+    {
+      "leiras": "Ingatlan értékbecslése és összehasonlítása a piacon",
+      "task_idk": [
+        "4602",
+        "2447",
+        "4608"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Jogszabályok, piaci hírek és finanszírozási lehetőségek követése",
+      "task_idk": [
+        "4605",
+        "4609",
+        "2460"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Hirdetés, megbízásszerzés és ingatlanlisták összeállítása",
+      "task_idk": [
+        "4600",
+        "2462",
+        "2446",
+        "4604",
+        "2449"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Ügyfél igényeinek felmérése, tanácsadás és ingatlanbemutatás",
+      "task_idk": [
+        "2442",
+        "2458",
+        "4614",
+        "2448"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Alkudozás és közvetítés eladó és vevő között",
+      "task_idk": [
+        "4603",
+        "2445",
+        "4599"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Szerződések előkészítése és az adásvétel ügyintézése",
+      "task_idk": [
+        "2443",
+        "4601",
+        "2441",
+        "4606",
+        "4613"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Bérbeadás, bérleti ügyek és az iroda vezetése",
+      "task_idk": [
+        "4612",
+        "4610"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Ingatlan értékbecslése és összehasonlítása a piacon",
+      "task_idk": [
+        "4602",
+        "2447",
+        "4608"
+      ],
+      "idoArany": 0.1317,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.42,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Jogszabályok, piaci hírek és finanszírozási lehetőségek követése",
+      "task_idk": [
+        "4605",
+        "4609",
+        "2460"
+      ],
+      "idoArany": 0.1312,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.345,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Hirdetés, megbízásszerzés és ingatlanlisták összeállítása",
+      "task_idk": [
+        "4600",
+        "2462",
+        "2446",
+        "4604",
+        "2449"
+      ],
+      "idoArany": 0.1973,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.42,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Ügyfél igényeinek felmérése, tanácsadás és ingatlanbemutatás",
+      "task_idk": [
+        "2442",
+        "2458",
+        "4614",
+        "2448"
+      ],
+      "idoArany": 0.1379,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.417,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Alkudozás és közvetítés eladó és vevő között",
+      "task_idk": [
+        "4603",
+        "2445",
+        "4599"
+      ],
+      "idoArany": 0.1381,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.46,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Szerződések előkészítése és az adásvétel ügyintézése",
+      "task_idk": [
+        "2443",
+        "4601",
+        "2441",
+        "4606",
+        "4613"
+      ],
+      "idoArany": 0.1746,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.417,
+      "horizont": "1-3ev",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Bérbeadás, bérleti ügyek és az iroda vezetése",
+      "task_idk": [
+        "4612",
+        "4610"
+      ],
+      "idoArany": 0.089,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.417,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "A kis súlyú feladatok elhagyása a munkaidő 33%-át érinti.",
+    "Az Economic Index a munkaidő csak 31%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "4605": "Maintain knowledge of real estate law, local economies, fair housing laws, types of available mortgages, financing options, and government programs.",
+    "4612": "Rent properties or manage rental properties.",
+    "4602": "Compare a property with similar properties that have recently sold to determine its competitive market price.",
+    "4603": "Act as an intermediary in negotiations between buyers and sellers over property prices and settlement details and during the closing of sales.",
+    "4599": "Sell, for a fee, real estate owned by others.",
+    "4604": "Generate lists of properties for sale, their locations, descriptions, and available financing options, using computers.",
+    "4601": "Monitor fulfillment of purchase contract terms to ensure that they are handled in a timely manner.",
+    "4600": "Obtain agreements from property owners to place properties for sale with real estate firms.",
+    "4608": "Appraise property values, assessing income potential when relevant.",
+    "2458": "Advise clients on market conditions, prices, mortgages, legal requirements, and related matters.",
+    "4614": "Give buyers virtual tours of properties in which they are interested, using computers.",
+    "4606": "Check work completed by loan officers, attorneys, or other professionals to ensure that it is performed properly.",
+    "2446": "Promote sales of properties through advertisements, open houses, and participation in multiple listing services.",
+    "4609": "Maintain awareness of current income tax regulations, local zoning, building and tax laws, and growth possibilities of a property's area.",
+    "2460": "Review property listings, trade journals, and relevant literature, and attend conventions, seminars, and staff and association meetings, to remain knowledgeable about real estate markets.",
+    "2447": "Compare a property with similar properties that have recently sold to determine its competitive market price.",
+    "2462": "Contact property owners and advertise services to solicit property sales listings.",
+    "2449": "Generate lists of properties that are compatible with buyers' needs and financial resources.",
+    "2441": "Confer with escrow companies, lenders, home inspectors, and pest control operators to ensure that terms and conditions of purchase agreements are met before closing dates.",
+    "4610": "Manage or operate real estate offices, handling associated business details.",
+    "2445": "Act as an intermediary in negotiations between buyers and sellers, generally representing one or the other.",
+    "2448": "Coordinate appointments to show homes to prospective buyers.",
+    "2443": "Prepare documents such as representation contracts, purchase agreements, closing statements, deeds, and leases.",
+    "2442": "Interview clients to determine what kinds of properties they are seeking.",
+    "4613": "Arrange for title searches of properties being sold."
+  }
+}

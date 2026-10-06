@@ -1,0 +1,212 @@
+{
+  "ellenorizve": false,
+  "slug": "recepcios",
+  "nev": "Recepciós",
+  "aliasok": [
+    "recepciós hölgy",
+    "szállodai recepciós",
+    "front desk",
+    "portás",
+    "információs pultos",
+    "fogadó munkatárs",
+    "vendégfogadó"
+  ],
+  "feor_kod": "4222",
+  "isco_kod": "4226",
+  "soc_kodok": [
+    "43-4171.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "recepciósok",
+  "fekek": {
+    "fizikai": {
+      "ertek": 2,
+      "indoklas": "A recepción való jelenlét, a küldemények átvétele és a váró rendben tartása fizikai munka, amit szoftver nem végez el."
+    },
+    "felelosseg": {
+      "ertek": 1,
+      "indoklas": "A recepciós ritkán ír alá jogi jelentőségű dokumentumot, de a pénzkezelésért és az adatok pontosságáért felel."
+    },
+    "szabalyozas": {
+      "ertek": 1,
+      "indoklas": "A GDPR és az EU AI Act átláthatósági szabályai (például tájékoztatás arról, hogy az ügyfél géppel beszél) korlátozzák az automatizálást, de nem tiltják."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "Magyarországon a vendégek és ügyfelek a recepción általában élő embert várnak, főleg panasz vagy bizalmas ügy esetén."
+    }
+  },
+  "teendo_szoveg": "Építs arra, amit a gép nehezen pótol: a személyes jelenlétre, a barátságos fogadásra és a feszült helyzetek megoldására. Tanuld meg használni az online időpontfoglaló, hívásátirányító és dokumentumkezelő rendszereket, hogy te irányítsd őket, és ne helyettesítsenek. Fejleszd a panaszkezelési, nyelvi és szervezési készségeidet, mert így az ügyfélélmény felelőse lehetsz, és nem csupán a recepciót látod el.",
+  "csoportok": [
+    {
+      "leiras": "Telefonhívások fogadása, átkapcsolása, üzenetek felvétele, tájékoztatás a cégről és a szolgáltatásokról",
+      "task_idk": [
+        "744",
+        "753"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Vendégek fogadása, útbaigazítása, kísérése és az ügyfelek panaszainak meghallgatása, megoldása",
+      "task_idk": [
+        "747",
+        "748"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Időpontfoglalás, naptárak vezetése, kollégák elérhetőségének és termek, eszközök foglalásának nyilvántartása, jelentkezők felvétele",
+      "task_idk": [
+        "751",
+        "754",
+        "759",
+        "760"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Fizetések átvétele, megrendelések felvétele, iratok rendezése és dokumentumok küldése az ügyfeleknek",
+      "task_idk": [
+        "745",
+        "757",
+        "749",
+        "750"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Árajánlatok számolása, adatok elemzése, levelek, bizonylatok és egyéb dokumentumok elkészítése",
+      "task_idk": [
+        "746",
+        "756",
+        "752",
+        "758"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Posta és küldemények átvétele, szétosztása, a váró és a recepció rendben tartása",
+      "task_idk": [
+        "755",
+        "762"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Telefonhívások fogadása, átkapcsolása, üzenetek felvétele, tájékoztatás a cégről és a szolgáltatásokról",
+      "task_idk": [
+        "744",
+        "753"
+      ],
+      "idoArany": 0.1565,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.506,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Vendégek fogadása, útbaigazítása, kísérése és az ügyfelek panaszainak meghallgatása, megoldása",
+      "task_idk": [
+        "747",
+        "748"
+      ],
+      "idoArany": 0.1524,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.273,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Időpontfoglalás, naptárak vezetése, kollégák elérhetőségének és termek, eszközök foglalásának nyilvántartása, jelentkezők felvétele",
+      "task_idk": [
+        "751",
+        "754",
+        "759",
+        "760"
+      ],
+      "idoArany": 0.1643,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.59,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Fizetések átvétele, megrendelések felvétele, iratok rendezése és dokumentumok küldése az ügyfeleknek",
+      "task_idk": [
+        "745",
+        "757",
+        "749",
+        "750"
+      ],
+      "idoArany": 0.2404,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.533,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Árajánlatok számolása, adatok elemzése, levelek, bizonylatok és egyéb dokumentumok elkészítése",
+      "task_idk": [
+        "746",
+        "756",
+        "752",
+        "758"
+      ],
+      "idoArany": 0.1705,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.469,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Posta és küldemények átvétele, szétosztása, a váró és a recepció rendben tartása",
+      "task_idk": [
+        "755",
+        "762"
+      ],
+      "idoArany": 0.1159,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.473,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 38%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "744": "Operate telephone switchboard to answer, screen, or forward calls, providing information, taking messages, or scheduling appointments.",
+    "747": "Greet persons entering establishment, determine nature and purpose of visit, and direct or escort them to specific destinations.",
+    "745": "Receive payment and record receipts for services.",
+    "751": "Schedule appointments and maintain and update appointment calendars.",
+    "749": "File and maintain records.",
+    "746": "Perform administrative support tasks, such as proofreading, transcribing handwritten information, or operating calculators or computers to work with pay records, invoices, balance sheets, or other documents.",
+    "750": "Transmit information or documents to customers, using computer, mail, or facsimile machine.",
+    "753": "Provide information about establishment, such as location of departments or offices, employees within the organization, or services provided.",
+    "748": "Hear and resolve complaints from customers or the public.",
+    "755": "Collect, sort, distribute, or prepare mail, messages, or courier deliveries.",
+    "762": "Perform duties, such as taking care of plants or straightening magazines to maintain lobby or reception area.",
+    "756": "Calculate and quote rates for tours, stocks, insurance policies, or other products or services.",
+    "752": "Analyze data to determine answers to questions from customers or members of the public.",
+    "754": "Keep a current record of staff members' whereabouts and availability.",
+    "759": "Schedule space or equipment for special programs and prepare lists of participants.",
+    "758": "Process and prepare memos, correspondence, travel vouchers, or other documents.",
+    "760": "Enroll individuals to participate in programs and notify them of their acceptance.",
+    "757": "Take orders for merchandise or materials and send them to the proper departments to be filled."
+  }
+}

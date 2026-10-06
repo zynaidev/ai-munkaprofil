@@ -1,0 +1,244 @@
+{
+  "ellenorizve": false,
+  "slug": "jogasz",
+  "nev": "Jogász",
+  "aliasok": [
+    "Jogász, jogtanácsos",
+    "jogtanácsos",
+    "céges jogász",
+    "jogi tanácsadó",
+    "jogi szakértő",
+    "jogi előadó",
+    "bírósági jogász",
+    "jogi ügyintéző"
+  ],
+  "feor_kod": "2611",
+  "isco_kod": "2619",
+  "soc_kodok": [
+    "23-1011.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "jogászok",
+  "fekek": {
+    "fizikai": {
+      "ertek": 1,
+      "indoklas": "A munka nagy része íróasztalnál zajlik, de a tárgyalótermi megjelenés, az ügyfélfogadás és az aláírások személyes jelenlétet kívánnak."
+    },
+    "felelosseg": {
+      "ertek": 3,
+      "indoklas": "Az ügyvéd személyesen felel a tanácsaiért és az ellenjegyzett okiratokért, ezt a kamarai szabályok és a kötelező felelősségbiztosítás is megköveteli."
+    },
+    "szabalyozas": {
+      "ertek": 3,
+      "indoklas": "Az ügyvédi törvény kizárólagos jogi képviseleti és ellenjegyzési szabályai, a titoktartás, valamint az EU AI Act igazságszolgáltatási területre vonatkozó szigorú követelményei erős korlátot jelentenek."
+    },
+    "bizalom": {
+      "ertek": 3,
+      "indoklas": "Az ügyfelek érzékeny, nagy tétű ügyeiket általában olyan emberre bízzák, akinek az arcába néznek, és aki személyesen vállal értük felelősséget."
+    }
+  },
+  "teendo_szoveg": "Használd az AI-t a jogszabály-kutatásra, az első szerződéstervezetek elkészítésére és az iratok átnézésére, így több időd marad arra, amiben te vagy nélkülözhetetlen. Építs a tárgyalási készségedre, az ügyfélkapcsolataidra és a perstratégiai gondolkodásodra, mert itt a személyes jelenlét és a felelősségvállalás számít. Tanuld meg kritikusan ellenőrizni az AI kimenetét, és válassz egy szakterületet, ahol mély tudásoddal és ítélőképességeddel kitűnhetsz.",
+  "csoportok": [
+    {
+      "leiras": "Jogszabályok, ítélkezési gyakorlat és nyilvános nyilvántartások kutatása, jogi elemzés",
+      "task_idk": [
+        "3774",
+        "3783",
+        "3788",
+        "3775",
+        "3780",
+        "3793"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Szerződések, okiratok és jogi vélemények szerkesztése, ellenőrzése",
+      "task_idk": [
+        "20877",
+        "3785"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Ügyfelek tanácsadása, tényfeltárás és szakmai egyeztetés",
+      "task_idk": [
+        "3773",
+        "3778",
+        "3787"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Perstratégia kialakítása, egyezségi és szerződéses tárgyalások",
+      "task_idk": [
+        "3777",
+        "3786",
+        "23992"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Ügyfélképviselet bíróság és hatóságok előtt, tárgyalás",
+      "task_idk": [
+        "3779",
+        "3782",
+        "3776",
+        "3781"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Hagyatéki ügyek és megbízotti, gondnoki feladatok",
+      "task_idk": [
+        "3792",
+        "3791"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Irodavezetés és munkatársak irányítása",
+      "task_idk": [
+        "3789",
+        "3790"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Jogszabályok, ítélkezési gyakorlat és nyilvános nyilvántartások kutatása, jogi elemzés",
+      "task_idk": [
+        "3774",
+        "3783",
+        "3788",
+        "3775",
+        "3780",
+        "3793"
+      ],
+      "idoArany": 0.3089,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.234,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Szerződések, okiratok és jogi vélemények szerkesztése, ellenőrzése",
+      "task_idk": [
+        "20877",
+        "3785"
+      ],
+      "idoArany": 0.0772,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.329,
+      "horizont": "1-3ev",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Ügyfelek tanácsadása, tényfeltárás és szakmai egyeztetés",
+      "task_idk": [
+        "3773",
+        "3778",
+        "3787"
+      ],
+      "idoArany": 0.1711,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.165,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Perstratégia kialakítása, egyezségi és szerződéses tárgyalások",
+      "task_idk": [
+        "3777",
+        "3786",
+        "23992"
+      ],
+      "idoArany": 0.1574,
+      "kitettseg": 0.476,
+      "kivaltasArany": 0.251,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Ügyfélképviselet bíróság és hatóságok előtt, tárgyalás",
+      "task_idk": [
+        "3779",
+        "3782",
+        "3776",
+        "3781"
+      ],
+      "idoArany": 0.1291,
+      "kitettseg": 0.205,
+      "kivaltasArany": 0.251,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Hagyatéki ügyek és megbízotti, gondnoki feladatok",
+      "task_idk": [
+        "3792",
+        "3791"
+      ],
+      "idoArany": 0.0481,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.251,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Irodavezetés és munkatársak irányítása",
+      "task_idk": [
+        "3789",
+        "3790"
+      ],
+      "idoArany": 0.1083,
+      "kitettseg": 0.224,
+      "kivaltasArany": 0.251,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "1 feladatnál nincs kitettségi adat (munkakör-átlag használva).",
+    "Az Economic Index a munkaidő csak 21%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "3774": "Interpret laws, rulings and regulations for individuals and businesses.",
+    "3775": "Analyze the probable outcomes of cases, using knowledge of legal precedents.",
+    "3778": "Gather evidence to formulate defense or to initiate legal actions by such means as interviewing clients and witnesses to ascertain the facts of a case.",
+    "3789": "Supervise legal assistants.",
+    "20877": "Prepare, draft, and review legal documents, such as wills, deeds, patent applications, mortgages, leases, and contracts.",
+    "3773": "Advise clients concerning business transactions, claim liability, advisability of prosecuting or defending lawsuits, or legal rights and obligations.",
+    "3780": "Examine legal data to determine advisability of defending or prosecuting lawsuit.",
+    "3783": "Study Constitution, statutes, decisions, regulations, and ordinances of quasi-judicial bodies to determine ramifications for cases.",
+    "3786": "Negotiate settlements of civil disputes.",
+    "3777": "Evaluate findings and develop strategies and arguments in preparation for presentation of cases.",
+    "23992": "Negotiate contractual agreements.",
+    "3779": "Represent clients in court or before government agencies.",
+    "3787": "Confer with colleagues with specialties in appropriate areas of legal issue to establish and verify bases for legal proceedings.",
+    "3790": "Perform administrative and management functions related to the practice of law.",
+    "3788": "Search for and examine public and other legal records to write opinions or establish ownership.",
+    "3782": "Present evidence to defend clients or prosecute defendants in criminal or civil litigation.",
+    "3792": "Probate wills and represent and advise executors and administrators of estates.",
+    "3776": "Present and summarize cases to judges and juries.",
+    "3781": "Select jurors, argue motions, meet with judges, and question witnesses during the course of a trial.",
+    "3791": "Act as agent, trustee, guardian, or executor for businesses or individuals.",
+    "3793": "Help develop federal and state programs, draft and interpret laws and legislation, and establish enforcement procedures.",
+    "3785": "Prepare legal briefs and opinions, and file appeals in state and federal courts of appeal."
+  }
+}

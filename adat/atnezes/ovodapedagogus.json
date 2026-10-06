@@ -1,0 +1,254 @@
+{
+  "ellenorizve": false,
+  "slug": "ovodapedagogus",
+  "nev": "Óvodapedagógus",
+  "aliasok": [
+    "Csecsemő- és kisgyermeknevelő, óvodapedagógus",
+    "óvónő",
+    "óvodai nevelő",
+    "kisgyermeknevelő",
+    "bölcsődei gondozó",
+    "csecsemőnevelő",
+    "bölcsis nevelő",
+    "óvónéni"
+  ],
+  "feor_kod": "2432",
+  "isco_kod": "2342",
+  "soc_kodok": [
+    "25-2011.00",
+    "25-2012.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "óvodapedagógusok",
+  "fekek": {
+    "fizikai": {
+      "ertek": 3,
+      "indoklas": "A munka során folyamatosan jelen kell lenni a gyerekek mellett, öltöztetni, etetni, vigyázni rájuk, ezt gép nem tudja átvenni."
+    },
+    "felelosseg": {
+      "ertek": 3,
+      "indoklas": "Az óvodapedagógus felel a gyerekek testi épségéért és fejlődéséért, a felügyeleti kötelezettség pedig személyhez kötött."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "A köznevelési törvény és az óvodai nevelés országos alapprogramja képesítéshez és létszámhoz köti a munkát, az oktatási célú AI-rendszerekre pedig az EU AI Act szigorúbb szabályai vonatkoznak."
+    },
+    "bizalom": {
+      "ertek": 3,
+      "indoklas": "A szülők kisgyermekeiket csak megbízható, ismert felnőttre bízzák, az ő személyes jelenlétüket várják el."
+    }
+  },
+  "teendo_szoveg": "A munkád lényege az emberi kapcsolat, a figyelem és a gondoskodás, ezért ezt érdemes tovább erősítened: fejleszd a gyerekek megfigyelésében, a játékalapú fejlesztésben és a szülőkkel való kommunikációban szerzett tapasztalatodat. A tervezést és az adminisztrációt pedig bátran próbáld ki AI-eszközökkel, hogy több idő maradjon a gyerekekre. Tanulj meg olyan területeket is, mint a differenciált fejlesztés vagy a különleges bánásmód, mert ezekben a személyes jelenléted a legértékesebb.",
+  "csoportok": [
+    {
+      "leiras": "Gyerekek fogadása, etetés, öltöztetés, pelenkázás, tisztálkodás és étkezési szokások tanítása",
+      "task_idk": [
+        "6465",
+        "6476",
+        "6475",
+        "6477"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Alapkészségek tanítása, bemutatás, iskolára felkészítés",
+      "task_idk": [
+        "6466",
+        "6498",
+        "6507",
+        "6501",
+        "6480",
+        "6503"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Játék, mese, mondóka, barkácsolás és kirándulás vezetése",
+      "task_idk": [
+        "6469",
+        "6468",
+        "6464"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Szabályok és rend fenntartása a csoportban",
+      "task_idk": [
+        "6467",
+        "6499",
+        "6473"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Gyerekek megfigyelése, fejlődésük értékelése, egyéni segítés",
+      "task_idk": [
+        "6470",
+        "6500",
+        "6513"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Foglalkozások tervezése, módszerek igazítása, dokumentáció vezetése",
+      "task_idk": [
+        "6478",
+        "6508",
+        "6479",
+        "6482"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "A csoportszoba és az udvar berendezése, eszközök előkészítése",
+      "task_idk": [
+        "6474",
+        "6481"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Gyerekek fogadása, etetés, öltöztetés, pelenkázás, tisztálkodás és étkezési szokások tanítása",
+      "task_idk": [
+        "6465",
+        "6476",
+        "6475",
+        "6477"
+      ],
+      "idoArany": 0.162,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.597,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Alapkészségek tanítása, bemutatás, iskolára felkészítés",
+      "task_idk": [
+        "6466",
+        "6498",
+        "6507",
+        "6501",
+        "6480",
+        "6503"
+      ],
+      "idoArany": 0.2461,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.597,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Játék, mese, mondóka, barkácsolás és kirándulás vezetése",
+      "task_idk": [
+        "6469",
+        "6468",
+        "6464"
+      ],
+      "idoArany": 0.122,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.731,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Szabályok és rend fenntartása a csoportban",
+      "task_idk": [
+        "6467",
+        "6499",
+        "6473"
+      ],
+      "idoArany": 0.1247,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.597,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Gyerekek megfigyelése, fejlődésük értékelése, egyéni segítés",
+      "task_idk": [
+        "6470",
+        "6500",
+        "6513"
+      ],
+      "idoArany": 0.1156,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.597,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Foglalkozások tervezése, módszerek igazítása, dokumentáció vezetése",
+      "task_idk": [
+        "6478",
+        "6508",
+        "6479",
+        "6482"
+      ],
+      "idoArany": 0.1536,
+      "kitettseg": 0.623,
+      "kivaltasArany": 0.529,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "A csoportszoba és az udvar berendezése, eszközök előkészítése",
+      "task_idk": [
+        "6474",
+        "6481"
+      ],
+      "idoArany": 0.076,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.548,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "A kis súlyú feladatok elhagyása a munkaidő 55%-át érinti.",
+    "Az Economic Index a munkaidő csak 12%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "6466": "Teach basic skills, such as color, shape, number and letter recognition, personal hygiene, and social skills.",
+    "6467": "Establish and enforce rules for behavior and procedures for maintaining order.",
+    "6465": "Attend to children's basic needs by feeding them, dressing them, and changing their diapers.",
+    "6464": "Provide a variety of materials and resources for children to explore, manipulate, and use, both in learning activities and in imaginative play.",
+    "6478": "Adapt teaching methods and instructional materials to meet students' varying needs and interests.",
+    "6499": "Establish and enforce rules for behavior and policies and procedures to maintain order among students.",
+    "6477": "Assimilate arriving children to the school environment by greeting them, helping them remove outerwear, and selecting activities of interest to them.",
+    "6507": "Prepare children for later grades by encouraging them to explore learning opportunities and to persevere with challenging tasks.",
+    "6480": "Demonstrate activities to children.",
+    "6503": "Demonstrate activities to children.",
+    "6469": "Organize and lead activities designed to promote physical, mental, and social development, such as games, arts and crafts, music, storytelling, and field trips.",
+    "6501": "Instruct students individually and in groups, adapting teaching methods to meet students' varying needs and interests.",
+    "6498": "Teach basic skills, such as color, shape, number and letter recognition, personal hygiene, and social skills.",
+    "6470": "Observe and evaluate children's performance, behavior, social development, and physical health.",
+    "6476": "Serve meals and snacks in accordance with nutritional guidelines.",
+    "6500": "Observe and evaluate children's performance, behavior, social development, and physical health.",
+    "6468": "Read books to entire classes or to small groups.",
+    "6473": "Enforce all administration policies and rules governing students.",
+    "6475": "Teach proper eating habits and personal hygiene.",
+    "6474": "Prepare materials and classrooms for class activities.",
+    "6481": "Arrange indoor and outdoor space to facilitate creative play, motor-skill activities, and safety.",
+    "6482": "Maintain accurate and complete student records as required by laws, district policies, and administrative regulations.",
+    "6513": "Guide and counsel students with adjustment or academic problems or special academic interests.",
+    "6508": "Establish clear objectives for all lessons, units, and projects and communicate those objectives to children.",
+    "6479": "Establish clear objectives for all lessons, units, and projects and communicate those objectives to children."
+  }
+}

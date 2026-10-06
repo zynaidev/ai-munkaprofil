@@ -1,0 +1,235 @@
+{
+  "ellenorizve": false,
+  "slug": "szakacs",
+  "nev": "Szakács",
+  "aliasok": [
+    "séf",
+    "konyhafőnök",
+    "étteremi szakács",
+    "főzőember",
+    "konyhai szakács",
+    "főszakács",
+    "kuktá"
+  ],
+  "feor_kod": "5134",
+  "isco_kod": "5120",
+  "soc_kodok": [
+    "35-2014.00",
+    "35-2012.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "szakácsok",
+  "fekek": {
+    "fizikai": {
+      "ertek": 3,
+      "indoklas": "A konyhában a főzés, vágás, sütés, mosogatás és tálalás kézügyességet és fizikai jelenlétet igényel, ezt robot ma nem váltja ki megbízhatóan."
+    },
+    "felelosseg": {
+      "ertek": 2,
+      "indoklas": "A szakács felel az ételallergének kezeléséért és az élelmiszerbiztonságért, hiba esetén a vendég egészsége és a hatósági felelősség is a konyhára hárul."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "A HACCP-rendszer, az EU élelmiszer-higiéniai szabályai és a NÉBIH-ellenőrzések kötelező nyomon követést és emberi ellenőrzést írnak elő."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "A vendégek többsége elvárja, hogy az ételt hozzáértő ember készítse, és a kézzel készített, egyedi ízvilág sokszor maga a szolgáltatás értéke."
+    }
+  },
+  "teendo_szoveg": "Építsd az ízlésedre, a technikai tudásodra és az egyedi ételek megalkotására, mert ez az, ami a konyhában emberi marad. Tanuld meg a digitális eszközöket is, például a készletkövető és rendelési programokat vagy az okos sütők beállításait, hogy az adminisztrációra kevesebb időd menjen. Ha csapatot is vezetsz vagy tanítasz be, az még erősebb kapaszkodó lehet a pályádon.",
+  "csoportok": [
+    {
+      "leiras": "Főzés, sütés-pörkölés és ételkészítés (ízesítés, hús-hal feldolgozás, zöldségelőkészítés)",
+      "task_idk": [
+        "9488",
+        "9489",
+        "2170",
+        "2169",
+        "2176",
+        "2172",
+        "2171",
+        "2177"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Kenyér, péksütemény és torta sütése",
+      "task_idk": [
+        "9494",
+        "2183"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Adagolás, tálalás és az ételek díszítése",
+      "task_idk": [
+        "9487",
+        "2173"
+      ],
+      "emberi_mag": false,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Higiénia, takarítás, mosogatás és hőmérséklet-ellenőrzés",
+      "task_idk": [
+        "21148",
+        "9491",
+        "9486",
+        "18722",
+        "18723"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Alapanyag-készlet kezelése, leltár és rendelés",
+      "task_idk": [
+        "21149",
+        "18724",
+        "9496",
+        "9499"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Konyhai csapat irányítása, betanítás és beugrás csúcsidőben",
+      "task_idk": [
+        "9493",
+        "2180",
+        "9495",
+        "2175"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Főzés, sütés-pörkölés és ételkészítés (ízesítés, hús-hal feldolgozás, zöldségelőkészítés)",
+      "task_idk": [
+        "9488",
+        "9489",
+        "2170",
+        "2169",
+        "2176",
+        "2172",
+        "2171",
+        "2177"
+      ],
+      "idoArany": 0.3167,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.382,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Kenyér, péksütemény és torta sütése",
+      "task_idk": [
+        "9494",
+        "2183"
+      ],
+      "idoArany": 0.0624,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.382,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Adagolás, tálalás és az ételek díszítése",
+      "task_idk": [
+        "9487",
+        "2173"
+      ],
+      "idoArany": 0.0891,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.382,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Higiénia, takarítás, mosogatás és hőmérséklet-ellenőrzés",
+      "task_idk": [
+        "21148",
+        "9491",
+        "9486",
+        "18722",
+        "18723"
+      ],
+      "idoArany": 0.2278,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.382,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Alapanyag-készlet kezelése, leltár és rendelés",
+      "task_idk": [
+        "21149",
+        "18724",
+        "9496",
+        "9499"
+      ],
+      "idoArany": 0.1537,
+      "kitettseg": 0.115,
+      "kivaltasArany": 0.382,
+      "horizont": "5ev+",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Konyhai csapat irányítása, betanítás és beugrás csúcsidőben",
+      "task_idk": [
+        "9493",
+        "2180",
+        "9495",
+        "2175"
+      ],
+      "idoArany": 0.1503,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.382,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    }
+  ],
+  "_figyelmeztetesek": [
+    "A kis súlyú feladatok elhagyása a munkaidő 17%-át érinti.",
+    "Az Economic Index a munkaidő csak 12%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "21148": "Monitor and record food temperatures to ensure food safety.",
+    "9491": "Wash pots, pans, dishes, utensils, or other cooking equipment.",
+    "9486": "Clean and inspect galley equipment, kitchen appliances, and work areas to ensure cleanliness and functional operation.",
+    "9488": "Cook foodstuffs according to menus, special dietary or nutritional restrictions, or numbers of portions to be served.",
+    "9487": "Apportion and serve food to facility residents, employees, or patrons.",
+    "9493": "Direct activities of one or more workers who assist in preparing and serving meals.",
+    "9489": "Clean, cut, and cook meat, fish, or poultry.",
+    "21149": "Rotate and store food supplies.",
+    "2173": "Portion, arrange, and garnish food, and serve food to waiters or patrons.",
+    "18722": "Inspect and clean food preparation areas, such as equipment, work surfaces, and serving areas, to ensure safe and sanitary food-handling practices.",
+    "18723": "Ensure food is stored and cooked at correct temperature by regulating temperature of ovens, broilers, grills, and roasters.",
+    "2170": "Season and cook food according to recipes or personal judgment and experience.",
+    "2180": "Coordinate and supervise work of kitchen staff.",
+    "18724": "Ensure freshness of food and ingredients by checking for quality, keeping track of old and new items, and rotating stock.",
+    "2169": "Turn or stir foods to ensure even cooking.",
+    "2176": "Bake, roast, broil, and steam meats, fish, vegetables, and other foods.",
+    "2172": "Weigh, measure, and mix ingredients according to recipes or personal judgment, using various kitchen utensils and equipment.",
+    "2171": "Observe and test foods to determine if they have been cooked sufficiently, using methods such as tasting, smelling, or piercing them with utensils.",
+    "9496": "Take inventory of supplies and equipment.",
+    "9499": "Requisition food supplies, kitchen equipment, and appliances, based on estimates of future needs.",
+    "2175": "Substitute for or assist other cooks during emergencies or rush periods.",
+    "2177": "Wash, peel, cut, and seed fruits and vegetables to prepare them for consumption.",
+    "9495": "Train new employees.",
+    "9494": "Bake breads, rolls, or other pastries.",
+    "2183": "Bake breads, rolls, cakes, and pastries."
+  }
+}

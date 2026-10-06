@@ -1,0 +1,220 @@
+{
+  "ellenorizve": false,
+  "slug": "berelszamolo",
+  "nev": "Bérelszámoló",
+  "aliasok": [
+    "bérszámfejtő",
+    "bérügyi ügyintéző",
+    "bérszámfejtés",
+    "bérügyes",
+    "munkaügyi ügyintéző",
+    "HR adminisztrátor"
+  ],
+  "feor_kod": "4122",
+  "isco_kod": "4313",
+  "soc_kodok": [
+    "43-3051.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "bérelszámolók",
+  "fekek": {
+    "fizikai": {
+      "ertek": 0,
+      "indoklas": "A munka szinte teljesen irodai és digitális, nem igényel fizikai jelenlétet vagy kézügyességet."
+    },
+    "felelosseg": {
+      "ertek": 2,
+      "indoklas": "A bérszámfejtés és a NAV felé benyújtott bevallások pontosságáért a munkáltató és a szakember is felel, a jóváhagyás és az aláírás emberi feladat marad."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "A magyar adó-, járulék- és munkajogi szabályok gyakran változnak, a béradatok kezelésére pedig a GDPR és az EU AI Act is vonatkozik."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "A fizetési adatok érzékenyek, ezért a munkavállalók és a vezetők szívesebben fordulnak vitás kérdésekben egy felelős, megbízható emberhez."
+    }
+  },
+  "teendo_szoveg": "A rutinszerű adatrögzítést és számolást egyre inkább a szoftverek végzik, ezért érdemes megtanulnod a bérszámfejtő rendszerek automatizálási és ellenőrzési funkcióit. Fejleszd a jogszabályi tudásodat (SZJA, járulékok, munkajog), hogy te legyél az, aki felismeri az eltéréseket és megmagyarázza a különleges eseteket. A kollégáknak és vezetőknek adott érthető tanácsadás egyre értékesebb lesz, így érdemes ebben is erősödnöd.",
+  "csoportok": [
+    {
+      "leiras": "Jelenléti ívek, munkaidő és szabadságok nyilvántartása",
+      "task_idk": [
+        "2519",
+        "2526",
+        "2524",
+        "2517",
+        "18563"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Bér- és levonásszámítás, hibák javítása, visszamenőleges korrekciók",
+      "task_idk": [
+        "2516",
+        "2518",
+        "2521"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Munkavállalói törzsadatok és juttatások adminisztrációja",
+      "task_idk": [
+        "18562",
+        "2520",
+        "2527",
+        "2530"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Adóbevallások elkészítése és számlaegyeztetés",
+      "task_idk": [
+        "23954",
+        "20901"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Bérfizetés lebonyolítása, zárás és jelentések készítése",
+      "task_idk": [
+        "2515",
+        "2528",
+        "2529"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Tájékoztatás bérügyekben, jogszabálykövetés, kollégák betanítása",
+      "task_idk": [
+        "2523",
+        "2522",
+        "18564",
+        "20902"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Jelenléti ívek, munkaidő és szabadságok nyilvántartása",
+      "task_idk": [
+        "2519",
+        "2526",
+        "2524",
+        "2517",
+        "18563"
+      ],
+      "idoArany": 0.306,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.293,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Bér- és levonásszámítás, hibák javítása, visszamenőleges korrekciók",
+      "task_idk": [
+        "2516",
+        "2518",
+        "2521"
+      ],
+      "idoArany": 0.176,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.293,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Munkavállalói törzsadatok és juttatások adminisztrációja",
+      "task_idk": [
+        "18562",
+        "2520",
+        "2527",
+        "2530"
+      ],
+      "idoArany": 0.1631,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.293,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Adóbevallások elkészítése és számlaegyeztetés",
+      "task_idk": [
+        "23954",
+        "20901"
+      ],
+      "idoArany": 0.0548,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.293,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Bérfizetés lebonyolítása, zárás és jelentések készítése",
+      "task_idk": [
+        "2515",
+        "2528",
+        "2529"
+      ],
+      "idoArany": 0.137,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.293,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Tájékoztatás bérügyekben, jogszabálykövetés, kollégák betanítása",
+      "task_idk": [
+        "2523",
+        "2522",
+        "18564",
+        "20902"
+      ],
+      "idoArany": 0.1632,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.293,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 5%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "2519": "Verify attendance, hours worked, and pay adjustments, and post information onto designated records.",
+    "2526": "Distribute and collect timecards each pay period.",
+    "2516": "Compute wages and deductions, and enter data into computers.",
+    "18563": "Keep track of leave time, such as vacation, personal, and sick leave, for employees.",
+    "18562": "Process paperwork for new employees and enter employee information into the payroll system.",
+    "2518": "Review time sheets, work charts, wage computation, and other information to detect and reconcile payroll discrepancies.",
+    "2520": "Record employee information, such as exemptions, transfers, and resignations, to maintain and update payroll records.",
+    "2528": "Prepare and balance period-end reports, and reconcile issued payrolls to bank statements.",
+    "2524": "Complete time sheets showing employees' arrival and departure times.",
+    "2517": "Compile employee time, production, and payroll data from time sheets and other records.",
+    "2515": "Process and issue employee paychecks and statements of earnings and deductions.",
+    "2521": "Issue and record adjustments to pay related to previous errors or retroactive increases.",
+    "2523": "Provide information to employees and managers on payroll matters, tax issues, benefit plans, and collective agreement provisions.",
+    "2522": "Keep informed about changes in tax and deduction laws that apply to the payroll process.",
+    "18564": "Conduct verifications of employment.",
+    "23954": "Prepare and file payroll tax returns.",
+    "2529": "Compile statistical reports, statements, and summaries related to pay and benefits accounts, and submit them to appropriate departments.",
+    "20901": "Balance cash and payroll accounts.",
+    "2527": "Complete, verify, and process forms and documentation for administration of benefits, such as pension plans, and unemployment and medical insurance.",
+    "20902": "Train employees on organizations' timekeeping systems.",
+    "2530": "Coordinate special programs, such as United Way campaigns, that involve payroll deductions."
+  }
+}

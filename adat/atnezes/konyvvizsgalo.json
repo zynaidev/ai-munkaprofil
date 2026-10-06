@@ -1,0 +1,254 @@
+{
+  "ellenorizve": false,
+  "slug": "konyvvizsgalo",
+  "nev": "Könyvvizsgáló",
+  "aliasok": [
+    "könyvszakértő",
+    "auditor",
+    "számviteli szakértő",
+    "Könyvvizsgáló, könyvelő, könyvszakértő",
+    "mérlegképes könyvelő",
+    "adótanácsadó",
+    "számviteli szakember",
+    "főkönyvelő",
+    "bérszámfejtő"
+  ],
+  "feor_kod": "2513",
+  "isco_kod": "2411",
+  "soc_kodok": [
+    "13-2011.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "könyvvizsgálók",
+  "fekek": {
+    "fizikai": {
+      "ertek": 1,
+      "indoklas": "A munka nagy része asztali és digitális, de a készpénz-, értékpapír- és helyszíni ellenőrzésekhez néha személyes jelenlét kell."
+    },
+    "felelosseg": {
+      "ertek": 3,
+      "indoklas": "A könyvvizsgálói záradékért és az aláírásért a kamarai tag könyvvizsgáló személyesen felel, ezt gép nem vállalhatja át."
+    },
+    "szabalyozas": {
+      "ertek": 3,
+      "indoklas": "A magyar könyvvizsgálói törvény, az uniós könyvvizsgálati rendelet és a számviteli, adózási előírások szigorúan szabályozzák, ki és hogyan végezheti a vizsgálatot."
+    },
+    "bizalom": {
+      "ertek": 3,
+      "indoklas": "A vállalatok, a befektetők és a hatóságok a vizsgálói függetlenséget és a hiteles szakmai véleményt elvárják egy felelős embertől."
+    }
+  },
+  "teendo_szoveg": "A rutinszerű adatrögzítést és egyeztetést egyre inkább szoftverek végzik, ezért érdemes az eltérések értelmezésére, a kockázatok megítélésére és a szakmai ítéletalkotásra építened. Tanuld meg magabiztosan használni az adatelemző és automatizált ellenőrző eszközöket, hogy a vizsgálatod mélyebb és gyorsabb legyen. Fejleszd az ügyfélkapcsolati és tárgyalási készségedet, mert a vezetői egyeztetés és a hatósági képviselet a te emberi értéked marad.",
+  "csoportok": [
+    {
+      "leiras": "Számlák feldolgozása, könyvelési tételek rögzítése és egyeztetése",
+      "task_idk": [
+        "21533",
+        "21515",
+        "21517",
+        "21516"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Beszámolók, kimutatások és nyilvántartások ellenőrzése",
+      "task_idk": [
+        "21514",
+        "21534",
+        "21532",
+        "21508",
+        "21512"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Adószámítás és adóbevallások elkészítése",
+      "task_idk": [
+        "21526",
+        "21522"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Jelentések, elemzések és költségvetések készítése",
+      "task_idk": [
+        "21505",
+        "21520",
+        "21531",
+        "21519"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Belső kontroll, kockázat- és csalásfeltárás",
+      "task_idk": [
+        "21507",
+        "21511",
+        "21513",
+        "21523",
+        "21521"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Vizsgálat irányítása, csapatvezetés és egyeztetés a vezetőkkel",
+      "task_idk": [
+        "21509",
+        "21529",
+        "21510"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Ügyfélképviselet adóhatóság és bíróság előtt",
+      "task_idk": [
+        "21525",
+        "21528"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Számlák feldolgozása, könyvelési tételek rögzítése és egyeztetése",
+      "task_idk": [
+        "21533",
+        "21515",
+        "21517",
+        "21516"
+      ],
+      "idoArany": 0.2085,
+      "kitettseg": 0.716,
+      "kivaltasArany": 0.457,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Beszámolók, kimutatások és nyilvántartások ellenőrzése",
+      "task_idk": [
+        "21514",
+        "21534",
+        "21532",
+        "21508",
+        "21512"
+      ],
+      "idoArany": 0.2237,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.457,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Adószámítás és adóbevallások elkészítése",
+      "task_idk": [
+        "21526",
+        "21522"
+      ],
+      "idoArany": 0.0926,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.457,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Jelentések, elemzések és költségvetések készítése",
+      "task_idk": [
+        "21505",
+        "21520",
+        "21531",
+        "21519"
+      ],
+      "idoArany": 0.1376,
+      "kitettseg": 0.67,
+      "kivaltasArany": 0.498,
+      "horizont": "1-3ev",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Belső kontroll, kockázat- és csalásfeltárás",
+      "task_idk": [
+        "21507",
+        "21511",
+        "21513",
+        "21523",
+        "21521"
+      ],
+      "idoArany": 0.1677,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.455,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Vizsgálat irányítása, csapatvezetés és egyeztetés a vezetőkkel",
+      "task_idk": [
+        "21509",
+        "21529",
+        "21510"
+      ],
+      "idoArany": 0.1076,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.457,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Ügyfélképviselet adóhatóság és bíróság előtt",
+      "task_idk": [
+        "21525",
+        "21528"
+      ],
+      "idoArany": 0.0624,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.457,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    }
+  ],
+  "_figyelmeztetesek": [
+    "A kis súlyú feladatok elhagyása a munkaidő 8%-át érinti.",
+    "Az Economic Index a munkaidő csak 12%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "21533": "Process invoices for payment.",
+    "21514": "Prepare, examine, or analyze accounting records, financial statements, or other financial reports to assess accuracy, completeness, and conformance to reporting and procedural standards.",
+    "21516": "Review accounts for discrepancies and reconcile differences.",
+    "21515": "Prepare adjusting journal entries.",
+    "21526": "Compute taxes owed and prepare tax returns, ensuring compliance with payment, reporting, or other tax requirements.",
+    "21508": "Inspect account books and accounting systems for efficiency, effectiveness, and use of accepted accounting procedures to record transactions.",
+    "21505": "Prepare detailed reports on audit findings.",
+    "21534": "Review data about material assets, net worth, liabilities, capital stock, surplus, income, or expenditures.",
+    "21522": "Evaluate taxpayer finances to determine tax liability, using knowledge of interest and discount rates, annuities, valuation of stocks and bonds, and amortization valuation of depletable assets.",
+    "21525": "Review taxpayer accounts, and conduct audits on-site, by correspondence, or by summoning taxpayer to office.",
+    "21521": "Develop, implement, modify, and document recordkeeping and accounting systems, making use of current computer technology.",
+    "21513": "Examine records and interview workers to ensure recording of transactions and compliance with laws and regulations.",
+    "21520": "Report to management regarding the finances of establishment.",
+    "21509": "Supervise auditing of establishments, and determine scope of investigation required.",
+    "21512": "Inspect cash on hand, notes receivable and payable, negotiable securities, and canceled checks to confirm records are accurate.",
+    "21517": "Establish tables of accounts and assign entries to proper accounts.",
+    "21529": "Direct activities of personnel engaged in filing, recording, compiling, and transmitting financial records.",
+    "21532": "Prepare, analyze, or verify annual reports, financial statements, and other records, using accepted accounting and statistical procedures to assess financial condition and facilitate financial planning.",
+    "21510": "Confer with company officials about financial and regulatory matters.",
+    "21511": "Examine and evaluate financial and information systems, recommending controls to ensure system reliability and data integrity.",
+    "21507": "Collect and analyze data to detect deficient controls, duplicated effort, extravagance, fraud, or non-compliance with laws, regulations, and management policies.",
+    "21519": "Analyze business operations, trends, costs, revenues, financial commitments, and obligations to project future revenues and expenses or to provide advice.",
+    "21523": "Examine whether the organization's objectives are reflected in its management activities, and whether employees understand the objectives.",
+    "21531": "Develop, maintain, or analyze budgets, preparing periodic reports that compare budgeted costs to actual costs.",
+    "21528": "Represent clients before taxing authorities and provide support during litigation involving financial issues."
+  }
+}

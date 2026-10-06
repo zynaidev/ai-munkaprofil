@@ -1,0 +1,217 @@
+{
+  "ellenorizve": false,
+  "slug": "tanito",
+  "nev": "Tanító",
+  "aliasok": [
+    "Általános iskolai tanár, tanító",
+    "általános iskolai tanár",
+    "tanár",
+    "alsós tanító",
+    "felsős tanár",
+    "osztálytanító",
+    "általános iskolai pedagógus",
+    "napközis tanár"
+  ],
+  "feor_kod": "2431",
+  "isco_kod": "2341",
+  "soc_kodok": [
+    "25-2021.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "tanítók",
+  "fekek": {
+    "fizikai": {
+      "ertek": 3,
+      "indoklas": "A gyerekek mellett fizikailag jelen kell lenni: felügyelet, mozgásos és kézműves foglalkozások, eszközök biztonságos használata."
+    },
+    "felelosseg": {
+      "ertek": 3,
+      "indoklas": "A tanító felel a gyerekek testi épségéért, az osztálynaplóért és az értékelésért, ezt jogszabály a pedagógusra telepíti."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "A köznevelési törvény és a Nemzeti alaptanterv szigorúan szabályozza a munkát, az EU AI Act pedig az oktatási célú AI-t magas kockázatúnak tekinti."
+    },
+    "bizalom": {
+      "ertek": 3,
+      "indoklas": "A szülők és az iskola elvárják, hogy az alsós gyerekek mellett ember legyen, aki személyesen ismeri és neveli őket."
+    }
+  },
+  "teendo_szoveg": "Építs arra, amit gép nem tud átvenni: a gyerekek személyes ismeretére, a közösség formálására és a szülőkkel való bizalmi kapcsolatra. Az óraterveket, gyakorlófeladatokat és szemléltető anyagokat próbáld ki AI-eszközök segítségével, így több időd marad a gyerekekre. Fejleszd a differenciálás és a fejlesztő pedagógia terén a tudásodat, mert ezekben a személyre szabott figyelem a legfontosabb.",
+  "csoportok": [
+    {
+      "leiras": "Tanítás, foglalkozások vezetése és rend az osztályteremben",
+      "task_idk": [
+        "6540",
+        "6561",
+        "6552",
+        "6560",
+        "6535",
+        "6553",
+        "6537"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Gyerekek motiválása, egyéni segítés és kapcsolattartás a szülőkkel",
+      "task_idk": [
+        "6549",
+        "6548",
+        "6545"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Óratervezés, tananyag-készítés és szemléltetés",
+      "task_idk": [
+        "6538",
+        "6539",
+        "6541",
+        "6551",
+        "6557",
+        "6550",
+        "6556",
+        "6543"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Dolgozatok, házi feladatok és a gyerekek fejlődésének értékelése",
+      "task_idk": [
+        "6536",
+        "6542",
+        "6544"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Adminisztráció, egyeztetés kollégákkal és segítők irányítása",
+      "task_idk": [
+        "6547",
+        "6554",
+        "6555",
+        "6567"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Tanítás, foglalkozások vezetése és rend az osztályteremben",
+      "task_idk": [
+        "6540",
+        "6561",
+        "6552",
+        "6560",
+        "6535",
+        "6553",
+        "6537"
+      ],
+      "idoArany": 0.3007,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.533,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Gyerekek motiválása, egyéni segítés és kapcsolattartás a szülőkkel",
+      "task_idk": [
+        "6549",
+        "6548",
+        "6545"
+      ],
+      "idoArany": 0.1222,
+      "kitettseg": 0.169,
+      "kivaltasArany": 0.549,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Óratervezés, tananyag-készítés és szemléltetés",
+      "task_idk": [
+        "6538",
+        "6539",
+        "6541",
+        "6551",
+        "6557",
+        "6550",
+        "6556",
+        "6543"
+      ],
+      "idoArany": 0.3295,
+      "kitettseg": 0.56,
+      "kivaltasArany": 0.512,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Dolgozatok, házi feladatok és a gyerekek fejlődésének értékelése",
+      "task_idk": [
+        "6536",
+        "6542",
+        "6544"
+      ],
+      "idoArany": 0.1195,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.687,
+      "horizont": "1-3ev",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Adminisztráció, egyeztetés kollégákkal és segítők irányítása",
+      "task_idk": [
+        "6547",
+        "6554",
+        "6555",
+        "6567"
+      ],
+      "idoArany": 0.1281,
+      "kitettseg": 0.266,
+      "kivaltasArany": 0.549,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "A kis súlyú feladatok elhagyása a munkaidő 22%-át érinti.",
+    "Az Economic Index a munkaidő csak 37%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "6540": "Instruct students individually and in groups, using teaching methods such as lectures, discussions, and demonstrations.",
+    "6535": "Establish and enforce rules for behavior and procedures for maintaining order among the students.",
+    "6549": "Guide and counsel students with adjustment or academic problems or with special academic interests.",
+    "6538": "Adapt teaching methods and instructional materials to meet students' varying needs and interests.",
+    "6556": "Use computers, audio-visual aids, and other equipment and materials to supplement presentations.",
+    "6539": "Plan and conduct activities for a balanced program of instruction, demonstration, and work time that provides students with opportunities to observe, question, and investigate.",
+    "6536": "Observe and evaluate students' performance, behavior, social development, and physical health.",
+    "6537": "Prepare materials and classrooms for class activities.",
+    "6541": "Establish clear objectives for all lessons, units, and projects and communicate those objectives to students.",
+    "6548": "Prepare students for later grades by encouraging them to explore learning opportunities and to persevere with challenging tasks.",
+    "6542": "Assign and grade class work and homework.",
+    "6553": "Enforce administration policies and rules governing students.",
+    "6543": "Read books to entire classes or small groups.",
+    "6560": "Instruct and monitor students in the use and care of equipment and materials to prevent injuries and damage.",
+    "6550": "Prepare and implement remedial programs for students requiring extra help.",
+    "6561": "Organize and lead activities designed to promote physical, mental, and social development, such as games, arts and crafts, music, and storytelling.",
+    "6552": "Provide a variety of materials and resources for children to explore, manipulate, and use, both in learning activities and in imaginative play.",
+    "6547": "Maintain accurate and complete student records as required by laws, district policies, and administrative regulations.",
+    "6551": "Prepare objectives and outlines for courses of study, following curriculum guidelines or requirements of states and schools.",
+    "6557": "Prepare for assigned classes and show written evidence of preparation upon request of immediate supervisors.",
+    "6545": "Confer with parents or guardians, teachers, counselors, and administrators to resolve students' behavioral and academic problems.",
+    "6544": "Prepare, administer, and grade tests and assignments to evaluate students' progress.",
+    "6554": "Confer with other staff members to plan and schedule lessons promoting learning, following approved curricula.",
+    "6555": "Meet with other professionals to discuss individual students' needs and progress.",
+    "6567": "Supervise, evaluate, and plan assignments for teacher assistants and volunteers."
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "ellenorizve": false,
+  "slug": "pszichologus",
+  "nev": "Pszichológus",
+  "aliasok": [
+    "klinikai szakpszichológus",
+    "terapeuta",
+    "pszichoterapeuta",
+    "iskolapszichológus",
+    "mentálhigiénés szakember",
+    "lélekgyógyász",
+    "családterapeuta"
+  ],
+  "feor_kod": "2628",
+  "isco_kod": "2634",
+  "soc_kodok": [
+    "19-3033.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "pszichológusok",
+  "fekek": {
+    "fizikai": {
+      "ertek": 1,
+      "indoklas": "A munka nem kézügyességen alapul, de a terápiás helyzetben az együttlét, a testbeszéd és a közös tér sokat számít."
+    },
+    "felelosseg": {
+      "ertek": 3,
+      "indoklas": "A diagnózisért, a kockázatfelmérésért és a kezelési döntésekért a szakember személyesen és szakmailag felel, ezt nem lehet átadni."
+    },
+    "szabalyozas": {
+      "ertek": 3,
+      "indoklas": "A pszichológiai tevékenység engedélyhez és etikai szabályokhoz kötött, az egészségügyi adatok különleges védelmet kapnak a GDPR-ban, és az egészségügyi AI-alkalmazásokra az EU AI Act szigorú előírásai vonatkoznak."
+    },
+    "bizalom": {
+      "ertek": 3,
+      "indoklas": "Az ügyfelek a legbizalmasabb gondjaikat osztják meg, ehhez a legtöbben emberi kapcsolatot várnak el, a terápiás kapcsolat minősége pedig az eredményesség egyik fő tényezője."
+    }
+  },
+  "teendo_szoveg": "Építs arra, ami a munkád lényege: a terápiás kapcsolatra, a krízishelyzetek kezelésére és a szakmai ítélőképességedre. A dokumentációt és a jegyzetelést érdemes olyan eszközökkel gyorsítani, amelyek megfelelnek az adatvédelmi szabályoknak, így több idő marad az ügyfelekre. Fejleszd a szupervízióban, a képzésben és a konzultációban szerzett tapasztalatodat is, mert ezek a területek az emberi hozzáértésre épülnek.",
+  "csoportok": [
+    {
+      "leiras": "Terápia és tanácsadás egyéni, páros, csoportos vagy családi alkalmakon",
+      "task_idk": [
+        "22164",
+        "22169",
+        "22166",
+        "22175"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Krízishelyzetek és önveszélyesség vagy ártalom kockázatának felmérése",
+      "task_idk": [
+        "22190"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Dokumentáció, ülésjegyzetek és jelentések írása",
+      "task_idk": [
+        "22165",
+        "22170"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Kikérdezés, tesztek felvétele és diagnosztikai döntés előkészítése",
+      "task_idk": [
+        "22163",
+        "22172",
+        "22174",
+        "22168"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Kezelési terv készítése, eredmények értékelése, továbbirányítás és pályainformáció",
+      "task_idk": [
+        "22167",
+        "22176",
+        "22173",
+        "22178",
+        "22183"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Szakirodalom követése és egyeztetés kollégákkal, más intézményekkel",
+      "task_idk": [
+        "22179",
+        "22180",
+        "22171",
+        "22177"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Szupervízió, gyakornokok képzése, szakmai programok és prevenciós előadások",
+      "task_idk": [
+        "22185",
+        "22192",
+        "22186",
+        "22184",
+        "22182"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Terápia és tanácsadás egyéni, páros, csoportos vagy családi alkalmakon",
+      "task_idk": [
+        "22164",
+        "22169",
+        "22166",
+        "22175"
+      ],
+      "idoArany": 0.1891,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.218,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Krízishelyzetek és önveszélyesség vagy ártalom kockázatának felmérése",
+      "task_idk": [
+        "22190"
+      ],
+      "idoArany": 0.0525,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.233,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Dokumentáció, ülésjegyzetek és jelentések írása",
+      "task_idk": [
+        "22165",
+        "22170"
+      ],
+      "idoArany": 0.1055,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.644,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Kikérdezés, tesztek felvétele és diagnosztikai döntés előkészítése",
+      "task_idk": [
+        "22163",
+        "22172",
+        "22174",
+        "22168"
+      ],
+      "idoArany": 0.1713,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.168,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Kezelési terv készítése, eredmények értékelése, továbbirányítás és pályainformáció",
+      "task_idk": [
+        "22167",
+        "22176",
+        "22173",
+        "22178",
+        "22183"
+      ],
+      "idoArany": 0.1845,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.233,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Szakirodalom követése és egyeztetés kollégákkal, más intézményekkel",
+      "task_idk": [
+        "22179",
+        "22180",
+        "22171",
+        "22177"
+      ],
+      "idoArany": 0.1457,
+      "kitettseg": 0.39,
+      "kivaltasArany": 0.16,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Szupervízió, gyakornokok képzése, szakmai programok és prevenciós előadások",
+      "task_idk": [
+        "22185",
+        "22192",
+        "22186",
+        "22184",
+        "22182"
+      ],
+      "idoArany": 0.1514,
+      "kitettseg": 0.195,
+      "kivaltasArany": 0.233,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    }
+  ],
+  "_figyelmeztetesek": [
+    "A kis súlyú feladatok elhagyása a munkaidő 7%-át érinti.",
+    "Az Economic Index a munkaidő csak 21%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "22165": "Document patient information including session notes, progress notes, recommendations, and treatment plans.",
+    "22190": "Conduct assessments of patients' risk for harm to self or others.",
+    "22164": "Counsel individuals, groups, or families to help them understand problems, deal with crisis situations, define goals, and develop realistic action plans.",
+    "22169": "Use a variety of treatment methods, such as psychotherapy, hypnosis, behavior modification, stress reduction therapy, psychodrama, or play therapy.",
+    "22170": "Write reports on clients and maintain required paperwork.",
+    "22166": "Interact with clients to assist them in gaining insight, defining goals, and planning action to achieve effective personal, social, educational, or vocational development and adjustment.",
+    "22163": "Collect information about individuals or clients, using interviews, case histories, observational techniques, and other assessment methods.",
+    "22168": "Identify psychological, emotional, or behavioral issues and diagnose disorders, using information obtained from interviews, tests, records, or reference materials.",
+    "22173": "Evaluate the effectiveness of counseling or treatments and the accuracy and completeness of diagnoses, modifying plans or diagnoses as necessary.",
+    "22167": "Develop therapeutic and treatment plans based on clients' interests, abilities, or needs.",
+    "22176": "Develop and implement individual treatment plans, specifying type, frequency, intensity, and duration of therapy.",
+    "22175": "Advise clients on how they could be helped by counseling.",
+    "22179": "Maintain current knowledge of relevant research.",
+    "22180": "Consult reference material, such as textbooks, manuals, or journals, to identify symptoms, make diagnoses, or develop approaches to treatment.",
+    "22172": "Obtain and study medical, psychological, social, and family histories by interviewing individuals, couples, or families and by reviewing records.",
+    "22174": "Select, administer, score, and interpret psychological tests to obtain information on individuals' intelligence, achievements, interests, or personalities.",
+    "22185": "Direct, coordinate, and evaluate activities of staff and interns engaged in patient assessment and treatment.",
+    "22171": "Consult with or provide consultation to other doctors, therapists, or clinicians regarding patient care.",
+    "22177": "Consult with other professionals, agencies, or universities to discuss therapies, treatments, counseling resources or techniques, and to share occupational information.",
+    "22192": "Supervise and train interns, clinicians in training, and other counselors.",
+    "22178": "Refer clients to other specialists, institutions, or support services as necessary.",
+    "22186": "Develop, direct, and participate in training programs for staff and students.",
+    "22184": "Plan and develop accredited psychological service programs in psychiatric centers or hospitals, in collaboration with psychiatrists and other professional staff.",
+    "22182": "Provide consulting services, including educational programs, outreach programs, or prevention talks to schools, social service agencies, businesses, or the general public.",
+    "22183": "Provide occupational, educational, or other information to individuals so that they can make educational or vocational plans."
+  }
+}

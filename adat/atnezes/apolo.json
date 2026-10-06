@@ -1,0 +1,253 @@
+{
+  "ellenorizve": false,
+  "slug": "apolo",
+  "nev": "Ápoló",
+  "aliasok": [
+    "Ápoló, szakápoló",
+    "nővér",
+    "szakápoló",
+    "ápolónő",
+    "kórházi nővér",
+    "szakképzett ápoló",
+    "betegápoló",
+    "diplomás ápoló",
+    "krónikus ápoló"
+  ],
+  "feor_kod": "3311",
+  "isco_kod": "3221",
+  "soc_kodok": [
+    "29-1141.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "ápolók",
+  "fekek": {
+    "fizikai": {
+      "ertek": 3,
+      "indoklas": "Az ápolás kézzel végzett, a beteg mellett zajló munka (injekció, sebkezelés, mozgatás, ellátás), amelyet szoftver nem tud átvenni."
+    },
+    "felelosseg": {
+      "ertek": 3,
+      "indoklas": "A gyógyszerelésért, a beavatkozásokért és a betegbiztonságért az ápoló személyesen felel, és a dokumentációját is ő írja alá."
+    },
+    "szabalyozas": {
+      "ertek": 3,
+      "indoklas": "Az egészségügyi ágazat szigorúan szabályozott (kamarai és szakmai előírások, adatvédelem), az EU AI Act pedig a klinikai döntéstámogatást magas kockázatú alkalmazásnak tekinti."
+    },
+    "bizalom": {
+      "ertek": 3,
+      "indoklas": "A betegek és hozzátartozóik a kiszolgáltatott, fájdalmas helyzetekben emberi jelenlétet, törődést és megnyugtatást várnak el."
+    }
+  },
+  "teendo_szoveg": "Építs a betegágy melletti munkára: a megfigyelés, az emberi kapcsolat és a klinikai ítélőképesség a legerősebb oldalad. A dokumentálás és az adatrögzítés terén használd bátran a digitális és AI-alapú eszközöket, így több időd marad a betegekre. Tanulj meg kritikusan olvasni a monitorozó és döntéstámogató rendszerek jelzéseiből, és fejlődj egy szakterületen (például intenzív ellátás, krónikus betegek gondozása, egészségnevelés) vagy vezetői, mentori irányban.",
+  "csoportok": [
+    {
+      "leiras": "Ápolási dokumentáció és jelentések vezetése",
+      "task_idk": [
+        "1839",
+        "1841"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Betegmegfigyelés, állapotváltozás követése és jelzése, ápolási terv módosítása",
+      "task_idk": [
+        "1840",
+        "1845",
+        "1842"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Gyógyszerbeadás, kezelések, infúziók és altatásban közreműködés",
+      "task_idk": [
+        "20413",
+        "1854",
+        "1852",
+        "1859"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Betegágy melletti ápolás, vizsgálatok és kezelések előkészítése, elsősegély, oltás, rehabilitáció",
+      "task_idk": [
+        "1855",
+        "1847",
+        "1856"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Laborvizsgálatok, diagnosztikai eredmények értékelése, eszközök és eszközkészlet előkészítése",
+      "task_idk": [
+        "1857",
+        "1844",
+        "1851"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Egészségnevelés, szükségletfelmérés, közösségi programok és továbbirányítás",
+      "task_idk": [
+        "1850",
+        "1849",
+        "1865",
+        "1863"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Csapatkoordináció, osztályvezetés, betanítás, ápolók felügyelete és fertőzéskontroll",
+      "task_idk": [
+        "1843",
+        "1846",
+        "1848",
+        "1861",
+        "1860",
+        "1862"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Ápolási dokumentáció és jelentések vezetése",
+      "task_idk": [
+        "1839",
+        "1841"
+      ],
+      "idoArany": 0.1177,
+      "kitettseg": 0.748,
+      "kivaltasArany": 0.0,
+      "horizont": "1-3ev",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Betegmegfigyelés, állapotváltozás követése és jelzése, ápolási terv módosítása",
+      "task_idk": [
+        "1840",
+        "1845",
+        "1842"
+      ],
+      "idoArany": 0.1612,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.0,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Gyógyszerbeadás, kezelések, infúziók és altatásban közreműködés",
+      "task_idk": [
+        "20413",
+        "1854",
+        "1852",
+        "1859"
+      ],
+      "idoArany": 0.1224,
+      "kitettseg": 0.092,
+      "kivaltasArany": 0.0,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Betegágy melletti ápolás, vizsgálatok és kezelések előkészítése, elsősegély, oltás, rehabilitáció",
+      "task_idk": [
+        "1855",
+        "1847",
+        "1856"
+      ],
+      "idoArany": 0.1204,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.0,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Laborvizsgálatok, diagnosztikai eredmények értékelése, eszközök és eszközkészlet előkészítése",
+      "task_idk": [
+        "1857",
+        "1844",
+        "1851"
+      ],
+      "idoArany": 0.0938,
+      "kitettseg": 0.134,
+      "kivaltasArany": 0.0,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Egészségnevelés, szükségletfelmérés, közösségi programok és továbbirányítás",
+      "task_idk": [
+        "1850",
+        "1849",
+        "1865",
+        "1863"
+      ],
+      "idoArany": 0.1592,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.0,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Csapatkoordináció, osztályvezetés, betanítás, ápolók felügyelete és fertőzéskontroll",
+      "task_idk": [
+        "1843",
+        "1846",
+        "1848",
+        "1861",
+        "1860",
+        "1862"
+      ],
+      "idoArany": 0.2254,
+      "kitettseg": 0.271,
+      "kivaltasArany": 0.0,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 5%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "1841": "Record patients' medical information and vital signs.",
+    "1839": "Maintain accurate, detailed reports and records.",
+    "20413": "Administer medications to patients and monitor patients for reactions or side effects.",
+    "1840": "Monitor, record, and report symptoms or changes in patients' conditions.",
+    "1845": "Monitor all aspects of patient care, including diet and physical activity.",
+    "1855": "Provide health care, first aid, immunizations, or assistance in convalescence or rehabilitation in locations such as schools, hospitals, or industry.",
+    "1846": "Direct or supervise less-skilled nursing or healthcare personnel or supervise a particular unit.",
+    "1843": "Consult and coordinate with healthcare team members to assess, plan, implement, or evaluate patient care plans.",
+    "1848": "Observe nurses and visit patients to ensure proper nursing care.",
+    "1849": "Assess the needs of individuals, families, or communities, including assessment of individuals' home or work environments, to identify potential health or safety problems.",
+    "1842": "Modify patient treatment plans as indicated by patients' responses and conditions.",
+    "1850": "Instruct individuals, families, or other groups on topics such as health education, disease prevention, or childbirth and develop health improvement programs.",
+    "1847": "Prepare patients for and assist with examinations or treatments.",
+    "1857": "Conduct specified laboratory tests.",
+    "1865": "Work with individuals, groups, or families to plan or implement programs designed to improve the overall health of communities.",
+    "1861": "Perform administrative or managerial functions, such as taking responsibility for a unit's staff, budget, planning, or long-range goals.",
+    "1844": "Order, interpret, and evaluate diagnostic tests to identify and assess patient's condition.",
+    "1851": "Prepare rooms, sterile instruments, equipment, or supplies and ensure that stock of supplies is maintained.",
+    "1860": "Direct or coordinate infection control programs, advising or consulting with specified personnel about necessary precautions.",
+    "1859": "Prescribe or recommend drugs, medical devices, or other forms of treatment, such as physical therapy, inhalation therapy, or related therapeutic procedures.",
+    "1854": "Administer local, inhalation, intravenous, or other anesthetics.",
+    "1856": "Perform physical examinations, make tentative diagnoses, and treat patients en route to hospitals or at disaster site triage centers.",
+    "1852": "Inform physician of patient's condition during anesthesia.",
+    "1862": "Provide or arrange for training or instruction of auxiliary personnel or students.",
+    "1863": "Refer students or patients to specialized health resources or community agencies furnishing assistance."
+  }
+}

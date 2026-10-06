@@ -1,0 +1,234 @@
+{
+  "ellenorizve": false,
+  "slug": "pr-szakember",
+  "nev": "PR-szakember",
+  "aliasok": [
+    "PR-es",
+    "kommunikációs szakember",
+    "Marketing- és PR-ügyintéző",
+    "pr-munkatárs",
+    "marketing asszisztens",
+    "kommunikációs munkatárs",
+    "sajtós",
+    "pr-ügyintéző",
+    "marketing ügyintéző",
+    "közösségi média menedzser",
+    "kommunikációs asszisztens"
+  ],
+  "feor_kod": "3632",
+  "isco_kod": "2431;2432",
+  "soc_kodok": [
+    "27-3031.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "PR-szakemberek",
+  "fekek": {
+    "fizikai": {
+      "ertek": 1,
+      "indoklas": "A munka nagyrészt irodai, csak a rendezvények és a személyes megjelenések igényelnek helyszíni jelenlétet."
+    },
+    "felelosseg": {
+      "ertek": 2,
+      "indoklas": "A nyilvános közlések hitelességéért, a jogi és hírnévkockázatokért a szakember és a szervezet felel, a válsághelyzetekben különösen."
+    },
+    "szabalyozas": {
+      "ertek": 1,
+      "indoklas": "Az EU AI Act átláthatósági szabályai (például az AI-generált tartalom jelölése) és az adatvédelmi előírások kötik a munkát, de ágazati tiltás nincs."
+    },
+    "bizalom": {
+      "ertek": 3,
+      "indoklas": "A sajtó, a partnerek és a vezetők személyes kapcsolatra és megbízható emberi ítélőképességre építenek, főleg vitás vagy válsághelyzetben."
+    }
+  },
+  "teendo_szoveg": "Építsd a személyes kapcsolataidat újságírókkal, civil szereplőkkel és vezetőkkel, mert ez az a terület, ahol a jelenléted és az ítélőképességed a legtöbbet számít. Használd az AI-eszközöket a vázlatokhoz, a tartalomnaptárhoz és az adatelemzéshez, hogy több időd jusson a stratégiára, a válságkommunikációra és a vezetők felkészítésére. Tanuld meg az AI-tartalmak ellenőrzését és átlátható jelölését is, így megbízható, minőségi kommunikációs partnerré válhatsz.",
+  "csoportok": [
+    {
+      "leiras": "Sajtóközlemények, hírlevelek és kiadványok írása, szerkesztése",
+      "task_idk": [
+        "20554",
+        "20557"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Weboldal és közösségi média tartalmak feltöltése, frissítése",
+      "task_idk": [
+        "23951"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Kommunikációs stratégia és programok tervezése, piac- és közvélemény-kutatás",
+      "task_idk": [
+        "1769",
+        "20555",
+        "19811",
+        "1775",
+        "19810"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Újságírók megkeresése, sajtókérdések kezelése, szóvivői feladatok",
+      "task_idk": [
+        "1764",
+        "19809"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Kapcsolattartás civil szervezetekkel, érdekcsoportokkal és belső vezetőkkel, tanácsadás",
+      "task_idk": [
+        "1765",
+        "1770"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Ügyfelek és vezetők felkészítése a nyilvános megszólalásra, beszédek írása és megtartása",
+      "task_idk": [
+        "1772",
+        "1773"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Rendezvények, szereplések és kampányok szervezése, ügynökségekkel és médiafelületekkel egyeztetés",
+      "task_idk": [
+        "1768",
+        "1767",
+        "1771",
+        "1774"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Sajtóközlemények, hírlevelek és kiadványok írása, szerkesztése",
+      "task_idk": [
+        "20554",
+        "20557"
+      ],
+      "idoArany": 0.1446,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.373,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Weboldal és közösségi média tartalmak feltöltése, frissítése",
+      "task_idk": [
+        "23951"
+      ],
+      "idoArany": 0.0898,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.299,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Kommunikációs stratégia és programok tervezése, piac- és közvélemény-kutatás",
+      "task_idk": [
+        "1769",
+        "20555",
+        "19811",
+        "1775",
+        "19810"
+      ],
+      "idoArany": 0.2594,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.353,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Újságírók megkeresése, sajtókérdések kezelése, szóvivői feladatok",
+      "task_idk": [
+        "1764",
+        "19809"
+      ],
+      "idoArany": 0.1095,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.369,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Kapcsolattartás civil szervezetekkel, érdekcsoportokkal és belső vezetőkkel, tanácsadás",
+      "task_idk": [
+        "1765",
+        "1770"
+      ],
+      "idoArany": 0.1326,
+      "kitettseg": 0.233,
+      "kivaltasArany": 0.299,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Ügyfelek és vezetők felkészítése a nyilvános megszólalásra, beszédek írása és megtartása",
+      "task_idk": [
+        "1772",
+        "1773"
+      ],
+      "idoArany": 0.1042,
+      "kitettseg": 0.655,
+      "kivaltasArany": 0.0,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Rendezvények, szereplések és kampányok szervezése, ügynökségekkel és médiafelületekkel egyeztetés",
+      "task_idk": [
+        "1768",
+        "1767",
+        "1771",
+        "1774"
+      ],
+      "idoArany": 0.1599,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.299,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 45%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "1764": "Respond to requests for information from the media or designate an appropriate spokesperson or information source.",
+    "23951": "Post and update content on the company's Web site and social media outlets.",
+    "20555": "Plan or direct development or communication of programs to maintain favorable public or stockholder perceptions of an organization's accomplishments, agenda, or environmental responsibility.",
+    "20554": "Write press releases or other media communications to promote clients.",
+    "1769": "Study the objectives, promotional policies, or needs of organizations to develop public relations strategies that will influence public opinion or promote ideas, products, or services.",
+    "1772": "Coach client representatives in effective communication with the public or with employees.",
+    "1765": "Establish or maintain cooperative relationships with representatives of community, consumer, employee, or public interest groups.",
+    "1770": "Confer with other managers to identify trends or key group interests or concerns or to provide advice on business decisions.",
+    "20557": "Prepare or edit organizational publications, such as employee newsletters or stockholders' reports, for internal or external audiences.",
+    "19811": "Develop plans or materials to communicate organizational activities that are beneficial to the environment, public safety, or other important social issues.",
+    "1768": "Arrange public appearances, lectures, contests, or exhibits for clients to increase product or service awareness or to promote goodwill.",
+    "1767": "Confer with production or support personnel to produce or coordinate production of advertisements or promotions.",
+    "1771": "Consult with advertising agencies or staff to arrange promotional campaigns in all types of media for products, organizations, or individuals.",
+    "1775": "Plan or conduct market or public opinion research to test products or determine potential for product success, communicating results to client or management.",
+    "1773": "Prepare or deliver speeches to further public relations objectives.",
+    "19809": "Coordinate public responses to environmental management incidents or conflicts.",
+    "1774": "Purchase advertising space or time as required to promote client's product or agenda.",
+    "19810": "Develop marketing campaigns for environmental technologies or services."
+  }
+}

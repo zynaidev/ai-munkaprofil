@@ -1,0 +1,251 @@
+{
+  "ellenorizve": false,
+  "slug": "pincer",
+  "nev": "Pincér",
+  "aliasok": [
+    "felszolgáló",
+    "pincérnő",
+    "étteremi pincér",
+    "kiszolgáló",
+    "főpincér",
+    "vendéglátós",
+    "kávézói felszolgáló"
+  ],
+  "feor_kod": "5132",
+  "isco_kod": "5131",
+  "soc_kodok": [
+    "35-3031.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "pincérek",
+  "fekek": {
+    "fizikai": {
+      "ertek": 3,
+      "indoklas": "A munka nagy része fizikai jelenlétet, cipelést, terítést, felszolgálást és takarítást jelent a vendégtérben."
+    },
+    "felelosseg": {
+      "ertek": 2,
+      "indoklas": "A pincér felel az alkoholeladás korhatár-ellenőrzéséért, az allergénekről adott tájékoztatásért és a pontos számlázásért."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "Az élelmiszer-higiéniai (HACCP) és alkoholeladási szabályok, valamint a kötelező online pénztárgép- és számlaadási előírások emberi odafigyelést kívánnak."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "A magyar vendégek többsége a személyes kiszolgálást és a törődést várja el, különösen étteremben, bár a rendelésfelvételnél már elfogadják a digitális megoldásokat."
+    }
+  },
+  "teendo_szoveg": "A rendelésfelvételt és a számlázást egyre gyakrabban átveszik a tableten vagy QR-kóddal működő rendszerek, ezért tanuld meg őket magabiztosan kezelni, hogy ne akadályozzanak, hanem időt spóroljanak neked. Építs arra, ami emberi marad: a vendég hangulatának érzékelésére, a panaszok kezelésére, a személyes ajánlásokra. Érdemes elmélyedned a borokban, az ételek ismeretében és az allergénekben, mert ezzel igazi szakértővé válhatsz, akire a vendégek számítanak.",
+  "csoportok": [
+    {
+      "leiras": "Rendelések rögzítése és számlakészítés",
+      "task_idk": [
+        "2277",
+        "2281"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Étlap, napi ajánlat és borok ismertetése, helyi tippek",
+      "task_idk": [
+        "2283",
+        "2284",
+        "2287",
+        "2294",
+        "18748"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Vendégfogadás, rendelésfelvétel, fizetés és vendégekkel törődés",
+      "task_idk": [
+        "2278",
+        "2279",
+        "2293",
+        "18746",
+        "2275",
+        "2276"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Ételek és italok felszolgálása az asztalnál",
+      "task_idk": [
+        "2280",
+        "2295"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Italok, hideg előételek és desszertek elkészítése",
+      "task_idk": [
+        "2286",
+        "2289",
+        "2291"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Terítés, előkészítés és utánpótlás",
+      "task_idk": [
+        "18744",
+        "2288",
+        "2290",
+        "2292"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Asztalok leszedése, takarítás és rendrakás",
+      "task_idk": [
+        "18745",
+        "2285",
+        "18747"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Rendelések rögzítése és számlakészítés",
+      "task_idk": [
+        "2277",
+        "2281"
+      ],
+      "idoArany": 0.0969,
+      "kitettseg": 0.753,
+      "kivaltasArany": 0.0,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Étlap, napi ajánlat és borok ismertetése, helyi tippek",
+      "task_idk": [
+        "2283",
+        "2284",
+        "2287",
+        "2294",
+        "18748"
+      ],
+      "idoArany": 0.175,
+      "kitettseg": 0.616,
+      "kivaltasArany": 0.0,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Vendégfogadás, rendelésfelvétel, fizetés és vendégekkel törődés",
+      "task_idk": [
+        "2278",
+        "2279",
+        "2293",
+        "18746",
+        "2275",
+        "2276"
+      ],
+      "idoArany": 0.2703,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.0,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Ételek és italok felszolgálása az asztalnál",
+      "task_idk": [
+        "2280",
+        "2295"
+      ],
+      "idoArany": 0.0619,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.0,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Italok, hideg előételek és desszertek elkészítése",
+      "task_idk": [
+        "2286",
+        "2289",
+        "2291"
+      ],
+      "idoArany": 0.0943,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.0,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Terítés, előkészítés és utánpótlás",
+      "task_idk": [
+        "18744",
+        "2288",
+        "2290",
+        "2292"
+      ],
+      "idoArany": 0.1626,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.0,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Asztalok leszedése, takarítás és rendrakás",
+      "task_idk": [
+        "18745",
+        "2285",
+        "18747"
+      ],
+      "idoArany": 0.1389,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.0,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 6%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "2276": "Collect payments from customers.",
+    "2277": "Write patrons' food orders on order slips, memorize orders, or enter orders into computers for transmittal to kitchen staff.",
+    "2279": "Check with customers to ensure that they are enjoying their meals, and take action to correct any problems.",
+    "2278": "Take orders from patrons for food or beverages.",
+    "2281": "Prepare checks that itemize and total meal costs and sales taxes.",
+    "18745": "Remove dishes and glasses from tables or counters, and take them to kitchen for cleaning.",
+    "2285": "Clean tables or counters after patrons have finished dining.",
+    "2275": "Check patrons' identification to ensure that they meet minimum age requirements for consumption of alcoholic beverages.",
+    "2280": "Serve food or beverages to patrons, and prepare or serve specialty dishes at tables as required.",
+    "2283": "Present menus to patrons and answer questions about menu items, making recommendations upon request.",
+    "18747": "Perform cleaning duties, such as sweeping and mopping floors, vacuuming carpet, tidying up server station, taking out trash, or checking and cleaning bathroom.",
+    "2284": "Inform customers of daily specials.",
+    "18744": "Roll silverware, set up food stations, or set up dining areas to prepare for the next shift or for large parties.",
+    "2288": "Prepare tables for meals, including setting up items such as linens, silverware, and glassware.",
+    "2290": "Stock service areas with supplies such as coffee, food, tableware, and linens.",
+    "2287": "Explain how various menu items are prepared, describing ingredients and cooking methods.",
+    "18746": "Assist host or hostess by answering phones to take reservations or to-go orders, and by greeting, seating, and thanking guests.",
+    "2286": "Prepare hot, cold, and mixed drinks for patrons, and chill bottles of wine.",
+    "2289": "Perform food preparation duties, such as preparing salads, appetizers, and cold dishes, portioning desserts, and brewing coffee.",
+    "2293": "Escort customers to their tables.",
+    "2292": "Fill salt, pepper, sugar, cream, condiment, and napkin containers.",
+    "18748": "Provide guests with information about local areas, including directions.",
+    "2291": "Garnish and decorate dishes in preparation for serving.",
+    "2295": "Bring wine selections to tables with appropriate glasses, and pour the wines for customers.",
+    "2294": "Describe and recommend wines to customers."
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "ellenorizve": false,
+  "slug": "fogorvos",
+  "nev": "Fogorvos",
+  "aliasok": [
+    "Fogorvos, fogszakorvos",
+    "fogszakorvos",
+    "fogász",
+    "fogászati szakorvos",
+    "fogszabályozó orvos",
+    "szájsebész",
+    "fogtechnikus orvos"
+  ],
+  "feor_kod": "2213",
+  "isco_kod": "2261",
+  "soc_kodok": [
+    "29-1021.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "fogorvosok",
+  "fekek": {
+    "fizikai": {
+      "ertek": 3,
+      "indoklas": "A kezelések a páciens szájában végzett, nagy kézügyességet igénylő munkát jelentenek, amit ma nem lehet távolról vagy szoftverrel elvégezni."
+    },
+    "felelosseg": {
+      "ertek": 3,
+      "indoklas": "A diagnózisért, a beavatkozásért és a gyógyszerfelírásért a fogorvos személyesen felel, a működési engedély és a szakmai kamarai szabályok is ehhez kötik."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "Az egészségügyi ágazati előírások (működési engedély, betegjogok, adatvédelem) szigorúak, és az EU AI Act a diagnosztikai AI-t magas kockázatúnak tekinti."
+    },
+    "bizalom": {
+      "ertek": 3,
+      "indoklas": "A magyar páciensek a félelmetes vagy fájdalmas beavatkozásokat ismerős, megbízható orvossal szeretnék elvégeztetni, nem géppel."
+    }
+  },
+  "teendo_szoveg": "A munkád lényege, a kezelés és a páciensek megnyugtatása, a kezedben és a személyes kapcsolatban marad. Ismerkedj meg a képalkotó leleteket elemző és a kezelést tervező AI-eszközökkel, hogy gyorsabban és biztosabban dönts, és használd őket a páciensek számára is érthető magyarázatokhoz. Az adminisztrációt és a nyilvántartást bátran bízd digitális segítőre, a felszabaduló időt pedig fordítsd összetettebb esetekre, például implantológiára, szájsebészetre vagy esztétikai fogászatra.",
+  "csoportok": [
+    {
+      "leiras": "Fogászati beavatkozások: fúrás, tömés, gyökérkezelés, fogeltávolítás, szájsebészet, érzéstelenítés",
+      "task_idk": [
+        "6925",
+        "20563",
+        "6931",
+        "6938",
+        "6936",
+        "6932",
+        "6937",
+        "6935"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Fogtisztítás, fluoridozás, fehérítés és fertőzés elleni védekezés",
+      "task_idk": [
+        "6939",
+        "6941",
+        "20562"
+      ],
+      "emberi_mag": false,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Vizsgálat, képalkotó leletek értékelése, diagnózis és kezelési terv",
+      "task_idk": [
+        "6926",
+        "6927"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Páciensek tanácsadása a megelőzésről és a kezelési lehetőségekről",
+      "task_idk": [
+        "6929"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Fogpótlások tervezése, illesztése, megrendelése a fogtechnikusnál",
+      "task_idk": [
+        "6930"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Gyógyszerek és antibiotikumok felírása",
+      "task_idk": [
+        "6933"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Rendelő vezetése, adminisztráció, betegadatok elemzése, egészségprogramok és oktatóanyagok",
+      "task_idk": [
+        "20564",
+        "6934",
+        "6942",
+        "6943"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Fogászati beavatkozások: fúrás, tömés, gyökérkezelés, fogeltávolítás, szájsebészet, érzéstelenítés",
+      "task_idk": [
+        "6925",
+        "20563",
+        "6931",
+        "6938",
+        "6936",
+        "6932",
+        "6937",
+        "6935"
+      ],
+      "idoArany": 0.3928,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.585,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Fogtisztítás, fluoridozás, fehérítés és fertőzés elleni védekezés",
+      "task_idk": [
+        "6939",
+        "6941",
+        "20562"
+      ],
+      "idoArany": 0.1553,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.585,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Vizsgálat, képalkotó leletek értékelése, diagnózis és kezelési terv",
+      "task_idk": [
+        "6926",
+        "6927"
+      ],
+      "idoArany": 0.1226,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.795,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Páciensek tanácsadása a megelőzésről és a kezelési lehetőségekről",
+      "task_idk": [
+        "6929"
+      ],
+      "idoArany": 0.0585,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.169,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Fogpótlások tervezése, illesztése, megrendelése a fogtechnikusnál",
+      "task_idk": [
+        "6930"
+      ],
+      "idoArany": 0.0528,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.585,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Gyógyszerek és antibiotikumok felírása",
+      "task_idk": [
+        "6933"
+      ],
+      "idoArany": 0.0479,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.585,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Rendelő vezetése, adminisztráció, betegadatok elemzése, egészségprogramok és oktatóanyagok",
+      "task_idk": [
+        "20564",
+        "6934",
+        "6942",
+        "6943"
+      ],
+      "idoArany": 0.1701,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.585,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 12%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "20562": "Use masks, gloves, and safety glasses to protect patients and self from infectious diseases.",
+    "6925": "Administer anesthetics to limit the amount of pain experienced by patients during procedures.",
+    "20563": "Use dental air turbines, hand instruments, dental appliances, or surgical implements.",
+    "6926": "Examine teeth, gums, and related tissues, using dental instruments, x-rays, or other diagnostic equipment, to evaluate dental health, diagnose diseases or abnormalities, and plan appropriate treatments.",
+    "6927": "Formulate plan of treatment for patient's teeth and mouth tissue.",
+    "6929": "Advise or instruct patients regarding preventive dental care, the causes and treatment of dental problems, or oral health care services.",
+    "6931": "Diagnose and treat diseases, injuries, or malformations of teeth, gums, or related oral structures and provide preventive or corrective services.",
+    "6930": "Design, make, or fit prosthodontic appliances, such as space maintainers, bridges, or dentures, or write fabrication instructions or prescriptions for denturists or dental technicians.",
+    "6934": "Analyze or evaluate dental needs to determine changes or trends in patterns of dental disease.",
+    "20564": "Manage business aspects such as employing or supervising staff or handling paperwork or insurance claims.",
+    "6938": "Remove diseased tissue, using surgical instruments.",
+    "6933": "Write prescriptions for antibiotics or other medications.",
+    "6939": "Apply fluoride or sealants to teeth.",
+    "6942": "Plan, organize, or maintain dental health programs.",
+    "6936": "Eliminate irritating margins of fillings and correct occlusions, using dental instruments.",
+    "6941": "Bleach, clean, or polish teeth to restore natural color.",
+    "6932": "Fill pulp chamber and canal with endodontic materials.",
+    "6937": "Perform oral or periodontal surgery on the jaw or mouth.",
+    "6935": "Treat exposure of pulp by pulp capping, removal of pulp from pulp chamber, or root canal, using dental instruments.",
+    "6943": "Produce or evaluate dental health educational materials."
+  }
+}

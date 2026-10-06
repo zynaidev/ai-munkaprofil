@@ -1,0 +1,236 @@
+{
+  "ellenorizve": false,
+  "slug": "fodrasz",
+  "nev": "Fodrász",
+  "aliasok": [
+    "fodrásznő",
+    "férfifodrász",
+    "borbély",
+    "hajvágó",
+    "fodrász stylist",
+    "hajszobrász",
+    "fodrászat"
+  ],
+  "feor_kod": "5211",
+  "isco_kod": "5141",
+  "soc_kodok": [
+    "39-5012.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "fodrászok",
+  "fekek": {
+    "fizikai": {
+      "ertek": 3,
+      "indoklas": "A munka szinte teljesen kézi, a vendég hajával és fejbőrével közvetlenül dolgozol, ezt gép vagy szoftver nem tudja átvenni."
+    },
+    "felelosseg": {
+      "ertek": 2,
+      "indoklas": "A vegyi kezelések (festés, dauer) károsodást okozhatnak, a fejbőrbetegségek felismerése és a vendég egészségének védelme szakmai felelősség, a szalonnak pedig meg kell felelnie a higiéniai előírásoknak."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "A fodrászat iparengedélyhez és szakmai végzettséghez kötött, a higiéniai és vegyszerhasználati szabályok szigorúak, az AI-specifikus szabályozás viszont itt alig érint."
+    },
+    "bizalom": {
+      "ertek": 3,
+      "indoklas": "A magyar vendégek jellemzően törzsfodrászhoz járnak, a személyes kapcsolat, a bizalom és a jó beszélgetés a szolgáltatás része."
+    }
+  },
+  "teendo_szoveg": "Építsd a törzsvendégkörödet, mert a bizalom és a személyes kapcsolat a legerősebb értéked. Fejleszd a speciális tudásodat, például a színezési technikákat, a hajápolást vagy a férfi barber szolgáltatásokat, és tarts lépést az új trendekkel. A foglalási és nyilvántartási teendőkre használj online időpontfoglaló rendszert, így több időd marad a vendégekre és a kreatív munkára.",
+  "csoportok": [
+    {
+      "leiras": "Hajvágás, formázás és borotválás (hajvágás, szakálligazítás, szemöldökformázás)",
+      "task_idk": [
+        "636",
+        "650",
+        "647"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Hajfestés, dauer, hajegyenesítés és egyéb vegyi kezelések",
+      "task_idk": [
+        "639",
+        "645"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Hajmosás, szárítás, beállítás és fejbőrmasszázs",
+      "task_idk": [
+        "641",
+        "646",
+        "649",
+        "648"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Tanácsadás: hajtípus elemzése, fazonajánlás, termékek bemutatása és eladása",
+      "task_idk": [
+        "637",
+        "643",
+        "652"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Új fazonok, technikák kidolgozása és parókák, póthajak elkészítése",
+      "task_idk": [
+        "644",
+        "656"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Időpontfoglalás, vendégkartoték vezetése és pénztárkezelés",
+      "task_idk": [
+        "638",
+        "640",
+        "642"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Szalon rendben tartása, eszközfertőtlenítés, készletrendelés és a tanulók betanítása",
+      "task_idk": [
+        "635",
+        "20899",
+        "651"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Hajvágás, formázás és borotválás (hajvágás, szakálligazítás, szemöldökformázás)",
+      "task_idk": [
+        "636",
+        "650",
+        "647"
+      ],
+      "idoArany": 0.1507,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Hajfestés, dauer, hajegyenesítés és egyéb vegyi kezelések",
+      "task_idk": [
+        "639",
+        "645"
+      ],
+      "idoArany": 0.1278,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Hajmosás, szárítás, beállítás és fejbőrmasszázs",
+      "task_idk": [
+        "641",
+        "646",
+        "649",
+        "648"
+      ],
+      "idoArany": 0.2061,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Tanácsadás: hajtípus elemzése, fazonajánlás, termékek bemutatása és eladása",
+      "task_idk": [
+        "637",
+        "643",
+        "652"
+      ],
+      "idoArany": 0.149,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Új fazonok, technikák kidolgozása és parókák, póthajak elkészítése",
+      "task_idk": [
+        "644",
+        "656"
+      ],
+      "idoArany": 0.0579,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Időpontfoglalás, vendégkartoték vezetése és pénztárkezelés",
+      "task_idk": [
+        "638",
+        "640",
+        "642"
+      ],
+      "idoArany": 0.1645,
+      "kitettseg": 0.596,
+      "kivaltasArany": 0.357,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Szalon rendben tartása, eszközfertőtlenítés, készletrendelés és a tanulók betanítása",
+      "task_idk": [
+        "635",
+        "20899",
+        "651"
+      ],
+      "idoArany": 0.144,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 0%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "635": "Keep work stations clean and sanitize tools, such as scissors and combs.",
+    "639": "Bleach, dye, or tint hair, using applicator or brush.",
+    "641": "Shampoo, rinse, condition, and dry hair and scalp or hairpieces with water, liquid soap, or other solutions.",
+    "638": "Schedule client appointments.",
+    "636": "Cut, trim and shape hair or hairpieces, based on customers' instructions, hair type, and facial features, using clippers, scissors, trimmers and razors.",
+    "637": "Analyze patrons' hair and other physical features to determine and recommend beauty treatment or suggest hair styles.",
+    "640": "Update and maintain customer information records, such as beauty services provided.",
+    "643": "Demonstrate and sell hair care products and cosmetics.",
+    "646": "Comb, brush, and spray hair or wigs to set style.",
+    "645": "Apply water or setting, straightening or waving solutions to hair, and use curlers, rollers, hot combs and curling irons to press and curl hair.",
+    "649": "Massage and treat scalp for hygienic and remedial purposes, using hands, fingers, or vibrating equipment.",
+    "650": "Shave, trim, and shape beards and moustaches.",
+    "644": "Develop new styles and techniques.",
+    "20899": "Order, display, and maintain supplies.",
+    "642": "Operate cash registers to receive payments from patrons.",
+    "647": "Shape eyebrows and remove facial hair, using depilatory cream, tweezers, electrolysis or wax.",
+    "651": "Train or supervise other hairstylists, hairdressers, and assistants.",
+    "652": "Recommend and explain the use of cosmetics, lotions, and creams to soften and lubricate skin and enhance and restore natural appearance.",
+    "648": "Administer therapeutic medication and advise patron to seek medical treatment for chronic or contagious scalp conditions.",
+    "656": "Attach wigs or hairpieces to model heads and dress wigs and hairpieces according to instructions, samples, sketches or photographs."
+  }
+}

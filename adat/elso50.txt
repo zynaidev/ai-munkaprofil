@@ -1,0 +1,55 @@
+# Első kör: 50 FEOR-08 kód (soronként egy; a # utáni rész megjegyzés)
+# Várhatóan 4. szint
+4114  # Adatrögzítő, kódoló
+4225  # Ügyfélszolgálati központ tájékoztatója
+4112  # Általános irodai adminisztrátor
+4111  # Titkár(nő)
+4121  # Könyvelő (analitikus)
+4122  # Bérelszámoló
+3614  # Számviteli ügyintéző
+5123  # Telefonos értékesítési ügynök
+2627  # Nyelvész, fordító, tolmács
+4222  # Recepciós
+3612  # Pénzintézeti ügyintéző
+5117  # Bolti pénztáros
+# Várhatóan 3. szint
+2513  # Könyvvizsgáló, könyvelő, könyvszakértő
+2531  # Piackutató, marketingtervező
+2716  # Újságíró
+2136  # Grafikus és multimédia-tervező
+2611  # Jogász, jogtanácsos
+2511  # Pénzügyi elemző, befektetési tanácsadó
+3632  # Marketing- és PR-ügyintéző
+3633  # Ingatlanügynök
+3621  # Biztosítási ügynök
+2523  # Személyzeti (HR) szakértő
+# Várhatóan 2. szint
+2142  # Szoftverfejlesztő
+2141  # Rendszerelemző (informatikai)
+2152  # Rendszergazda
+2211  # Általános orvos
+2421  # Középiskolai tanár
+2431  # Általános iskolai tanár, tanító
+2628  # Pszichológus
+2214  # Gyógyszerész
+2514  # Kontroller
+2615  # Ügyvéd
+# Várhatóan 1. szint
+7524  # Villanyszerelő
+3311  # Ápoló, szakápoló
+8417  # Tehergépkocsi-vezető, kamionsofőr
+5211  # Fodrász
+7521  # Vízvezeték-, fűtésszerelő
+7511  # Kőműves
+5252  # Tűzoltó
+5134  # Szakács
+5132  # Pincér
+7331  # Autószerelő
+2432  # Óvodapedagógus
+5223  # Házi gondozó
+5251  # Rendőr
+9112  # Intézményi takarító
+5113  # Bolti eladó
+8418  # Autóbuszvezető
+2213  # Fogorvos
+5254  # Vagyonőr, testőr

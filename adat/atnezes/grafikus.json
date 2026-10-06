@@ -1,0 +1,217 @@
+{
+  "ellenorizve": false,
+  "slug": "grafikus",
+  "nev": "Grafikus",
+  "aliasok": [
+    "Grafikus és multimédia-tervező",
+    "grafikai tervező",
+    "webdizájner",
+    "multimédia tervező",
+    "designer",
+    "logótervező",
+    "ui ux dizájner",
+    "animátor"
+  ],
+  "feor_kod": "2136",
+  "isco_kod": "2166",
+  "soc_kodok": [
+    "27-1024.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "grafikusok",
+  "fekek": {
+    "fizikai": {
+      "ertek": 0,
+      "indoklas": "A munka szinte teljesen számítógépen zajlik, fizikai jelenlét vagy kézügyesség csak elvétve kell hozzá (pl. nyomdai próbanyomat átnézése)."
+    },
+    "felelosseg": {
+      "ertek": 1,
+      "indoklas": "Az ügyfél jóváhagyása és a szerzői jogi, márkahasználati felelősség emberi döntést kíván, de külön szakmai aláírás nem szükséges."
+    },
+    "szabalyozas": {
+      "ertek": 1,
+      "indoklas": "Az EU AI Act átláthatósági szabályai (AI-generált tartalom jelölése) és a szerzői jogi előírások kötik a munkát, de a szakma nem szigorúan szabályozott."
+    },
+    "bizalom": {
+      "ertek": 1,
+      "indoklas": "Az ügyfelek többnyire az eredményt nézik, de a márkájukat érintő kulcsdöntésekhez továbbra is szívesen egyeztetnek egy emberi tervezővel."
+    }
+  },
+  "teendo_szoveg": "Építs arra, amiben az ember erős: az ügyfél igényének megértésére, az erős koncepcióra és az ízlésre, amellyel a sok AI-javaslatból kiválasztod a jót. Használd az AI-eszközöket a gyártás és a variációk gyorsítására, így több időd marad stratégiai, arculati munkára. Érdemes az ügyfélkommunikációban és a márkaépítési tanácsadásban is fejlődnöd, mert ott leszel igazán nehezen helyettesíthető.",
+  "csoportok": [
+    {
+      "leiras": "Koncepció- és arculattervezés (logó, weboldal, termékgrafika)",
+      "task_idk": [
+        "299",
+        "306"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Oldalelrendezés, szövegtükör és betűtípusok kiválasztása",
+      "task_idk": [
+        "300",
+        "307"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Képek, illusztrációk, diagramok és mozgógrafikák elkészítése",
+      "task_idk": [
+        "301",
+        "303",
+        "313"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Egyeztetés az ügyféllel, vázlatok és visszajelzések kezelése",
+      "task_idk": [
+        "305",
+        "308",
+        "304"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Nyomdai előkészítés, fájlkezelés és képarchívum karbantartása",
+      "task_idk": [
+        "23970",
+        "302",
+        "310",
+        "312",
+        "15228"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Célközönség- és trendkutatás, szövegek írása, szerkesztése",
+      "task_idk": [
+        "309",
+        "23971",
+        "15229",
+        "23972"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Koncepció- és arculattervezés (logó, weboldal, termékgrafika)",
+      "task_idk": [
+        "299",
+        "306"
+      ],
+      "idoArany": 0.1366,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.67,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Oldalelrendezés, szövegtükör és betűtípusok kiválasztása",
+      "task_idk": [
+        "300",
+        "307"
+      ],
+      "idoArany": 0.143,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.563,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Képek, illusztrációk, diagramok és mozgógrafikák elkészítése",
+      "task_idk": [
+        "301",
+        "303",
+        "313"
+      ],
+      "idoArany": 0.1518,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.581,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Egyeztetés az ügyféllel, vázlatok és visszajelzések kezelése",
+      "task_idk": [
+        "305",
+        "308",
+        "304"
+      ],
+      "idoArany": 0.1685,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.599,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Nyomdai előkészítés, fájlkezelés és képarchívum karbantartása",
+      "task_idk": [
+        "23970",
+        "302",
+        "310",
+        "312",
+        "15228"
+      ],
+      "idoArany": 0.2386,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.601,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Célközönség- és trendkutatás, szövegek írása, szerkesztése",
+      "task_idk": [
+        "309",
+        "23971",
+        "15229",
+        "23972"
+      ],
+      "idoArany": 0.1615,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.599,
+      "horizont": "1-3ev",
+      "csatorna": "irasos",
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "3 feladatnál nincs kitettségi adat (munkakör-átlag használva).",
+    "Az Economic Index a munkaidő csak 38%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "300": "Determine size and arrangement of illustrative material and copy, and select style and size of type.",
+    "299": "Create designs, concepts, and sample layouts, based on knowledge of layout principles and esthetic design concepts.",
+    "307": "Key information into computer equipment to create layouts for client or supervisor.",
+    "301": "Use computer software to generate new images.",
+    "304": "Review final layouts and suggest improvements, as needed.",
+    "306": "Develop graphics and layouts for product illustrations, company logos, and Web sites.",
+    "23970": "Prepare digital files for printing.",
+    "303": "Draw and print charts, graphs, illustrations, and other artwork, using computer.",
+    "15228": "Maintain archive of images, photos, or previous work products.",
+    "310": "Prepare notes and instructions for workers who assemble and prepare final layouts for printing.",
+    "309": "Study illustrations and photographs to plan presentation of materials, products, or services.",
+    "23971": "Research the target audience of projects.",
+    "305": "Confer with clients to discuss and determine layout design.",
+    "308": "Prepare illustrations or rough sketches of material, discussing them with clients or supervisors and making necessary changes.",
+    "302": "Mark up, paste, and assemble final layouts to prepare layouts for printer.",
+    "15229": "Research new software or design concepts.",
+    "313": "Produce still and animated graphics for on-air and taped portions of television news broadcasts, using electronic video equipment.",
+    "312": "Photograph layouts, using camera, to make layout prints for supervisors or clients.",
+    "23972": "Write or edit copy for clients."
+  }
+}

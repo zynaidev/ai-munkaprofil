@@ -1,0 +1,236 @@
+{
+  "ellenorizve": false,
+  "slug": "kamionsofor",
+  "nev": "Kamionsofőr",
+  "aliasok": [
+    "Tehergépkocsi-vezető, kamionsofőr",
+    "kamionos",
+    "tehergépkocsi-vezető",
+    "teherautó-sofőr",
+    "nemzetközi sofőr",
+    "nyerges vontatós",
+    "fuvarozó",
+    "kamionvezető",
+    "C kategóriás sofőr"
+  ],
+  "feor_kod": "8417",
+  "isco_kod": "8332",
+  "soc_kodok": [
+    "53-3032.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "kamionsofőrök",
+  "fekek": {
+    "fizikai": {
+      "ertek": 3,
+      "indoklas": "A vezetés, a pótkocsi csatlakoztatása, a rakomány rögzítése és az útszéli javítás fizikai jelenlétet és kézügyességet kíván."
+    },
+    "felelosseg": {
+      "ertek": 3,
+      "indoklas": "A sofőr személyesen felel a rakományért, a járműért, a közlekedésbiztonságért, és ő írja alá a fuvarokmányokat."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "A vezetési és pihenőidő, a tachográf, az ADR és az uniós mobilitási csomag szigorúan szabályozza a szakmát, ez lassítja az automatizálást."
+    },
+    "bizalom": {
+      "ertek": 1,
+      "indoklas": "Az ügyfelek főleg a megbízható, pontos szállítást várják el, de az áruátadásnál számít az ismert, felelős sofőr."
+    }
+  },
+  "teendo_szoveg": "A papírmunka, a menetnaplók és az útvonaltervezés egyre inkább digitális eszközökre kerül, ezért érdemes magabiztosan használnod a fedélzeti rendszereket, a flottakövető és az útvonaltervező appokat. Az ADR-jogosítvány, a hűtött és különleges áruk szállításához szükséges tudás, valamint a megbízható ügyfélkapcsolat tartósan megkülönböztet másoktól. Ha műszaki ismereteidet is fejleszted, például a kisebb hibák felismerésében, a szakmában még keresettebb leszel.",
+  "csoportok": [
+    {
+      "leiras": "Fuvarokmányok (CMR, szállítólevél) ellenőrzése, menetidő- és szervizlogok vezetése, hibák és balesetek jelentése, kapcsolattartás a bázissal fedélzeti számítógépen vagy telefonon",
+      "task_idk": [
+        "10637",
+        "20693",
+        "10643",
+        "10644",
+        "20695"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Fuvarutasítások és útvonalak ellenőrzése, útvonaltervezés és módosítás menet közben",
+      "task_idk": [
+        "10647",
+        "10645",
+        "19923"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Nehéz tehergépjármű vezetése, manőverezés a rakodónál, mérlegelés",
+      "task_idk": [
+        "10641",
+        "10640",
+        "20694"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Jármű átvizsgálása, pótkocsi csatlakoztatása, karbantartás és útszéli hibaelhárítás",
+      "task_idk": [
+        "10636",
+        "10651",
+        "10646",
+        "10653",
+        "10662"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Rakodás, rakomány rögzítése és ellenőrzése, veszélyes és különleges áruk kezelése",
+      "task_idk": [
+        "20692",
+        "20696",
+        "10656",
+        "10642",
+        "10635",
+        "10658"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Áru átvétele és állapotellenőrzése, átadás az ügyfélnek, aláírás és fizetés begyűjtése",
+      "task_idk": [
+        "10655",
+        "10650",
+        "10638"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Fuvarokmányok (CMR, szállítólevél) ellenőrzése, menetidő- és szervizlogok vezetése, hibák és balesetek jelentése, kapcsolattartás a bázissal fedélzeti számítógépen vagy telefonon",
+      "task_idk": [
+        "10637",
+        "20693",
+        "10643",
+        "10644",
+        "20695"
+      ],
+      "idoArany": 0.2298,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.358,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Fuvarutasítások és útvonalak ellenőrzése, útvonaltervezés és módosítás menet közben",
+      "task_idk": [
+        "10647",
+        "10645",
+        "19923"
+      ],
+      "idoArany": 0.1299,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.358,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Nehéz tehergépjármű vezetése, manőverezés a rakodónál, mérlegelés",
+      "task_idk": [
+        "10641",
+        "10640",
+        "20694"
+      ],
+      "idoArany": 0.1316,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.358,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Jármű átvizsgálása, pótkocsi csatlakoztatása, karbantartás és útszéli hibaelhárítás",
+      "task_idk": [
+        "10636",
+        "10651",
+        "10646",
+        "10653",
+        "10662"
+      ],
+      "idoArany": 0.2083,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.358,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Rakodás, rakomány rögzítése és ellenőrzése, veszélyes és különleges áruk kezelése",
+      "task_idk": [
+        "20692",
+        "20696",
+        "10656",
+        "10642",
+        "10635",
+        "10658"
+      ],
+      "idoArany": 0.191,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.358,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Áru átvétele és állapotellenőrzése, átadás az ügyfélnek, aláírás és fizetés begyűjtése",
+      "task_idk": [
+        "10655",
+        "10650",
+        "10638"
+      ],
+      "idoArany": 0.1094,
+      "kitettseg": 0.291,
+      "kivaltasArany": 0.358,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    }
+  ],
+  "_figyelmeztetesek": [
+    "A kis súlyú feladatok elhagyása a munkaidő 6%-át érinti.",
+    "Az Economic Index a munkaidő csak 4%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "10637": "Maintain logs of working hours or of vehicle service or repair status, following applicable state and federal regulations.",
+    "10636": "Check vehicles to ensure that mechanical, safety, and emergency equipment is in good working order.",
+    "20692": "Inspect loads to ensure that cargo is secure.",
+    "10640": "Maneuver trucks into loading or unloading positions, following signals from loading crew and checking that vehicle and loading equipment are properly positioned.",
+    "20693": "Check all load-related documentation for completeness and accuracy.",
+    "10643": "Read bills of lading to determine assignment details.",
+    "10641": "Drive trucks with capacities greater than 13 tons, including tractor-trailer combinations, to transport and deliver products, livestock, or other materials.",
+    "10651": "Crank trailer landing gear up or down to safely secure vehicles.",
+    "10638": "Obtain receipts or signatures for delivered goods and collect payment for services when required.",
+    "10647": "Collect delivery instructions from appropriate sources, verifying instructions and routes.",
+    "20695": "Operate equipment, such as truck cab computers, CB radios, phones, or global positioning systems (GPS) equipment to exchange necessary information with bases, supervisors, or other drivers.",
+    "10646": "Couple or uncouple trailers by changing trailer jack positions, connecting or disconnecting air or electrical lines, or manipulating fifth-wheel locks.",
+    "10645": "Read and interpret maps to determine vehicle routes.",
+    "10650": "Check conditions of trailers after contents have been unloaded to ensure that there has been no damage.",
+    "10644": "Report vehicle defects, accidents, traffic violations, or damage to the vehicles.",
+    "19923": "Plan or adjust routes based on changing conditions, using computer equipment, global positioning systems (GPS) equipment, or other navigation devices, to minimize fuel consumption and carbon emissions.",
+    "20696": "Load or unload trucks or help others with loading or unloading, using special loading-related equipment or other equipment as necessary.",
+    "10653": "Perform basic vehicle maintenance tasks, such as adding oil, fuel, or radiator fluid, performing minor repairs, or washing trucks.",
+    "20694": "Drive trucks to weigh stations before and after loading and along routes in compliance with state regulations.",
+    "10656": "Remove debris from loaded trailers.",
+    "10662": "Perform emergency roadside repairs, such as changing tires or installing light bulbs, tire chains, or spark plugs.",
+    "10635": "Follow appropriate safety procedures for transporting dangerous goods.",
+    "10642": "Secure cargo for transport, using ropes, blocks, chain, binders, or covers.",
+    "10655": "Inventory and inspect goods to be moved to determine quantities and conditions.",
+    "10658": "Follow special cargo-related procedures, such as checking refrigeration systems for frozen foods or providing food or water for livestock."
+  }
+}

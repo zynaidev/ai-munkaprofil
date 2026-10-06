@@ -1,0 +1,251 @@
+{
+  "ellenorizve": false,
+  "slug": "tuzolto",
+  "nev": "Tűzoltó",
+  "aliasok": [
+    "hivatásos tűzoltó",
+    "tűzoltóság",
+    "tűzoltóautó",
+    "önkéntes tűzoltó",
+    "tűzvédelmi szakember",
+    "tűzoltó parancsnok"
+  ],
+  "feor_kod": "5252",
+  "isco_kod": "5411",
+  "soc_kodok": [
+    "33-2011.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "tűzoltók",
+  "fekek": {
+    "fizikai": {
+      "ertek": 3,
+      "indoklas": "A munka nagy része égő épületekben, baleseti helyszíneken, nehéz felszerelésben, fizikai jelenlétet és erőnlétet igényel, amit gép egyelőre nem tud átvenni."
+    },
+    "felelosseg": {
+      "ertek": 3,
+      "indoklas": "Emberéletről és vagyonról kell döntenni a helyszínen, a beavatkozásért és a jelentésekért a tűzoltóparancsnok és a katasztrófavédelem felel."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "A katasztrófavédelem szigorú szakmai és munkavédelmi előírásai kötik a beavatkozást, az AI-szabályozás főleg a riasztási és jelentési rendszereket érinti."
+    },
+    "bizalom": {
+      "ertek": 3,
+      "indoklas": "Veszélyhelyzetben az emberek azt várják, hogy képzett, jelen lévő emberek mentsék őket, nem automatika."
+    }
+  },
+  "teendo_szoveg": "A munkád lényege a helyszíni, fizikailag és emberileg is megterhelő beavatkozás, ami a jövőben is rád marad. Érdemes elsajátítanod a digitális eszközöket: a riasztási rendszereket, a drónos felderítést, a hőkamerákat és a jelentéskészítő programokat, mert ezek időt szabadítanak fel a mentésre. Fejleszd tovább az elsősegély-, műszaki mentési és veszélyes anyagos tudásodat, a parancsnoki és csapatvezetői készségeidet is, mert ezek tesznek igazán nélkülözhetetlenné.",
+  "csoportok": [
+    {
+      "leiras": "Riasztásra kivonulás, járművezetés és védőfelszerelés felvétele",
+      "task_idk": [
+        "22965",
+        "22967",
+        "22962"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Tűzoltás a helyszínen: sugárvezetés, szivattyúzás, létrázás, veszélyes anyagok megfékezése",
+      "task_idk": [
+        "22964",
+        "22970",
+        "22988",
+        "22986",
+        "22969",
+        "22972",
+        "22974",
+        "22985"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Életmentés, műszaki mentés és elsősegélynyújtás",
+      "task_idk": [
+        "22961",
+        "22987"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Utómunkálatok: kárelhárítás, utóellenőrzés, tűzfészkek felkutatása",
+      "task_idk": [
+        "22981",
+        "22973",
+        "22968"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Rádiózás, helyzetjelentés és eseményjelentések írása",
+      "task_idk": [
+        "22971",
+        "22963",
+        "22977"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Tűzvédelmi ellenőrzések és bemutatók",
+      "task_idk": [
+        "22984",
+        "22975"
+      ],
+      "emberi_mag": false,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Gyakorlás, kondíció, kiképzés és eszközkarbantartás",
+      "task_idk": [
+        "22976",
+        "22978",
+        "22990",
+        "22983"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Riasztásra kivonulás, járművezetés és védőfelszerelés felvétele",
+      "task_idk": [
+        "22965",
+        "22967",
+        "22962"
+      ],
+      "idoArany": 0.1511,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Tűzoltás a helyszínen: sugárvezetés, szivattyúzás, létrázás, veszélyes anyagok megfékezése",
+      "task_idk": [
+        "22964",
+        "22970",
+        "22988",
+        "22986",
+        "22969",
+        "22972",
+        "22974",
+        "22985"
+      ],
+      "idoArany": 0.3045,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Életmentés, műszaki mentés és elsősegélynyújtás",
+      "task_idk": [
+        "22961",
+        "22987"
+      ],
+      "idoArany": 0.0831,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Utómunkálatok: kárelhárítás, utóellenőrzés, tűzfészkek felkutatása",
+      "task_idk": [
+        "22981",
+        "22973",
+        "22968"
+      ],
+      "idoArany": 0.0937,
+      "kitettseg": 0.162,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Rádiózás, helyzetjelentés és eseményjelentések írása",
+      "task_idk": [
+        "22971",
+        "22963",
+        "22977"
+      ],
+      "idoArany": 0.1286,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.357,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Tűzvédelmi ellenőrzések és bemutatók",
+      "task_idk": [
+        "22984",
+        "22975"
+      ],
+      "idoArany": 0.0731,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Gyakorlás, kondíció, kiképzés és eszközkarbantartás",
+      "task_idk": [
+        "22976",
+        "22978",
+        "22990",
+        "22983"
+      ],
+      "idoArany": 0.1659,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.357,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "A kis súlyú feladatok elhagyása a munkaidő 11%-át érinti.",
+    "Az Economic Index a munkaidő csak 0%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "22967": "Drive and operate fire fighting vehicles and equipment.",
+    "22971": "Maintain contact with fire dispatchers at all times to notify them of the need for additional firefighters and supplies, or to detail any difficulties encountered.",
+    "22987": "Administer first aid and cardiopulmonary resuscitation to injured persons or provide emergency medical care such as basic or advanced life support.",
+    "22965": "Respond to fire alarms and other calls for assistance, such as automobile and industrial accidents.",
+    "22962": "Dress with equipment such as fire-resistant clothing and breathing apparatus.",
+    "22972": "Collaborate with other firefighters as a member of a firefighting crew.",
+    "22983": "Clean and maintain fire stations and fire fighting equipment and apparatus.",
+    "22964": "Move toward the source of a fire, using knowledge of types of fires, construction design, building materials, and physical layout of properties.",
+    "22976": "Maintain knowledge of current firefighting practices by participating in drills and by attending seminars, conventions, and conferences.",
+    "22974": "Collaborate with police to respond to accidents, disasters, and arson investigation calls.",
+    "22975": "Participate in fire drills and demonstrations of fire fighting techniques.",
+    "22988": "Operate pumps connected to high-pressure hoses.",
+    "22990": "Train new employees to control and suppress fires.",
+    "22963": "Assess fires and situations and report conditions to superiors to receive instructions, using two-way radios.",
+    "22977": "Prepare written reports that detail specifics of fire incidents.",
+    "22978": "Participate in physical training activities to maintain a high level of physical fitness.",
+    "22970": "Select and attach hose nozzles, depending on fire type, and direct streams of water or chemicals onto fires.",
+    "22961": "Rescue survivors from burning buildings, accident sites, and water hazards.",
+    "22981": "Salvage property by removing broken glass, pumping out water, and ventilating buildings to remove smoke.",
+    "22986": "Extinguish flames and embers to suppress fires, using shovels or engine- or hand-driven water or chemical pumps.",
+    "22985": "Take action to contain any hazardous chemicals that could catch fire, leak, or spill.",
+    "22973": "Patrol burned areas after fires to locate and eliminate hot spots that may restart fires.",
+    "22984": "Inspect buildings for fire hazards and compliance with fire prevention ordinances, testing and checking smoke alarms and fire suppression equipment as necessary.",
+    "22968": "Inspect fire sites after flames have been extinguished to ensure that there is no further danger.",
+    "22969": "Position and climb ladders to gain access to upper levels of buildings, or to rescue individuals from burning structures."
+  }
+}

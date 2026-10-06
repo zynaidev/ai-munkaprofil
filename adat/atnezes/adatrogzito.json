@@ -1,0 +1,185 @@
+{
+  "ellenorizve": false,
+  "slug": "adatrogzito",
+  "nev": "Adatrögzítő",
+  "aliasok": [
+    "Adatrögzítő, kódoló",
+    "adatbevitel",
+    "adatbevivő",
+    "kódoló",
+    "adatfeldolgozó",
+    "adatrögzítés otthonról",
+    "számítógépes adatrögzítő"
+  ],
+  "feor_kod": "4114",
+  "isco_kod": "4132;4413",
+  "soc_kodok": [
+    "43-9021.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "adatrögzítők",
+  "fekek": {
+    "fizikai": {
+      "ertek": 1,
+      "indoklas": "A munka döntően képernyő előtt zajlik, csak a papíralapú iratok kezelése és a gépek feltöltése igényel fizikai jelenlétet."
+    },
+    "felelosseg": {
+      "ertek": 1,
+      "indoklas": "Az adatok pontosságáért a munkavállaló felel, de a végső jogi és szakmai felelősség általában a felettesnél vagy a cégnél marad."
+    },
+    "szabalyozas": {
+      "ertek": 1,
+      "indoklas": "Az adatkezelésre a GDPR és az EU AI Act átláthatósági elvei vonatkoznak, de az adatrögzítés automatizálását nem tiltják."
+    },
+    "bizalom": {
+      "ertek": 1,
+      "indoklas": "Ez a munka jellemzően háttérfeladat, az ügyfelek nem várják el kifejezetten, hogy ember végezze, a belső ellenőrzés viszont számít."
+    }
+  },
+  "teendo_szoveg": "Az adatrögzítés rutinfeladatait az automatizálás egyre inkább átveszi, ezért érdemes az adatminőség-ellenőrzés, az adatkezelés és a kivételes esetek megoldása felé fejlődnöd. Tanuld meg az automatizált beolvasó és feldolgozó eszközöket felügyelni, és ismerd meg az alap adatelemzési módszereket, például az Excel haladó funkcióit vagy az SQL-t. Ha a GDPR-ban és az adatvédelemben is jártasságot szerzel, olyan területen leszel értékes, ahol az emberi odafigyelés továbbra is számít.",
+  "csoportok": [
+    {
+      "leiras": "Adatok beolvasása és begépelése a forrásdokumentumokból",
+      "task_idk": [
+        "11401"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Adatok előkészítése, rendezése és ellenőrzése bevitel előtt",
+      "task_idk": [
+        "11402",
+        "11407"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Beírt adatok összevetése az eredeti dokumentumokkal, hibák kijavítása vagy jelzése",
+      "task_idk": [
+        "11403",
+        "11405"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Elkészült dokumentumok iktatása, tárolása, munkanaplók vezetése",
+      "task_idk": [
+        "11404",
+        "11406"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Olvashatatlan vagy sérült üzenetek, adatok megfejtése",
+      "task_idk": [
+        "11409"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Gépek feltöltése papírral vagy adathordozóval",
+      "task_idk": [
+        "11408"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Adatok beolvasása és begépelése a forrásdokumentumokból",
+      "task_idk": [
+        "11401"
+      ],
+      "idoArany": 0.0763,
+      "kitettseg": 0.5,
+      "kivaltasArany": 1.0,
+      "horizont": "1-3ev",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Adatok előkészítése, rendezése és ellenőrzése bevitel előtt",
+      "task_idk": [
+        "11402",
+        "11407"
+      ],
+      "idoArany": 0.297,
+      "kitettseg": 1.0,
+      "kivaltasArany": 1.0,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Beírt adatok összevetése az eredeti dokumentumokkal, hibák kijavítása vagy jelzése",
+      "task_idk": [
+        "11403",
+        "11405"
+      ],
+      "idoArany": 0.312,
+      "kitettseg": 1.0,
+      "kivaltasArany": 1.0,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Elkészült dokumentumok iktatása, tárolása, munkanaplók vezetése",
+      "task_idk": [
+        "11404",
+        "11406"
+      ],
+      "idoArany": 0.214,
+      "kitettseg": 1.0,
+      "kivaltasArany": 1.0,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Olvashatatlan vagy sérült üzenetek, adatok megfejtése",
+      "task_idk": [
+        "11409"
+      ],
+      "idoArany": 0.0504,
+      "kitettseg": 1.0,
+      "kivaltasArany": 1.0,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Gépek feltöltése papírral vagy adathordozóval",
+      "task_idk": [
+        "11408"
+      ],
+      "idoArany": 0.0503,
+      "kitettseg": 0.0,
+      "kivaltasArany": 1.0,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 13%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "11405": "Locate and correct data entry errors, or report them to supervisors.",
+    "11402": "Compile, sort, and verify the accuracy of data before it is entered.",
+    "11403": "Compare data with source documents, or re-enter data in verification format to detect errors.",
+    "11404": "Store completed documents in appropriate locations.",
+    "11407": "Select materials needed to complete work assignments.",
+    "11401": "Read source documents such as canceled checks, sales reports, or bills, and enter data in specific data fields or onto tapes or disks for subsequent entry, using keyboards or scanners.",
+    "11406": "Maintain logs of activities and completed work.",
+    "11409": "Resolve garbled or indecipherable messages, using cryptographic procedures and equipment.",
+    "11408": "Load machines with required input or output media, such as paper, cards, disks, tape, or Braille media."
+  }
+}

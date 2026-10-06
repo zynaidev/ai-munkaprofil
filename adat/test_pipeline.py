@@ -105,6 +105,11 @@ def test_elokeszit(tmp_path, ei_formatum, capsys):
     assert by_id["1001"]["kivaltas_arany"] == pytest.approx(0.8)          # (0.6+0.2) / 1.0
     assert by_id["1001"]["kivaltas_forras"] == "economic-index"
     assert by_id["1004"]["kivaltas_forras"] == "munkakor-atlag"
+    # a hiányzó értéket a munkakör-átlag adja, de a globális átlag felé simítva, a lefedettség arányában
+    lefedett = sum(by_id[i]["arany"] for i in ("1001", "1002", "1003", "1006"))
+    mk, glob = (0.8 + 0.4 + 0.9 + 0.8) / 4, (0.8 + 0.4 + 0.9 + 0.8 + 0.6 + 0.2) / 6
+    assert by_id["1004"]["kivaltas_arany"] == pytest.approx((lefedett * mk + 0.25 * glob) / (lefedett + 0.25), abs=2e-3)
+    assert by_id["1004"]["kivaltas_arany"] < mk
     # Core + gyakoribb + fontosabb feladat nagyobb súlyú, mint a Supplemental riport
     assert by_id["1002"]["arany"] > by_id["1006"]["arany"]
 
@@ -165,7 +170,7 @@ def test_teljes_folyamat_tartalek_csoportositassal(tmp_path):
         ki = futas.stdout
         eredmeny = json.loads(ki.strip().splitlines()[-1])
         assert eredmeny["ossz"] == 40
-        assert eredmeny["tipus"] == "vedett"
+        assert eredmeny["tipus"] == "Védett"
 
 
 def test_claude_hibas_valasz_ujraprobalas(tmp_path, monkeypatch):

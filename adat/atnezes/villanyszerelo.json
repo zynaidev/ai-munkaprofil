@@ -1,0 +1,240 @@
+{
+  "ellenorizve": false,
+  "slug": "villanyszerelo",
+  "nev": "Villanyszerelő",
+  "aliasok": [
+    "Épületvillamossági szerelő, villanyszerelő",
+    "épületvillamossági szerelő",
+    "villany szerelő",
+    "villanyász",
+    "áramszerelő",
+    "elektrikus",
+    "villanyszerelő mester",
+    "villamos szerelő"
+  ],
+  "feor_kod": "7524",
+  "isco_kod": "7411",
+  "soc_kodok": [
+    "47-2111.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "villanyszerelők",
+  "fekek": {
+    "fizikai": {
+      "ertek": 3,
+      "indoklas": "A munka helyszíni, kézzel végzett szerelés szűk, nehezen elérhető terekben, magasban és földmunkával, amit gép vagy szoftver nem tud átvenni."
+    },
+    "felelosseg": {
+      "ertek": 3,
+      "indoklas": "Hibás bekötés tűzet vagy balesetet okozhat, ezért a munkáért a jogosultsággal rendelkező szakember felel, ő írja alá az átvételt és a szabványossági dokumentumokat."
+    },
+    "szabalyozas": {
+      "ertek": 3,
+      "indoklas": "Az érintésvédelmi és villamos biztonsági szabványok, valamint a szakmai jogosultsági követelmények szigorúan előírják, ki és hogyan végezhet villamos munkát."
+    },
+    "bizalom": {
+      "ertek": 3,
+      "indoklas": "Az ügyfelek otthonukba vagy üzemükbe csak megbízható, személyesen felelős szakembert engednek be, és az elvégzett munkát is tőle várják el."
+    }
+  },
+  "teendo_szoveg": "A kézi szerelés és a hibakeresés a munkád magja, ezért ezekben érdemes még mélyebb szakértelmet építeni, például okosotthon-rendszerekben, napelemes és energiatároló telepítésben vagy töltőinfrastruktúrában. Használd bátran a digitális eszközöket az ajánlatkészítéshez, a dokumentáláshoz és a tervezéshez, mert így több időd marad a helyszíni munkára és az ügyfelekre. Tartsd naprakészen a jogosultságaidat és a szabványismeretedet, mert ez a megbízhatóságod alapja.",
+  "csoportok": [
+    {
+      "leiras": "Vezetékek, csövek és szerelvények beépítése, bekötése (létrán, állványon, tetőn is)",
+      "task_idk": [
+        "2887",
+        "2883",
+        "2888",
+        "2873",
+        "2875",
+        "2890",
+        "2884",
+        "20439",
+        "2891"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Hibakeresés, mérés és javítás",
+      "task_idk": [
+        "2878",
+        "2874",
+        "2886"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Biztonsági ellenőrzés, szabványok és engedélyek betartása",
+      "task_idk": [
+        "2876",
+        "2877",
+        "2879"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Tervrajz olvasása, vezetékelés és kivitelezés tervezése",
+      "task_idk": [
+        "2882",
+        "2880"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Árajánlat, költségbecslés és papírmunka",
+      "task_idk": [
+        "2885",
+        "2892"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Kollégák, segédek irányítása és betanítása",
+      "task_idk": [
+        "2881"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Segítségnyújtás vészhelyzetben (világítás, áramfejlesztő, helyszínbiztosítás)",
+      "task_idk": [
+        "2893"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Vezetékek, csövek és szerelvények beépítése, bekötése (létrán, állványon, tetőn is)",
+      "task_idk": [
+        "2887",
+        "2883",
+        "2888",
+        "2873",
+        "2875",
+        "2890",
+        "2884",
+        "20439",
+        "2891"
+      ],
+      "idoArany": 0.4642,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.0,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Hibakeresés, mérés és javítás",
+      "task_idk": [
+        "2878",
+        "2874",
+        "2886"
+      ],
+      "idoArany": 0.1422,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.0,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Biztonsági ellenőrzés, szabványok és engedélyek betartása",
+      "task_idk": [
+        "2876",
+        "2877",
+        "2879"
+      ],
+      "idoArany": 0.1467,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.0,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Tervrajz olvasása, vezetékelés és kivitelezés tervezése",
+      "task_idk": [
+        "2882",
+        "2880"
+      ],
+      "idoArany": 0.1135,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.0,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Árajánlat, költségbecslés és papírmunka",
+      "task_idk": [
+        "2885",
+        "2892"
+      ],
+      "idoArany": 0.0702,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.0,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Kollégák, segédek irányítása és betanítása",
+      "task_idk": [
+        "2881"
+      ],
+      "idoArany": 0.051,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.0,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Segítségnyújtás vészhelyzetben (világítás, áramfejlesztő, helyszínbiztosítás)",
+      "task_idk": [
+        "2893"
+      ],
+      "idoArany": 0.0122,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.0,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 4%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "2887": "Work from ladders, scaffolds, or roofs to install, maintain, or repair electrical wiring, equipment, or fixtures.",
+    "2883": "Use a variety of tools or equipment, such as power construction equipment, measuring devices, power tools, and testing equipment, such as oscilloscopes, ammeters, or test lamps.",
+    "2882": "Prepare sketches or follow blueprints to determine the location of wiring or equipment and to ensure conformance to building and safety codes.",
+    "2888": "Place conduit, pipes, or tubing, inside designated partitions, walls, or other concealed areas, and pull insulated wires or cables through the conduit to complete circuits between boxes.",
+    "2873": "Assemble, install, test, or maintain electrical or electronic wiring, equipment, appliances, apparatus, or fixtures, using hand tools or power tools.",
+    "2879": "Maintain current electrician's license or identification card to meet governmental regulations.",
+    "2880": "Plan layout and installation of electrical wiring, equipment, or fixtures, based on job specifications and local codes.",
+    "2881": "Direct or train workers to install, maintain, or repair electrical wiring, equipment, or fixtures.",
+    "2878": "Test electrical systems or continuity of circuits in electrical wiring, equipment, or fixtures, using testing devices, such as ohmmeters, voltmeters, or oscilloscopes, to ensure compatibility and safety of system.",
+    "2875": "Connect wires to circuit breakers, transformers, or other components.",
+    "2876": "Inspect electrical systems, equipment, or components to identify hazards, defects, or the need for adjustment or repair, and to ensure compliance with codes.",
+    "2886": "Repair or replace wiring, equipment, or fixtures, using hand tools or power tools.",
+    "2891": "Perform physically demanding tasks, such as digging trenches to lay conduit or moving or lifting heavy objects.",
+    "2874": "Diagnose malfunctioning systems, apparatus, or components, using test equipment and hand tools to locate the cause of a breakdown and correct the problem.",
+    "20439": "Construct or fabricate parts, using hand tools, according to specifications.",
+    "2877": "Advise management on whether continued operation of equipment could be hazardous.",
+    "2885": "Perform business management duties, such as maintaining records or files, preparing reports, or ordering supplies or equipment.",
+    "2890": "Fasten small metal or plastic boxes to walls to house electrical switches or outlets.",
+    "2884": "Install ground leads and connect power cables to equipment, such as motors.",
+    "2892": "Provide preliminary sketches or cost estimates for materials or services.",
+    "2893": "Provide assistance during emergencies by operating floodlights or generators, placing flares, or driving needed vehicles."
+  }
+}

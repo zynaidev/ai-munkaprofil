@@ -1,0 +1,220 @@
+{
+  "ellenorizve": false,
+  "slug": "vagyonor",
+  "nev": "Vagyonőr",
+  "aliasok": [
+    "Vagyonőr, testőr",
+    "biztonsági őr",
+    "őr",
+    "testőr",
+    "biztonsági ember",
+    "térfigyelő",
+    "objektumőr",
+    "portás őr",
+    "biztonsági szolgálat"
+  ],
+  "feor_kod": "5254",
+  "isco_kod": "5414",
+  "soc_kodok": [
+    "33-9032.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "vagyonőrök",
+  "fekek": {
+    "fizikai": {
+      "ertek": 3,
+      "indoklas": "A munka nagy része fizikai jelenlétet igényel: járőrözés, ajtók zárása, beavatkozás és elsősegélynyújtás a helyszínen."
+    },
+    "felelosseg": {
+      "ertek": 2,
+      "indoklas": "A vagyonőr a személy- és vagyonőrzésről szóló törvény szerint jár el, és a testi kényszer alkalmazása vagy a jelentések hitelessége felelősséggel jár, de ez többnyire a munkáltatóra is hárul."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "A magyar személy- és vagyonvédelmi szabályozás (igazolvány, kötelező képzés) és az EU AI Act a biometrikus azonosítás, kamerás megfigyelés területén korlátozza az automatizálást."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "Az ügyfelek és a látogatók elvárják, hogy konfliktus vagy vészhelyzet esetén egy valódi ember jelenjen meg, bár a távfelügyelet egyre elfogadottabb."
+    }
+  },
+  "teendo_szoveg": "Fejleszd a helyszíni problémamegoldó és konfliktuskezelő készségeidet, mert a váratlan helyzetek kezelése marad igazán emberi feladat. Tanuld meg a modern biztonságtechnikai rendszerek, a kamerás és beléptető szoftverek kezelését, így te leszel az, aki az új eszközöket irányítja. Egy elsősegély- vagy tűzvédelmi tanfolyam, illetve a személyvédelmi képesítés megerősíti a pozíciódat.",
+  "csoportok": [
+    {
+      "leiras": "Be- és kilépés ellenőrzése, beengedés, ellenőrzőpont és beléptetés",
+      "task_idk": [
+        "2133",
+        "2139",
+        "20894"
+      ],
+      "emberi_mag": false,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Őrjárat, a terület és az épület rendszeres bejárása",
+      "task_idk": [
+        "2131",
+        "2136"
+      ],
+      "emberi_mag": false,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Riasztások kivizsgálása és a szabálysértők elleni fellépés",
+      "task_idk": [
+        "2132",
+        "2138"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Elsősegélynyújtás és segélyhívás vészhelyzetben",
+      "task_idk": [
+        "20895",
+        "2135"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Biztonsági és épületgépészeti rendszerek ellenőrzése, beállítása",
+      "task_idk": [
+        "2141",
+        "2143"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Kísérés, személyvédelem és szállítás",
+      "task_idk": [
+        "2140"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Telefonos ügyfélszolgálat és írásos eseményjelentések",
+      "task_idk": [
+        "2137",
+        "2134"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Be- és kilépés ellenőrzése, beengedés, ellenőrzőpont és beléptetés",
+      "task_idk": [
+        "2133",
+        "2139",
+        "20894"
+      ],
+      "idoArany": 0.2498,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.5,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Őrjárat, a terület és az épület rendszeres bejárása",
+      "task_idk": [
+        "2131",
+        "2136"
+      ],
+      "idoArany": 0.1712,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.5,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Riasztások kivizsgálása és a szabálysértők elleni fellépés",
+      "task_idk": [
+        "2132",
+        "2138"
+      ],
+      "idoArany": 0.1509,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.5,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Elsősegélynyújtás és segélyhívás vészhelyzetben",
+      "task_idk": [
+        "20895",
+        "2135"
+      ],
+      "idoArany": 0.1162,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.5,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Biztonsági és épületgépészeti rendszerek ellenőrzése, beállítása",
+      "task_idk": [
+        "2141",
+        "2143"
+      ],
+      "idoArany": 0.092,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.5,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Kísérés, személyvédelem és szállítás",
+      "task_idk": [
+        "2140"
+      ],
+      "idoArany": 0.0598,
+      "kitettseg": 0.0,
+      "kivaltasArany": 0.5,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Telefonos ügyfélszolgálat és írásos eseményjelentések",
+      "task_idk": [
+        "2137",
+        "2134"
+      ],
+      "idoArany": 0.1601,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.506,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 16%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "2133": "Monitor and authorize entrance and departure of employees, visitors, and other persons to guard against theft and maintain security of premises.",
+    "2136": "Circulate among visitors, patrons, or employees to preserve order and protect property.",
+    "20894": "Lock doors and gates of entrances and exits to secure buildings.",
+    "2131": "Patrol industrial or commercial premises to prevent and detect signs of intrusion and ensure security of doors, windows, and gates.",
+    "2137": "Answer telephone calls to take messages, answer questions, and provide information during non-business hours or when switchboard is closed.",
+    "2134": "Write reports of daily activities and irregularities, such as equipment or property damage, theft, presence of unauthorized persons, or unusual occurrences.",
+    "2132": "Answer alarms and investigate disturbances.",
+    "2139": "Operate detecting devices to screen individuals and prevent passage of prohibited articles into restricted areas.",
+    "2138": "Warn persons of rule infractions or violations, and apprehend or evict violators from premises, using force when necessary.",
+    "2141": "Inspect and adjust security systems, equipment, or machinery to ensure operational use and to detect evidence of tampering.",
+    "20895": "Respond to medical emergencies by administering basic first aid or by obtaining assistance from paramedics.",
+    "2140": "Escort or drive motor vehicle to transport individuals to specified locations or to provide personal protection.",
+    "2135": "Call police or fire departments in cases of emergency, such as fire or presence of unauthorized persons.",
+    "2143": "Monitor and adjust controls that regulate building systems, such as air conditioning, furnace, or boiler."
+  }
+}

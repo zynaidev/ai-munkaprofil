@@ -1,0 +1,253 @@
+{
+  "ellenorizve": false,
+  "slug": "titkar",
+  "nev": "Titkár",
+  "aliasok": [
+    "nő",
+    "titkárnő",
+    "irodai titkár",
+    "vezetői titkár",
+    "ügyvezetői asszisztens",
+    "asszisztens",
+    "titkárság",
+    "személyi asszisztens"
+  ],
+  "feor_kod": "4111",
+  "isco_kod": "4120",
+  "soc_kodok": [
+    "43-6014.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "titkárok",
+  "fekek": {
+    "fizikai": {
+      "ertek": 1,
+      "indoklas": "A vendégek fogadása, a nyomtatás-másolás és a gépek javíttatása fizikai jelenlétet kíván, de a munka nagy része képernyő előtt zajlik."
+    },
+    "felelosseg": {
+      "ertek": 1,
+      "indoklas": "A pénzkezelés és a bérszámfejtés pontosságáért az irodai munkatárs felel, de a végső aláírás általában a vezetőnél van."
+    },
+    "szabalyozas": {
+      "ertek": 1,
+      "indoklas": "A személyes adatok kezelésére (GDPR) és a bér- és pénzügyi adminisztrációra vonatkozó szabályok korlátozzák az automatizálást, de nem tiltják."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "A vezetők és az ügyfelek elvárják, hogy a bizalmas információkat és a személyes kapcsolattartást egy ismert ember kezelje."
+    }
+  },
+  "teendo_szoveg": "Építs arra, amit gép nehezen pótol: a személyes kapcsolattartásra, a vezetők és kollégák támogatására, a bizalmas ügyek diszkrét kezelésére. Tanuld meg magabiztosan használni az AI-asszisztenseket levelezéshez, naptárkezeléshez és jelentésekhez, így te leszel az, aki a csapatnak megmutatja, hogyan lehet velük gyorsabban dolgozni. Ha a szervezés, a rendezvények vagy a bér- és pénzügyi adminisztráció érdekel, mélyítsd el ezeket a területeket, mert ott a felelősséged és az ítélőképességed különösen értékes.",
+  "csoportok": [
+    {
+      "leiras": "Telefonhívások fogadása, látogatók fogadása és ügyfélkérdések intézése",
+      "task_idk": [
+        "2790",
+        "2791",
+        "2806"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Időpontok, naptárak és rendezvények szervezése",
+      "task_idk": [
+        "2801",
+        "2800",
+        "20287",
+        "20290"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Levelezés, e-mailek, jegyzőkönyvek és jelentések kezelése, ellenőrzése",
+      "task_idk": [
+        "20284",
+        "2797",
+        "2794",
+        "2813",
+        "2793"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Adatbázisok, iratrendezés és űrlapok kezelése, információkeresés",
+      "task_idk": [
+        "20280",
+        "20281",
+        "20282",
+        "2795",
+        "2805"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Irodai gépek kezelése, másolás és készletrendelés",
+      "task_idk": [
+        "20283",
+        "2796",
+        "2804"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Kollégák segítése, betanítása és a napi irodai munka szervezése",
+      "task_idk": [
+        "20289",
+        "2799",
+        "2809"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Pénzkezelés, számlák és bérszámfejtési adminisztráció",
+      "task_idk": [
+        "20286",
+        "20285"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Telefonhívások fogadása, látogatók fogadása és ügyfélkérdések intézése",
+      "task_idk": [
+        "2790",
+        "2791",
+        "2806"
+      ],
+      "idoArany": 0.1388,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.279,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Időpontok, naptárak és rendezvények szervezése",
+      "task_idk": [
+        "2801",
+        "2800",
+        "20287",
+        "20290"
+      ],
+      "idoArany": 0.1407,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.413,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Levelezés, e-mailek, jegyzőkönyvek és jelentések kezelése, ellenőrzése",
+      "task_idk": [
+        "20284",
+        "2797",
+        "2794",
+        "2813",
+        "2793"
+      ],
+      "idoArany": 0.2179,
+      "kitettseg": 0.784,
+      "kivaltasArany": 0.418,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Adatbázisok, iratrendezés és űrlapok kezelése, információkeresés",
+      "task_idk": [
+        "20280",
+        "20281",
+        "20282",
+        "2795",
+        "2805"
+      ],
+      "idoArany": 0.2499,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.423,
+      "horizont": "ma",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Irodai gépek kezelése, másolás és készletrendelés",
+      "task_idk": [
+        "20283",
+        "2796",
+        "2804"
+      ],
+      "idoArany": 0.1289,
+      "kitettseg": 0.18,
+      "kivaltasArany": 0.404,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Kollégák segítése, betanítása és a napi irodai munka szervezése",
+      "task_idk": [
+        "20289",
+        "2799",
+        "2809"
+      ],
+      "idoArany": 0.0815,
+      "kitettseg": 0.7,
+      "kivaltasArany": 0.404,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Pénzkezelés, számlák és bérszámfejtési adminisztráció",
+      "task_idk": [
+        "20286",
+        "20285"
+      ],
+      "idoArany": 0.0423,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.464,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    }
+  ],
+  "_figyelmeztetesek": [
+    "A kis súlyú feladatok elhagyása a munkaidő 9%-át érinti.",
+    "Az Economic Index a munkaidő csak 43%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "2790": "Answer telephones and give information to callers, take messages, or transfer calls to appropriate individuals.",
+    "20280": "Use computers for various applications, such as database management or word processing.",
+    "2791": "Greet visitors or callers and handle their inquiries or direct them to the appropriate persons according to their needs.",
+    "20281": "Create, maintain, and enter information into databases.",
+    "20283": "Operate office equipment, such as fax machines, copiers, or phone systems and arrange for repairs when equipment malfunctions.",
+    "2813": "Operate electronic mail systems and coordinate the flow of information, internally or with other organizations.",
+    "20282": "Set up and manage paper or electronic filing systems, recording information, updating paperwork, or maintaining documents, such as attendance records, correspondence, or other material.",
+    "2801": "Schedule and confirm appointments for clients, customers, or supervisors.",
+    "2796": "Make copies of correspondence or other printed material.",
+    "2800": "Maintain scheduling and event calendars.",
+    "2795": "Complete forms in accordance with company procedures.",
+    "20284": "Compose, type, and distribute meeting notes, routine correspondence, or reports, such as presentations or expense, statistical, or monthly reports.",
+    "2805": "Conduct searches to find needed information, using such sources as the Internet.",
+    "2793": "Locate and attach appropriate files to incoming correspondence requiring replies.",
+    "2794": "Open, read, route, and distribute incoming mail or other materials and answer routine letters.",
+    "2797": "Review work done by others to check for correct spelling and grammar, ensure that company format policies are followed, and recommend revisions.",
+    "20289": "Train and assist staff with computer usage.",
+    "2804": "Order and dispense supplies.",
+    "2799": "Learn to operate new office technologies as they are developed and implemented.",
+    "20290": "Prepare conference or event materials, such as flyers or invitations.",
+    "2806": "Provide services to customers, such as order placement or account information.",
+    "20286": "Collect and deposit money into accounts, disburse funds from cash accounts to pay bills or invoices, keep records of collections and disbursements, and ensure accounts are balanced.",
+    "2809": "Establish work procedures or schedules and keep track of the daily work of clerical staff.",
+    "20285": "Perform payroll functions, such as maintaining timekeeping information and processing and submitting payroll.",
+    "20287": "Coordinate conferences, meetings, or special events, such as luncheons or graduation ceremonies."
+  }
+}

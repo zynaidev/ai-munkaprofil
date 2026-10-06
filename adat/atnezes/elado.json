@@ -1,0 +1,248 @@
+{
+  "ellenorizve": false,
+  "slug": "elado",
+  "nev": "Eladó",
+  "aliasok": [
+    "Bolti eladó",
+    "boltos",
+    "kereskedelmi eladó",
+    "vegyesbolti eladó",
+    "ruhaboltos",
+    "szaküzleti eladó",
+    "pultos eladó"
+  ],
+  "feor_kod": "5113",
+  "isco_kod": "5223",
+  "soc_kodok": [
+    "41-2031.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "eladók",
+  "fekek": {
+    "fizikai": {
+      "ertek": 2,
+      "indoklas": "Az áru mozgatása, polcrendezés, csomagolás és a vevő melletti jelenlét fizikai munka, amelyet a szoftver nem old meg."
+    },
+    "felelosseg": {
+      "ertek": 1,
+      "indoklas": "Az eladó felelős a kasszáért és a pénzkezelésért, de komoly jogi vagy szakmai aláírási felelőssége általában nincs."
+    },
+    "szabalyozas": {
+      "ertek": 1,
+      "indoklas": "A fogyasztóvédelmi szabályok, az online pénztárgép és a garanciális előírások érvényesek, de az AI használatát ágazati szabály nem korlátozza erősen."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "Sok magyar vevő, főleg drágább vagy tanácsot igénylő termékeknél, szívesebben vásárol embertől, és számít neki a személyes ajánlás."
+    }
+  },
+  "teendo_szoveg": "Építsd a termékismeretedet és a vevőkkel való kapcsolatodat, mert a személyes tanács és a bizalom nehezen pótolható. Tanuld meg magabiztosan használni az önkiszolgáló kasszákat, a készletkezelő és rendelési rendszereket, hogy a rutinfeladatokra kevesebb időd menjen. Ha egy termékkörben igazán jártassá válsz, például műszaki cikkek vagy szépségápolás terén, szakértő tanácsadóként még értékesebb leszel.",
+  "csoportok": [
+    {
+      "leiras": "Vásárlók fogadása, igényeik felmérése és személyre szabott ajánlás",
+      "task_idk": [
+        "694",
+        "700",
+        "710"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Termékek bemutatása, kipróbáltatása, használatuk elmagyarázása és kérdések megválaszolása",
+      "task_idk": [
+        "701",
+        "702",
+        "706"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Pénztárazás, fizetés kezelése, kassza nyitása-zárása és csomagolás",
+      "task_idk": [
+        "697",
+        "695",
+        "709"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Csere, visszavétel, különrendelés és a más üzletekben lévő termék felkutatása",
+      "task_idk": [
+        "708",
+        "705",
+        "717"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Számlák, szerződések, nyilvántartások és árajánlatok elkészítése",
+      "task_idk": [
+        "698",
+        "704",
+        "715",
+        "716",
+        "714",
+        "713"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Áru előkészítése, kipakolás, polcrendezés, árazás, leltározás és rendrakás",
+      "task_idk": [
+        "712",
+        "703",
+        "711",
+        "707"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Akciók és szabályzatok ismerete, lopások és biztonsági kockázatok kezelése",
+      "task_idk": [
+        "696",
+        "699"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Vásárlók fogadása, igényeik felmérése és személyre szabott ajánlás",
+      "task_idk": [
+        "694",
+        "700",
+        "710"
+      ],
+      "idoArany": 0.1547,
+      "kitettseg": 0.201,
+      "kivaltasArany": 0.373,
+      "horizont": "5ev+",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Termékek bemutatása, kipróbáltatása, használatuk elmagyarázása és kérdések megválaszolása",
+      "task_idk": [
+        "701",
+        "702",
+        "706"
+      ],
+      "idoArany": 0.1697,
+      "kitettseg": 0.342,
+      "kivaltasArany": 0.281,
+      "horizont": "1-3ev",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    },
+    {
+      "leiras": "Pénztárazás, fizetés kezelése, kassza nyitása-zárása és csomagolás",
+      "task_idk": [
+        "697",
+        "695",
+        "709"
+      ],
+      "idoArany": 0.1185,
+      "kitettseg": 0.257,
+      "kivaltasArany": 0.236,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Csere, visszavétel, különrendelés és a más üzletekben lévő termék felkutatása",
+      "task_idk": [
+        "708",
+        "705",
+        "717"
+      ],
+      "idoArany": 0.1111,
+      "kitettseg": 0.266,
+      "kivaltasArany": 0.236,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Számlák, szerződések, nyilvántartások és árajánlatok elkészítése",
+      "task_idk": [
+        "698",
+        "704",
+        "715",
+        "716",
+        "714",
+        "713"
+      ],
+      "idoArany": 0.141,
+      "kitettseg": 0.755,
+      "kivaltasArany": 0.236,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Áru előkészítése, kipakolás, polcrendezés, árazás, leltározás és rendrakás",
+      "task_idk": [
+        "712",
+        "703",
+        "711",
+        "707"
+      ],
+      "idoArany": 0.1993,
+      "kitettseg": 0.247,
+      "kivaltasArany": 0.236,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Akciók és szabályzatok ismerete, lopások és biztonsági kockázatok kezelése",
+      "task_idk": [
+        "696",
+        "699"
+      ],
+      "idoArany": 0.1058,
+      "kitettseg": 0.27,
+      "kivaltasArany": 0.236,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 24%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "694": "Greet customers and ascertain what each customer wants or needs.",
+    "700": "Recommend, select, and help locate or obtain merchandise based on customer needs and desires.",
+    "697": "Compute sales prices, total purchases, and receive and process cash or credit payment.",
+    "701": "Answer questions regarding the store and its merchandise.",
+    "712": "Prepare merchandise for purchase or rental.",
+    "696": "Maintain knowledge of current sales and promotions, policies regarding payment and exchanges, and security practices.",
+    "702": "Describe merchandise and explain use, operation, and care of merchandise to customers.",
+    "706": "Demonstrate use or operation of merchandise.",
+    "708": "Exchange merchandise for customers and accept returns.",
+    "703": "Ticket, arrange, and display merchandise to promote sales.",
+    "699": "Watch for and recognize security risks and thefts and know how to prevent or handle these situations.",
+    "711": "Inventory stock and requisition new stock.",
+    "707": "Clean shelves, counters, and tables.",
+    "705": "Place special orders or call other stores to find desired items.",
+    "695": "Open and close cash registers, performing tasks such as counting money, separating charge slips, coupons, and vouchers, balancing cash drawers, and making deposits.",
+    "698": "Maintain records related to sales.",
+    "709": "Bag or package purchases and wrap gifts.",
+    "704": "Prepare sales slips or sales contracts.",
+    "710": "Help customers try on or fit merchandise.",
+    "713": "Sell or arrange for delivery, insurance, financing, or service contracts for merchandise.",
+    "714": "Estimate and quote trade-in allowances.",
+    "716": "Estimate quantity and cost of merchandise required, such as paint or floor covering.",
+    "717": "Rent merchandise to customers.",
+    "715": "Estimate cost of repair or alteration of merchandise."
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "ellenorizve": false,
+  "slug": "fordito",
+  "nev": "Fordító",
+  "aliasok": [
+    "Nyelvész, fordító, tolmács",
+    "tolmács",
+    "nyelvész",
+    "szakfordító",
+    "konferenciatolmács",
+    "lektor",
+    "nyelvi szakértő",
+    "szinkrontolmács",
+    "bírósági tolmács"
+  ],
+  "feor_kod": "2627",
+  "isco_kod": "2643",
+  "soc_kodok": [
+    "27-3091.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "fordítók",
+  "fekek": {
+    "fizikai": {
+      "ertek": 1,
+      "indoklas": "Az írásbeli fordítás teljesen digitális, de a helyszíni tolmácsolás és a turisták kísérése fizikai jelenlétet igényel."
+    },
+    "felelosseg": {
+      "ertek": 2,
+      "indoklas": "Hivatalos, hiteles fordításnál (bírósági, hatósági, orvosi iratok) a fordító szakmai és jogi felelősséggel tartozik, és a titoktartás is kötelező."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "Magyarországon a hiteles fordítás szabályozott (pl. OFFI), az adatvédelem (GDPR) és az EU AI Act kockázati előírásai pedig érzékeny tartalmaknál korlátozzák a gépi használatot."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "Tárgyalásokon, bírósági és egészségügyi helyzetekben az ügyfelek elvárják, hogy egy ember vállaljon felelősséget a pontosságért és a diszkrécióért."
+    }
+  },
+  "teendo_szoveg": "A gépi fordítás a rutinszövegeknél már komoly segítség, ezért érdemes a nyers fordítás helyett a minőségbiztosításra, a lektorálásra és a szakterületi tudásra (jog, orvosi, műszaki) építened. Tanulj meg gépi fordítási eszközökkel és terminológiai adatbázisokkal hatékonyan dolgozni, így gyorsabban és következetesebben szállíthatsz. A szóbeli tolmácsolásban és a kulturális közvetítésben az emberi jelenlét és a bizalom a erősséged, ezt érdemes tudatosan fejlesztened, például hiteles fordítói vagy szakosított tolmács képesítéssel.",
+  "csoportok": [
+    {
+      "leiras": "Szóbeli tolmácsolás és a beszélők követése (szimultán, konszekutív, jelnyelvi)",
+      "task_idk": [
+        "9328",
+        "9335"
+      ],
+      "emberi_mag": false,
+      "csatorna": "szemelyes"
+    },
+    {
+      "leiras": "Írásos szövegek fordítása más nyelvre (jogi, tudományos, hírszövegek)",
+      "task_idk": [
+        "9331"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Lektorálás, javítás és a fordítás hűségének ellenőrzése",
+      "task_idk": [
+        "9329",
+        "9336",
+        "9330"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Szakszótárak, terminológia és háttéranyagok összeállítása, szótárak használata",
+      "task_idk": [
+        "9333",
+        "9332",
+        "9337"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Szoftverek, dokumentációk és oktatási anyagok lokalizálása, kulturális és szintbeli adaptálása",
+      "task_idk": [
+        "9339",
+        "9334"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Titoktartás, etikai szabályok betartása és kulturális félreértések feloldása",
+      "task_idk": [
+        "9326",
+        "9327"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Ügyfelekkel egyeztetés, árajánlat, kollégák betanítása, turisták kísérése",
+      "task_idk": [
+        "9338",
+        "9340",
+        "9341",
+        "9342"
+      ],
+      "emberi_mag": true,
+      "csatorna": "szemelyes"
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Szóbeli tolmácsolás és a beszélők követése (szimultán, konszekutív, jelnyelvi)",
+      "task_idk": [
+        "9328",
+        "9335"
+      ],
+      "idoArany": 0.1918,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.505,
+      "horizont": "ma",
+      "csatorna": "szemelyes",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Írásos szövegek fordítása más nyelvre (jogi, tudományos, hírszövegek)",
+      "task_idk": [
+        "9331"
+      ],
+      "idoArany": 0.0282,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.679,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Lektorálás, javítás és a fordítás hűségének ellenőrzése",
+      "task_idk": [
+        "9329",
+        "9336",
+        "9330"
+      ],
+      "idoArany": 0.1557,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.311,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Szakszótárak, terminológia és háttéranyagok összeállítása, szótárak használata",
+      "task_idk": [
+        "9333",
+        "9332",
+        "9337"
+      ],
+      "idoArany": 0.2468,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.29,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Szoftverek, dokumentációk és oktatási anyagok lokalizálása, kulturális és szintbeli adaptálása",
+      "task_idk": [
+        "9339",
+        "9334"
+      ],
+      "idoArany": 0.0803,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.327,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Titoktartás, etikai szabályok betartása és kulturális félreértések feloldása",
+      "task_idk": [
+        "9326",
+        "9327"
+      ],
+      "idoArany": 0.1895,
+      "kitettseg": 0.451,
+      "kivaltasArany": 0.436,
+      "horizont": "5ev+",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Ügyfelekkel egyeztetés, árajánlat, kollégák betanítása, turisták kísérése",
+      "task_idk": [
+        "9338",
+        "9340",
+        "9341",
+        "9342"
+      ],
+      "idoArany": 0.1077,
+      "kitettseg": 0.784,
+      "kivaltasArany": 0.436,
+      "horizont": "ma",
+      "csatorna": "szemelyes",
+      "emberiMag": true
+    }
+  ],
+  "_figyelmeztetesek": [],
+  "_eredeti_feladatok": {
+    "9326": "Follow ethical codes that protect the confidentiality of information.",
+    "9328": "Translate messages simultaneously or consecutively into specified languages, orally or by using hand signs, maintaining message content, context, and style as much as possible.",
+    "9335": "Listen to speakers' statements to determine meanings and to prepare translations, using electronic listening systems as necessary.",
+    "9327": "Identify and resolve conflicts related to the meanings of words, concepts, practices, or behaviors.",
+    "9330": "Check translations of technical terms and terminology to ensure that they are accurate and remain consistent throughout translation revisions.",
+    "9332": "Refer to reference materials, such as dictionaries, lexicons, encyclopedias, and computerized terminology banks, as needed to ensure translation accuracy.",
+    "9333": "Compile terminology and information to be used in translations, including technical terms such as those for legal or medical material.",
+    "9337": "Compile information on content and context of information to be translated and on intended audience.",
+    "9334": "Adapt translations to students' cognitive and grade levels, collaborating with educational team members as necessary.",
+    "9339": "Adapt software and accompanying technical documents to another language and culture.",
+    "9336": "Check original texts or confer with authors to ensure that translations retain the content, meaning, and feeling of the original material.",
+    "9329": "Proofread, edit, and revise translated materials.",
+    "9338": "Discuss translation requirements with clients and determine any fees to be charged for services provided.",
+    "9331": "Read written materials, such as legal documents, scientific works, or news reports, and rewrite material into specified languages.",
+    "9340": "Educate students, parents, staff, and teachers about the roles and functions of educational interpreters.",
+    "9341": "Train and supervise other translators or interpreters.",
+    "9342": "Travel with or guide tourists who speak another language."
+  }
+}

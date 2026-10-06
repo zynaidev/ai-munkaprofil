@@ -1,0 +1,217 @@
+{
+  "ellenorizve": false,
+  "slug": "ugyfelszolgalatos",
+  "nev": "Ügyfélszolgálatos",
+  "aliasok": [
+    "Ügyfélszolgálati központ tájékoztatója",
+    "call center",
+    "telefonos ügyfélszolgálatos",
+    "ügyfélkapcsolati munkatárs",
+    "ügyféltájékoztató",
+    "diszpécser",
+    "telefonos ügyintéző",
+    "ügyfélszolgálati munkatárs",
+    "contact center"
+  ],
+  "feor_kod": "4225",
+  "isco_kod": "4222;4223",
+  "soc_kodok": [
+    "43-4051.00"
+  ],
+  "heti_ora": 40.0,
+  "indexelheto": false,
+  "tobbes": "ügyfélszolgálatosok",
+  "fekek": {
+    "fizikai": {
+      "ertek": 0,
+      "indoklas": "A munka nagyrészt telefonon vagy számítógépen zajlik, ezért fizikai jelenlét vagy kézügyesség nem védi."
+    },
+    "felelosseg": {
+      "ertek": 1,
+      "indoklas": "Pénzkezelésnél és biztosítási fedezet megítélésénél van felelősség, de a döntések többsége szabályzat szerinti rutin, nem egyéni szakmai aláírás."
+    },
+    "szabalyozas": {
+      "ertek": 2,
+      "indoklas": "A GDPR, a fogyasztóvédelmi szabályok és az EU AI Act átláthatósági előírásai korlátozzák a teljes automatizálást, és biztosítani kell az emberi ügyintézőhöz fordulás lehetőségét."
+    },
+    "bizalom": {
+      "ertek": 2,
+      "indoklas": "Egy vitás vagy érzelmileg terhelt ügyben a magyar ügyfelek jellemzően embert szeretnének, a rutinkérdéseknél viszont elfogadják az automatát."
+    }
+  },
+  "teendo_szoveg": "Fejleszd azokat a képességeidet, amelyekben az ember erősebb: a nehéz panaszok megoldását, a higgadt kommunikációt és a méltányos döntéshozatalt. Tanuld meg magabiztosan használni az AI-asszisztenseket és az automatizált rendszereket, hogy a rutinfeladatokat gyorsan átadhasd nekik, te pedig az összetett ügyekre koncentrálhass. Érdemes egy-egy terület (például biztosítás, energiaszolgáltatás, pénzügy) szakmai ismereteit is elmélyítened, mert ez téged tesz a bonyolult esetek megbízható kezelőjévé.",
+  "csoportok": [
+    {
+      "leiras": "Ügyfelek megkereséseinek fogadása, tájékoztatás, rendelések felvétele, szerződésmondás",
+      "task_idk": [
+        "18565"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Panaszok kivizsgálása és megoldása: csere, visszatérítés, számlamódosítás, szükség esetén átadás",
+      "task_idk": [
+        "2579",
+        "2585",
+        "2587",
+        "2582"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    },
+    {
+      "leiras": "Ügyfelek visszahívása, értesítése és annak ellenőrzése, hogy a megoldás megtörtént",
+      "task_idk": [
+        "2581",
+        "2580"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Díjak megállapítása, befizetések és előlegek kezelése, számlázás",
+      "task_idk": [
+        "2583"
+      ],
+      "emberi_mag": false,
+      "csatorna": null
+    },
+    {
+      "leiras": "Szerződések, címváltozások és visszáru-számlák ügyintézése a rendszerben",
+      "task_idk": [
+        "2584",
+        "2589"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Ügyfélkapcsolatok és megkeresések nyilvántartása",
+      "task_idk": [
+        "2578"
+      ],
+      "emberi_mag": false,
+      "csatorna": "irasos"
+    },
+    {
+      "leiras": "Többletszolgáltatások ajánlása és fejlesztési javaslatok",
+      "task_idk": [
+        "2586",
+        "2591"
+      ],
+      "emberi_mag": true,
+      "csatorna": null
+    }
+  ],
+  "_szamitott_elonezet": [
+    {
+      "leiras": "Ügyfelek megkereséseinek fogadása, tájékoztatás, rendelések felvétele, szerződésmondás",
+      "task_idk": [
+        "18565"
+      ],
+      "idoArany": 0.1217,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.364,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Panaszok kivizsgálása és megoldása: csere, visszatérítés, számlamódosítás, szükség esetén átadás",
+      "task_idk": [
+        "2579",
+        "2585",
+        "2587",
+        "2582"
+      ],
+      "idoArany": 0.2354,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.315,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    },
+    {
+      "leiras": "Ügyfelek visszahívása, értesítése és annak ellenőrzése, hogy a megoldás megtörtént",
+      "task_idk": [
+        "2581",
+        "2580"
+      ],
+      "idoArany": 0.2122,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.324,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Díjak megállapítása, befizetések és előlegek kezelése, számlázás",
+      "task_idk": [
+        "2583"
+      ],
+      "idoArany": 0.101,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.324,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": false
+    },
+    {
+      "leiras": "Szerződések, címváltozások és visszáru-számlák ügyintézése a rendszerben",
+      "task_idk": [
+        "2584",
+        "2589"
+      ],
+      "idoArany": 0.1385,
+      "kitettseg": 1.0,
+      "kivaltasArany": 0.324,
+      "horizont": "ma",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Ügyfélkapcsolatok és megkeresések nyilvántartása",
+      "task_idk": [
+        "2578"
+      ],
+      "idoArany": 0.1168,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.324,
+      "horizont": "1-3ev",
+      "csatorna": "irasos",
+      "emberiMag": false
+    },
+    {
+      "leiras": "Többletszolgáltatások ajánlása és fejlesztési javaslatok",
+      "task_idk": [
+        "2586",
+        "2591"
+      ],
+      "idoArany": 0.0743,
+      "kitettseg": 0.5,
+      "kivaltasArany": 0.324,
+      "horizont": "1-3ev",
+      "csatorna": null,
+      "emberiMag": true
+    }
+  ],
+  "_figyelmeztetesek": [
+    "Az Economic Index a munkaidő csak 22%-át fedi le közvetlenül."
+  ],
+  "_eredeti_feladatok": {
+    "18565": "Confer with customers by telephone or in person to provide information about products or services, take or enter orders, cancel accounts, or obtain details of complaints.",
+    "2578": "Keep records of customer interactions or transactions, recording details of inquiries, complaints, or comments, as well as actions taken.",
+    "2580": "Check to ensure that appropriate changes were made to resolve customers' problems.",
+    "2581": "Contact customers to respond to inquiries or to notify them of claim investigation results or any planned adjustments.",
+    "2584": "Complete contract forms, prepare change of address records, or issue service discontinuance orders, using computers.",
+    "2583": "Determine charges for services requested, collect deposits or payments, or arrange for billing.",
+    "2582": "Refer unresolved customer grievances to designated departments for further investigation.",
+    "2587": "Review insurance policy terms to determine whether a particular loss is covered by insurance.",
+    "2579": "Resolve customers' service or billing complaints by performing activities such as exchanging merchandise, refunding money, or adjusting bills.",
+    "2586": "Solicit sales of new or additional services or products.",
+    "2585": "Obtain and examine all relevant information to assess validity of complaints and to determine possible causes, such as extreme weather conditions that could increase utility bills.",
+    "2589": "Compare disputed merchandise with original requisitions and information from invoices and prepare invoices for returned goods.",
+    "2591": "Recommend improvements in products, packaging, shipping, service, or billing methods and procedures to prevent future problems."
+  }
+}
