@@ -9,7 +9,7 @@ import Fekek from "@/components/eredmeny/Fekek";
 import ProfilNezet from "@/components/eredmeny/ProfilNezet";
 import { getIndexelhetoSlugok, getMunkakor } from "@/lib/data";
 import { szamolProfil } from "@/lib/scoring";
-import { metaLeiras, OLDALNEV, ogCim, ogLeiras, seoCim } from "@/lib/seo";
+import { metaLeiras, OLDALNEV, ogCim, ogLeiras, oldalUrl, seoCim } from "@/lib/seo";
 
 // Route segment config (Next.js 16, Cache Components nélkül érvényes):
 // buildkor csak az indexelhető oldalak készülnek el, a többi az első kéréskor, napi újraérvényesítéssel.
@@ -39,6 +39,12 @@ export async function generateMetadata({ params }: PageProps<"/[slug]">): Promis
       title: ogCim(profil),
       description: ogLeiras(profil),
     },
+    // A kép az opengraph-image.tsx-ből jön (og:image + alt); az X/Twitter az og:image-et használja.
+    twitter: {
+      card: "summary_large_image",
+      title: ogCim(profil),
+      description: ogLeiras(profil),
+    },
   };
 }
 
@@ -54,16 +60,18 @@ export default async function MunkakorOldal({ params }: PageProps<"/[slug]">) {
     <main>
       <ProfilNezet
         munkakor={{ slug, nev, hetiOra, fekek, feladatok }}
+        kanonikusUrl={`${oldalUrl()}/${slug}`}
         fekek={
           <Szekcio id="fekek" sorszam="03" cimke="Mi fékez?" cim="Ami lassítja – vagy megállítja" alt>
             <Fekek ertekek={fekek} indoklas={munkakor.fekIndoklas} />
           </Szekcio>
         }
+        teendo={
+          <Szekcio id="teendo" sorszam="05" cimke="Teendő" cim="Mit tegyél most?" alt>
+            <p className="border-l-2 border-accent pl-6 text-lead leading-[1.8] text-primary sm:pl-8">{munkakor.teendo}</p>
+          </Szekcio>
+        }
       />
-
-      <Szekcio id="teendo" sorszam="05" cimke="Teendő" cim="Mit tegyél most?" alt>
-        <p className="border-l-2 border-accent pl-6 text-lead leading-[1.8] text-primary sm:pl-8">{munkakor.teendo}</p>
-      </Szekcio>
 
       <Disclaimer />
     </main>

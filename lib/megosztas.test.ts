@@ -1,0 +1,40 @@
+// Futtatás: npm test
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { facebookUrl, linkedinUrl, megosztasiUrl, megosztasSzoveg, ogSavSzoveg } from './megosztas.ts';
+import { getMunkakor } from './data.ts';
+import { szamolProfil } from './scoring.ts';
+import { finomitasbol } from './finomitas.ts';
+
+test('előre megírt megosztási szöveg a copy szerint, a tényleges adatokkal', () => {
+  const m = getMunkakor('ugyfelszolgalati-munkatars');
+  assert.ok(m);
+  assert.equal(
+    megosztasSzoveg(szamolProfil(m)),
+    'Megcsináltam az AI-Munkaprofilt: Automatizálódó vagyok (4. szint a 4-ből). A heti 40 órámból 19 óra kiváltható, 11 óra marad csak az enyém. Te hova esel?',
+  );
+  const v = getMunkakor('villanyszerelo');
+  assert.ok(v);
+  assert.equal(
+    megosztasSzoveg(szamolProfil(v)),
+    'Megcsináltam az AI-Munkaprofilt: Védett vagyok (1. szint a 4-ből). A heti 40 órámból 5 óra kiváltható, 29 óra marad csak az enyém. Te hova esel?',
+  );
+  // a finomított profil saját számait mondja
+  const finomitott = szamolProfil(m, finomitasbol({ telefon: 'sok' }));
+  assert.match(megosztasSzoveg(finomitott), new RegExp(`${finomitott.orak.kivalthato} óra kiváltható`));
+});
+
+test('megosztási URL-ek kódolva, a finomítás query-vel együtt', () => {
+  const u = 'https://teszt.zynai.hu/ugyfelszolgalati-munkatars?telefon=sok';
+  assert.equal(facebookUrl(u), 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fteszt.zynai.hu%2Fugyfelszolgalati-munkatars%3Ftelefon%3Dsok');
+  assert.equal(linkedinUrl(u), 'https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fteszt.zynai.hu%2Fugyfelszolgalati-munkatars%3Ftelefon%3Dsok');
+});
+
+test('megosztott URL: a horgony (#…) nem kerül bele, a query igen', () => {
+  assert.equal(megosztasiUrl('https://x.hu/konyvelo?irasos=sok#reszletek'), 'https://x.hu/konyvelo?irasos=sok');
+  assert.equal(megosztasiUrl('https://x.hu/konyvelo'), 'https://x.hu/konyvelo');
+});
+
+test('OG-sáv szövege', () => {
+  assert.equal(ogSavSzoveg({ kivalthato: 19, felgyorsul: 10, emberi: 11 }), '19 ó kiváltható · 10 ó felgyorsul · 11 ó emberi');
+});

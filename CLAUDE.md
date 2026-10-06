@@ -47,6 +47,8 @@ adat/                      Python pipeline (nem része a Next buildnek)
 - Kis, ellenőrizhető lépésekben dolgozz; minden lépés végén fusson a build és a tesztek.
 - Új függőséget csak indoklással adj hozzá.
 - Ha valami ellentmond ennek a fájlnak, kérdezz, mielőtt eltérsz.
+- Éles próbához (`npm start`) a 3100-as portot használd (`npm start -- -p 3100`). A felhasználó dev szerverét a 3000-es porton ne állítsd le.
+- Fájlokat UTF-8-ban, BOM nélkül írj. PowerShell `Set-Content`/`Out-File` helyett a Write/Edit eszközt használd.
 
 ## Dizájnrendszer
 - **Csak sötét téma** (`color-scheme: dark`), a zynai.hu főoldal stílusát követi. Világos mód nincs.

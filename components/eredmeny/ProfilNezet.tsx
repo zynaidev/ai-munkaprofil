@@ -1,7 +1,8 @@
 "use client";
 
 // Az eredményoldal finomítástól függő része: hero (típus), 01 órabontás + finomító kérdések, 02 Mikor?,
-// 04 feladatlista. A fékek szekciót a szerver rendereli és slotként kapjuk (nem függ a finomítástól).
+// 04 feladatlista, és a megosztás (06). A fékek és a teendő szekciót a szerver rendereli, slotként kapjuk
+// (nem függnek a finomítástól). A megosztott URL a jelenlegi URL a finomítás query-vel.
 //
 // Állapot: a válaszok az URL-ben élnek (?telefon=sok …), history.replaceState-tel írva, navigáció nélkül.
 // Szerveren és hidratáláskor az alapprofil renderelődik (useSyncExternalStore szerver-pillanatképe üres),
@@ -11,12 +12,15 @@ import { useId, useMemo, useState, useSyncExternalStore, type ReactNode } from "
 import { szamolProfil, type Csatorna, type Munkakor, type Profil } from "@/lib/scoring";
 import { elerhetoCsatornak, finomitasbol, irUrl, olvasUrl, szukit, type Valasz, type Valaszok } from "@/lib/finomitas";
 import { egeszOra, horizontEgeszOrak, ora, oraSzam } from "@/lib/format";
+import { megosztasiUrl, megosztasSzoveg } from "@/lib/megosztas";
+import { ogCim } from "@/lib/seo";
 import Container from "../Container";
 import Szekcio from "../Szekcio";
 import FeladatLista from "./FeladatLista";
 import Finomito from "./Finomito";
 import Hero from "./Hero";
 import Horizont from "./Horizont";
+import Megosztas from "./Megosztas";
 import OraBontas from "./OraBontas";
 
 // ───────── URL-hez kötött válasz-tár (useSyncExternalStore) ─────────
@@ -46,16 +50,31 @@ function beallit(valaszok: Valaszok) {
   figyelok.forEach((f) => f());
 }
 
+// A jelenlegi oldal-URL (finomítás query-vel, horgony nélkül); szerveren a kanonikus URL
+const jelenlegiUrl = () => megosztasiUrl(window.location.href);
+
 const frissitve = (p: Profil) =>
   `Frissítve: ${ora(p.orak.kivalthato)} kiváltható, ${ora(p.orak.felgyorsul)} felgyorsul, ${ora(p.orak.emberi)} emberi mag`;
 
-export default function ProfilNezet({ munkakor, fekek }: { munkakor: Munkakor; fekek: ReactNode }) {
+export default function ProfilNezet({
+  munkakor,
+  kanonikusUrl,
+  fekek,
+  teendo,
+}: {
+  munkakor: Munkakor;
+  kanonikusUrl: string;
+  fekek: ReactNode;
+  teendo: ReactNode;
+}) {
   const azon = useId();
   const csatornak = useMemo(() => elerhetoCsatornak(munkakor.feladatok), [munkakor]);
   const nyers = useSyncExternalStore(feliratkoz, pillanatkep, () => URES);
   const valaszok = useMemo(() => szukit(nyers, csatornak), [nyers, csatornak]);
   const profil = useMemo(() => szamolProfil(munkakor, finomitasbol(valaszok)), [munkakor, valaszok]);
   const [bejelentes, setBejelentes] = useState("");
+  const url = useSyncExternalStore(feliratkoz, jelenlegiUrl, () => kanonikusUrl);
+  const megosztas = { url, cim: ogCim(profil), szoveg: megosztasSzoveg(profil) };
 
   function frissit(uj: Valaszok) {
     beallit(uj);
@@ -78,7 +97,7 @@ export default function ProfilNezet({ munkakor, fekek }: { munkakor: Munkakor; f
             >
               <span aria-hidden="true">←</span>&nbsp;Másik munkakör
             </a>
-            <Hero nev={profil.nev} tipus={profil.tipus} reszletekId="reszletek" />
+            <Hero nev={profil.nev} tipus={profil.tipus} reszletekId="reszletek" megosztas={megosztas} />
           </div>
         </Container>
       </div>
@@ -111,6 +130,12 @@ export default function ProfilNezet({ munkakor, fekek }: { munkakor: Munkakor; f
 
       <Szekcio id="feladatok" sorszam="04" cimke="Feladatonként" cim="A munkád, feladatokra bontva">
         <FeladatLista feladatok={profil.feladatok} />
+      </Szekcio>
+
+      {teendo}
+
+      <Szekcio id="megosztas" sorszam="06" cimke="Megosztás" cim="Kíváncsi vagy, a kollégáid hova esnek?">
+        <Megosztas {...megosztas} />
       </Szekcio>
     </>
   );

@@ -1,13 +1,28 @@
 // Eredményoldal herója: mono címke, SEO-H1, szint („3. szint · 4-ből” + 4 szegmenses jelző), a típus nagyban,
-// alatta az egymondatos leírás és horgonygomb a részletekhez. Doboz nélkül.
+// alatta az egymondatos leírás, a „Megosztom az eredményem” fő gomb és horgonygomb a részletekhez. Doboz nélkül.
 // Név, leírás, szint és szín: lib/tipusok.ts. A szint jelentését a felirat, a kitöltés és a méret is hordozza,
 // a szín csak kiegészítés.
 import type { ProfilTipus } from "@/lib/scoring";
 import { SZINTEK, TIPUSOK, szintAlt, szintCimke } from "@/lib/tipusok";
+import PrimaryCta from "../PrimaryCta";
 import SectionLabel from "../SectionLabel";
+import MasolasVisszajelzes from "./MasolasVisszajelzes";
+import { useMegosztas } from "./useMegosztas";
 
-export default function Hero({ nev, tipus, reszletekId }: { nev: string; tipus: ProfilTipus; reszletekId: string }) {
+export default function Hero({
+  nev,
+  tipus,
+  reszletekId,
+  megosztas,
+}: {
+  nev: string;
+  tipus: ProfilTipus;
+  reszletekId: string;
+  megosztas: { url: string; cim: string; szoveg: string };
+}) {
   const t = TIPUSOK[tipus];
+  // Ha van natív megosztás, azt hívja; különben a linket másolja visszajelzéssel
+  const { allapot, megoszt } = useMegosztas(megosztas);
 
   return (
     <div className="flex min-h-[min(80svh,720px)] flex-col justify-center py-12">
@@ -39,7 +54,8 @@ export default function Hero({ nev, tipus, reszletekId }: { nev: string; tipus: 
       <p className="mt-4 font-display text-tipus font-medium whitespace-nowrap text-primary">{t.cimke}</p>
       <p className="mt-6 max-w-xl text-lead text-secondary text-pretty">{t.leiras}</p>
 
-      <div className="mt-12">
+      <div className="mt-12 flex flex-wrap items-center gap-3">
+        <PrimaryCta onClick={megoszt}>Megosztom az eredményem</PrimaryCta>
         <a
           href={`#${reszletekId}`}
           className="inline-flex min-h-11 items-center gap-2.5 rounded-full border border-line px-6 py-3 text-cta font-medium text-primary transition-colors hover:border-accent-30"
@@ -50,6 +66,7 @@ export default function Hero({ nev, tipus, reszletekId }: { nev: string; tipus: 
           </svg>
         </a>
       </div>
+      <MasolasVisszajelzes allapot={allapot} url={megosztas.url} />
     </div>
   );
 }

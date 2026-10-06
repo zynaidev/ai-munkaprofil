@@ -11,6 +11,7 @@ export interface TipusAdat {
   cimke: string;       // megjelenített név
   leiras: string;      // egymondatos leírás (hero típusmondat és kezdőoldali kártya)
   szinValtozo: string; // CSS-változó a globals.css-ben
+  szin: string;        // ugyanaz hexben (OG-kép, ahol nincs CSS-változó); teszt őrzi az egyezést
   pontOsztaly: string; // Tailwind-osztály a kis színjelzéshez (teljes név, hogy a Tailwind megtalálja)
 }
 
@@ -18,22 +19,22 @@ export const TIPUSOK: Readonly<Record<ProfilTipus, TipusAdat>> = {
   vedett: {
     kulcs: 'vedett', szint: 1, cimke: 'Védett',
     leiras: 'Az AI hatása jelenleg korlátozott.',
-    szinValtozo: '--szint-1', pontOsztaly: 'bg-szint-1',
+    szinValtozo: '--szint-1', szin: '#3fd0bb', pontOsztaly: 'bg-szint-1',
   },
   felerosodo: {
     kulcs: 'felerosodo', szint: 2, cimke: 'Felerősödő',
     leiras: 'Az AI hatékonyabbá teszi a munkavégzést.',
-    szinValtozo: '--szint-2', pontOsztaly: 'bg-szint-2',
+    szinValtozo: '--szint-2', szin: '#9a9cff', pontOsztaly: 'bg-szint-2',
   },
   atalakulo: {
     kulcs: 'atalakulo', szint: 3, cimke: 'Átalakuló',
     leiras: 'A feladatok és a szerepkör érdemben megváltoznak.',
-    szinValtozo: '--szint-3', pontOsztaly: 'bg-szint-3',
+    szinValtozo: '--szint-3', szin: '#e8b43c', pontOsztaly: 'bg-szint-3',
   },
   automatizalodo: {
     kulcs: 'automatizalodo', szint: 4, cimke: 'Automatizálódó',
     leiras: 'A munkafeladatok jelentős részét AI végezheti.',
-    szinValtozo: '--szint-4', pontOsztaly: 'bg-szint-4',
+    szinValtozo: '--szint-4', szin: '#ff9a62', pontOsztaly: 'bg-szint-4',
   },
 };
 

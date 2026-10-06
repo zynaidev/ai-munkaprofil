@@ -40,7 +40,7 @@ export const viewport: Viewport = {
   colorScheme: "dark",
 };
 
-// A láblécet a route groupok layoutjai adják: (fooldal) teljes szöveggel, (eredmeny) a becslés-mondat nélkül.
+// A láblécet az alárendelt layoutok adják: (fooldal) teljes szöveggel, [slug] a becslés-mondat nélkül.
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
