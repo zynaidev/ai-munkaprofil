@@ -46,3 +46,13 @@ adat/                      Python pipeline (nem része a Next buildnek)
 - Kis, ellenőrizhető lépésekben dolgozz; minden lépés végén fusson a build és a tesztek.
 - Új függőséget csak indoklással adj hozzá.
 - Ha valami ellentmond ennek a fájlnak, kérdezz, mielőtt eltérsz.
+
+## Dizájnrendszer
+- **Csak sötét téma** (`color-scheme: dark`), a zynai.hu főoldal stílusát követi. Világos mód nincs.
+- **Tokenek az `app/globals.css`-ben** (`:root` + Tailwind 4 `@theme inline`, utility-ként is: `bg-base`, `bg-elevated`, `text-primary`, `text-secondary`, `border-hairline`, `text-h2`, `max-w-site` stb.). Új színt, betűméretet ne írj be közvetlenül a komponensbe; ha kell, előbb tokenként vedd fel.
+- **Egyetlen akcentus a lime (`--accent: #bdff00`)**, csak CTA-ra, linkre, fókuszra és kiemelésre. A fókuszkeret 3 px-es lime.
+- **Kontraszt:** olvasandó szöveg legalább `--text-secondary` (AA, ≥ 4,5:1); a `--text-tertiary` csak apró, dekoratív szövegre. Űrlapmező kerete `--szin-mezo-keret` (≥ 3:1).
+- **Betűk** (`next/font/google`, latin + latin-ext, csak a használt súlyok): címek Instrument Sans 500 (`font-display`), törzs Inter 400/500 (`font-sans`), címkék és számok Geist Mono 400 (`font-mono`).
+- **Komponensek:** `Container` (max. 1280 px), `SectionLabel` (sorszám + mono címke minden szekciócím felett), `PrimaryCta` (lime pill, ez a fő gomb).
+- **Mozgás csak CSS-sel** (keyframes, `animation-timeline: view()` `@supports` mögött). Nincs animációs könyvtár, scroll-kezelő JS vagy IntersectionObserver. Alapból semmi sem lehet `opacity: 0`, és `prefers-reduced-motion: reduce` esetén minden mozgás kikapcsol.
+- **A profiltípus jelentését sosem hordozhatja csak szín:** a típus neve mindig ott van, a típusszínek csak kis jelzések (pont, vékony szegély).

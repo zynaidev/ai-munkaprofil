@@ -1,6 +1,10 @@
 // Kezdőoldal – szöveg: landing-copy.md, 1. fejezet (szó szerint)
+// Szerverkomponens; kliens-JS csak a Kereso-ban van.
 import type { Metadata } from "next";
+import Container from "@/components/Container";
 import Kereso from "@/components/Kereso";
+import PrimaryCta from "@/components/PrimaryCta";
+import SectionLabel from "@/components/SectionLabel";
 
 export const metadata: Metadata = {
   title: "Elveszi az AI a munkádat?",
@@ -11,22 +15,22 @@ export const metadata: Metadata = {
 const TIPUSOK = [
   {
     nev: "Átalakuló",
-    szin: "bg-atalakulo",
+    pont: "bg-atalakulo",
     leiras: "A munkád jelentős része már ma kiváltható. A szereped gyorsan változik, és ebben lehetőség is van.",
   },
   {
     nev: "Felerősödő",
-    szin: "bg-felerosodo",
+    pont: "bg-felerosodo",
     leiras: "Az AI főleg gyorsít. Kevesebb rutin, több idő arra, amiben igazán jó vagy.",
   },
   {
     nev: "Kevert",
-    szin: "bg-kevert",
+    pont: "bg-kevert",
     leiras: "Van, ami kiváltható, van, ami csak gyorsul. A te kezedben van, merre billen.",
   },
   {
     nev: "Védett",
-    szin: "bg-vedett",
+    pont: "bg-vedett",
     leiras: "Munkád magja fizikai jelenlétet, kézügyességet vagy bizalmat igényel. Az AI itt inkább segéd.",
   },
 ];
@@ -47,107 +51,146 @@ const LEPESEK = [
   },
 ];
 
-const tartaly = "mx-auto w-full max-w-5xl px-5 sm:px-8";
+const TENYEK = ["Ingyenes", "~1 perc", "Regisztráció nélkül"];
+
+const szekcio = "border-t border-hairline py-28 lg:py-36";
+const h2 = "font-display text-h2 font-medium text-balance text-primary";
 
 export default function Home() {
   return (
     <main>
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -top-40 left-1/2 h-[28rem] w-[56rem] -translate-x-1/2 rounded-full bg-kiemelo-halvany opacity-70 blur-3xl"
-        />
-        <div className={`${tartaly} relative pt-14 pb-16 sm:pt-24 sm:pb-24`}>
-          <p className="inline-flex items-center gap-2 rounded-full border border-vonal bg-felulet px-3 py-1 text-xs font-medium tracking-wide text-halvany">
-            <span aria-hidden="true" className="flex gap-0.5">
-              <span className="size-1.5 rounded-full bg-atalakulo" />
-              <span className="size-1.5 rounded-full bg-felerosodo" />
-              <span className="size-1.5 rounded-full bg-kevert" />
-              <span className="size-1.5 rounded-full bg-vedett" />
-            </span>
-            AI-Munkaprofil · ingyenes, 1 perc
-          </p>
+      <section className="hero-hatter relative -mt-16 overflow-hidden pt-16">
+        <Container className="relative">
+          <div className="mx-auto max-w-3xl pt-16 pb-28 text-center lg:pt-24 lg:pb-36">
+            <p className="inline-flex items-center gap-2.5 rounded-full border border-accent-30 bg-[rgba(189,255,0,0.06)] px-3.5 py-1.5 font-mono text-cimke leading-none tracking-[0.14em] text-accent uppercase">
+              <span aria-hidden="true" className="pulzalo-pont size-1.5 rounded-full bg-accent" />
+              AI-Munkaprofil · ingyenes, 1 perc
+            </p>
 
-          <h1 className="mt-6 max-w-3xl font-display text-hero leading-[1.02] font-bold tracking-tight text-balance">
-            Elveszi az AI a munkádat?
-          </h1>
-          <p className="mt-5 max-w-2xl text-lg text-halvany text-pretty">
-            Nem egy riogató százalékot kapsz. Megmutatjuk, hogy a heti 40 órádból mennyit vesz át az AI, mennyit
-            gyorsít fel, és mi marad a te dolgod – kutatási adatok alapján.
-          </p>
+            <h1 className="mt-8 font-display text-h1 font-medium text-balance text-primary">
+              Elveszi az AI a <span className="kiemelt-szo">munkádat</span>?
+            </h1>
+            <p className="mx-auto mt-6 max-w-xl text-lead text-secondary text-pretty">
+              Nem egy riogató százalékot kapsz. Megmutatjuk, hogy a{" "}
+              <span className="font-medium text-primary">heti 40 órádból</span> mennyit vesz át az AI, mennyit gyorsít
+              fel, és <span className="font-medium text-primary">mi marad a te dolgod</span> – kutatási adatok
+              alapján.
+            </p>
 
-          <div className="mt-8 max-w-2xl">
-            <Kereso />
-            <p className="mt-3 text-xs text-halvany">Nem kell regisztráció. Nem tárolunk semmit, amit beírsz.</p>
+            <div className="mx-auto mt-10 max-w-2xl text-left">
+              <Kereso />
+              <p className="mt-4 text-center text-kicsi text-secondary">
+                Nem kell regisztráció. Nem tárolunk semmit, amit beírsz.
+              </p>
+            </div>
+
+            <ul className="mx-auto mt-14 grid max-w-2xl grid-cols-3 divide-x divide-hairline rounded-3xl border border-hairline bg-elevated">
+              {TENYEK.map((t) => (
+                <li
+                  key={t}
+                  className="flex items-center justify-center gap-2 px-2 py-5 font-mono text-cimke leading-snug tracking-[0.14em] text-primary uppercase sm:px-4"
+                >
+                  <span aria-hidden="true" className="hidden size-1 shrink-0 rounded-full bg-accent sm:block" />
+                  {t}
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Négy típus */}
-      <section aria-labelledby="tipusok-cim" className="border-t border-vonal py-16 sm:py-20">
-        <div className={tartaly}>
-          <h2 id="tipusok-cim" className="font-display text-xl font-bold tracking-tight">
-            Te melyik típus vagy?
-          </h2>
-          <ul className="mt-8 grid gap-4 sm:grid-cols-2">
-            {TIPUSOK.map((t) => (
-              <li key={t.nev} className="relative overflow-hidden rounded-doboz border border-vonal bg-felulet p-5 pl-7">
-                <span aria-hidden="true" className={`absolute inset-y-0 left-0 w-1.5 ${t.szin}`} />
-                <h3 className="font-display text-lg font-bold">{t.nev}</h3>
-                <p className="mt-1 text-halvany">{t.leiras}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
+      <section aria-labelledby="tipusok-cim" className={`${szekcio} bg-alt`}>
+        <Container>
+          <div className="belep mx-auto max-w-5xl">
+            <SectionLabel sorszam="01">A típusok</SectionLabel>
+            <h2 id="tipusok-cim" className={`mt-5 ${h2}`}>
+              Te melyik típus vagy?
+            </h2>
+            <ul className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {TIPUSOK.map((t) => (
+                <li
+                  key={t.nev}
+                  className="tipus-kartya relative rounded-2xl border border-hairline bg-elevated p-6 transition-colors duration-300 hover:border-accent-30"
+                >
+                  <h3 className="flex items-center gap-3 font-display text-h3 font-medium text-primary">
+                    <span aria-hidden="true" className={`size-2.5 shrink-0 rounded-full ${t.pont}`} />
+                    {t.nev}
+                  </h3>
+                  <p className="mt-3 text-torzs text-secondary">{t.leiras}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Container>
       </section>
 
       {/* Hogyan számolunk? */}
-      <section aria-labelledby="modszer-cim" className="border-t border-vonal py-16 sm:py-20">
-        <div className={tartaly}>
-          <h2 id="modszer-cim" className="font-display text-xl font-bold tracking-tight">
-            Nem jóslat. Kutatás.
-          </h2>
-          <ol className="mt-8 grid gap-8 sm:grid-cols-3 sm:gap-6">
-            {LEPESEK.map((l, i) => (
-              <li key={l.cim} className="border-t-2 border-szoveg pt-4">
-                <span aria-hidden="true" className="font-display text-xl font-bold text-kiemelo">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <p className="mt-2">
-                  <strong className="font-semibold">{l.cim}</strong> <span className="text-halvany">{l.szoveg}</span>
-                </p>
-              </li>
-            ))}
-          </ol>
-          <a
-            href="/modszertan"
-            className="mt-8 inline-flex min-h-erintes items-center font-semibold text-kiemelo underline decoration-2 underline-offset-4 hover:text-kiemelo-hover"
-          >
-            Részletes módszertan&nbsp;<span aria-hidden="true">→</span>
-          </a>
-        </div>
+      <section aria-labelledby="modszer-cim" className={szekcio}>
+        <Container>
+          <div className="belep mx-auto max-w-3xl">
+            <SectionLabel sorszam="02">Módszer</SectionLabel>
+            <h2 id="modszer-cim" className={`mt-5 ${h2}`}>
+              Nem jóslat. Kutatás.
+            </h2>
+            <ol className="mt-12 space-y-4">
+              {LEPESEK.map((l, i) => {
+                const sorszam = String(i + 1).padStart(2, "0");
+                return (
+                  <li key={l.cim} className="relative">
+                    <span
+                      aria-hidden="true"
+                      className="pointer-events-none absolute top-1/2 right-full mr-8 hidden -translate-y-1/2 font-display text-[140px] leading-none font-medium text-white/[0.025] select-none lg:block"
+                    >
+                      {sorszam}
+                    </span>
+                    <div className="rounded-2xl border border-hairline bg-elevated p-6 sm:p-8">
+                      <span aria-hidden="true" className="font-mono text-cimke tracking-[0.14em] text-accent">
+                        {sorszam}
+                      </span>
+                      <p className="mt-3 text-torzs text-secondary">
+                        <strong className="font-medium text-primary">{l.cim}</strong> {l.szoveg}
+                      </p>
+                    </div>
+                  </li>
+                );
+              })}
+            </ol>
+            <a
+              href="/modszertan"
+              className="mt-10 inline-flex min-h-11 items-center gap-1 font-medium text-accent underline decoration-accent-30 underline-offset-[6px] transition-colors hover:decoration-accent"
+            >
+              Részletes módszertan&nbsp;<span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </Container>
       </section>
 
-      {/* Záró sáv */}
-      <section aria-labelledby="csapat-cim" className="sav bg-sav-hatter text-sav-szoveg">
-        <div className={`${tartaly} py-16 sm:flex sm:items-end sm:justify-between sm:gap-10 sm:py-20`}>
-          <div className="max-w-2xl">
-            <h2 id="csapat-cim" className="font-display text-xl font-bold tracking-tight">
-              Vezetőként a csapatod érdekel?
-            </h2>
-            <p className="mt-3 text-sav-halvany">
-              Felvisszük a cégetek munkaköreit, és megmutatjuk, hol szabadul fel a legtöbb idő AI-val – és hol nem éri
-              meg hozzányúlni.
-            </p>
+      {/* Záró sáv – B2B */}
+      <section aria-labelledby="csapat-cim" className={`${szekcio} bg-alt`}>
+        <Container>
+          <div className="belep relative mx-auto max-w-5xl overflow-hidden rounded-[32px] border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.03)] px-6 py-16 text-center sm:px-12 sm:py-20">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_50%_55%_at_50%_50%,rgba(189,255,0,0.07),transparent_70%)]"
+            />
+            <div className="relative">
+              <SectionLabel sorszam="03">Csapatoknak</SectionLabel>
+              <h2 id="csapat-cim" className={`mx-auto mt-5 max-w-2xl ${h2}`}>
+                Vezetőként a csapatod érdekel?
+              </h2>
+              <p className="mx-auto mt-6 max-w-xl text-torzs text-secondary">
+                Felvisszük a cégetek munkaköreit, és megmutatjuk,{" "}
+                <span className="font-medium text-primary">hol szabadul fel a legtöbb idő AI-val</span> – és hol nem éri
+                meg hozzányúlni.
+              </p>
+              <PrimaryCta href="https://zynai.hu" className="mt-10">
+                Csapatelemzést kérek
+              </PrimaryCta>
+            </div>
           </div>
-          <a
-            href="https://zynai.hu"
-            className="mt-6 inline-flex min-h-14 shrink-0 items-center justify-center rounded-doboz bg-sav-szoveg px-6 font-semibold text-sav-hatter transition-opacity hover:opacity-90 sm:mt-0"
-          >
-            Csapatelemzést kérek
-          </a>
-        </div>
+        </Container>
       </section>
     </main>
   );

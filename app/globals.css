@@ -1,142 +1,237 @@
 @import "tailwindcss";
 
-/* ───────── Arculat: minden szín és betűméret itt állítható ───────── */
+/* ───────── Dizájnrendszer: sötét téma, egyetlen akcentus (lime) ─────────
+   Minden szín és betűméret itt állítható. A zynai.hu főoldal stílusát követi. */
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 
-  /* Felületek és szöveg */
-  --szin-hatter: #f5f3ee;
-  --szin-felulet: #fffdf8;
-  --szin-szoveg: #14161b;
-  --szin-halvany: #4a4f5c;
-  --szin-vonal: #d6d0c3;
-  --szin-mezo-keret: #7a7f8c; /* űrlapmezők kerete: min. 3:1 kontraszt */
+  /* Felületek */
+  --bg-base: #09090b;     /* oldalháttér */
+  --bg-elevated: #0d0d10; /* kártyák, lábléc, legördülő lista */
+  --bg-alt: rgba(255, 255, 255, 0.015); /* minden második szekció */
 
-  /* Kiemelőszín (gombok, linkek, fókusz) */
-  --szin-kiemelo: #3a37c8;
-  --szin-kiemelo-hover: #2e2ba6;
-  --szin-kiemelo-szoveg: #ffffff;
-  --szin-kiemelo-halvany: #e7e6fa;
-  --szin-fokusz: #3a37c8;
+  /* Akcentus – csak CTA, link, fókusz, kiemelés */
+  --accent: #bdff00;
+  --accent-on-light: #09090b; /* szöveg a lime gombon */
+  --accent-05: rgba(189, 255, 0, 0.05); /* halvány háttér */
+  --accent-10: rgba(189, 255, 0, 0.1);  /* ikonháttér */
+  --accent-20: rgba(189, 255, 0, 0.2);  /* szegély */
+  --accent-30: rgba(189, 255, 0, 0.3);  /* szegély hoveren, glow */
 
-  /* Profiltípusok */
-  --szin-atalakulo: #b93c0b;
-  --szin-felerosodo: #3a37c8;
-  --szin-kevert: #8a5d00;
-  --szin-vedett: #0d7265;
+  /* Szöveg. A tertiary (~4:1) csak apró, dekoratív szövegre; olvasandó szöveg secondary vagy világosabb. */
+  --text-primary: #fafafa;
+  --text-secondary: #a1a1aa;
+  --text-tertiary: #71717a;
 
-  /* Záró sáv (sötét blokk) */
-  --szin-sav-hatter: #14161b;
-  --szin-sav-szoveg: #f5f3ee;
-  --szin-sav-halvany: #b8bcc7;
+  /* Szegélyek */
+  --border-hairline: rgba(255, 255, 255, 0.06);
+  --border-default: rgba(255, 255, 255, 0.1);
+  --szin-mezo-keret: #7c7c86; /* űrlapmezők kerete: min. 3:1 a mező és az oldal hátterén */
 
-  --szin-hiba: #a12a1a;
-  --szin-hiba-hatter: #fbe9e5;
+  /* Profiltípusok – csak kis jelzésként (pont, vékony szegély), a név mindig mellette */
+  --szin-atalakulo: #ff9a62;
+  --szin-felerosodo: #9a9cff;
+  --szin-kevert: #e8b43c;
+  --szin-vedett: #3fd0bb;
 
-  /* Betűméretek (mobil-első, folyékony skála) */
-  --meret-xs: 0.8125rem;
-  --meret-sm: 0.9375rem;
-  --meret-base: 1.0625rem;
-  --meret-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem);
-  --meret-xl: clamp(1.5rem, 1.3rem + 1vw, 2.125rem);
-  --meret-hero: clamp(2.5rem, 1.7rem + 4vw, 4.75rem);
+  --szin-hiba: #ffb4a6;
+  --szin-hiba-hatter: rgba(255, 90, 60, 0.1);
 
-  /* Betűtípusok: a címbetű (--font-cim) a layoutban töltődik, a törzsszöveg rendszerbetű */
-  --font-torzs: ui-sans-serif, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* Elrendezés */
+  --container-max: 1280px;
 
-  --sugar: 0.875rem;
-  --erintes-min: 2.75rem; /* 44 px */
+  /* Betűméretek */
+  --meret-h1: clamp(36px, 6vw, 64px);
+  --meret-h2: clamp(28px, 4vw, 44px);
+  --meret-h3: 1.25rem;
+  --meret-lead: clamp(18px, 1.1rem + 0.25vw, 20px);
+  --meret-torzs: clamp(16px, 0.95rem + 0.2vw, 18px);
+  --meret-cta: 15px;
+  --meret-mezo: 17px;
+  --meret-kicsi: 0.875rem;
+  --meret-cimke: 11px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-
-    --szin-hatter: #0f1115;
-    --szin-felulet: #171a21;
-    --szin-szoveg: #eeece6;
-    --szin-halvany: #a9aebb;
-    --szin-vonal: #2c313c;
-    --szin-mezo-keret: #767c8a;
-
-    --szin-kiemelo: #9a9cff;
-    --szin-kiemelo-hover: #b7b8ff;
-    --szin-kiemelo-szoveg: #0f1115;
-    --szin-kiemelo-halvany: #23244a;
-    --szin-fokusz: #b7b8ff;
-
-    --szin-atalakulo: #ff9a62;
-    --szin-felerosodo: #9a9cff;
-    --szin-kevert: #e8b43c;
-    --szin-vedett: #3fd0bb;
-
-    --szin-sav-hatter: #1d2029;
-    --szin-sav-szoveg: #eeece6;
-    --szin-sav-halvany: #b3b8c4;
-
-    --szin-hiba: #ffb4a6;
-    --szin-hiba-hatter: #3a1712;
-  }
-}
-
-/* Tailwind-osztályok a fenti változókra (pl. bg-hatter, text-halvany, text-hero) */
+/* Tailwind-utility-k a tokenekre (pl. bg-base, text-secondary, border-hairline, text-h2, max-w-site) */
 @theme inline {
-  --color-hatter: var(--szin-hatter);
-  --color-felulet: var(--szin-felulet);
-  --color-szoveg: var(--szin-szoveg);
-  --color-halvany: var(--szin-halvany);
-  --color-vonal: var(--szin-vonal);
+  --color-base: var(--bg-base);
+  --color-elevated: var(--bg-elevated);
+  --color-alt: var(--bg-alt);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--accent-on-light);
+  --color-accent-05: var(--accent-05);
+  --color-accent-10: var(--accent-10);
+  --color-accent-20: var(--accent-20);
+  --color-accent-30: var(--accent-30);
+  --color-primary: var(--text-primary);
+  --color-secondary: var(--text-secondary);
+  --color-tertiary: var(--text-tertiary);
+  --color-hairline: var(--border-hairline);
+  --color-line: var(--border-default);
   --color-mezo-keret: var(--szin-mezo-keret);
-  --color-kiemelo: var(--szin-kiemelo);
-  --color-kiemelo-hover: var(--szin-kiemelo-hover);
-  --color-kiemelo-szoveg: var(--szin-kiemelo-szoveg);
-  --color-kiemelo-halvany: var(--szin-kiemelo-halvany);
   --color-atalakulo: var(--szin-atalakulo);
   --color-felerosodo: var(--szin-felerosodo);
   --color-kevert: var(--szin-kevert);
   --color-vedett: var(--szin-vedett);
-  --color-sav-hatter: var(--szin-sav-hatter);
-  --color-sav-szoveg: var(--szin-sav-szoveg);
-  --color-sav-halvany: var(--szin-sav-halvany);
   --color-hiba: var(--szin-hiba);
   --color-hiba-hatter: var(--szin-hiba-hatter);
 
-  --text-xs: var(--meret-xs);
-  --text-sm: var(--meret-sm);
-  --text-base: var(--meret-base);
-  --text-lg: var(--meret-lg);
-  --text-xl: var(--meret-xl);
-  --text-hero: var(--meret-hero);
+  --container-site: var(--container-max);
 
-  --radius-doboz: var(--sugar);
-  --spacing-erintes: var(--erintes-min);
+  --text-h1: var(--meret-h1);
+  --text-h1--line-height: 1.05;
+  --text-h1--letter-spacing: -0.03em;
+  --text-h2: var(--meret-h2);
+  --text-h2--line-height: 1.1;
+  --text-h2--letter-spacing: -0.025em;
+  --text-h3: var(--meret-h3);
+  --text-h3--line-height: 1.3;
+  --text-lead: var(--meret-lead);
+  --text-lead--line-height: 1.7;
+  --text-torzs: var(--meret-torzs);
+  --text-torzs--line-height: 1.8;
+  --text-cta: var(--meret-cta);
+  --text-mezo: var(--meret-mezo);
+  --text-kicsi: var(--meret-kicsi);
+  --text-cimke: var(--meret-cimke);
 
-  --font-sans: var(--font-torzs);
-  --font-display: var(--font-cim), var(--font-torzs);
+  /* A betűcsaládokat a layout tölti be (next/font) */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-instrument), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "Cascadia Mono", Consolas, monospace;
 }
 
 body {
-  background: var(--szin-hatter);
-  color: var(--szin-szoveg);
-  font-size: var(--meret-base);
-  line-height: 1.6;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-size: var(--meret-torzs);
+  line-height: 1.8;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-on-light);
 }
 
 :focus-visible {
-  outline: 3px solid var(--szin-fokusz);
+  outline: 3px solid var(--accent);
   outline-offset: 3px;
 }
 
-/* A sötét záró sávban a fókuszkeret világos maradjon */
-.sav :focus-visible {
-  outline-color: var(--szin-sav-szoveg);
+/* ───────── Hero háttér: pontrács + halvány lime glow (tiszta CSS) ───────── */
+.hero-hatter {
+  background-image:
+    radial-gradient(ellipse 60% 45% at 50% 0%, rgba(189, 255, 0, 0.09), transparent 70%),
+    radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 100% 100%, 22px 22px;
+}
+.hero-hatter::before {
+  /* a pontrács a szélek felé elhalványul */
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 80% 70% at 50% 30%, transparent 40%, var(--bg-base) 100%);
+}
+
+/* ───────── Kiemelt szó a H1-ben: lime, aláhúzás, lassú fénycsík ───────── */
+.kiemelt-szo {
+  position: relative;
+  display: inline-block;
+  color: var(--accent);
+}
+.kiemelt-szo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.06em;
+  height: 0.06em;
+  min-height: 2px;
+  border-radius: 999px;
+  background: var(--accent);
+  transform-origin: left center;
+}
+
+/* Pulzáló pont a badge-ben */
+.pulzalo-pont {
+  position: relative;
+}
+.pulzalo-pont::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  opacity: 0;
+}
+
+/* Típuskártya: felül 1 px-es lime csík, hoveren kinő */
+.tipus-kartya::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 1.5rem;
+  width: 2.5rem;
+  height: 1px;
+  background: var(--accent);
+  transition: left 0.4s ease, width 0.4s ease;
+}
+.tipus-kartya:hover::before {
+  left: 0;
+  width: 100%;
+}
+
+/* ───────── Mozgás: csak CSS, és csak ha a felhasználó nem kérte a kikapcsolását ───────── */
+@keyframes alahuzas {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+@keyframes fenycsik {
+  from { background-position: 150% 0; }
+  to { background-position: -50% 0; }
+}
+@keyframes pulzal {
+  0% { opacity: 0.6; transform: scale(1); }
+  100% { opacity: 0; transform: scale(2.6); }
+}
+@keyframes belep {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .kiemelt-szo::after {
+    animation: alahuzas 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
+  }
+  .pulzalo-pont::after {
+    animation: pulzal 2s ease-out infinite;
+  }
+
+  /* Fénycsík csak asztalon */
+  @media (min-width: 640px) {
+    .kiemelt-szo {
+      color: transparent;
+      background-image: linear-gradient(100deg, var(--accent) 40%, #f3ffcc 50%, var(--accent) 60%);
+      background-size: 250% 100%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      animation: fenycsik 7s linear infinite;
+    }
+  }
+
+  /* Szekciók belépése görgetéskor – progresszív fejlesztés: támogatás nélkül a tartalom egyszerűen látszik */
+  @supports (animation-timeline: view()) {
+    .belep {
+      animation: belep linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
+    }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
+  .tipus-kartya::before {
+    transition: none;
   }
 }
