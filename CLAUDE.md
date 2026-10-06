@@ -56,3 +56,4 @@ adat/                      Python pipeline (nem része a Next buildnek)
 - **Komponensek:** `Container` (max. 1280 px), `SectionLabel` (sorszám + mono címke minden szekciócím felett), `PrimaryCta` (lime pill, ez a fő gomb).
 - **Mozgás csak CSS-sel** (keyframes, `animation-timeline: view()` `@supports` mögött). Nincs animációs könyvtár, scroll-kezelő JS vagy IntersectionObserver. Alapból semmi sem lehet `opacity: 0`, és `prefers-reduced-motion: reduce` esetén minden mozgás kikapcsol.
 - **A profiltípus jelentését sosem hordozhatja csak szín:** a típus neve mindig ott van, a típusszínek csak kis jelzések (pont, vékony szegély).
+- Keretezett doboz csak kiemelésre, oldalanként legfeljebb egy. Listák doboz nélküli, hairline-elválasztós sorok. A szekciók köze az eredményoldalon py-16/lg:py-24.

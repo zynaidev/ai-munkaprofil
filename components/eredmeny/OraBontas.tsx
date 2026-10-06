@@ -1,23 +1,12 @@
-// „A heti 40 órád” blokk – szöveg: landing-copy.md, 2. fejezet
+// „A heti 40 órád” blokk – szöveg: landing-copy.md, 2. fejezet.
+// Az oldal egyetlen keretezett eleme a visszanyert órák kiemelése.
 import { ora } from "@/lib/format";
-import BontasSav, { type Bontas } from "./BontasSav";
+import BontasSav, { Jelolo, KATEGORIAK, type Bontas } from "./BontasSav";
 
-const MAGYARAZAT: Record<keyof Bontas, { cimke: string; szoveg: string; minta: string }> = {
-  kivalthato: {
-    cimke: "kiváltható",
-    szoveg: "az AI egyedül is el tudja végezni, neked ellenőrizned kell",
-    minta: "minta-kivalthato",
-  },
-  felgyorsul: {
-    cimke: "felgyorsul",
-    szoveg: "továbbra is te csinálod, de AI-val gyorsabban",
-    minta: "minta-felgyorsul",
-  },
-  emberi: {
-    cimke: "emberi mag",
-    szoveg: "ezt az AI érdemben nem tudja",
-    minta: "minta-emberi",
-  },
+const MAGYARAZAT: Record<keyof Bontas, string> = {
+  kivalthato: "az AI egyedül is el tudja végezni, neked ellenőrizned kell",
+  felgyorsul: "továbbra is te csinálod, de AI-val gyorsabban",
+  emberi: "ezt az AI érdemben nem tudja",
 };
 
 export default function OraBontas({
@@ -35,13 +24,12 @@ export default function OraBontas({
     <>
       <BontasSav bontas={orak} osszes={hetiOra} cimke={cimke} vastag />
 
-      <ul className="mt-8 space-y-5">
-        {(Object.keys(MAGYARAZAT) as (keyof Bontas)[]).map((k) => (
-          <li key={k} className="flex gap-4">
-            <span aria-hidden="true" className={`mt-1.5 size-4 shrink-0 rounded ${MAGYARAZAT[k].minta}`} />
+      <ul className="mt-8 space-y-4">
+        {KATEGORIAK.map(({ kulcs, minta, nev }) => (
+          <li key={kulcs} className="flex gap-4">
+            <Jelolo minta={minta} className="mt-[0.45em]" />
             <p className="text-torzs text-secondary">
-              <strong className="font-medium text-primary">{ora(orak[k])}</strong> – {MAGYARAZAT[k].cimke}:{" "}
-              {MAGYARAZAT[k].szoveg}
+              <strong className="font-medium text-primary">{ora(orak[kulcs])}</strong> – {nev}: {MAGYARAZAT[kulcs]}
             </p>
           </li>
         ))}

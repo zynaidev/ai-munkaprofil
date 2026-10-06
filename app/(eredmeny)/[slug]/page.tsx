@@ -5,14 +5,14 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Container from "@/components/Container";
 import Szekcio from "@/components/Szekcio";
-import TipusKartya from "@/components/TipusKartya";
 import Disclaimer from "@/components/eredmeny/Disclaimer";
+import Hero from "@/components/eredmeny/Hero";
 import FeladatLista from "@/components/eredmeny/FeladatLista";
 import Fekek from "@/components/eredmeny/Fekek";
 import Horizont from "@/components/eredmeny/Horizont";
 import OraBontas from "@/components/eredmeny/OraBontas";
 import { getIndexelhetoSlugok, getMunkakor } from "@/lib/data";
-import { oraSzam } from "@/lib/format";
+import { egeszOra, horizontEgeszOrak, oraSzam } from "@/lib/format";
 import { szamolProfil } from "@/lib/scoring";
 import { metaLeiras, OLDALNEV, ogCim, ogLeiras, seoCim } from "@/lib/seo";
 
@@ -56,8 +56,8 @@ export default async function MunkakorOldal({ params }: PageProps<"/[slug]">) {
 
   return (
     <main>
-      {/* Felső rész: vissza-link, H1, típuskártya */}
-      <div className="pt-10 pb-28 sm:pt-16 lg:pb-36">
+      {/* Hero: vissza-link, H1, a típus nagyban, horgony a részletekhez */}
+      <div className="pt-6 sm:pt-10">
         <Container>
           <div className="mx-auto max-w-3xl">
             {/* Sima <a>: a next/link kliens-JS-t hozna; ez az oldal kliens-JS nélküli (CLAUDE.md 6.) */}
@@ -68,22 +68,21 @@ export default async function MunkakorOldal({ params }: PageProps<"/[slug]">) {
             >
               <span aria-hidden="true">←</span>&nbsp;Másik munkakör
             </a>
-            <h1 className="mt-6 font-display text-h2 font-medium text-balance text-primary">
-              {profil.nev} és az AI: mi változik a munkában?
-            </h1>
-            <div className="mt-10">
-              <TipusKartya nev={profil.nev} tipus={profil.tipus} />
-            </div>
+            <Hero nev={profil.nev} tipus={profil.tipus} reszletekId="reszletek" />
           </div>
         </Container>
       </div>
 
-      <Szekcio id="orak" sorszam="01" cimke={`A heti ${hetiOra} órád`} cim={`Mi történik a heti ${hetiOra} órával?`} alt>
+      <Szekcio id="orak" horgony="reszletek" sorszam="01" cimke={`A heti ${hetiOra} órád`} cim={`Mi történik a heti ${hetiOra} órával?`} alt>
         <OraBontas orak={profil.orak} hetiOra={profil.hetiOra} visszanyertOra={profil.visszanyertOra} />
       </Szekcio>
 
       <Szekcio id="mikor" sorszam="02" cimke="Mikor?" cim="Nem holnap. De nem is soha.">
-        <Horizont szerint={profil.kivalthatoHorizontSzerint} gyakorlatbanMa={profil.gyakorlatbanMaKivalthato} />
+        <Horizont
+          kivalthato={profil.orak.kivalthato}
+          orak={horizontEgeszOrak(profil.kivalthatoHorizontSzerint, profil.orak.kivalthato)}
+          gyakorlatbanMa={egeszOra(profil.gyakorlatbanMaKivalthato)}
+        />
       </Szekcio>
 
       <Szekcio id="fekek" sorszam="03" cimke="Mi fékez?" cim="Ami lassítja – vagy megállítja" alt>
@@ -95,9 +94,7 @@ export default async function MunkakorOldal({ params }: PageProps<"/[slug]">) {
       </Szekcio>
 
       <Szekcio id="teendo" sorszam="05" cimke="Teendő" cim="Mit tegyél most?" alt>
-        <p className="rounded-2xl border border-hairline bg-elevated p-6 text-lead text-primary sm:p-8">
-          {munkakor.teendo}
-        </p>
+        <p className="border-l-2 border-accent pl-6 text-lead leading-[1.8] text-primary sm:pl-8">{munkakor.teendo}</p>
       </Szekcio>
 
       <Disclaimer />

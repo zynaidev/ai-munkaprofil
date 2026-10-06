@@ -1,4 +1,5 @@
-// AI-Munkaprofil – megjelenítési formázás (tiszta függvények). Nem számol modellt, csak formáz.
+// AI-Munkaprofil – megjelenítési formázás (tiszta függvények). Nem számol modellt, csak formáz és kerekít.
+import { egeszreKerekit, type Horizont } from './scoring.ts';
 
 // Óraszám magyar formátumban: legfeljebb egy tizedes, tizedesvesszővel; egész számnál tizedes nélkül.
 // 12.5 → „12,5”, 19 → „19”, 9.25 → „9,3”, 40.0 → „40”
@@ -18,4 +19,22 @@ export function szelesseg(resz: number, egesz: number): string {
   if (!(egesz > 0) || !Number.isFinite(resz)) return '0%';
   const sz = Math.min(100, Math.max(0, (resz / egesz) * 100));
   return `${Math.round(sz * 100) / 100}%`;
+}
+
+// Egész órára kerekítés megjelenítéshez (pl. „ma reálisan kb. 10 óra”).
+export function egeszOra(ertek: number): number {
+  if (!Number.isFinite(ertek)) throw new Error(`Érvénytelen óraszám: ${ertek}`);
+  return Math.max(0, Math.round(ertek));
+}
+
+const HORIZONTOK: Horizont[] = ['ma', '1-3ev', '5ev+'];
+
+// A horizontonkénti kiváltható órák egész órákra, úgy, hogy összegük pontosan a sávon látható
+// egész „kiváltható” óra legyen. Előbb arányosan a célösszegre skáláz, majd a legnagyobb maradék
+// módszerével (scoring.ts egeszreKerekit) kerekít – új kerekítési szabály nincs.
+export function horizontEgeszOrak(szerint: Record<Horizont, number>, kivalthato: number): Record<Horizont, number> {
+  const ertekek = HORIZONTOK.map((h) => Math.max(0, szerint[h]));
+  const osszeg = ertekek.reduce((a, b) => a + b, 0);
+  const egeszek = osszeg > 0 ? egeszreKerekit(ertekek.map((v) => (v * kivalthato) / osszeg), kivalthato) : [0, 0, 0];
+  return { ma: egeszek[0], '1-3ev': egeszek[1], '5ev+': egeszek[2] };
 }

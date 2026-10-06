@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist_Mono, Instrument_Sans, Inter } from "next/font/google";
 import Fejlec from "@/components/Fejlec";
-import Lablec from "@/components/Lablec";
 import { oldalUrl } from "@/lib/seo";
 import "./globals.css";
 
@@ -41,6 +40,7 @@ export const viewport: Viewport = {
   colorScheme: "dark",
 };
 
+// A láblécet a route groupok layoutjai adják: (fooldal) teljes szöveggel, (eredmeny) a becslés-mondat nélkül.
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
@@ -49,8 +49,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="flex min-h-full flex-col">
         <Fejlec />
-        <div className="flex-1">{children}</div>
-        <Lablec adatVerzio="fejlesztői" />
+        {children}
       </body>
     </html>
   );

@@ -1,4 +1,6 @@
-// „Mikor?” blokk – szöveg: landing-copy.md, 2. fejezet
+// „Mikor?” blokk – szöveg: landing-copy.md, 2. fejezet.
+// Doboz nélkül: három oszlop hairline függőleges elválasztókkal (mobilon egymás alatt, vízszintes elválasztóval).
+// A horizont-órák egészek, és összegük a sávon látható kiváltható óra (a hívó adja, lib/format horizontEgeszOrak).
 import type { Horizont as HorizontKulcs } from "@/lib/scoring";
 import { ora } from "@/lib/format";
 
@@ -9,27 +11,30 @@ export const HORIZONT_CIMKE: Record<HorizontKulcs, string> = {
   "5ev+": "5+ év / bizonytalan",
 };
 
-const MAGYARAZAT: Record<HorizontKulcs, string | null> = {
+const MAGYARAZAT: Record<HorizontKulcs, string> = {
   ma: "létező, olcsó eszközökkel megoldható",
   "1-3ev": "a technológia van, a bevezetés lassabb",
-  "5ev+": null,
+  "5ev+": "ma még nem látszik rá megbízható megoldás",
 };
 
 export default function Horizont({
-  szerint,
+  kivalthato,
+  orak,
   gyakorlatbanMa,
 }: {
-  szerint: Record<HorizontKulcs, number>;
+  kivalthato: number;
+  orak: Record<HorizontKulcs, number>;
   gyakorlatbanMa: number;
 }) {
   return (
     <>
-      <ul className="grid gap-4 sm:grid-cols-3">
+      <p className="text-torzs text-secondary">A kiváltható {ora(kivalthato)} időbeli megoszlása:</p>
+      <ul className="mt-8 grid divide-y divide-hairline border-y border-hairline sm:grid-cols-3 sm:divide-x sm:divide-y-0 sm:border-y-0">
         {(Object.keys(HORIZONT_CIMKE) as HorizontKulcs[]).map((h) => (
-          <li key={h} className="rounded-2xl border border-hairline bg-elevated p-6">
+          <li key={h} className="py-6 sm:px-6 sm:py-2 sm:first:pl-0 sm:last:pr-0">
             <p className="font-mono text-cimke tracking-[0.14em] text-secondary uppercase">{HORIZONT_CIMKE[h]}</p>
-            <p className="mt-3 font-display text-h2 font-medium text-primary">{ora(szerint[h])}</p>
-            {MAGYARAZAT[h] && <p className="mt-2 text-kicsi leading-[1.7] text-secondary">{MAGYARAZAT[h]}</p>}
+            <p className="mt-3 font-display text-h2 font-medium text-primary">{ora(orak[h])}</p>
+            <p className="mt-2 text-kicsi leading-[1.7] text-secondary">{MAGYARAZAT[h]}</p>
           </li>
         ))}
       </ul>

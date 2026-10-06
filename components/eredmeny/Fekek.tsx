@@ -1,4 +1,5 @@
-// „Mi fékez?” blokk – szöveg: landing-copy.md, 2. fejezet. 0–3 skála, a szám is kiírva.
+// „Mi fékez?” blokk – szöveg: landing-copy.md, 2. fejezet. 0–3 skála, a szám is kiírva; 0-nál „nem fékez”.
+// Doboz nélküli, hairline-elválasztós sorok.
 import type { Fekek as FekErtekek } from "@/lib/scoring";
 
 const FEKEK: { kulcs: keyof FekErtekek; nev: string }[] = [
@@ -12,9 +13,9 @@ const SKALA = [1, 2, 3] as const;
 
 export default function Fekek({ ertekek, indoklas }: { ertekek: FekErtekek; indoklas: Record<keyof FekErtekek, string> }) {
   return (
-    <ul className="divide-y divide-hairline rounded-2xl border border-hairline bg-elevated">
+    <ul className="border-b border-hairline">
       {FEKEK.map(({ kulcs, nev }) => (
-        <li key={kulcs} className="grid gap-3 p-6 sm:grid-cols-[13rem_1fr] sm:gap-8">
+        <li key={kulcs} className="grid gap-3 border-t border-hairline py-6 sm:grid-cols-[13rem_1fr] sm:gap-8">
           <div>
             <p className="font-medium text-primary">{nev}</p>
             <div className="mt-3 flex items-center gap-3">
@@ -26,11 +27,15 @@ export default function Fekek({ ertekek, indoklas }: { ertekek: FekErtekek; indo
                   />
                 ))}
               </span>
-              <span className="font-mono text-xs text-secondary">
-                {ertekek[kulcs]}
-                <span aria-hidden="true">/3</span>
-                <span className="sr-only"> a 3-ból</span>
-              </span>
+              {ertekek[kulcs] === 0 ? (
+                <span className="font-mono text-xs text-secondary">nem fékez</span>
+              ) : (
+                <span className="font-mono text-xs text-secondary">
+                  {ertekek[kulcs]}
+                  <span aria-hidden="true">/3</span>
+                  <span className="sr-only"> a 3-ból</span>
+                </span>
+              )}
             </div>
           </div>
           <p className="text-torzs text-secondary">{indoklas[kulcs]}</p>

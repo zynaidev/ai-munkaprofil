@@ -1,7 +1,9 @@
 import Container from "./Container";
 
-// Lábléc – szöveg: landing-copy.md, 1. fejezet
-export default function Lablec({ adatVerzio }: { adatVerzio: string }) {
+// Lábléc – szöveg: landing-copy.md, 1. fejezet.
+// `becsles={false}`: a „becslések…” mondat nélkül, ahol az oldal saját disclaimer-blokkja ezt már részletesen
+// elmondja (eredményoldal), hogy ugyanaz a figyelmeztetés ne szerepeljen kétszer. Az adatverzió mindig látszik.
+export default function Lablec({ adatVerzio, becsles = true }: { adatVerzio: string; becsles?: boolean }) {
   return (
     <footer className="border-t border-hairline bg-elevated">
       <Container className="py-10 text-kicsi leading-[1.8] text-secondary">
@@ -15,7 +17,8 @@ export default function Lablec({ adatVerzio }: { adatVerzio: string }) {
           </a>
         </p>
         <p className="mt-2 text-xs">
-          Az eredmények becslések kutatási adatok alapján, nem egyéni előrejelzések. Adatverzió: {adatVerzio}
+          {becsles && "Az eredmények becslések kutatási adatok alapján, nem egyéni előrejelzések. "}Adatverzió:{" "}
+          {adatVerzio}
         </p>
       </Container>
     </footer>
