@@ -19,6 +19,14 @@ Magyar nyelvű, nyilvános webes eszköz: a felhasználó beírja a munkakörét
 7. **SEO:** csak az `indexelheto: true` munkakörök indexelhetők, a többi oldal `noindex, follow`.
 8. **Titkok** (`N8N_WEBHOOK_URL`, `N8N_WEBHOOK_SECRET`, `ANTHROPIC_API_KEY`) csak szerveroldalon, környezeti változóból. Soha ne kerüljenek kliens-bundle-be (`NEXT_PUBLIC_` előtag tilos rájuk).
 
+## Visszajelzés-végpont
+- `POST /api/visszajelzes`: „nincs találat” (a beírt munkakörnév) és „Egyezik ez a tapasztalatoddal?” (slug, szint, igen/nem). A logika a `lib/visszajelzes.ts` (tisztítás, érvényesítés) és a `lib/visszajelzesKezelo.ts` (végpont), mindkettő tesztelve; a `route.ts` csak a beállításokat adja.
+- Továbbítás az n8n webhookra: `VISSZAJELZES_WEBHOOK_URL` (csak szerveroldali env, `NEXT_PUBLIC_` előtag tilos). Ha nincs beállítva (fejlesztés), a tisztított payload `console.info`-val naplózódik. Továbbítási időkorlát 4 mp, hiba esetén 502.
+- IP-cím, user-agent és más azonosító nem megy tovább és nem kerül naplóba. Az e-mail- vagy telefonszám-szerű szöveget a végpont eldobja (a kliens sikert kap). Rejtett `weboldal` mező (honeypot) → 204.
+- **A 3. szabály kivétele:** a „nincs találat” jelzésnél a beírt szöveget (tisztítva, max. 80 karakter) a felhasználó kifejezett gombnyomására rögzítjük a lista bővítéséhez. Más szabad szöveget továbbra sem tárolunk és nem naplózunk.
+- **Korlát:** IP-nként 10 kérés / 10 perc, memóriában, folyamatonként (best-effort, újraindításkor nullázódik). **A végleges rate limit az Nginx-ben van** (`limit_req`), az alkalmazásbeli korlát csak tartalék.
+- A kliens a küldőt (`lib/visszajelzesKuldes.ts`) lustán, gombnyomáskor tölti be; az oldalak statikusak maradnak.
+
 ## Mappastruktúra
 ```
 app/
@@ -29,6 +37,7 @@ app/
   adatkezeles/page.tsx
   api/besorol/route.ts
   api/lead/route.ts
+  api/visszajelzes/route.ts  visszajelzés-végpont (az egyetlen dinamikus útvonal az OG-képen kívül)
 components/                UI-komponensek
 lib/scoring.ts             pontozás (tiszta függvények)
 lib/tipusok.ts             a négy szint: név, leírás, szint, színtoken

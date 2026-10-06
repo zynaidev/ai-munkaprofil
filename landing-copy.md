@@ -15,7 +15,7 @@ Kapcsos zárójelben: dinamikus érték. Szögletes zárójelben: szerkesztői m
 
 **Kereső placeholder:** Írd be a munkakörödet, pl. könyvelő, ügyfélszolgálatos, grafikus…
 **Gomb:** Mutasd a profilom
-**Alatta, apró:** Nem kell regisztráció. Nem tárolunk semmit, amit beírsz.
+**Alatta, apró:** Nem kell regisztráció. Nem tárolunk semmit, amit beírsz, hacsak nem te jelzed nekünk.
 
 [Ha nincs találat a listában:]
 **Szöveg:** Nem találjuk pontosan ezt a munkakört. Megkeressük a hozzá legközelebb állót.

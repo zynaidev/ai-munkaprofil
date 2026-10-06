@@ -59,7 +59,7 @@ export default function Home() {
             <div className="mx-auto mt-10 max-w-2xl text-left">
               <Kereso />
               <p className="mt-4 text-center text-kicsi text-secondary">
-                Nem kell regisztráció. Nem tárolunk semmit, amit beírsz.
+                Nem kell regisztráció. Nem tárolunk semmit, amit beírsz, hacsak nem te jelzed nekünk.
               </p>
             </div>
 

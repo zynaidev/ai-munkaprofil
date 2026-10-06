@@ -2,13 +2,15 @@
 
 // Munkakör-kereső: ARIA combobox (WAI-ARIA APG, „list autocomplete”).
 // A /data/kereso.json csak az első fókuszkor töltődik be, egyszer (hiba után újrapróbálható).
-// A beírt szöveget nem küldjük sehova és nem naplózzuk.
+// A beírt szöveget csak akkor küldjük el, ha nincs találat, és a felhasználó a „Jelezd, hogy felvegyük” gombbal
+// kifejezetten kéri; a küldő modul csak ekkor töltődik be (lusta import).
 import { useId, useMemo, useRef, useState, type FormEvent, type KeyboardEvent } from "react";
 import { useRouter } from "next/navigation";
 import { indexel, keres, normalizal, type IndexeltMunkakor, type KeresoForras } from "@/lib/search";
 import PrimaryCta from "./PrimaryCta";
 
 type Allapot = "kezdeti" | "tolt" | "kesz" | "hiba";
+type JelzesAllapot = "alap" | "kuld" | "kesz" | "hiba";
 
 const SLUG_MINTA = /^[a-z0-9-]+$/;
 
@@ -26,10 +28,23 @@ export default function Kereso() {
   const [kerdes, setKerdes] = useState("");
   const [nyitva, setNyitva] = useState(false);
   const [aktiv, setAktiv] = useState(-1);
+  // A jelzés a beírt szöveghez tartozik: ha a szöveg változik, újra lehet jelezni
+  const [jelzes, setJelzes] = useState<{ szoveg: string; allapot: JelzesAllapot }>({ szoveg: "", allapot: "alap" });
+  const csapdaRef = useRef<HTMLInputElement>(null);
 
   const talalatok = useMemo(() => (index ? keres(index, kerdes) : []), [index, kerdes]);
   const listaLathato = nyitva && talalatok.length > 0;
   const nincsTalalat = allapot === "kesz" && normalizal(kerdes) !== "" && talalatok.length === 0;
+  const jelzesAllapot: JelzesAllapot = jelzes.szoveg === kerdes.trim() ? jelzes.allapot : "alap";
+
+  async function jelez() {
+    const szoveg = kerdes.trim();
+    if (!szoveg || jelzesAllapot === "kuld" || jelzesAllapot === "kesz") return;
+    setJelzes({ szoveg, allapot: "kuld" });
+    const { kuldVisszajelzest } = await import("@/lib/visszajelzesKuldes");
+    const ok = await kuldVisszajelzest({ tipus: "nincs-talalat", szoveg }, csapdaRef.current?.value ?? "");
+    setJelzes({ szoveg, allapot: ok ? "kesz" : "hiba" });
+  }
 
   function betolt(): Promise<IndexeltMunkakor[] | null> {
     if (index) return Promise.resolve(index);
@@ -190,17 +205,23 @@ export default function Kereso() {
       )}
 
       {nincsTalalat && (
-        <div className="mt-4 rounded-xl border border-hairline bg-elevated p-5 text-left sm:flex sm:items-center sm:justify-between sm:gap-6">
-          <p className="text-kicsi leading-[1.7] text-secondary">
-            Nem találjuk pontosan ezt a munkakört. Megkeressük a hozzá legközelebb állót.
+        <div className="mt-4 text-left">
+          <p className="text-kicsi leading-[1.7] text-secondary">Ez a munkakör még nincs a listában.</p>
+          {/* Honeypot: embernek láthatatlan és nem fókuszálható; ha kitöltik, a szerver eldobja a kérést */}
+          <input ref={csapdaRef} name="weboldal" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
+          {jelzesAllapot !== "kesz" && (
+            <button
+              type="button"
+              onClick={jelez}
+              disabled={jelzesAllapot === "kuld"}
+              className="mt-3 min-h-11 rounded-full border border-accent-30 bg-accent-05 px-6 text-kicsi font-medium text-accent transition-colors hover:border-accent hover:bg-accent-10 disabled:cursor-wait disabled:opacity-60"
+            >
+              Jelezd, hogy felvegyük
+            </button>
+          )}
+          <p aria-live="polite" className="mt-2 min-h-[1.5em] text-kicsi text-secondary">
+            {jelzesAllapot === "kesz" ? "Köszönjük, megnézzük." : jelzesAllapot === "hiba" ? "Most nem sikerült, próbáld később." : ""}
           </p>
-          <button
-            type="button"
-            onClick={() => console.info("Besorolás: a 10. lépésben kötjük be.")}
-            className="mt-4 min-h-11 w-full shrink-0 rounded-full border border-accent-30 bg-accent-05 px-6 text-kicsi font-medium text-accent transition-colors hover:border-accent hover:bg-accent-10 sm:mt-0 sm:w-auto"
-          >
-            Keresd meg a legközelebbit
-          </button>
         </div>
       )}
     </div>

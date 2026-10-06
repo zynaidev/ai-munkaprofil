@@ -22,7 +22,8 @@ export default function AdatkezelesOldal() {
           <SectionLabel>Adatkezelés</SectionLabel>
           <h1 className="mt-5 font-display text-h2 font-medium text-balance text-primary">Milyen adatot kezelünk?</h1>
           <p className="mt-6 max-w-2xl text-lead text-secondary">
-            Röviden: jelenleg semmilyen személyes adatot nem kérünk tőled, és nem is gyűjtünk.
+            Röviden: az eszköz nem kér és nem tárol rólad személyes adatot. Amit rögzítünk, azt alább pontosan
+            leírjuk.
           </p>
           <p className="mt-6 font-mono text-cimke tracking-[0.14em] text-secondary uppercase">Jogi átnézésre vár</p>
         </div>
@@ -31,12 +32,22 @@ export default function AdatkezelesOldal() {
       <Szekcio id="mit" sorszam="01" cimke="Mit gyűjt" cim="Mit gyűjt az eszköz?" alt>
         <ul className="border-b border-hairline text-torzs text-secondary">
           <li className={sor}>
-            <span className={kiemelt}>Nincs regisztráció és nincs űrlap.</span> Az eszköz használatához nem kell megadnod
-            semmilyen adatot.
+            <span className={kiemelt}>Nincs regisztráció.</span> Az eszköz használatához nem kell megadnod semmilyen
+            adatot.
           </li>
           <li className={sor}>
-            <span className={kiemelt}>Amit a keresőbe írsz,</span> a böngésződben marad: a keresés ott fut, a beírt
-            szöveget nem küldjük el sehova.
+            <span className={kiemelt}>Technikai napló.</span> A szerver üzemeltetési célból technikai naplót vezet
+            (IP-cím, időpont). Megőrzési idő: TODO.
+          </li>
+          <li className={sor}>
+            <span className={kiemelt}>Amit a keresőbe írsz,</span> a böngésződben marad: a keresés ott fut. Kivétel, ha
+            nincs találat, és a „Jelezd, hogy felvegyük” gombbal jelzed a munkakört: ekkor a beírt szöveget és az
+            időpontot rögzítjük, hogy bővíthessük a listát. Kérjük, ne írj bele személyes adatot. Az e-mail-címnek vagy
+            telefonszámnak tűnő szöveget nem rögzítjük.
+          </li>
+          <li className={sor}>
+            <span className={kiemelt}>„Egyezik ez a tapasztalatoddal?”</span> Ha igennel vagy nemmel válaszolsz, a
+            munkakört, a szintet, a válaszodat és az időpontot rögzítjük.
           </li>
           <li className={sor}>
             <span className={kiemelt}>A finomító kérdésekre adott válaszaid</span> csak az oldal címében (URL) jelennek

@@ -16,6 +16,7 @@ import { megosztasiUrl, megosztasSzoveg } from "@/lib/megosztas";
 import { ogCim } from "@/lib/seo";
 import Container from "../Container";
 import Szekcio from "../Szekcio";
+import Egyezes from "./Egyezes";
 import FeladatLista from "./FeladatLista";
 import Finomito from "./Finomito";
 import Hero from "./Hero";
@@ -135,6 +136,7 @@ export default function ProfilNezet({
       </Szekcio>
 
       {teendo}
+      <Egyezes slug={munkakor.slug} szint={profil.szint} />
 
       <Szekcio id="megosztas" sorszam="06" cimke="Megosztás" cim="Kíváncsi vagy, a kollégáid hova esnek?">
         <Megosztas {...megosztas} />

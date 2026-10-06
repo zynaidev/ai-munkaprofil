@@ -151,6 +151,13 @@ python pipeline.py export --verzio 2026-Q4
 
 ---
 
+### Visszajelzés-végpont
+- `POST /api/visszajelzes` JSON-t vár: `{ tipus: "nincs-talalat", szoveg }` vagy `{ tipus: "szint-egyezes", slug, szint: 1–4, egyezik }`.
+- A végpont tisztít és érvényesít (szöveg max. 80 karakter, e-mail- és telefonszám-szerű szöveg eldobva, slug csak `[a-z0-9-]`), majd továbbít az n8n webhookra: `{ tipus, szoveg, slug, szint, egyezik, idopont, adatVerzio }`. IP-cím és user-agent nem megy tovább.
+- Környezeti változó: `VISSZAJELZES_WEBHOOK_URL`. Ha nincs megadva, a payload csak a szerver konzoljára kerül (fejlesztés).
+- Válaszok: 200 siker, 204 honeypot, 400 érvénytelen kérés, 429 túl sok kérés, 502 a webhook hibázott vagy 4 mp alatt nem válaszolt.
+- Korlát: az alkalmazásban IP-nként 10 kérés / 10 perc, memóriában (best-effort). **A végleges rate limitet az Nginx adja.**
+
 ## 5. Építési sorrend
 Minden lépés végén legyen működő, kipróbálható állapot.
 

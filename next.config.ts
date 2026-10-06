@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
     "/\\[slug\\]/opengraph-image": ["./public/data/*.json", "./assets/fonts/*.ttf"],
     "/sitemap.xml": ["./public/data/kereso.json"],
     "/_not-found": ["./public/data/*.json"], // a lábléc adatverziója
+    "/api/visszajelzes": ["./public/data/*.json"], // az adatverzió a payloadban
   },
 };
 
