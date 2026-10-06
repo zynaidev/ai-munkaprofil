@@ -21,6 +21,11 @@ export function szelesseg(resz: number, egesz: number): string {
   return `${Math.round(sz * 100) / 100}%`;
 }
 
+// Szám pontosan, tizedesvesszővel (pl. küszöbök: 0.35 → „0,35”), kerekítés nélkül
+export function tizedes(n: number): string {
+  return String(n).replace('.', ',');
+}
+
 // Egész órára kerekítés megjelenítéshez (pl. „ma reálisan kb. 10 óra”).
 export function egeszOra(ertek: number): number {
   if (!Number.isFinite(ertek)) throw new Error(`Érvénytelen óraszám: ${ertek}`);

@@ -26,10 +26,16 @@ export function nevelo(szo: string): 'a' | 'az' {
   return /^[aáeéiíoóöőuúüű]/i.test(szo) ? 'az' : 'a';
 }
 
-// <title> és SEO-cím; ha a slug hiányzik a szótárból: „{nev} és az AI | AI-Munkaprofil”
-export function seoCim(slug: string, nev: string): string {
-  const t = TARGYESET[slug];
-  return t ? `Elveszi az AI ${nevelo(t)} ${t} munkáját? | ${OLDALNEV}` : `${nev} és az AI | ${OLDALNEV}`;
+// „Elveszi az AI a/az {tobbes} munkáját?” – helyes névelővel
+export function kerdes(tobbes: string): string {
+  return `Elveszi az AI ${nevelo(tobbes)} ${tobbes} munkáját?`;
+}
+
+// <title> és SEO-cím. Elsőbbség: a munkakör saját „tobbes” mezője, majd a TARGYESET szótár;
+// ha egyik sincs: „{nev} és az AI | AI-Munkaprofil”.
+export function seoCim(slug: string, nev: string, tobbes?: string): string {
+  const t = tobbes?.trim() || TARGYESET[slug];
+  return t ? `${kerdes(t)} | ${OLDALNEV}` : `${nev} és az AI | ${OLDALNEV}`;
 }
 
 export function metaLeiras(p: Pick<Profil, 'nev' | 'orak'>): string {

@@ -7,7 +7,7 @@ export default function EredmenyLayout({ children }: { children: React.ReactNode
   return (
     <>
       <div className="flex-1">{children}</div>
-      <Lablec adatVerzio="fejlesztői" becsles={false} />
+      <Lablec becsles={false} />
     </>
   );
 }

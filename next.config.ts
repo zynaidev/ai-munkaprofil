@@ -12,6 +12,7 @@ const nextConfig: NextConfig = {
     "/\\[slug\\]": ["./public/data/*.json"],
     "/\\[slug\\]/opengraph-image": ["./public/data/*.json", "./assets/fonts/*.ttf"],
     "/sitemap.xml": ["./public/data/kereso.json"],
+    "/_not-found": ["./public/data/*.json"], // a lábléc adatverziója
   },
 };
 

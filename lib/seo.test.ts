@@ -27,6 +27,15 @@ test('SEO-cím tárgyesettel és helyes névelővel', () => {
   assert.equal(seoCim('hr-munkatars', 'HR-munkatárs'), 'Elveszi az AI a HR-munkatársak munkáját? | AI-Munkaprofil');
 });
 
+test('a munkakör saját „tobbes” mezője elsőbbséget kap, névelővel', () => {
+  assert.equal(seoCim('villanyszerelo', 'Villanyszerelő', 'villanyszerelők'), 'Elveszi az AI a villanyszerelők munkáját? | AI-Munkaprofil');
+  assert.equal(seoCim('x', 'Ápoló', 'ápolók'), 'Elveszi az AI az ápolók munkáját? | AI-Munkaprofil');
+  assert.equal(seoCim('konyvelo', 'Könyvelő', 'mérlegképes könyvelők'), 'Elveszi az AI a mérlegképes könyvelők munkáját? | AI-Munkaprofil');
+  // üres vagy csak szóköz: mintha nem lenne (a szótár, majd a tartalék cím marad)
+  assert.equal(seoCim('konyvelo', 'Könyvelő', '  '), 'Elveszi az AI a könyvelők munkáját? | AI-Munkaprofil');
+  assert.equal(seoCim('villanyszerelo', 'Villanyszerelő', ''), 'Villanyszerelő és az AI | AI-Munkaprofil');
+});
+
 test('hiányzó slugnál: „{nev} és az AI | AI-Munkaprofil”', () => {
   assert.equal(seoCim('villanyszerelo', 'Villanyszerelő'), 'Villanyszerelő és az AI | AI-Munkaprofil');
 });

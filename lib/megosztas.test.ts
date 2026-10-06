@@ -24,6 +24,17 @@ test('előre megírt megosztási szöveg a copy szerint, a tényleges adatokkal'
   assert.match(megosztasSzoveg(finomitott), new RegExp(`${finomitott.orak.kivalthato} óra kiváltható`));
 });
 
+test('ha van „tobbes”, a megosztási szöveg a kérdéssel kezdődik; ha nincs, változatlan', () => {
+  const m = getMunkakor('villanyszerelo');
+  assert.ok(m);
+  const p = szamolProfil(m);
+  const alap = megosztasSzoveg(p);
+  assert.equal(megosztasSzoveg(p, 'villanyszerelők'), `Elveszi az AI a villanyszerelők munkáját? ${alap}`);
+  assert.equal(megosztasSzoveg(p, 'ügyintézők'), `Elveszi az AI az ügyintézők munkáját? ${alap}`);
+  assert.equal(megosztasSzoveg(p, ''), alap);
+  assert.equal(megosztasSzoveg(p, undefined), alap);
+});
+
 test('megosztási URL-ek kódolva, a finomítás query-vel együtt', () => {
   const u = 'https://teszt.zynai.hu/ugyfelszolgalati-munkatars?telefon=sok';
   assert.equal(facebookUrl(u), 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fteszt.zynai.hu%2Fugyfelszolgalati-munkatars%3Ftelefon%3Dsok');

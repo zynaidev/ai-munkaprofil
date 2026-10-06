@@ -15,6 +15,7 @@ export interface MunkakorAdat extends Munkakor {
   teendo: string;
   indexelheto: boolean;
   adatVerzio: string;
+  tobbes?: string; // többes szám alanyeset a címhez („könyvelők”); opcionális, a pipeline exportálhatja
 }
 
 export interface KeresoElem {
@@ -67,6 +68,14 @@ function szam(o: Obj, kulcs: string, forras: string, min: number, max: number, e
   return v;
 }
 
+// Opcionális szöveg: hiányzó, üres vagy csak szóköz → undefined; más típus → hiba
+function opcionalisSzoveg(o: Obj, kulcs: string, forras: string): string | undefined {
+  const v = o[kulcs];
+  if (v === undefined || v === null) return undefined;
+  if (typeof v !== 'string') hiba(forras, kulcs, 'szöveg vagy hiányzó');
+  return v.trim() || undefined;
+}
+
 function logikai(o: Obj, kulcs: string, forras: string, elotag = ''): boolean {
   const v = o[kulcs];
   if (typeof v !== 'boolean') hiba(forras, elotag + kulcs, 'true/false');
@@ -101,6 +110,7 @@ export function ellenorizMunkakor(x: unknown, forras = 'munkakör'): MunkakorAda
 
   const feladatok = x.feladatok;
   if (!Array.isArray(feladatok) || feladatok.length === 0) hiba(forras, 'feladatok', 'nem üres tömb');
+  const tobbes = opcionalisSzoveg(x, 'tobbes', forras);
 
   return {
     slug: szoveg(x, 'slug', forras),
@@ -114,6 +124,7 @@ export function ellenorizMunkakor(x: unknown, forras = 'munkakör'): MunkakorAda
     teendo: szoveg(x, 'teendo', forras),
     indexelheto: logikai(x, 'indexelheto', forras),
     adatVerzio: szoveg(x, 'adatVerzio', forras),
+    ...(tobbes !== undefined && { tobbes }),
   };
 }
 
@@ -151,6 +162,19 @@ export function getKereso(): KeresoElem[] {
 // Minden munkakör slugja a kereső indexéből.
 export function getOsszesSlug(): string[] {
   return getKereso().map((k) => k.slug);
+}
+
+// Az adatverzió (pl. „2026-Q4”) a munkakör-fájlokból; a lábléc és a módszertan mutatja.
+export function getAdatVerzio(): string {
+  const elso = getOsszesSlug()[0];
+  const m = elso ? getMunkakor(elso) : null;
+  if (!m) throw new Error('Nincs munkakör-adat az adatverzió megállapításához');
+  return m.adatVerzio;
+}
+
+// Megjelenítendő felirat: a fejlesztői adat jelölése ékezettel, minden más változatlanul
+export function adatVerzioFelirat(v: string): string {
+  return v === 'fejlesztoi' ? 'fejlesztői' : v;
 }
 
 // Az indexelhető munkakörök slugjai, a munkakör-fájlok indexelheto mezője alapján.

@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: PageProps<"/[slug]">): Promis
   const profil = szamolProfil(munkakor);
 
   return {
-    title: { absolute: seoCim(slug, munkakor.nev) },
+    title: { absolute: seoCim(slug, munkakor.nev, munkakor.tobbes) },
     description: metaLeiras(profil),
     alternates: { canonical: `/${slug}` },
     robots: munkakor.indexelheto ? { index: true, follow: true } : { index: false, follow: true },
@@ -61,6 +61,7 @@ export default async function MunkakorOldal({ params }: PageProps<"/[slug]">) {
       <ProfilNezet
         munkakor={{ slug, nev, hetiOra, fekek, feladatok }}
         kanonikusUrl={`${oldalUrl()}/${slug}`}
+        tobbes={munkakor.tobbes}
         fekek={
           <Szekcio id="fekek" sorszam="03" cimke="Mi fékez?" cim="Ami lassítja – vagy megállítja" alt>
             <Fekek ertekek={fekek} indoklas={munkakor.fekIndoklas} />

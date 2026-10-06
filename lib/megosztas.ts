@@ -2,13 +2,17 @@
 // Tiszta függvények, harmadik fél SDK nélkül.
 import type { Profil } from './scoring.ts';
 import { oraSzam } from './format.ts';
+import { kerdes } from './seo.ts';
 import { SZINTEK_SZAMA, TIPUSOK } from './tipusok.ts';
 
 // „Megcsináltam az AI-Munkaprofilt: {tipus} vagyok ({szint}. szint a 4-ből). A heti {hetiOra} órámból
 // {kivalthato} óra kiváltható, {emberi} óra marad csak az enyém. Te hova esel?”
-export function megosztasSzoveg(p: Pick<Profil, 'tipus' | 'hetiOra' | 'orak'>): string {
+// Ha a munkakörnek van „tobbes” alakja, a szöveg a kérdéssel kezdődik: „Elveszi az AI a könyvelők munkáját? …”
+export function megosztasSzoveg(p: Pick<Profil, 'tipus' | 'hetiOra' | 'orak'>, tobbes?: string): string {
   const t = TIPUSOK[p.tipus];
+  const elotag = tobbes?.trim() ? `${kerdes(tobbes.trim())} ` : '';
   return (
+    elotag +
     `Megcsináltam az AI-Munkaprofilt: ${t.cimke} vagyok (${t.szint}. szint a ${SZINTEK_SZAMA}-ből). ` +
     `A heti ${oraSzam(p.hetiOra)} órámból ${oraSzam(p.orak.kivalthato)} óra kiváltható, ` +
     `${oraSzam(p.orak.emberi)} óra marad csak az enyém. Te hova esel?`

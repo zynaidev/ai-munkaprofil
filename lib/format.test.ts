@@ -1,7 +1,7 @@
 // Futtatás: npm test
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { egeszOra, horizontEgeszOrak, ora, oraSzam, szelesseg } from './format.ts';
+import { egeszOra, horizontEgeszOrak, ora, oraSzam, szelesseg, tizedes } from './format.ts';
 import { getOsszesSlug, getMunkakor } from './data.ts';
 import { szamolProfil } from './scoring.ts';
 
@@ -31,6 +31,13 @@ test('sávszélesség', () => {
   assert.equal(szelesseg(1, 3), '33.33%');
   assert.equal(szelesseg(50, 40), '100%');
   assert.equal(szelesseg(5, 0), '0%');
+});
+
+test('pontos tizedes szám tizedesvesszővel (küszöbökhöz, kerekítés nélkül)', () => {
+  assert.equal(tizedes(0.35), '0,35');
+  assert.equal(tizedes(0.5), '0,5');
+  assert.equal(tizedes(3), '3');
+  assert.equal(tizedes(1.8), '1,8');
 });
 
 test('egész óra', () => {

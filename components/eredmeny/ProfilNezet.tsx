@@ -59,11 +59,13 @@ const frissitve = (p: Profil) =>
 export default function ProfilNezet({
   munkakor,
   kanonikusUrl,
+  tobbes,
   fekek,
   teendo,
 }: {
   munkakor: Munkakor;
   kanonikusUrl: string;
+  tobbes?: string;
   fekek: ReactNode;
   teendo: ReactNode;
 }) {
@@ -74,7 +76,7 @@ export default function ProfilNezet({
   const profil = useMemo(() => szamolProfil(munkakor, finomitasbol(valaszok)), [munkakor, valaszok]);
   const [bejelentes, setBejelentes] = useState("");
   const url = useSyncExternalStore(feliratkoz, jelenlegiUrl, () => kanonikusUrl);
-  const megosztas = { url, cim: ogCim(profil), szoveg: megosztasSzoveg(profil) };
+  const megosztas = { url, cim: ogCim(profil), szoveg: megosztasSzoveg(profil, tobbes) };
 
   function frissit(uj: Valaszok) {
     beallit(uj);
