@@ -36,19 +36,16 @@ export interface Munkakor {
 // Pl. "főleg telefonon dolgozom" → { telefon: 1.5, irasos: 0.6 }
 export type Finomitas = Partial<Record<Csatorna, number>>;
 
-// Konstansok – a módszertani oldalon is publikálandók
+// Konstansok – az összes küszöb és súly egy helyen (más fájlban ne legyen belőlük szám).
 export const KONSTANSOK = {
   felerositesMegtakaritas: 0.4, // felerősített órák ennyi része szabadul fel (időmegtakarítás)
-  fekSuly: 0.5,                 // a fékindex ennyivel csökkentheti a "gyakorlatban ma kiváltható" órákat
-  kuszob: {
-    // A kulcsnevek a korábbi elnevezést őrzik; értékük és a döntési sorrend változatlan.
-    vedettEmberi: 0.5,          // emberi arány ≥ 50% → vedett (1. szint)
-    vedettFizikaiFek: 3,        // vagy maximális fizikai fék
-    atalakuloKivaltas: 0.35,    // kiváltási arány ≥ 35% …
-    atalakuloMaxFek: 0.5,       // … és fékindex < 0.5 → automatizalodo (4. szint)
-    felerosodoFelerosites: 0.4, // felerősítési arány ≥ 40% …
-    felerosodoMaxKivaltas: 0.25 // … és kiváltás < 25% → felerosodo (2. szint); minden más → atalakulo (3. szint)
-  },
+  FEK_SULY: 0.5,     // a fékindex legfeljebb ennyivel csökkenti P-t és a „gyakorlatban ma kiváltható” órákat
+  // Besorolás: P = (Σ időarány × kitettség) × (1 − FEK_SULY × fékindex),
+  //            K = Σ(időarány × kitettség × kiváltási arány) / Σ(időarány × kitettség)
+  P_VEDETT: 0.2,     // P < 0.20 → 1. szint, Védett
+  P_ATALAKUL: 0.36,  // P ≥ 0.36 → 3. szint, Átalakuló (ha nem 4.)
+  P_AUTOMATIZ: 0.5,  // P ≥ 0.50 …
+  K_AUTOMATIZ: 0.36, // … és K ≥ 0.36 → 4. szint, Automatizálódó; különben 2. szint, Felerősödő
 } as const;
 
 export interface FeladatEredmeny {
@@ -73,6 +70,8 @@ export interface Profil {
   kivalthatoHorizontSzerint: Record<Horizont, number>;
   gyakorlatbanMaKivalthato: number; // a fékek figyelembevételével
   fekIndex: number;                 // 0–1
+  // Belső mutatók (besorolás, eloszlás-riport). A felhasználónak sosem jelenik meg, csak a szint.
+  szintMutatok: { P: number; K: number };
   fekek: Fekek;
   feladatok: FeladatEredmeny[];
 }
@@ -98,31 +97,45 @@ export function fekIndex(f: Fekek): number {
   return (f.fizikai + f.felelosseg + f.szabalyozas + f.bizalom) / 12;
 }
 
-export function profilTipus(
-  kivaltasArany: number,
-  felerositesArany: number,
-  emberiArany: number,
-  fek: Fekek,
-): ProfilTipus {
-  const k = KONSTANSOK.kuszob;
-  if (emberiArany >= k.vedettEmberi || fek.fizikai >= k.vedettFizikaiFek) return 'vedett';
-  if (kivaltasArany >= k.atalakuloKivaltas && fekIndex(fek) < k.atalakuloMaxFek) return 'automatizalodo';
-  if (felerositesArany >= k.felerosodoFelerosites && kivaltasArany < k.felerosodoMaxKivaltas) return 'felerosodo';
-  return 'atalakulo';
+// Szint a két mutatóból, ebben a sorrendben
+export function profilTipus(P: number, K: number): ProfilTipus {
+  const k = KONSTANSOK;
+  if (P < k.P_VEDETT) return 'vedett';
+  if (P >= k.P_AUTOMATIZ && K >= k.K_AUTOMATIZ) return 'automatizalodo';
+  if (P >= k.P_ATALAKUL) return 'atalakulo';
+  return 'felerosodo';
+}
+
+// Normalizált (finomítással súlyozott) időarányok
+function idoSulyok(m: Munkakor, finomitas: Finomitas): number[] {
+  const sulyok = m.feladatok.map((f) => f.idoArany * (f.csatorna ? finomitas[f.csatorna] ?? 1 : 1));
+  const ossz = sulyok.reduce((a, b) => a + b, 0);
+  return sulyok.map((s) => (ossz > 0 ? s / ossz : 0));
+}
+
+// P: fékkel csökkentett AI-kitettség; K: a kitett munka kiváltható hányada (nevező 0 → K = 0)
+export function szintMutatok(m: Munkakor, finomitas: Finomitas = {}): { P: number; K: number } {
+  const w = idoSulyok(m, finomitas);
+  let kitett = 0, kivalthato = 0;
+  m.feladatok.forEach((f, i) => {
+    kitett += w[i] * f.kitettseg;
+    kivalthato += w[i] * f.kitettseg * f.kivaltasArany;
+  });
+  return {
+    P: kitett * (1 - KONSTANSOK.FEK_SULY * fekIndex(m.fekek)),
+    K: kitett > 0 ? kivalthato / kitett : 0,
+  };
 }
 
 export function szamolProfil(m: Munkakor, finomitas: Finomitas = {}): Profil {
   if (m.feladatok.length === 0) throw new Error(`Nincs feladat: ${m.slug}`);
 
-  // 1. Súlyozott időarányok (finomítással), normalizálás
-  const sulyok = m.feladatok.map(
-    (f) => f.idoArany * (f.csatorna ? finomitas[f.csatorna] ?? 1 : 1),
-  );
-  const osszSuly = sulyok.reduce((a, b) => a + b, 0);
+  // 1. Súlyozott, normalizált időarányok (finomítással)
+  const w = idoSulyok(m, finomitas);
 
   // 2. Feladatonkénti órák és bontás
   const feladatok: FeladatEredmeny[] = m.feladatok.map((f, i) => {
-    const ora = (m.hetiOra * sulyok[i]) / osszSuly;
+    const ora = m.hetiOra * w[i];
     const erintett = ora * f.kitettseg;
     return {
       leiras: f.leiras,
@@ -139,7 +152,7 @@ export function szamolProfil(m: Munkakor, finomitas: Finomitas = {}): Profil {
   let kiv = 0, fel = 0, emb = 0;
   const horizont: Record<Horizont, number> = { ma: 0, '1-3ev': 0, '5ev+': 0 };
   m.feladatok.forEach((f, i) => {
-    const ora = (m.hetiOra * sulyok[i]) / osszSuly;
+    const ora = m.hetiOra * w[i];
     const erintett = ora * f.kitettseg;
     kiv += erintett * f.kivaltasArany;
     fel += erintett * (1 - f.kivaltasArany);
@@ -151,7 +164,8 @@ export function szamolProfil(m: Munkakor, finomitas: Finomitas = {}): Profil {
   const [kivalthato, felgyorsul, emberi] = egeszreKerekit([kiv, fel, emb], Math.round(m.hetiOra));
 
   const fi = fekIndex(m.fekek);
-  const tipus = profilTipus(kiv / m.hetiOra, fel / m.hetiOra, emb / m.hetiOra, m.fekek);
+  const mutatok = szintMutatok(m, finomitas);
+  const tipus = profilTipus(mutatok.P, mutatok.K);
 
   return {
     slug: m.slug,
@@ -166,8 +180,9 @@ export function szamolProfil(m: Munkakor, finomitas: Finomitas = {}): Profil {
       '1-3ev': kerek1(horizont['1-3ev']),
       '5ev+': kerek1(horizont['5ev+']),
     },
-    gyakorlatbanMaKivalthato: kerek1(horizont.ma * (1 - KONSTANSOK.fekSuly * fi)),
+    gyakorlatbanMaKivalthato: kerek1(horizont.ma * (1 - KONSTANSOK.FEK_SULY * fi)),
     fekIndex: Math.round(fi * 100) / 100,
+    szintMutatok: mutatok,
     fekek: m.fekek,
     feladatok,
   };

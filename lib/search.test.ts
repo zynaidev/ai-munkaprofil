@@ -12,10 +12,12 @@ test('normalizálás: kisbetű, ékezet nélkül', () => {
   assert.equal(normalizal('  ÜGYFÉL-szolgálat  Őr '), 'ugyfel szolgalat or');
 });
 
-test('„ugyfel”, „ügyfél” és „call” is az ügyfélszolgálatot adja', () => {
-  for (const q of ['ugyfel', 'ügyfél', 'ÜGYFÉL', 'call', 'Call Center']) {
-    assert.deepEqual(slugok(q), ['ugyfelszolgalati-munkatars'], q);
-  }
+test('„ugyfel”, „ügyfél” és „call” is megtalálja az ügyfélszolgálatost (a valós adattal)', () => {
+  // névre illeszkedés: az ügyfélszolgálatos elöl, utána az aliasban illeszkedő banki ügyintéző
+  for (const q of ['ugyfel', 'ügyfél', 'ÜGYFÉL']) assert.deepEqual(slugok(q), ['ugyfelszolgalatos', 'banki-ugyintezo'], q);
+  // a „call center” alias mindkét munkakörnél szerepel; azonos pontnál ábécérend
+  for (const q of ['call', 'Call Center']) assert.deepEqual(slugok(q), ['telefonos-ertekesito', 'ugyfelszolgalatos'], q);
+  assert.deepEqual(slugok('ügyfélszolgálat'), ['ugyfelszolgalatos']);
 });
 
 test('aliasra is talál (programozó → szoftverfejlesztő)', () => {

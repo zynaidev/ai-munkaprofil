@@ -54,23 +54,27 @@ A négy szint (név, leírás, szint és szín egyetlen forrása a `lib/tipusok.
 | 3 | `atalakulo` | Átalakuló | A feladatok és a szerepkör érdemben megváltoznak. |
 | 4 | `automatizalodo` | Automatizálódó | A munkafeladatok jelentős részét AI végezheti. |
 
-Döntési sorrend (az első teljesülő feltétel):
-1. **Védett (1. szint):** emberi arány ≥ 50%, vagy fizikai fék = 3
-2. **Automatizálódó (4. szint):** kiváltási arány ≥ 35% és fék_index < 0,5
-3. **Felerősödő (2. szint):** felerősítési arány ≥ 40% és kiváltás < 25%
-4. **Átalakuló (3. szint):** minden más
+Besorolás: egyindexes modell két mutatóval (feladatcsoportonként, a normalizált időarányokkal):
+- `P = (Σ ido_arany × kitettseg) × (1 − FEK_SULY × fek_index)` – fékkel csökkentett AI-kitettség (0–1)
+- `K = Σ(ido_arany × kitettseg × kivaltas_arany) / Σ(ido_arany × kitettseg)` – a kitett munka kiváltható hányada; ha a nevező 0, `K = 0`
 
-A küszöbök a `scoring.ts` `KONSTANSOK` objektumában vannak, és a módszertani oldalon is publikálni kell őket. A nyílt módszertan maga is hitelességi érv.
+Szintek (ebben a sorrendben):
+1. `P < 0,20` → **Védett (1. szint)**
+2. `P ≥ 0,50` és `K ≥ 0,36` → **Automatizálódó (4. szint)**
+3. `P ≥ 0,36` → **Átalakuló (3. szint)**
+4. különben → **Felerősödő (2. szint)**
+
+A küszöbök és súlyok (`P_VEDETT`, `P_ATALAKUL`, `P_AUTOMATIZ`, `K_AUTOMATIZ`, `FEK_SULY`) egy helyen, a `lib/scoring.ts` `KONSTANSOK` objektumában vannak. A `szamolProfil` a `szintMutatok` mezőben belső használatra visszaadja P-t és K-t (eloszlás-riport: `node --experimental-strip-types adat/eloszlas.mts`); a felhasználónak sosem jelenik meg pontszám vagy százalék, csak a szint. A küszöbök kalibrációja szakmai becslés, nem tudományos mérés; a módszertani oldal ezt számok nélkül, közérthetően írja le.
 
 **Tesztkimenet illusztratív mintaadatokkal:**
 | Munkakör | Szint · Típus | Kiváltható / Felgyorsul / Emberi | Visszanyert |
 |---|---|---|---|
 | Ügyfélszolgálati munkatárs | 4 · Automatizálódó | 19 / 10 / 11 ó | 4 ó |
-| Szoftverfejlesztő | 2 · Felerősödő | 7 / 23 / 10 ó | 9 ó |
+| Szoftverfejlesztő | 3 · Átalakuló | 7 / 23 / 10 ó | 9 ó |
 | Villanyszerelő | 1 · Védett | 5 / 6 / 29 ó | 2 ó |
 | Könyvelő | 3 · Átalakuló | 13 / 16 / 11 ó | 6 ó |
 
-A könyvelő a kiváltható órák alapján Automatizálódó lehetne, de a felelősség és a szabályozás fékje miatt Átalakuló (3. szint) lesz. Pontosan ilyen árnyalatot akartunk a puszta százalék helyett.
+A könyvelő kitettsége magas, de a felelősség és a szabályozás fékje P-t 0,50 alá viszi, ezért Átalakuló (3. szint), nem Automatizálódó. A szoftverfejlesztő kitettsége is magas, de a kitett munka főleg felgyorsul (alacsony K), ezért szintén Átalakuló. Pontosan ilyen árnyalatot akartunk a puszta százalék helyett.
 
 ---
 
@@ -169,7 +173,7 @@ Minden lépés végén legyen működő, kipróbálható állapot.
 6. **Finomító kérdések:** 2–3 csúszka (pl. telefon vs. írásos arány), a `Finomitas` objektumot állítják, és élőben számolnak újra.
 7. **Szabad szöveges besorolás:** `/api/besorol` útvonal, Claude-hívás, cache, rate limit.
 8. **Megosztás:** OG-kép a típussal és a fő számokkal, Facebook- és LinkedIn-gomb, link másolása.
-9. **Módszertani oldal:** források, képletek, küszöbök, korlátok, disclaimer.
+9. **Módszertani oldal:** források, az órák képletei, a besorolás közérthető leírása (számok nélkül), korlátok, disclaimer.
 10. **Lead:** e-mail űrlap GDPR-checkboxszal, n8n webhookra küldve.
 11. **Deploy:** Hetzner + Nginx (cache, gzip/brotli), `teszt.zynai.hu` DNS, GA4-események.
 12. **Valós adat:** a 3. fejezet szkriptjének lefuttatása a 30 munkakörre, kézi átnézés, seedelés, élesítés.

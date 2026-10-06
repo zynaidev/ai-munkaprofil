@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "konyvelo",
   "nev": "Könyvelő",
   "aliasok": [
@@ -21,7 +21,7 @@
     "43-3031.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "könyvelők",
   "fekek": {
     "fizikai": {

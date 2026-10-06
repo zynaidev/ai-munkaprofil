@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "penztaros",
   "nev": "Pénztáros",
   "aliasok": [
@@ -18,7 +18,7 @@
     "41-2011.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "pénztárosok",
   "fekek": {
     "fizikai": {

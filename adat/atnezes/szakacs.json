@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "szakacs",
   "nev": "Szakács",
   "aliasok": [
@@ -18,7 +18,7 @@
     "35-2012.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "szakácsok",
   "fekek": {
     "fizikai": {

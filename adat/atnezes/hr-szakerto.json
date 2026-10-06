@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "hr-szakerto",
   "nev": "HR-szakértő",
   "aliasok": [
@@ -19,7 +19,7 @@
     "13-1071.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "HR-szakértők",
   "fekek": {
     "fizikai": {

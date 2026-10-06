@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "pr-szakember",
   "nev": "PR-szakember",
   "aliasok": [
@@ -21,7 +21,7 @@
     "27-3031.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "PR-szakemberek",
   "fekek": {
     "fizikai": {

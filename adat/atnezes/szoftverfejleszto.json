@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "szoftverfejleszto",
   "nev": "Szoftverfejlesztő",
   "aliasok": [
@@ -18,7 +18,7 @@
     "15-1252.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "szoftverfejlesztők",
   "fekek": {
     "fizikai": {

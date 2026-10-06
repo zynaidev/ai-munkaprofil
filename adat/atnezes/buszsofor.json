@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "buszsofor",
   "nev": "Buszsofőr",
   "aliasok": [
@@ -17,7 +17,7 @@
     "53-3052.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "buszsofőrök",
   "fekek": {
     "fizikai": {

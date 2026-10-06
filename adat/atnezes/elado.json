@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "elado",
   "nev": "Eladó",
   "aliasok": [
@@ -17,7 +17,7 @@
     "41-2031.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "eladók",
   "fekek": {
     "fizikai": {

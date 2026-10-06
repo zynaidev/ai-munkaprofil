@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "fogorvos",
   "nev": "Fogorvos",
   "aliasok": [
@@ -17,7 +17,7 @@
     "29-1021.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "fogorvosok",
   "fekek": {
     "fizikai": {

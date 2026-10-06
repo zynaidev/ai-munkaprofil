@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "rendszergazda",
   "nev": "Rendszergazda",
   "aliasok": [
@@ -17,7 +17,7 @@
     "15-1244.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "rendszergazdák",
   "fekek": {
     "fizikai": {

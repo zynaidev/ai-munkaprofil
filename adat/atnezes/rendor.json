@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "rendor",
   "nev": "Rendőr",
   "aliasok": [
@@ -17,7 +17,7 @@
     "33-3051.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "rendőrök",
   "fekek": {
     "fizikai": {

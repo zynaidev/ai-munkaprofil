@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "ingatlanugynok",
   "nev": "Ingatlanügynök",
   "aliasok": [
@@ -18,7 +18,7 @@
     "41-9021.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "ingatlanügynökök",
   "fekek": {
     "fizikai": {

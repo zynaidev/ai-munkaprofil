@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "recepcios",
   "nev": "Recepciós",
   "aliasok": [
@@ -17,7 +17,7 @@
     "43-4171.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "recepciósok",
   "fekek": {
     "fizikai": {

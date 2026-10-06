@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "tuzolto",
   "nev": "Tűzoltó",
   "aliasok": [
@@ -16,7 +16,7 @@
     "33-2011.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "tűzoltók",
   "fekek": {
     "fizikai": {

@@ -7,20 +7,21 @@ import { szamolProfil } from './scoring.ts';
 import { finomitasbol } from './finomitas.ts';
 
 test('előre megírt megosztási szöveg a copy szerint, a tényleges adatokkal', () => {
-  const m = getMunkakor('ugyfelszolgalati-munkatars');
+  const m = getMunkakor('adatrogzito');
   assert.ok(m);
   assert.equal(
     megosztasSzoveg(szamolProfil(m)),
-    'Megcsináltam az AI-Munkaprofilt: Automatizálódó vagyok (4. szint a 4-ből). A heti 40 órámból 19 óra kiváltható, 11 óra marad csak az enyém. Te hova esel?',
+    'Megcsináltam az AI-Munkaprofilt: Automatizálódó vagyok (4. szint a 4-ből). A heti 40 órámból 22 óra kiváltható, 4 óra marad csak az enyém. Te hova esel?',
   );
   const v = getMunkakor('villanyszerelo');
   assert.ok(v);
   assert.equal(
     megosztasSzoveg(szamolProfil(v)),
-    'Megcsináltam az AI-Munkaprofilt: Védett vagyok (1. szint a 4-ből). A heti 40 órámból 5 óra kiváltható, 29 óra marad csak az enyém. Te hova esel?',
+    'Megcsináltam az AI-Munkaprofilt: Védett vagyok (1. szint a 4-ből). A heti 40 órámból 2 óra kiváltható, 35 óra marad csak az enyém. Te hova esel?',
   );
-  // a finomított profil saját számait mondja
-  const finomitott = szamolProfil(m, finomitasbol({ telefon: 'sok' }));
+  // a finomított profil saját számait mondja (az adatrögzítőnek írásbeli csatornája van)
+  const finomitott = szamolProfil(m, finomitasbol({ irasos: 'sok' }));
+  assert.notDeepEqual(finomitott.orak, szamolProfil(m).orak);
   assert.match(megosztasSzoveg(finomitott), new RegExp(`${finomitott.orak.kivalthato} óra kiváltható`));
 });
 

@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "vagyonor",
   "nev": "Vagyonőr",
   "aliasok": [
@@ -19,7 +19,7 @@
     "33-9032.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "vagyonőrök",
   "fekek": {
     "fizikai": {

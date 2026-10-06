@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "hazi-gondozo",
   "nev": "Házi gondozó",
   "aliasok": [
@@ -17,7 +17,7 @@
     "31-1121.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "házi gondozók",
   "fekek": {
     "fizikai": {

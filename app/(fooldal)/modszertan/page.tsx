@@ -18,23 +18,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/modszertan" },
 };
 
-const k = KONSTANSOK.kuszob;
-
-// A szint eldöntése: ebben a sorrendben, az első teljesülő feltétel dönt (lib/scoring.ts profilTipus)
+// A szint eldöntése (lib/scoring.ts profilTipus), közérthetően, számok nélkül. A küszöbök csak a kódban vannak.
 const DONTES = [
-  {
-    t: TIPUSOK.vedett,
-    feltetel: `az emberi mag aránya legalább ${tizedes(k.vedettEmberi)}, vagy a fizikai jelenlét fékje a legerősebb (${k.vedettFizikaiFek})`,
-  },
-  {
-    t: TIPUSOK.automatizalodo,
-    feltetel: `a kiváltható arány legalább ${tizedes(k.atalakuloKivaltas)}, és a fékindex ${tizedes(k.atalakuloMaxFek)} alatt van`,
-  },
-  {
-    t: TIPUSOK.felerosodo,
-    feltetel: `a felgyorsuló arány legalább ${tizedes(k.felerosodoFelerosites)}, és a kiváltható arány ${tizedes(k.felerosodoMaxKivaltas)} alatt van`,
-  },
-  { t: TIPUSOK.atalakulo, feltetel: "minden más eset" },
+  { t: TIPUSOK.vedett, feltetel: "ha a munkát az AI összességében kevéssé érinti – vagy azért, mert a feladatok nagy része kívül esik rajta, vagy mert erős fékek lassítják" },
+  { t: TIPUSOK.automatizalodo, feltetel: "ha a munkát az AI erősen érinti, és az érintett részben jelentős a kiváltás (nem csak gyorsítás)" },
+  { t: TIPUSOK.atalakulo, feltetel: "ha a munkát az AI jelentősen érinti, de az érintett rész inkább felgyorsul, vagy a kitettség közepesen erős" },
+  { t: TIPUSOK.felerosodo, feltetel: "minden más esetben: az AI érezhetően jelen van, de főleg gyorsít és segít" },
 ];
 
 // Kitalált példa: egy 40 órás munkakör, amelynek első feladatára a munkaidő negyede jut
@@ -131,16 +120,22 @@ export default function ModszertanOldal() {
 
         <h3 className="mt-12 font-display text-h3 font-medium text-primary">Hogyan dől el a szint?</h3>
         <p className="mt-4 text-torzs text-secondary">
-          A feltételeket ebben a sorrendben nézzük, és az első teljesülő dönt. Az arányok a heti órákhoz viszonyítanak:
-          az 1 az összes órát jelenti. A fékindexről lent, a számításnál olvashatsz.
+          Két dolgot nézünk. Az egyik, hogy a heti munkaidődből mekkora részt érint az AI – ezt a fékek csökkentik,
+          mert ahol erős a felelősség, a szabályozás, a fizikai jelenlét vagy az ügyfelek bizalma, ott a változás
+          lassabb. A másik, hogy az érintett részből mennyi kiváltás és mennyi csak gyorsítás. A szinteket ebben a
+          sorrendben nézzük, és az első illeszkedő dönt:
         </p>
         <ol className="mt-6 list-decimal space-y-3 pl-6 text-torzs text-secondary marker:text-secondary">
           {DONTES.map(({ t, feltetel }) => (
             <li key={t.kulcs}>
-              <span className={kiemelt}>{t.cimke}</span> ({t.szint}. szint): {feltetel}.
+              <span className={kiemelt}>{t.cimke}</span> ({t.szint}. szint) – {feltetel}.
             </li>
           ))}
         </ol>
+        <p className="mt-6 text-torzs text-secondary">
+          A határokat szakmai becsléssel állítottuk be, hogy a szintek értelmesen különítsék el a munkaköröket. Ez nem
+          tudományos mérés eredménye: ha jobb adatunk lesz, a határokat is pontosítjuk.
+        </p>
       </Szekcio>
 
       <Szekcio id="adatok" sorszam="03" cimke="Adatok" cim="Honnan jönnek az adatok" alt>
@@ -235,7 +230,7 @@ export default function ModszertanOldal() {
           <li>
             <span className={kiemelt}>Fékek</span>: fizikai jelenlét, felelősség, szabályozás és ügyfélbizalom,
             mindegyik 0–3 skálán (0: nem fékez, 3: erősen fékez). A fékindex a négy érték összege osztva 12-vel. A ma
-            reálisan érintett órák = a ma kiváltható órák × (1 − {tizedes(KONSTANSOK.fekSuly)} × fékindex).
+            reálisan érintett órák = a ma kiváltható órák × (1 − {tizedes(KONSTANSOK.FEK_SULY)} × fékindex).
           </li>
           <li>
             <span className={kiemelt}>Finomítás</span>: ha megadod, mennyit dolgozol telefonon, személyesen vagy

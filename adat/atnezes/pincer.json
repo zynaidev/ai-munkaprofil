@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "pincer",
   "nev": "Pincér",
   "aliasok": [
@@ -17,7 +17,7 @@
     "35-3031.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "pincérek",
   "fekek": {
     "fizikai": {

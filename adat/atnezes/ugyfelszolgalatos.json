@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "ugyfelszolgalatos",
   "nev": "Ügyfélszolgálatos",
   "aliasok": [
@@ -19,7 +19,7 @@
     "43-4051.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "ügyfélszolgálatosok",
   "fekek": {
     "fizikai": {

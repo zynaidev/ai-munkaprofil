@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "grafikus",
   "nev": "Grafikus",
   "aliasok": [
@@ -18,7 +18,7 @@
     "27-1024.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "grafikusok",
   "fekek": {
     "fizikai": {

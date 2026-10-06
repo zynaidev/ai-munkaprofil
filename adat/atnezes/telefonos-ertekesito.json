@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "telefonos-ertekesito",
   "nev": "Telefonos értékesítő",
   "aliasok": [
@@ -19,7 +19,7 @@
     "41-9041.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "telefonos értékesítők",
   "fekek": {
     "fizikai": {

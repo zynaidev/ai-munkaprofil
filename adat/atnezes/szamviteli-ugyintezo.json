@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "szamviteli-ugyintezo",
   "nev": "Számviteli ügyintéző",
   "aliasok": [
@@ -18,7 +18,7 @@
     "43-3031.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "számviteli ügyintézők",
   "fekek": {
     "fizikai": {

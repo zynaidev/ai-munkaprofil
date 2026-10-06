@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "ujsagiro",
   "nev": "Újságíró",
   "aliasok": [
@@ -19,7 +19,7 @@
     "27-3023.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "újságírók",
   "fekek": {
     "fizikai": {

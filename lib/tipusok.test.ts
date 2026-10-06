@@ -26,18 +26,9 @@ test('szint-feliratok', () => {
   assert.equal(szintAlt(TIPUSOK.atalakulo), '3. szint a 4-ből: Átalakuló');
 });
 
-test('a döntési ágak → kulcsok, változatlan logikával és sorrendben', () => {
-  const fek0 = { fizikai: 0, felelosseg: 0, szabalyozas: 0, bizalom: 0 };
-  const fekEros = { fizikai: 0, felelosseg: 3, szabalyozas: 3, bizalom: 3 };
-  // 1. ág: emberi arány ≥ 50% vagy fizikai fék = 3
-  assert.equal(profilTipus(0.1, 0.1, 0.8, fek0), 'vedett');
-  assert.equal(profilTipus(0.6, 0.2, 0.2, { ...fek0, fizikai: 3 }), 'vedett');
-  // 2. ág: kiváltás ≥ 35% és fékindex < 0,5
-  assert.equal(profilTipus(0.5, 0.3, 0.2, fek0), 'automatizalodo');
-  // 3. ág: felerősítés ≥ 40% és kiváltás < 25%
-  assert.equal(profilTipus(0.2, 0.5, 0.3, fek0), 'felerosodo');
-  // 4. ág: minden más (pl. sok kiváltás, de erős fékek)
-  assert.equal(profilTipus(0.5, 0.3, 0.2, fekEros), 'atalakulo');
+test('mind a négy szint elérhető a P–K szabálysorral, a tipusok.ts szintjével', () => {
+  const kapott = [profilTipus(0.1, 0), profilTipus(0.3, 0), profilTipus(0.4, 0), profilTipus(0.6, 0.6)];
+  assert.deepEqual(kapott.map((k) => TIPUSOK[k].szint), [1, 2, 3, 4]);
 });
 
 test('a Profil szint mezője a tipusok.ts szintje', () => {

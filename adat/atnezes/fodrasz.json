@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "fodrasz",
   "nev": "Fodrász",
   "aliasok": [
@@ -17,7 +17,7 @@
     "39-5012.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "fodrászok",
   "fekek": {
     "fizikai": {

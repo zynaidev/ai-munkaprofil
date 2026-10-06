@@ -1,20 +1,27 @@
 // Futtatás: npm test
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import path from 'node:path';
+import { nyersKereso, nyersMunkakorok } from './tesztSegedek.ts';
 import { adatVerzioFelirat, ellenorizMunkakor, getAdatVerzio, getIndexelhetoSlugok, getMunkakor, getOsszesSlug } from './data.ts';
 
 test('létező slug: a munkakör betöltődik, minden mezővel', () => {
   const m = getMunkakor('konyvelo');
   assert.ok(m);
+  // az elvárt értékek a nyers fájlból, a betöltőtől függetlenül
+  const nyers = nyersMunkakorok().find((x) => x.slug === 'konyvelo');
+  assert.ok(nyers);
   assert.equal(m.nev, 'Könyvelő');
   assert.equal(m.hetiOra, 40);
-  assert.equal(m.fekek.szabalyozas, 3);
+  assert.deepEqual(m.fekek, nyers.fekek);
   assert.ok(m.fekIndoklas.bizalom.length > 0);
   assert.ok(m.teendo.length > 0);
-  assert.equal(m.indexelheto, true);
-  assert.equal(m.adatVerzio, 'fejlesztoi');
-  assert.equal(m.feladatok.length, 4);
+  assert.equal(m.indexelheto, nyers.indexelheto);
+  assert.equal(m.adatVerzio, nyers.adatVerzio);
+  assert.equal(m.feladatok.length, (nyers.feladatok as unknown[]).length);
+  assert.ok(m.feladatok.length > 0);
 });
 
 test('ismeretlen slug → null', () => {
@@ -30,17 +37,44 @@ test('érvénytelen slugok és path traversal → null', () => {
 });
 
 test('összes slug a kereső indexéből', () => {
-  assert.deepEqual(getOsszesSlug(), ['konyvelo', 'szoftverfejleszto', 'ugyfelszolgalati-munkatars', 'villanyszerelo']);
+  const vart = nyersKereso().map((k) => k.slug);
+  assert.ok(vart.length > 0);
+  assert.deepEqual(getOsszesSlug(), vart);
 });
 
 test('adatverzió az adatból, olvasható felirattal', () => {
-  assert.equal(getAdatVerzio(), 'fejlesztoi');
+  const verziok = [...new Set(nyersMunkakorok().map((m) => m.adatVerzio))];
+  assert.equal(verziok.length, 1);
+  assert.equal(getAdatVerzio(), verziok[0]);
   assert.equal(adatVerzioFelirat('fejlesztoi'), 'fejlesztői');
   assert.equal(adatVerzioFelirat('2026-Q4'), '2026-Q4');
 });
 
-test('indexelhető slugok', () => {
-  assert.deepEqual(getIndexelhetoSlugok(), ['konyvelo', 'ugyfelszolgalati-munkatars']);
+test('indexelhető slugok: a valós adatban a fájlok indexelheto mezője szerint, a kereső sorrendjében', () => {
+  const zaszlo = new Map(nyersMunkakorok().map((m) => [m.slug, m.indexelheto]));
+  const vart = nyersKereso().map((k) => k.slug).filter((s) => zaszlo.get(s) === true);
+  assert.deepEqual(getIndexelhetoSlugok(), vart);
+});
+
+test('indexelhető slugok: valós fájlokból épített mintán csak a megjelöltek, a kereső sorrendjében', () => {
+  // A valós adatban jelenleg nincs indexelhető munkakör, ezért a pozitív ágat egy ideiglenes mintán is ellenőrizzük.
+  const kereso = nyersKereso().slice(0, 3);
+  const munkakorok = new Map(nyersMunkakorok().map((m) => [m.slug, m]));
+  const minta = mkdtempSync(path.join(tmpdir(), 'munkaprofil-'));
+  const eredeti = process.cwd();
+  try {
+    mkdirSync(path.join(minta, 'public', 'data'), { recursive: true });
+    writeFileSync(path.join(minta, 'public', 'data', 'kereso.json'), JSON.stringify(kereso));
+    kereso.forEach((k, i) => {
+      const m = { ...munkakorok.get(k.slug), indexelheto: i !== 1 }; // az 1. és a 3. indexelhető
+      writeFileSync(path.join(minta, 'public', 'data', `${k.slug}.json`), JSON.stringify(m));
+    });
+    process.chdir(minta);
+    assert.deepEqual(getIndexelhetoSlugok(), [kereso[0].slug, kereso[2].slug]);
+  } finally {
+    process.chdir(eredeti);
+    rmSync(minta, { recursive: true, force: true });
+  }
 });
 
 test('opcionális „tobbes”: hiányzó, üres és kitöltött is érvényes; nem szöveg hiba', () => {

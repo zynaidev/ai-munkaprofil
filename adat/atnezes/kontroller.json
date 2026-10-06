@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "kontroller",
   "nev": "Kontroller",
   "aliasok": [
@@ -17,7 +17,7 @@
     "13-2011.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "kontrollerek",
   "fekek": {
     "fizikai": {

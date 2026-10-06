@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "banki-ugyintezo",
   "nev": "Banki ügyintéző",
   "aliasok": [
@@ -20,7 +20,7 @@
     "43-4131.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "banki ügyintézők",
   "fekek": {
     "fizikai": {

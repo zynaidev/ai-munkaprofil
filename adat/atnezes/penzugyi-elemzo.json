@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "penzugyi-elemzo",
   "nev": "Pénzügyi elemző",
   "aliasok": [
@@ -18,7 +18,7 @@
     "13-2051.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "pénzügyi elemzők",
   "fekek": {
     "fizikai": {

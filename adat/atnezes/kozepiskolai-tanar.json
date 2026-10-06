@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "kozepiskolai-tanar",
   "nev": "Középiskolai tanár",
   "aliasok": [
@@ -15,7 +15,7 @@
     "25-2031.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "középiskolai tanárok",
   "fekek": {
     "fizikai": {

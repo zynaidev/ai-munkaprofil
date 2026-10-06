@@ -1,20 +1,30 @@
 // Futtatás: npm test
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
 import { metaLeiras, nevelo, ogCim, ogLeiras, oldalUrl, seoCim, TARGYESET } from './seo.ts';
 import { getIndexelhetoSlugok, getMunkakor } from './data.ts';
 import { szamolProfil } from './scoring.ts';
 import { TIPUSOK } from './tipusok.ts';
+import { csvIndexelheto, csvSorok, nyersMunkakorok } from './tesztSegedek.ts';
 
-test('a szótárban benne van minden indexelhető munkakör (munkakorok.csv és public/data)', () => {
-  const csv = readFileSync(new URL('../adat/munkakorok.csv', import.meta.url), 'utf8').trim().split(/\r?\n/);
-  const fejlec = csv[0].split(',');
-  const iSlug = fejlec.indexOf('slug');
-  const iIdx = fejlec.indexOf('indexelheto');
-  const csvIndexelhetok = csv.slice(1).map((s) => s.split(',')).filter((s) => s[iIdx] === 'true').map((s) => s[iSlug]);
-  assert.ok(csvIndexelhetok.length > 0);
-  for (const slug of [...csvIndexelhetok, ...getIndexelhetoSlugok()]) assert.ok(TARGYESET[slug], slug);
+test('minden munkakörnek van tárgyesetes alakja a címhez (tobbes vagy szótár), az indexelhetőknek különösen', () => {
+  // Szigorúbb a korábbinál: nem csak az indexelhetőkre, hanem az összes munkakörre ellenőrzi,
+  // mert a valós adatban jelenleg nincs indexelhető munkakör, de bármelyik azzá válhat.
+  const csv = csvSorok();
+  const munkakorok = nyersMunkakorok();
+  assert.ok(csv.length > 0 && munkakorok.length > 0);
+  const csvTobbes = new Map(csv.map((s) => [s.slug, s.tobbes ?? '']));
+  for (const m of munkakorok) {
+    assert.ok(m.tobbes?.trim() || TARGYESET[m.slug], `nincs tárgyesetes alak: ${m.slug}`);
+    assert.match(seoCim(m.slug, m.nev, m.tobbes), /^Elveszi az AI az? .+ munkáját\? \| AI-Munkaprofil$/, m.slug);
+    // a fájl és a forrás-CSV ugyanazt a tobbes-alakot adja
+    if (csvTobbes.get(m.slug)) assert.equal(m.tobbes, csvTobbes.get(m.slug), m.slug);
+  }
+  for (const s of csv.filter((r) => csvIndexelheto(r.indexelheto))) assert.ok(s.tobbes || TARGYESET[s.slug], s.slug);
+  for (const slug of getIndexelhetoSlugok()) {
+    const m = munkakorok.find((x) => x.slug === slug);
+    assert.ok(m?.tobbes || TARGYESET[slug], slug);
+  }
 });
 
 test('SEO-cím tárgyesettel és helyes névelővel', () => {

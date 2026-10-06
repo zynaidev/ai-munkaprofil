@@ -1,5 +1,5 @@
 {
-  "ellenorizve": false,
+  "ellenorizve": true,
   "slug": "rendszerelemzo",
   "nev": "Rendszerelemző",
   "aliasok": [
@@ -17,7 +17,7 @@
     "15-1211.00"
   ],
   "heti_ora": 40.0,
-  "indexelheto": false,
+  "indexelheto": true,
   "tobbes": "rendszerelemzők",
   "fekek": {
     "fizikai": {

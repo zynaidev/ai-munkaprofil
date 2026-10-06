@@ -41,7 +41,8 @@ test('oda-vissza: írás → olvasás', () => {
 });
 
 test('elérhető csatornák és szűkítés', () => {
-  const m = getMunkakor('ugyfelszolgalati-munkatars');
+  // telefonos és írásbeli csatornájú valós munkakör
+  const m = getMunkakor('telefonos-ertekesito');
   assert.ok(m);
   assert.deepEqual(elerhetoCsatornak(m.feladatok), ['telefon', 'irasos']);
   assert.deepEqual(elerhetoCsatornak([{}, { csatorna: undefined }]), []);
@@ -54,8 +55,8 @@ test('kérdések száma szóval', () => {
   assert.equal(kerdesSzamSzo(3), 'Három');
 });
 
-test('telefon „A munkám nagy része” → kevesebb „Már ma” óra (ügyfélszolgálat)', () => {
-  const m = getMunkakor('ugyfelszolgalati-munkatars');
+test('telefon „A munkám nagy része” → kevesebb „Már ma” óra (telefonos értékesítő)', () => {
+  const m = getMunkakor('telefonos-ertekesito');
   assert.ok(m);
   const alap = szamolProfil(m);
   const sok = szamolProfil(m, finomitasbol(olvasUrl('?telefon=sok')));
