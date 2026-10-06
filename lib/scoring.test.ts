@@ -1,4 +1,4 @@
-// Futtatás: node --experimental-strip-types --test scoring.test.ts
+// Futtatás: npm test
 // A mintaszámok ILLUSZTRATÍVAK – a logikát tesztelik, nem valós kutatási adatok.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
