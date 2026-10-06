@@ -1,7 +1,7 @@
 # AI-Munkaprofil – projektkontextus a Claude ügynöknek
 
 ## Mi ez
-Magyar nyelvű, nyilvános webes eszköz: a felhasználó beírja a munkakörét, és megkapja az AI-Munkaprofilját (típus + heti órák bontása + időhorizont + fékerők + teendő). A ZynAI (zynai.hu) lead magnetje. Külön alkalmazás a `teszt.zynai.hu` aldomainen; a fő weboldaltól független.
+Magyar nyelvű, nyilvános webes eszköz: a felhasználó beírja a munkakörét, és megkapja az AI-Munkaprofilját (típus + heti órák bontása + időhorizont + fékerők + teendő). A ZynAI (zynai.hu) lead magnetje. Külön alkalmazás a `ai-munkaprofil.zynai.hu` aldomainen; a fő weboldaltól független.
 
 ## Stack
 - Next.js (App Router), TypeScript (strict), Tailwind CSS
@@ -42,7 +42,7 @@ components/                UI-komponensek
 lib/scoring.ts             pontozás (tiszta függvények)
 lib/tipusok.ts             a négy szint: név, leírás, szint, színtoken
 lib/data.ts                JSON betöltés, típusok
-public/data/               generált adat
+public/data/               generált adat (csak <slug>.json és kereso.json; leírás: adat/ADATOK.md)
 adat/                      Python pipeline (nem része a Next buildnek)
 ```
 

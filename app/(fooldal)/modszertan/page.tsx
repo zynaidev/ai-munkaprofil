@@ -8,6 +8,7 @@ import Szekcio from "@/components/Szekcio";
 import { adatVerzioFelirat, getAdatVerzio } from "@/lib/data";
 import { SZORZO } from "@/lib/finomitas";
 import { ora, tizedes } from "@/lib/format";
+import { zynaiUrl } from "@/lib/linkek";
 import { KONSTANSOK, szamolProfil, type Munkakor } from "@/lib/scoring";
 import { SZINTEK, TIPUSOK } from "@/lib/tipusok";
 
@@ -145,13 +146,20 @@ export default function ModszertanOldal() {
         <dl className="mt-8 border-b border-hairline">
           <div className={sor}>
             <dt className={kiemelt}>
-              <a href="https://www.onetcenter.org/" className={kulsoLink}>
-                O*NET
+              <a href="https://www.onetcenter.org/database.html" className={kulsoLink}>
+                O*NET 31.0 Database
               </a>{" "}
-              – amerikai foglalkozási adatbázis
+              – az amerikai munkaügyi minisztérium (U.S. Department of Labor, Employment and Training Administration,
+              USDOL/ETA) foglalkozási adatbázisa
             </dt>
             <dd className="mt-1 text-torzs text-secondary">
-              A feladatok leírása (Task Statements), valamint a feladatok gyakorisága és fontossága (Task Ratings).
+              Az O*NET-adatbázisból a feladatok leírását (Task Statements), valamint a feladatok gyakoriságát és
+              fontosságát (Task Ratings) használjuk. Licenc:{" "}
+              <a href="https://creativecommons.org/licenses/by/4.0/" className={kulsoLink}>
+                CC BY 4.0
+              </a>
+              . Az O*NET-adatokat átcsoportosítottuk és módosítottuk; ezeket a módosításokat az USDOL/ETA nem hagyta
+              jóvá.
             </dd>
           </div>
           <div className={sor}>
@@ -163,24 +171,36 @@ export default function ModszertanOldal() {
             </dt>
             <dd className="mt-1 text-torzs text-secondary">
               Feladatonként megmondja, mennyire érintik a nagy nyelvi modellek (E0, E1 és E2 kitettségi címkék).
+              Adatforrás:{" "}
+              <a href="https://github.com/openai/GPTs-are-GPTs" className={kulsoLink}>
+                github.com/openai/GPTs-are-GPTs
+              </a>
+              , MIT licenc.
             </dd>
           </div>
           <div className={sor}>
             <dt className={kiemelt}>
-              <a href="https://www.anthropic.com/economic-index" className={kulsoLink}>
+              <a href="https://huggingface.co/datasets/Anthropic/EconomicIndex" className={kulsoLink}>
                 Anthropic Economic Index
               </a>
             </dt>
             <dd className="mt-1 text-torzs text-secondary">
               Valós AI-használat alapján feladatonként azt, hogy az AI inkább elvégzi a feladatot (kiváltás), vagy
-              segít benne (felerősítés).
+              segít benne (felerősítés). Licenc: CC BY 4.0.
             </dd>
           </div>
           <div className={sor}>
             <dt className={kiemelt}>Megfeleltetési táblák</dt>
             <dd className="mt-1 text-torzs text-secondary">
-              A FEOR-08 ↔ ISCO-08 (KSH) és az ISCO-08 ↔ amerikai SOC (BLS) táblák kötik össze a magyar munkaköröket az
-              amerikai adatokkal.
+              A{" "}
+              <a href="https://www.ksh.hu/docs/osztalyozasok/feor/fordkulcs_feor_isco_hu.pdf" className={kulsoLink}>
+                FEOR-08 ↔ ISCO-08 (KSH)
+              </a>{" "}
+              és az{" "}
+              <a href="https://www.bls.gov/soc/" className={kulsoLink}>
+                ISCO-08 ↔ amerikai SOC (BLS)
+              </a>{" "}
+              táblák kötik össze a magyar munkaköröket az amerikai adatokkal.
             </dd>
           </div>
         </dl>
@@ -205,8 +225,16 @@ export default function ModszertanOldal() {
           </li>
         </ul>
         <p className="mt-8 text-xs leading-[1.8] text-secondary">
-          This site includes information from the O*NET Database by the U.S. Department of Labor, Employment and
-          Training Administration (USDOL/ETA). Used under the CC BY 4.0 license. O*NET® is a trademark of USDOL/ETA.
+          This site includes information from the{" "}
+          <a href="https://www.onetcenter.org/database.html" className={kulsoLink}>
+            O*NET 31.0 Database
+          </a>{" "}
+          by the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA). Used under the{" "}
+          <a href="https://creativecommons.org/licenses/by/4.0/" className={kulsoLink}>
+            CC BY 4.0
+          </a>{" "}
+          license. ZynAI has modified all or some of this information. USDOL/ETA has not approved, endorsed, or tested these modifications. O*NET® is a trademark of
+          USDOL/ETA.
         </p>
       </Szekcio>
 
@@ -214,8 +242,8 @@ export default function ModszertanOldal() {
         <ol className="list-decimal space-y-4 pl-6 text-torzs text-secondary marker:text-secondary">
           <li>
             <span className={kiemelt}>A feladat heti órája</span> = heti óra × a feladat időaránya. Az időarány az
-            O*NET gyakoriságából (log-skálán) és fontosságából jön, a kiegészítő feladatok fél súllyal. Ez közelítés:
-            az O*NET nem méri közvetlenül, mennyi időt töltesz egy feladattal.
+            O*NET-adatbázis gyakorisági (log-skálán) és fontossági értékeiből jön, a kiegészítő feladatok fél
+            súllyal. Ez közelítés: az O*NET-adatbázis nem méri közvetlenül, mennyi időt töltesz egy feladattal.
           </li>
           <li>
             <span className={kiemelt}>Kiváltható</span> = a feladat órája × kitettség × kiváltási arány.{" "}
@@ -279,11 +307,15 @@ export default function ModszertanOldal() {
 
       <Szekcio id="kapcsolat" sorszam="06" cimke="Kapcsolat" cim="Kérdésed van?">
         <p className="text-torzs text-secondary">
-          Ha kérdésed van a módszertanról, vagy hibát találsz egy munkakörnél, írj nekünk a{" "}
-          <a href="https://zynai.hu" className={kulsoLink}>
+          Ha kérdésed van a módszertanról, vagy hibát találsz egy munkakörnél, írj nekünk:{" "}
+          <a href="mailto:info@zynai.hu" className={kulsoLink}>
+            info@zynai.hu
+          </a>
+          . Többet rólunk a{" "}
+          <a href={zynaiUrl("/", "modszertan-kapcsolat")} className={kulsoLink}>
             zynai.hu
           </a>{" "}
-          oldalon.
+          oldalon találsz.
         </p>
       </Szekcio>
     </main>

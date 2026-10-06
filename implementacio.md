@@ -15,7 +15,7 @@ Egy lépés = egy commit. Ha egy lépés elcsúszik, `git reset`, és a promptot
 
 ### 0. Előkészítés (kézi, ügynök nélkül)
 - Új Git-repo: `ai-munkaprofil`. Másold bele: `CLAUDE.md`, `README.md`, `landing-copy.md`, `implementacio.md`, `schema.sql`, `scoring.ts`, `scoring.test.ts`, és az `adat/` mappát.
-- DNS: `teszt.zynai.hu` A-rekord a Hetzner VPS IP-jére (élesítésig ráér, de a propagáció miatt érdemes most).
+- DNS: `ai-munkaprofil.zynai.hu` A-rekord a Hetzner VPS IP-jére (élesítésig ráér, de a propagáció miatt érdemes most).
 - n8n-ben hozz létre egy üres webhook workflow-t (`/webhook/munkaprofil-lead`), és jegyezd fel az URL-t. Generálj hozzá egy titkos kulcsot.
 - `.env.local` (git-ignorált):
   ```
@@ -156,13 +156,13 @@ Egy lépés = egy commit. Ha egy lépés elcsúszik, `git reset`, és a promptot
 
 ### 15. Docker és deploy
 **Prompt:**
-> Készíts többlépcsős `Dockerfile`-t a Next.js standalone kimenethez (Node 22 alpine, nem-root felhasználó, healthcheck), `docker-compose.yml`-t (a port csak localhoston, `.env` fájlból), és egy Nginx szerverblokk-mintát a `teszt.zynai.hu`-hoz: HTTPS (Let's Encrypt/certbot), gzip és brotli, hosszú cache a `/_next/static/` és `/data/` alatt, rövidebb az oldalakra, biztonsági fejlécek (CSP, HSTS, X-Content-Type-Options, Referrer-Policy). Írj egy `DEPLOY.md`-t a lépésekkel.
+> Készíts többlépcsős `Dockerfile`-t a Next.js standalone kimenethez (Node 22 alpine, nem-root felhasználó, healthcheck), `docker-compose.yml`-t (a port csak localhoston, `.env` fájlból), és egy Nginx szerverblokk-mintát a `ai-munkaprofil.zynai.hu`-hoz: HTTPS (Let's Encrypt/certbot), gzip és brotli, hosszú cache a `/_next/static/` és `/data/` alatt, rövidebb az oldalakra, biztonsági fejlécek (CSP, HSTS, X-Content-Type-Options, Referrer-Policy). Írj egy `DEPLOY.md`-t a lépésekkel.
 
-**Kész, ha…** a VPS-en `docker compose up -d` után a `https://teszt.zynai.hu` él, és a `/konyvelo` második betöltése cache-ből jön.
+**Kész, ha…** a VPS-en `docker compose up -d` után a `https://ai-munkaprofil.zynai.hu` él, és a `/konyvelo` második betöltése cache-ből jön.
 
 ### 16. Bekötés a fő oldalra (kézi)
 - A zynai.hu-ra csak egy link vagy CTA-blokk kerül („Elveszi az AI a munkádat? → Teszt”), beágyazott JS nélkül.
-- Search Console: új property a `teszt.zynai.hu`-ra, sitemap beküldése.
+- Search Console: új property a `ai-munkaprofil.zynai.hu`-ra, sitemap beküldése.
 
 ---
 
@@ -171,7 +171,7 @@ Egy lépés = egy commit. Ha egy lépés elcsúszik, `git reset`, és a promptot
 ### 17. Pipeline futtatása
 A `README.md` 3. fejezete szerint: forrásfájlok letöltése → `elokeszit` → `csoportosit` → **átnézés** → `export`. Kezdd az első 10 indexelhető munkakörrel, a többi jöhet fokozatosan.
 
-**Kész, ha…** a 30 munkakör átnézve, a `seed.sql` lefutott a Postgresen, a `public/data/` frissült, a `public/data/README.md`-ből kikerült az „illusztratív” jelölés.
+**Kész, ha…** a 30 munkakör átnézve, a `seed.sql` lefutott a Postgresen, a `public/data/` frissült, az `adat/ADATOK.md`-ből kikerült az „illusztratív” jelölés.
 
 ### 18. Adatellenőrzés (kézi, 30 perc)
 - Végignézed a 30 munkakör típusát: van-e nyilvánvalóan furcsa eredmény? Ha igen, előbb az átnézési fájlt (csoportosítás, fékek) javítsd, és csak végső esetben a `KONSTANSOK` küszöbeit.

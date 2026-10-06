@@ -74,8 +74,8 @@ test('meta- és OG-szövegek a copy szerint, a pontozás eredményéből', () =>
 });
 
 test('oldal-URL: záró perjel nélkül, alapértelmezés localhost', () => {
-  assert.equal(oldalUrl('https://teszt.zynai.hu/'), 'https://teszt.zynai.hu');
-  assert.equal(oldalUrl(' https://teszt.zynai.hu '), 'https://teszt.zynai.hu');
+  assert.equal(oldalUrl('https://ai-munkaprofil.zynai.hu/'), 'https://ai-munkaprofil.zynai.hu');
+  assert.equal(oldalUrl(' https://ai-munkaprofil.zynai.hu '), 'https://ai-munkaprofil.zynai.hu');
   assert.equal(oldalUrl(''), 'http://localhost:3000');
   assert.equal(oldalUrl(undefined), 'http://localhost:3000');
 });

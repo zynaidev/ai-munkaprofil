@@ -1,4 +1,5 @@
 import { adatVerzioFelirat, getAdatVerzio } from "@/lib/data";
+import { zynaiUrl } from "@/lib/linkek";
 import Container from "./Container";
 
 const link =
@@ -15,7 +16,7 @@ export default function Lablec({ becsles = true }: { becsles?: boolean }) {
       <Container className="py-10 text-kicsi leading-[1.8] text-secondary">
         <p>
           Készítette a ZynAI · AI-integráció magyar KKV-knak ·{" "}
-          <a href="https://zynai.hu" className={link}>
+          <a href={zynaiUrl("/", "lablec")} className={link}>
             zynai.hu
           </a>
         </p>

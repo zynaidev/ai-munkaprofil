@@ -1,3 +1,4 @@
+import { zynaiUrl } from "@/lib/linkek";
 import Container from "./Container";
 
 // Minimális fejléc: szöveges logó és link a fő oldalra. Nem sticky.
@@ -11,7 +12,7 @@ export default function Fejlec() {
           Zyn<span className="text-accent">AI</span>
         </a>
         <a
-          href="https://zynai.hu"
+          href={zynaiUrl("/", "fejlec")}
           className="inline-flex min-h-11 items-center font-mono text-xs text-secondary transition-colors hover:text-accent"
         >
           zynai.hu

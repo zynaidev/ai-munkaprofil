@@ -5,6 +5,7 @@ import Container from "@/components/Container";
 import Kereso from "@/components/Kereso";
 import PrimaryCta from "@/components/PrimaryCta";
 import SectionLabel from "@/components/SectionLabel";
+import { zynaiUrl } from "@/lib/linkek";
 import { SZINTEK } from "@/lib/tipusok";
 
 export const metadata: Metadata = {
@@ -167,7 +168,7 @@ export default function Home() {
                 <span className="font-medium text-primary">hol szabadul fel a legtöbb idő AI-val</span> – és hol nem éri
                 meg hozzányúlni.
               </p>
-              <PrimaryCta href="https://zynai.hu" className="mt-10">
+              <PrimaryCta href={zynaiUrl("/kapcsolatfelvetel", "kezdooldal-csapat")} className="mt-10">
                 Csapatelemzést kérek
               </PrimaryCta>
             </div>

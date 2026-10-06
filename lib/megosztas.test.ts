@@ -37,9 +37,9 @@ test('ha van „tobbes”, a megosztási szöveg a kérdéssel kezdődik; ha nin
 });
 
 test('megosztási URL-ek kódolva, a finomítás query-vel együtt', () => {
-  const u = 'https://teszt.zynai.hu/ugyfelszolgalati-munkatars?telefon=sok';
-  assert.equal(facebookUrl(u), 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fteszt.zynai.hu%2Fugyfelszolgalati-munkatars%3Ftelefon%3Dsok');
-  assert.equal(linkedinUrl(u), 'https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fteszt.zynai.hu%2Fugyfelszolgalati-munkatars%3Ftelefon%3Dsok');
+  const u = 'https://ai-munkaprofil.zynai.hu/ugyfelszolgalati-munkatars?telefon=sok';
+  assert.equal(facebookUrl(u), 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fai-munkaprofil.zynai.hu%2Fugyfelszolgalati-munkatars%3Ftelefon%3Dsok');
+  assert.equal(linkedinUrl(u), 'https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fai-munkaprofil.zynai.hu%2Fugyfelszolgalati-munkatars%3Ftelefon%3Dsok');
 });
 
 test('megosztott URL: a horgony (#…) nem kerül bele, a query igen', () => {

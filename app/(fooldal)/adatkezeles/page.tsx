@@ -1,7 +1,6 @@
 // Adatkezelési tájékoztató. A jogi keret (adatkezelő, általános tudnivalók, adattárolás és biztonság, érintetti
 // jogok, jogorvoslat, módosítás) a zynai.hu tájékoztatójából szó szerint jön; a kezelt adatok és az adattovábbítás
-// az AI-Munkaprofil tényleges működését írják le. A még eldöntendő részek (jogalap, megőrzési idő, hatály) TODO-val
-// jelölve, jogi átnézésre várnak.
+// az AI-Munkaprofil tényleges működését írják le. A szöveg jogi átnézésre vár (az oldalon látható címke jelzi).
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Container from "@/components/Container";
@@ -14,8 +13,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/adatkezeles" },
 };
 
-// A tájékoztató hatályba lépésének napja – egyetlen helyen. Az indulás napján itt kell kitölteni (pl. "2026. november 1.").
-const HATALYOS_DATUM = "TODO: az indulás napja";
+// A tájékoztató hatályba lépésének napja – egyetlen helyen; módosításkor itt kell átírni.
+const HATALYOS_DATUM = "2026. október 7.";
 
 const sor = "border-t border-hairline py-5";
 const kiemelt = "font-medium text-primary";
@@ -73,8 +72,8 @@ export default function AdatkezelesOldal() {
             Hatályos: {HATALYOS_DATUM} · GDPR · 2011. évi CXII. tv.
           </p>
           <p className="mt-6 max-w-2xl text-lead text-secondary">
-            Röviden: az AI-Munkaprofil nem kér és nem tárol rólad személyes adatot. Amit rögzítünk, azt alább pontosan
-            leírjuk.
+            Röviden: az AI-Munkaprofil nem kér tőled személyes adatot. Amit technikai okból rögzítünk, azt alább
+            pontosan leírjuk.
           </p>
           <p className="mt-6 font-mono text-cimke tracking-[0.14em] text-secondary uppercase">Jogi átnézésre vár</p>
         </div>
@@ -121,8 +120,10 @@ export default function AdatkezelesOldal() {
           >
             <p>
               Ha a keresőben nincs találat, és a gombbal jelzed a munkakört, rögzítjük a beírt szöveget (tisztítva,
-              legfeljebb 80 karakter) és az időpontot. Kérjük, ne írj bele személyes adatot. Az e-mail-címnek vagy
-              telefonszámnak tűnő szöveget nem rögzítjük. A jelzéshez IP-címet és böngészőazonosítót nem tárolunk.
+              legfeljebb 80 karakter), az időpontot és az adatverziót. Kérjük, ne írj bele személyes adatot. Az
+              e-mail-címnek vagy telefonszámnak tűnő szöveget nem rögzítjük. Az IP-címedet a jelzéshez tartósan nem
+              tároljuk: a túlterhelés elleni korláthoz legfeljebb 10 percig a szerver memóriájában van, és nem megy
+              tovább. Böngészőazonosítót nem rögzítünk.
             </p>
           </Adatkezeles>
           <Adatkezeles
@@ -132,8 +133,9 @@ export default function AdatkezelesOldal() {
             megorzes="12 hónap, utána csak összesítve, egyedi sorok nélkül."
           >
             <p>
-              Ha igennel vagy nemmel válaszolsz, a munkakört, a szintet, a válaszodat és az időpontot rögzítjük. IP-címet
-              és böngészőazonosítót ehhez sem tárolunk.
+              Ha igennel vagy nemmel válaszolsz, a munkakört, a szintet, a válaszodat, az időpontot és az adatverziót
+              rögzítjük. Az IP-címre itt is ugyanaz érvényes, mint a 3.1. pontban: tartósan nem tároljuk, legfeljebb 10
+              percig a memóriában van a túlterhelés elleni korláthoz, és nem megy tovább.
             </p>
           </Adatkezeles>
           <Adatkezeles
@@ -142,7 +144,10 @@ export default function AdatkezelesOldal() {
             jogalap="GDPR 6. cikk (1) bekezdés f) pont, jogos érdek (üzemeltetés és biztonság)."
             megorzes="30 nap."
           >
-            <p>A szerver üzemeltetési célból technikai naplót vezet (IP-cím, időpont).</p>
+            <p>
+              A szerver üzemeltetési célból technikai naplót vezet (IP-cím, időpont). A 3.1. és a 3.2. ponttal
+              ellentétben itt az IP-cím a naplóban tárolódik, a lent megadott ideig.
+            </p>
           </Adatkezeles>
         </ol>
         <h3 className="mt-10 font-display text-h3 font-medium text-primary">Amit nem gyűjtünk</h3>
@@ -163,8 +168,8 @@ export default function AdatkezelesOldal() {
       <Szekcio id="tarolas" sorszam="04" cimke="Biztonság" cim="Adattárolás és biztonság">
         <p className={torzs}>
           A weboldal és az érintett adatai az adatkezelő által üzemeltetett, dedikált virtuális privát szerveren (VPS)
-          kerülnek tárolásra. Az adatokat az Európai Unióban, az általunk bérelt szerveren tároljuk, az Európai Unión
-          kívülre nem továbbítjuk. A szerver országa: TODO [SZERVER ORSZÁGA].
+          kerülnek tárolásra. Az adatokat az Európai Unióban (Finnország), az általunk bérelt szerveren tároljuk, az
+          Európai Unión kívülre nem továbbítjuk. A szerver helye: Finnország (Helsinki).
         </p>
         <p className={`mt-6 ${kiemelt}`}>Alkalmazott biztonsági intézkedések:</p>
         <Felsorolas
@@ -203,12 +208,18 @@ export default function AdatkezelesOldal() {
             "Helyesbítési jog — GDPR 16. cikk",
             "Törléshez való jog — GDPR 17. cikk",
             "Adatkezelés korlátozásához való jog — GDPR 18. cikk",
-            "Adathordozhatósághoz való jog — GDPR 20. cikk",
             "Tiltakozáshoz való jog — GDPR 21. cikk",
-            "Hozzájárulás visszavonásának joga — bármikor, visszamenőleges hatály nélkül",
           ]}
         />
-        <p className={`mt-6 ${torzs}`}>Az adatkezelő a kérelmeket 30 napon belül megválaszolja.</p>
+        <p className={`mt-6 ${torzs}`}>
+          Mindhárom adatkezelés (3.1–3.3.) jogos érdeken alapul, ezért a jogos érdeken alapuló adatkezelés elleni
+          tiltakozás joga is megillet.
+        </p>
+        <p className={`mt-4 ${torzs}`}>
+          A beküldött jelzésekhez és visszajelzésekhez nem kapcsolunk azonosítót, ezért ezeket utólag nem tudjuk
+          személyhez kötni. Ilyenkor nem tudunk adatot kikeresni vagy törölni.
+        </p>
+        <p className={`mt-4 ${torzs}`}>Az adatkezelő a kérelmeket 30 napon belül megválaszolja.</p>
       </Szekcio>
 
       <Szekcio id="jogorvoslat" sorszam="07" cimke="Jogorvoslat" cim="Jogorvoslat" alt>

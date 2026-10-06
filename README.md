@@ -1,6 +1,6 @@
 # AI-Munkaprofil – MVP specifikáció
 
-Külön alkalmazás a `teszt.zynai.hu` aldomainen. A fő weboldalt nem érinti.
+Külön alkalmazás a `ai-munkaprofil.zynai.hu` aldomainen. A fő weboldalt nem érinti.
 
 ## Fájlok
 | Fájl | Mi ez |
@@ -11,7 +11,7 @@ Külön alkalmazás a `teszt.zynai.hu` aldomainen. A fő weboldalt nem érinti.
 | `landing-copy.md` | Oldalstruktúra és teljes magyar copy |
 | `schema.sql` | PostgreSQL séma (munkakör, feladat, cache, lead) |
 | `scoring.ts` | Pontozási logika, tiszta függvények, függőség nélkül |
-| `scoring.test.ts` | Tesztek illusztratív mintaadatokkal (`node --experimental-strip-types --test scoring.test.ts`) |
+| `lib/scoring.test.ts` | Pontozási tesztek beépített mintaadatokkal; a valós adatot a `lib/adat.test.ts` ellenőrzi (`npm test`) |
 | `adat/pipeline.py` | Adatfeldolgozó szkript: forrásadatok → átnézés → frontend JSON + `seed.sql` |
 | `adat/munkakorok.csv` | A 30 munkakör és O\*NET-SOC kódjaik, kézzel szerkeszthető |
 | `adat/test_pipeline.py` | A szkript tesztjei szintetikus mintaadatokkal (`python -m pytest -q`) |
@@ -66,7 +66,7 @@ Szintek (ebben a sorrendben):
 
 A küszöbök és súlyok (`P_VEDETT`, `P_ATALAKUL`, `P_AUTOMATIZ`, `K_AUTOMATIZ`, `FEK_SULY`) egy helyen, a `lib/scoring.ts` `KONSTANSOK` objektumában vannak. A `szamolProfil` a `szintMutatok` mezőben belső használatra visszaadja P-t és K-t (eloszlás-riport: `node --experimental-strip-types adat/eloszlas.mts`); a felhasználónak sosem jelenik meg pontszám vagy százalék, csak a szint. A küszöbök kalibrációja szakmai becslés, nem tudományos mérés; a módszertani oldal ezt számok nélkül, közérthetően írja le.
 
-**Tesztkimenet illusztratív mintaadatokkal:**
+**Tesztkimenet a `lib/scoring.test.ts` beépített mintaadataival** (nem a valós adat; a valós eloszlás: `adat/ADATOK.md`):
 | Munkakör | Szint · Típus | Kiváltható / Felgyorsul / Emberi | Visszanyert |
 |---|---|---|---|
 | Ügyfélszolgálati munkatárs | 4 · Automatizálódó | 19 / 10 / 11 ó | 4 ó |
@@ -138,7 +138,7 @@ Claude nélkül is futtatható (`--nincs-claude`): ekkor angol feladatnevek és 
 ```bash
 python pipeline.py export --verzio 2026-Q4
 ```
-→ `public/data/<slug>.json` (kb. 1 KB / munkakör), `public/data/kereso.json`, `seed.sql`. Az átnézetlen fájlok kimaradnak, a kitöltetlen mezőkre figyelmeztetés jön. A `seed.sql` upsertet használ, így újrafuttatható, és nem törli a leadeket.
+→ `public/data/<slug>.json` (kb. 1 KB / munkakör), `public/data/kereso.json`, `seed.sql`. Az adatok jelenlegi állapotának leírása: `adat/ADATOK.md` (szándékosan nem a `public/` alatt). Az átnézetlen fájlok kimaradnak, a kitöltetlen mezőkre figyelmeztetés jön. A `seed.sql` upsertet használ, így újrafuttatható, és nem törli a leadeket.
 
 **Fontos tulajdonság:** a csoportosítás nem torzítja az eredményt. A csoportértékek súlyozott átlagok, így a kiváltható / felgyorsuló / emberi órák összege pontosan ugyanaz, mint az összevonás előtt. Ezt a tesztek ellenőrzik.
 
@@ -166,7 +166,7 @@ python pipeline.py export --verzio 2026-Q4
 Minden lépés végén legyen működő, kipróbálható állapot.
 
 1. **Váz:** új Next.js (App Router, TypeScript, Tailwind) repo, a fő oldaltól külön. Másold be a `scoring.ts`-t és a tesztet a `lib/` mappába.
-2. **Adat:** Postgres a Hetzneren, `schema.sql` lefuttatása, a 4 illusztratív munkakör seedelése, hogy legyen min fejleszteni, amíg a valós adat elkészül.
+2. **Adat:** Postgres a Hetzneren, `schema.sql` lefuttatása és a valós adat seedelése (`seed.sql`). A fejlesztés eleje illusztratív mintaadattal indult; ma a `public/data/` az 50 valós munkakört tartalmazza (`adat/ADATOK.md`).
 3. **Adat bekötése:** a `pipeline.py export` kimenetét (`public/data/`) másold az app `public/data/` mappájába; a `seed.sql`-t futtasd a Postgresen.
 4. **Kezdőoldal és kereső:** autocomplete, és találat esetén átirányítás a `/[slug]` oldalra.
 5. **Eredményoldal:** típuskártya, 40 órás sávdiagram (kiváltható / felgyorsul / emberi), horizont-bontás, fékek, feladatlista az „emberi mag” kiemelésével, teendő szöveg.
@@ -175,7 +175,7 @@ Minden lépés végén legyen működő, kipróbálható állapot.
 8. **Megosztás:** OG-kép a típussal és a fő számokkal, Facebook- és LinkedIn-gomb, link másolása.
 9. **Módszertani oldal:** források, az órák képletei, a besorolás közérthető leírása (számok nélkül), korlátok, disclaimer.
 10. **Lead:** e-mail űrlap GDPR-checkboxszal, n8n webhookra küldve.
-11. **Deploy:** Hetzner + Nginx (cache, gzip/brotli), `teszt.zynai.hu` DNS, GA4-események.
+11. **Deploy:** Hetzner + Nginx (cache, gzip/brotli), `ai-munkaprofil.zynai.hu` DNS, GA4-események.
 12. **Valós adat:** a 3. fejezet szkriptjének lefuttatása a 30 munkakörre, kézi átnézés, seedelés, élesítés.
 
-A 12. lépés párhuzamosan is futhat az 1–11. lépéssel: az UI az illusztratív adatokkal elkészülhet, amíg a valós adat összeáll.
+A 12. lépés párhuzamosan futott az 1–11. lépéssel: az UI eleinte illusztratív mintaadattal készült, mostanra a valós adatra állt át.

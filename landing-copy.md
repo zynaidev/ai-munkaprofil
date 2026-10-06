@@ -5,7 +5,7 @@ Kapcsos zárójelben: dinamikus érték. Szögletes zárójelben: szerkesztői m
 
 ---
 
-## 1. KEZDŐOLDAL – `teszt.zynai.hu`
+## 1. KEZDŐOLDAL – `ai-munkaprofil.zynai.hu`
 
 ### Hero
 **Felcím:** AI-Munkaprofil · ingyenes, 1 perc
@@ -49,7 +49,7 @@ Kapcsos zárójelben: dinamikus érték. Szögletes zárójelben: szerkesztői m
 
 ---
 
-## 2. EREDMÉNYOLDAL – `teszt.zynai.hu/{slug}`
+## 2. EREDMÉNYOLDAL – `ai-munkaprofil.zynai.hu/{slug}`
 
 ### Felső blokk (hero – ez kerül a megosztási képre is)
 **Címke:** AI-Munkaprofil
@@ -112,9 +112,11 @@ Kapcsos zárójelben: dinamikus érték. Szögletes zárójelben: szerkesztői m
 **Előre megírt megosztási szöveg:**
 „Megcsináltam az AI-Munkaprofilt: {tipus} vagyok ({szint}. szint a 4-ből). A heti {hetiOra} órámból {kivalthato} óra kiváltható, {emberi} óra marad csak az enyém. Te hova esel?”
 
-[Példák az illusztratív fejlesztői adatokkal:]
-- „Megcsináltam az AI-Munkaprofilt: Automatizálódó vagyok (4. szint a 4-ből). A heti 40 órámból 19 óra kiváltható, 11 óra marad csak az enyém. Te hova esel?”
-- „Megcsináltam az AI-Munkaprofilt: Védett vagyok (1. szint a 4-ből). A heti 40 órámból 5 óra kiváltható, 29 óra marad csak az enyém. Te hova esel?”
+[Ha a munkakörnek van `tobbes` alakja (a valós adatban mindnek van), a szöveg a kérdéssel kezdődik: „Elveszi az AI a/az {tobbes} munkáját? Megcsináltam…”]
+
+[Példák a valós adattal (adatverzió 2026-Q4):]
+- „Elveszi az AI az adatrögzítők munkáját? Megcsináltam az AI-Munkaprofilt: Automatizálódó vagyok (4. szint a 4-ből). A heti 40 órámból 22 óra kiváltható, 4 óra marad csak az enyém. Te hova esel?”
+- „Elveszi az AI a villanyszerelők munkáját? Megcsináltam az AI-Munkaprofilt: Védett vagyok (1. szint a 4-ből). A heti 40 órámból 2 óra kiváltható, 35 óra marad csak az enyém. Te hova esel?”
 
 ### Lead – B2C
 **Szekciócím:** Kérd el a részletes riportot
@@ -135,7 +137,7 @@ Az eredmény becslés: nemzetközi kutatások feladatszintű adatait fordítottu
 
 ---
 
-## 3. MÓDSZERTAN – `teszt.zynai.hu/modszertan`
+## 3. MÓDSZERTAN – `ai-munkaprofil.zynai.hu/modszertan`
 
 **Főcím:** Honnan jönnek a számok?
 **Bevezető:** Az átláthatóság a lényeg. Itt leírjuk, mit mérünk, honnan vesszük az adatot, és mit nem tud a modell.
@@ -147,7 +149,7 @@ Az eredmény becslés: nemzetközi kutatások feladatszintű adatait fordítottu
 4. **A képlet** – A számítás lépései és a típusok küszöbei. [a README 2. fejezetéből, közérthetően]
 5. **Fékek** – A négy tényező és a 0–3 skála jelentése.
 6. **Korlátok** – Amerikai feladatleírások; az időarány becslés, nem mérés; a technológia gyorsabban változik, mint az adat; az eredmény átlag, nem a te munkahelyed.
-7. **Frissítés** – Negyedévente frissítjük. Jelenlegi adatverzió: {adatVerzio}.
+7. **Frissítés** – Jelenlegi adatverzió: {adatVerzio}. [Frissítési gyakoriságot az oldal nem ígér, csak az aktuális adatverziót mutatja.]
 
 ---
 
@@ -157,7 +159,7 @@ Az eredmény becslés: nemzetközi kutatások feladatszintű adatait fordítottu
 - Szint: {szint}. szint · 4-ből (szintjelzővel)
 - Nagy: {tipus}
 - Sáv: {kivalthato} ó kiváltható · {felgyorsul} ó felgyorsul · {emberi} ó emberi
-- Alul: Te melyik vagy? → teszt.zynai.hu
+- Alul: Te melyik vagy? → ai-munkaprofil.zynai.hu
 
 **OG cím:** {nev}: {tipus} | AI-Munkaprofil
 **OG leírás:** A heti {hetiOra} órából {kivalthato} óra kiváltható, {emberi} óra emberi mag. Nézd meg a saját munkakörödet!
