@@ -1,23 +1,14 @@
-// Eredményoldal herója: mono címke, SEO-H1, a típus nagyban, típusmondat (landing-copy.md 2. és 5. fejezet),
-// alatta horgonygomb a részletekhez. Doboz nélkül; a típus színe csak a pont, a név mindig kiírva.
+// Eredményoldal herója: mono címke, SEO-H1, szint („3. szint · 4-ből” + 4 szegmenses jelző), a típus nagyban,
+// alatta az egymondatos leírás és horgonygomb a részletekhez. Doboz nélkül.
+// Név, leírás, szint és szín: lib/tipusok.ts. A szint jelentését a felirat, a kitöltés és a méret is hordozza,
+// a szín csak kiegészítés.
 import type { ProfilTipus } from "@/lib/scoring";
+import { SZINTEK, TIPUSOK, szintAlt, szintCimke } from "@/lib/tipusok";
 import SectionLabel from "../SectionLabel";
 
-const TIPUSMONDAT: Record<ProfilTipus, string> = {
-  Átalakuló: "A munkád nagy része átalakul – a tudásod nem.",
-  Felerősödő: "Az AI nem helyetted dolgozik, hanem melletted.",
-  Kevert: "Félig átalakul, félig felgyorsul a munkád.",
-  Védett: "A munkád magját nem lehet letölteni.",
-};
-
-const TIPUSSZIN: Record<ProfilTipus, string> = {
-  Átalakuló: "bg-atalakulo",
-  Felerősödő: "bg-felerosodo",
-  Kevert: "bg-kevert",
-  Védett: "bg-vedett",
-};
-
 export default function Hero({ nev, tipus, reszletekId }: { nev: string; tipus: ProfilTipus; reszletekId: string }) {
+  const t = TIPUSOK[tipus];
+
   return (
     <div className="flex min-h-[min(80svh,720px)] flex-col justify-center py-12">
       <SectionLabel>AI-Munkaprofil</SectionLabel>
@@ -25,11 +16,28 @@ export default function Hero({ nev, tipus, reszletekId }: { nev: string; tipus: 
         {nev} és az AI: mi változik a munkában?
       </h1>
 
-      <p className="mt-10 flex items-center gap-3 font-display text-tipus font-medium text-primary sm:gap-5">
-        <span aria-hidden="true" className={`size-3 shrink-0 rounded-full sm:size-5 ${TIPUSSZIN[tipus]}`} />
-        {tipus}
-      </p>
-      <p className="mt-6 max-w-xl text-lead text-secondary text-pretty">{TIPUSMONDAT[tipus]}</p>
+      <div className="mt-10 flex items-center gap-4">
+        <span aria-hidden="true" className="font-mono text-cimke tracking-[0.14em] text-secondary uppercase">
+          {szintCimke(t.szint)}
+        </span>
+        <span role="img" aria-label={szintAlt(t)} className="flex items-center gap-1">
+          {SZINTEK.map(({ szint }) => (
+            <span
+              key={szint}
+              className={`block rounded-full ${
+                szint === t.szint
+                  ? `h-3 w-9 ${t.pontOsztaly}`
+                  : szint < t.szint
+                    ? "h-1.5 w-6 bg-secondary"
+                    : "h-1.5 w-6 border border-line"
+              }`}
+            />
+          ))}
+        </span>
+      </div>
+
+      <p className="mt-4 font-display text-tipus font-medium whitespace-nowrap text-primary">{t.cimke}</p>
+      <p className="mt-6 max-w-xl text-lead text-secondary text-pretty">{t.leiras}</p>
 
       <div className="mt-12">
         <a

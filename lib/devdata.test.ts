@@ -4,16 +4,17 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { szamolProfil, type Munkakor, type ProfilTipus } from './scoring.ts';
+import { TIPUSOK } from './tipusok.ts';
 
 const betolt = (fajl: string) =>
   JSON.parse(readFileSync(new URL(`../public/data/${fajl}`, import.meta.url), 'utf8'));
 
 // Ugyanazok a típusok, mint a scoring.test.ts-ben
 const vartTipus: Record<string, ProfilTipus> = {
-  'ugyfelszolgalati-munkatars': 'Átalakuló',
-  'szoftverfejleszto': 'Felerősödő',
-  'villanyszerelo': 'Védett',
-  'konyvelo': 'Kevert',
+  'ugyfelszolgalati-munkatars': 'automatizalodo',
+  'szoftverfejleszto': 'felerosodo',
+  'villanyszerelo': 'vedett',
+  'konyvelo': 'atalakulo',
 };
 
 test('mind a négy munkakör JSON betölthető, és a pontozás a várt típust adja', () => {
@@ -22,6 +23,7 @@ test('mind a négy munkakör JSON betölthető, és a pontozás a várt típust 
     assert.equal(m.slug, slug);
     const p = szamolProfil(m);
     assert.equal(p.tipus, tipus, slug);
+    assert.equal(p.szint, TIPUSOK[tipus].szint, slug);
     assert.equal(p.orak.kivalthato + p.orak.felgyorsul + p.orak.emberi, m.hetiOra, slug);
   }
 });

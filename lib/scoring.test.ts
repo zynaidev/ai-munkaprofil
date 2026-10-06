@@ -57,11 +57,15 @@ test('egész órák összege mindig a heti óraszám', () => {
   }
 });
 
-test('típusok a várt módon jönnek ki', () => {
-  assert.equal(szamolProfil(ugyfelszolgalat).tipus, 'Átalakuló');
-  assert.equal(szamolProfil(programozo).tipus, 'Felerősödő');
-  assert.equal(szamolProfil(villanyszerelo).tipus, 'Védett');
-  assert.equal(szamolProfil(konyvelo).tipus, 'Kevert'); // erős fékek miatt nem Átalakuló
+test('típusok és szintek a várt módon jönnek ki', () => {
+  assert.equal(szamolProfil(ugyfelszolgalat).tipus, 'automatizalodo');
+  assert.equal(szamolProfil(programozo).tipus, 'felerosodo');
+  assert.equal(szamolProfil(villanyszerelo).tipus, 'vedett');
+  assert.equal(szamolProfil(konyvelo).tipus, 'atalakulo'); // erős fékek miatt nem automatizalodo
+  assert.equal(szamolProfil(ugyfelszolgalat).szint, 4);
+  assert.equal(szamolProfil(programozo).szint, 2);
+  assert.equal(szamolProfil(villanyszerelo).szint, 1);
+  assert.equal(szamolProfil(konyvelo).szint, 3);
 });
 
 test('determinisztikus', () => {

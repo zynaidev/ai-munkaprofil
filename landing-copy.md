@@ -21,13 +21,14 @@ Kapcsos zárójelben: dinamikus érték. Szögletes zárójelben: szerkesztői m
 **Szöveg:** Nem találjuk pontosan ezt a munkakört. Megkeressük a hozzá legközelebb állót.
 **Gomb:** Keresd meg a legközelebbit
 
-### Négy típus (rövid előzetes)
+### Négy szint (rövid előzetes)
 **Szekciócím:** Te melyik típus vagy?
+[Szint szerint emelkedő sorrendben. Név, leírás, szint és szín egyetlen forrása: `lib/tipusok.ts`.]
 
-- **Átalakuló** – A munkád jelentős része már ma kiváltható. A szereped gyorsan változik, és ebben lehetőség is van.
-- **Felerősödő** – Az AI főleg gyorsít. Kevesebb rutin, több idő arra, amiben igazán jó vagy.
-- **Kevert** – Van, ami kiváltható, van, ami csak gyorsul. A te kezedben van, merre billen.
-- **Védett** – Munkád magja fizikai jelenlétet, kézügyességet vagy bizalmat igényel. Az AI itt inkább segéd.
+- **1. szint · Védett** – Az AI hatása jelenleg korlátozott.
+- **2. szint · Felerősödő** – Az AI hatékonyabbá teszi a munkavégzést.
+- **3. szint · Átalakuló** – A feladatok és a szerepkör érdemben megváltoznak.
+- **4. szint · Automatizálódó** – A munkafeladatok jelentős részét AI végezheti.
 
 ### Hogyan számolunk?
 **Szekciócím:** Nem jóslat. Kutatás.
@@ -50,14 +51,16 @@ Kapcsos zárójelben: dinamikus érték. Szögletes zárójelben: szerkesztői m
 
 ## 2. EREDMÉNYOLDAL – `teszt.zynai.hu/{slug}`
 
-### Felső blokk (típuskártya – ez kerül a megosztási képre is)
-**Felcím:** {nev} · AI-Munkaprofil
+### Felső blokk (hero – ez kerül a megosztási képre is)
+**Címke:** AI-Munkaprofil
+**H1:** {nev} és az AI: mi változik a munkában?
+**Szint:** {szint}. szint · 4-ből [4 szegmenses szintjelző; képernyőolvasónak: „{szint}. szint a 4-ből: {tipus}”]
 **Típus (nagy):** {tipus}
-**Típusmondat:**
-- Átalakuló: A munkád nagy része átalakul – a tudásod nem.
-- Felerősödő: Az AI nem helyetted dolgozik, hanem melletted.
-- Kevert: Félig átalakul, félig felgyorsul a munkád.
-- Védett: A munkád magját nem lehet letölteni.
+**Típusmondat:** a szint leírása (lásd a kezdőoldali „Négy szint” listát):
+- 1. szint · Védett: Az AI hatása jelenleg korlátozott.
+- 2. szint · Felerősödő: Az AI hatékonyabbá teszi a munkavégzést.
+- 3. szint · Átalakuló: A feladatok és a szerepkör érdemben megváltoznak.
+- 4. szint · Automatizálódó: A munkafeladatok jelentős részét AI végezheti.
 
 ### A heti 40 órád
 **Szekciócím:** Mi történik a heti {hetiOra} órával?
@@ -107,7 +110,11 @@ Kapcsos zárójelben: dinamikus érték. Szögletes zárójelben: szerkesztői m
 **Másolás visszajelzés:** Link vágólapon.
 
 **Előre megírt megosztási szöveg:**
-„Megcsináltam az AI-Munkaprofilt: {tipus} vagyok. A heti {hetiOra} órámból {kivalthato} óra kiváltható, {emberi} óra marad csak az enyém. Te hova esel?”
+„Megcsináltam az AI-Munkaprofilt: {tipus} vagyok ({szint}. szint a 4-ből). A heti {hetiOra} órámból {kivalthato} óra kiváltható, {emberi} óra marad csak az enyém. Te hova esel?”
+
+[Példák az illusztratív fejlesztői adatokkal:]
+- „Megcsináltam az AI-Munkaprofilt: Automatizálódó vagyok (4. szint a 4-ből). A heti 40 órámból 19 óra kiváltható, 11 óra marad csak az enyém. Te hova esel?”
+- „Megcsináltam az AI-Munkaprofilt: Védett vagyok (1. szint a 4-ből). A heti 40 órámból 5 óra kiváltható, 29 óra marad csak az enyém. Te hova esel?”
 
 ### Lead – B2C
 **Szekciócím:** Kérd el a részletes riportot
@@ -147,6 +154,7 @@ Az eredmény becslés: nemzetközi kutatások feladatszintű adatait fordítottu
 ## 4. MEGOSZTÁSI KÉP (OG, 1200×630)
 - Bal felül: ZynAI logó
 - Felcím: {nev}
+- Szint: {szint}. szint · 4-ből (szintjelzővel)
 - Nagy: {tipus}
 - Sáv: {kivalthato} ó kiváltható · {felgyorsul} ó felgyorsul · {emberi} ó emberi
 - Alul: Te melyik vagy? → teszt.zynai.hu

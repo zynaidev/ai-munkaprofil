@@ -165,7 +165,7 @@ def test_teljes_folyamat_tartalek_csoportositassal(tmp_path):
         ki = futas.stdout
         eredmeny = json.loads(ki.strip().splitlines()[-1])
         assert eredmeny["ossz"] == 40
-        assert eredmeny["tipus"] == "Védett"
+        assert eredmeny["tipus"] == "vedett"
 
 
 def test_claude_hibas_valasz_ujraprobalas(tmp_path, monkeypatch):

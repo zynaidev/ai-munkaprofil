@@ -5,6 +5,7 @@ import { readFileSync } from 'node:fs';
 import { metaLeiras, nevelo, ogCim, ogLeiras, oldalUrl, seoCim, TARGYESET } from './seo.ts';
 import { getIndexelhetoSlugok, getMunkakor } from './data.ts';
 import { szamolProfil } from './scoring.ts';
+import { TIPUSOK } from './tipusok.ts';
 
 test('a szótárban benne van minden indexelhető munkakör (munkakorok.csv és public/data)', () => {
   const csv = readFileSync(new URL('../adat/munkakorok.csv', import.meta.url), 'utf8').trim().split(/\r?\n/);
@@ -45,7 +46,8 @@ test('meta- és OG-szövegek a copy szerint, a pontozás eredményéből', () =>
     metaLeiras(p),
     `Könyvelő: ${kivalthato} óra kiváltható, ${felgyorsul} óra felgyorsul, ${emberi} óra marad emberi. Kutatási adatokon alapuló, feladatonkénti elemzés.`,
   );
-  assert.equal(ogCim(p), `Könyvelő: ${p.tipus} | AI-Munkaprofil`);
+  assert.equal(ogCim(p), 'Könyvelő: Átalakuló | AI-Munkaprofil');
+  assert.equal(TIPUSOK[p.tipus].cimke, 'Átalakuló');
   assert.equal(
     ogLeiras(p),
     `A heti 40 órából ${kivalthato} óra kiváltható, ${emberi} óra emberi mag. Nézd meg a saját munkakörödet!`,

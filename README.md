@@ -44,23 +44,33 @@ Az első 10 SEO-oldal (`indexelheto = TRUE`): ügyfélszolgálati munkatárs, k�
 - `fek_index = (fizikai + felelosseg + szabalyozas + bizalom) / 12`
 - `gyakorlatban_ma_kivalthato = ma_kivalthato × (1 − 0,5 × fek_index)`
 
-### Típus (sorrendben az első teljesülő)
-1. **Védett:** emberi arány ≥ 50%, vagy fizikai fék = 3
-2. **Átalakuló:** kiváltási arány ≥ 35% és fék_index < 0,5
-3. **Felerősödő:** felerősítési arány ≥ 40% és kiváltás < 25%
-4. **Kevert:** minden más
+### Típus: négy szint
+A négy szint (név, leírás, szint és szín egyetlen forrása a `lib/tipusok.ts`):
+
+| Szint | Kulcs | Név | Leírás |
+|---|---|---|---|
+| 1 | `vedett` | Védett | Az AI hatása jelenleg korlátozott. |
+| 2 | `felerosodo` | Felerősödő | Az AI hatékonyabbá teszi a munkavégzést. |
+| 3 | `atalakulo` | Átalakuló | A feladatok és a szerepkör érdemben megváltoznak. |
+| 4 | `automatizalodo` | Automatizálódó | A munkafeladatok jelentős részét AI végezheti. |
+
+Döntési sorrend (az első teljesülő feltétel):
+1. **Védett (1. szint):** emberi arány ≥ 50%, vagy fizikai fék = 3
+2. **Automatizálódó (4. szint):** kiváltási arány ≥ 35% és fék_index < 0,5
+3. **Felerősödő (2. szint):** felerősítési arány ≥ 40% és kiváltás < 25%
+4. **Átalakuló (3. szint):** minden más
 
 A küszöbök a `scoring.ts` `KONSTANSOK` objektumában vannak, és a módszertani oldalon is publikálni kell őket. A nyílt módszertan maga is hitelességi érv.
 
 **Tesztkimenet illusztratív mintaadatokkal:**
-| Munkakör | Típus | Kiváltható / Felgyorsul / Emberi | Visszanyert |
+| Munkakör | Szint · Típus | Kiváltható / Felgyorsul / Emberi | Visszanyert |
 |---|---|---|---|
-| Ügyfélszolgálati munkatárs | Átalakuló | 19 / 10 / 11 ó | 4 ó |
-| Szoftverfejlesztő | Felerősödő | 7 / 23 / 10 ó | 9 ó |
-| Villanyszerelő | Védett | 5 / 6 / 29 ó | 2 ó |
-| Könyvelő | Kevert | 13 / 16 / 11 ó | 6 ó |
+| Ügyfélszolgálati munkatárs | 4 · Automatizálódó | 19 / 10 / 11 ó | 4 ó |
+| Szoftverfejlesztő | 2 · Felerősödő | 7 / 23 / 10 ó | 9 ó |
+| Villanyszerelő | 1 · Védett | 5 / 6 / 29 ó | 2 ó |
+| Könyvelő | 3 · Átalakuló | 13 / 16 / 11 ó | 6 ó |
 
-A könyvelő a kiváltható órák alapján Átalakuló lehetne, de a felelősség és a szabályozás fékje miatt Kevert lesz. Pontosan ilyen árnyalatot akartunk a puszta százalék helyett.
+A könyvelő a kiváltható órák alapján Automatizálódó lehetne, de a felelősség és a szabályozás fékje miatt Átalakuló (3. szint) lesz. Pontosan ilyen árnyalatot akartunk a puszta százalék helyett.
 
 ---
 

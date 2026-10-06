@@ -28,11 +28,11 @@
   --border-default: rgba(255, 255, 255, 0.1);
   --szin-mezo-keret: #7c7c86; /* űrlapmezők kerete: min. 3:1 a mező és az oldal hátterén */
 
-  /* Profiltípusok – csak kis jelzésként (pont, vékony szegély), a név mindig mellette */
-  --szin-atalakulo: #ff9a62;
-  --szin-felerosodo: #9a9cff;
-  --szin-kevert: #e8b43c;
-  --szin-vedett: #3fd0bb;
+  /* Profilszintek (lib/tipusok.ts) – csak kis jelzésként (pont, szintjelző), a név mindig mellette */
+  --szint-1: #3fd0bb; /* vedett */
+  --szint-2: #9a9cff; /* felerosodo */
+  --szint-3: #e8b43c; /* atalakulo */
+  --szint-4: #ff9a62; /* automatizalodo */
 
   /* Órabontás (kiváltható / felgyorsul / emberi mag): Okabe–Ito alapú, színtévesztő-barát paletta.
      A jelentést mintázat is hordozza (csíkos / pöttyös / tömör), és mindig felirat kíséri. */
@@ -48,7 +48,7 @@
 
   /* Betűméretek */
   --meret-h1: clamp(36px, 6vw, 64px);
-  --meret-tipus: clamp(52px, 12vw, 128px); /* a profiltípus neve az eredményoldal herójában */
+  --meret-tipus: clamp(32px, 11.5vw, 104px); /* a típusnév a heróban; a leghosszabb név (14 karakter) is kifér 320 px-től a 768 px-es oszlopig */
   --meret-oldalcim: clamp(22px, 3vw, 30px); /* az eredményoldal SEO-H1-e */
   --meret-h2: clamp(28px, 4vw, 44px);
   --meret-h3: 1.25rem;
@@ -77,10 +77,10 @@
   --color-hairline: var(--border-hairline);
   --color-line: var(--border-default);
   --color-mezo-keret: var(--szin-mezo-keret);
-  --color-atalakulo: var(--szin-atalakulo);
-  --color-felerosodo: var(--szin-felerosodo);
-  --color-kevert: var(--szin-kevert);
-  --color-vedett: var(--szin-vedett);
+  --color-szint-1: var(--szint-1);
+  --color-szint-2: var(--szint-2);
+  --color-szint-3: var(--szint-3);
+  --color-szint-4: var(--szint-4);
   --color-kivalthato: var(--szin-kivalthato);
   --color-felgyorsul: var(--szin-felgyorsul);
   --color-emberi: var(--szin-emberi);

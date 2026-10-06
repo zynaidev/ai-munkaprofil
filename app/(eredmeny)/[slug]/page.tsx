@@ -1,18 +1,13 @@
 // Eredményoldal – landing-copy.md 2. fejezet (blokkok) és 5. fejezet (H1).
-// Szerverkomponens, kliens-JS nélkül. Az adat a getMunkakor, a profil a szamolProfil eredménye;
-// a komponensek propként kapják a számokat, itt és ott sem számolunk.
+// Szerverkomponens; a finomítástól függő blokkok a ProfilNezet kliens-komponensben (7. lépés).
+// Az adat a getMunkakor, a profil a szamolProfil eredménye; a komponensek propként kapják a számokat.
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Container from "@/components/Container";
 import Szekcio from "@/components/Szekcio";
 import Disclaimer from "@/components/eredmeny/Disclaimer";
-import Hero from "@/components/eredmeny/Hero";
-import FeladatLista from "@/components/eredmeny/FeladatLista";
 import Fekek from "@/components/eredmeny/Fekek";
-import Horizont from "@/components/eredmeny/Horizont";
-import OraBontas from "@/components/eredmeny/OraBontas";
+import ProfilNezet from "@/components/eredmeny/ProfilNezet";
 import { getIndexelhetoSlugok, getMunkakor } from "@/lib/data";
-import { egeszOra, horizontEgeszOrak, oraSzam } from "@/lib/format";
 import { szamolProfil } from "@/lib/scoring";
 import { metaLeiras, OLDALNEV, ogCim, ogLeiras, seoCim } from "@/lib/seo";
 
@@ -51,47 +46,20 @@ export default async function MunkakorOldal({ params }: PageProps<"/[slug]">) {
   const { slug } = await params;
   const munkakor = getMunkakor(slug);
   if (!munkakor) notFound();
-  const profil = szamolProfil(munkakor);
-  const hetiOra = oraSzam(profil.hetiOra);
+
+  // A kliens-nézet csak a pontozáshoz szükséges mezőket kapja (~1 KB), a szövegek szerveroldalon maradnak.
+  const { nev, hetiOra, fekek, feladatok } = munkakor;
 
   return (
     <main>
-      {/* Hero: vissza-link, H1, a típus nagyban, horgony a részletekhez */}
-      <div className="pt-6 sm:pt-10">
-        <Container>
-          <div className="mx-auto max-w-3xl">
-            {/* Sima <a>: a next/link kliens-JS-t hozna; ez az oldal kliens-JS nélküli (CLAUDE.md 6.) */}
-            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-            <a
-              href="/"
-              className="inline-flex min-h-11 items-center font-mono text-xs tracking-[0.08em] text-secondary transition-colors hover:text-accent"
-            >
-              <span aria-hidden="true">←</span>&nbsp;Másik munkakör
-            </a>
-            <Hero nev={profil.nev} tipus={profil.tipus} reszletekId="reszletek" />
-          </div>
-        </Container>
-      </div>
-
-      <Szekcio id="orak" horgony="reszletek" sorszam="01" cimke={`A heti ${hetiOra} órád`} cim={`Mi történik a heti ${hetiOra} órával?`} alt>
-        <OraBontas orak={profil.orak} hetiOra={profil.hetiOra} visszanyertOra={profil.visszanyertOra} />
-      </Szekcio>
-
-      <Szekcio id="mikor" sorszam="02" cimke="Mikor?" cim="Nem holnap. De nem is soha.">
-        <Horizont
-          kivalthato={profil.orak.kivalthato}
-          orak={horizontEgeszOrak(profil.kivalthatoHorizontSzerint, profil.orak.kivalthato)}
-          gyakorlatbanMa={egeszOra(profil.gyakorlatbanMaKivalthato)}
-        />
-      </Szekcio>
-
-      <Szekcio id="fekek" sorszam="03" cimke="Mi fékez?" cim="Ami lassítja – vagy megállítja" alt>
-        <Fekek ertekek={profil.fekek} indoklas={munkakor.fekIndoklas} />
-      </Szekcio>
-
-      <Szekcio id="feladatok" sorszam="04" cimke="Feladatonként" cim="A munkád, feladatokra bontva">
-        <FeladatLista feladatok={profil.feladatok} />
-      </Szekcio>
+      <ProfilNezet
+        munkakor={{ slug, nev, hetiOra, fekek, feladatok }}
+        fekek={
+          <Szekcio id="fekek" sorszam="03" cimke="Mi fékez?" cim="Ami lassítja – vagy megállítja" alt>
+            <Fekek ertekek={fekek} indoklas={munkakor.fekIndoklas} />
+          </Szekcio>
+        }
+      />
 
       <Szekcio id="teendo" sorszam="05" cimke="Teendő" cim="Mit tegyél most?" alt>
         <p className="border-l-2 border-accent pl-6 text-lead leading-[1.8] text-primary sm:pl-8">{munkakor.teendo}</p>

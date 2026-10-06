@@ -1,6 +1,7 @@
 // AI-Munkaprofil – SEO- és megosztási szövegek (landing-copy.md 4–5. fejezet). Tiszta függvények.
 // Szándékosan nincs benne Next.js-specifikus import, hogy node:test alatt is fusson.
 import type { Profil } from './scoring.ts';
+import { TIPUSOK } from './tipusok.ts';
 
 export const OLDALNEV = 'AI-Munkaprofil';
 const ALAP_URL = 'http://localhost:3000';
@@ -37,7 +38,7 @@ export function metaLeiras(p: Pick<Profil, 'nev' | 'orak'>): string {
 }
 
 export function ogCim(p: Pick<Profil, 'nev' | 'tipus'>): string {
-  return `${p.nev}: ${p.tipus} | ${OLDALNEV}`;
+  return `${p.nev}: ${TIPUSOK[p.tipus].cimke} | ${OLDALNEV}`;
 }
 
 export function ogLeiras(p: Pick<Profil, 'hetiOra' | 'orak'>): string {

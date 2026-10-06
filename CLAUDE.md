@@ -31,6 +31,7 @@ app/
   api/lead/route.ts
 components/                UI-komponensek
 lib/scoring.ts             pontozás (tiszta függvények)
+lib/tipusok.ts             a négy szint: név, leírás, szint, színtoken
 lib/data.ts                JSON betöltés, típusok
 public/data/               generált adat
 adat/                      Python pipeline (nem része a Next buildnek)
@@ -55,5 +56,6 @@ adat/                      Python pipeline (nem része a Next buildnek)
 - **Betűk** (`next/font/google`, latin + latin-ext, csak a használt súlyok): címek Instrument Sans 500 (`font-display`), törzs Inter 400/500 (`font-sans`), címkék és számok Geist Mono 400 (`font-mono`).
 - **Komponensek:** `Container` (max. 1280 px), `SectionLabel` (sorszám + mono címke minden szekciócím felett), `PrimaryCta` (lime pill, ez a fő gomb).
 - **Mozgás csak CSS-sel** (keyframes, `animation-timeline: view()` `@supports` mögött). Nincs animációs könyvtár, scroll-kezelő JS vagy IntersectionObserver. Alapból semmi sem lehet `opacity: 0`, és `prefers-reduced-motion: reduce` esetén minden mozgás kikapcsol.
-- **A profiltípus jelentését sosem hordozhatja csak szín:** a típus neve mindig ott van, a típusszínek csak kis jelzések (pont, vékony szegély).
+- **Profiltípus = négy szint** (1 Védett · 2 Felerősödő · 3 Átalakuló · 4 Automatizálódó). Név, leírás, szint és színtoken egyetlen forrása a `lib/tipusok.ts`; a színek a `--szint-1` … `--szint-4` tokenek. Sehol ne legyen beégetett típusnév vagy leírás.
+- **A profiltípus jelentését sosem hordozhatja csak szín:** a típus neve (és a szint felirata) mindig ott van, a típusszínek csak kis jelzések (pont, szintjelző).
 - Keretezett doboz csak kiemelésre, oldalanként legfeljebb egy. Listák doboz nélküli, hairline-elválasztós sorok. A szekciók köze az eredményoldalon py-16/lg:py-24.

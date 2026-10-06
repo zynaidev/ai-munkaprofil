@@ -78,7 +78,7 @@ Egy lépés = egy commit. Ha egy lépés elcsúszik, `git reset`, és a promptot
 **Prompt:**
 > Egészítsd ki az eredményoldalt a `landing-copy.md` 2. fejezetének blokkjaival, ebben a sorrendben: heti órák sáv (három szín, CSS-sel, felirat + képernyőolvasónak szöveges alternatíva), visszanyert órák kiemelés, „Mikor?” horizont-blokk, fékek 0–3 sávokkal és indoklással, feladatlista az „emberi mag” címkével, teendő, disclaimer. Minden szám a `szamolProfil` kimenetéből jön; a komponensek kapják propként, ne számoljanak. A színek legyenek színtévesztő-barátok, és ne csak a szín hordozza a jelentést. Szerveroldali komponensek legyenek, kliens-JS nélkül.
 
-**Kész, ha…** az ügyfélszolgálat oldalán a 19/10/11 óra és az „Átalakuló” típus látszik, a sávok összege vizuálisan is 40, és az oldal JS-letiltva is olvasható.
+**Kész, ha…** az ügyfélszolgálat oldalán a 19/10/11 óra és az „Automatizálódó” típus (4. szint) látszik, a sávok összege vizuálisan is 40, és az oldal JS-letiltva is olvasható.
 
 ### 7. Finomító kérdések
 **Cél:** két kérdéssel személyre szabható az eredmény.

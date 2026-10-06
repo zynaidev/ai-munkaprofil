@@ -5,35 +5,13 @@ import Container from "@/components/Container";
 import Kereso from "@/components/Kereso";
 import PrimaryCta from "@/components/PrimaryCta";
 import SectionLabel from "@/components/SectionLabel";
+import { SZINTEK } from "@/lib/tipusok";
 
 export const metadata: Metadata = {
   title: "Elveszi az AI a munkádat?",
   description:
     "Nem egy riogató százalékot kapsz. Megmutatjuk, hogy a heti 40 órádból mennyit vesz át az AI, mennyit gyorsít fel, és mi marad a te dolgod – kutatási adatok alapján.",
 };
-
-const TIPUSOK = [
-  {
-    nev: "Átalakuló",
-    pont: "bg-atalakulo",
-    leiras: "A munkád jelentős része már ma kiváltható. A szereped gyorsan változik, és ebben lehetőség is van.",
-  },
-  {
-    nev: "Felerősödő",
-    pont: "bg-felerosodo",
-    leiras: "Az AI főleg gyorsít. Kevesebb rutin, több idő arra, amiben igazán jó vagy.",
-  },
-  {
-    nev: "Kevert",
-    pont: "bg-kevert",
-    leiras: "Van, ami kiváltható, van, ami csak gyorsul. A te kezedben van, merre billen.",
-  },
-  {
-    nev: "Védett",
-    pont: "bg-vedett",
-    leiras: "Munkád magja fizikai jelenlétet, kézügyességet vagy bizalmat igényel. Az AI itt inkább segéd.",
-  },
-];
 
 const LEPESEK = [
   {
@@ -108,20 +86,22 @@ export default function Home() {
             <h2 id="tipusok-cim" className={`mt-5 ${h2}`}>
               Te melyik típus vagy?
             </h2>
-            <ul className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
-              {TIPUSOK.map((t) => (
+            {/* A négy szint emelkedő sorrendben (1 → 4); név, leírás, szín: lib/tipusok.ts */}
+            <ol className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {SZINTEK.map((t) => (
                 <li
-                  key={t.nev}
+                  key={t.kulcs}
                   className="tipus-kartya relative rounded-2xl border border-hairline bg-elevated p-6 transition-colors duration-300 hover:border-accent-30"
                 >
-                  <h3 className="flex items-center gap-3 font-display text-h3 font-medium text-primary">
-                    <span aria-hidden="true" className={`size-2.5 shrink-0 rounded-full ${t.pont}`} />
-                    {t.nev}
+                  <p className="font-mono text-cimke tracking-[0.14em] text-secondary uppercase">{t.szint}. szint</p>
+                  <h3 className="mt-3 flex items-center gap-3 font-display text-h3 font-medium text-primary">
+                    <span aria-hidden="true" className={`size-2.5 shrink-0 rounded-full ${t.pontOsztaly}`} />
+                    {t.cimke}
                   </h3>
                   <p className="mt-3 text-torzs text-secondary">{t.leiras}</p>
                 </li>
               ))}
-            </ul>
+            </ol>
           </div>
         </Container>
       </section>
