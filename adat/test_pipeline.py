@@ -95,7 +95,7 @@ def test_elokeszit(tmp_path, ei_formatum, capsys):
     futtat_elokeszit(tmp_path / "munka", f)
     err = capsys.readouterr().err
 
-    ugy = json.loads((tmp_path / "munka/nyers/ugyfelszolgalati-munkatars.json").read_text())
+    ugy = json.loads((tmp_path / "munka/nyers/ugyfelszolgalati-munkatars.json").read_text(encoding="utf-8"))
     assert len(ugy["feladatok_nyers"]) == 6
     assert sum(s["arany"] for s in ugy["feladatok_nyers"]) == pytest.approx(1.0)
     by_id = {s["task_id"]: s for s in ugy["feladatok_nyers"]}
@@ -109,7 +109,7 @@ def test_elokeszit(tmp_path, ei_formatum, capsys):
     assert by_id["1002"]["arany"] > by_id["1006"]["arany"]
 
     # hiányzó SOC-kód: figyelmeztetés, de a munkakör megmarad; teljesen hiányzó munkakör kimarad
-    vill = json.loads((tmp_path / "munka/nyers/villanyszerelo.json").read_text())
+    vill = json.loads((tmp_path / "munka/nyers/villanyszerelo.json").read_text(encoding="utf-8"))
     assert any("47-9999.00" in w for w in vill["figyelmeztetesek"])
     assert not (tmp_path / "munka/nyers/nemletezo.json").exists()
     assert "99-9999.00" in err
@@ -122,7 +122,7 @@ def test_teljes_folyamat_tartalek_csoportositassal(tmp_path):
     pipeline.main(["--mappa", str(munka), "csoportosit", "--nincs-claude"])
 
     atn = munka / "atnezes/ugyfelszolgalati-munkatars.json"
-    a = json.loads(atn.read_text())
+    a = json.loads(atn.read_text(encoding="utf-8"))
     assert a["ellenorizve"] is False
 
     # átnézetlen fájl nem kerül exportba
@@ -130,37 +130,39 @@ def test_teljes_folyamat_tartalek_csoportositassal(tmp_path):
         pipeline.main(["--mappa", str(munka), "export", "--verzio", "teszt"])
 
     for p in (munka / "atnezes").glob("*.json"):
-        d = json.loads(p.read_text())
+        d = json.loads(p.read_text(encoding="utf-8"))
         d["ellenorizve"] = True
-        p.write_text(json.dumps(d, ensure_ascii=False))
+        p.write_text(json.dumps(d, ensure_ascii=False), encoding="utf-8")
     pipeline.main(["--mappa", str(munka), "export", "--verzio", "2026-Q4"])
 
-    adat = json.loads((munka / "public/data/ugyfelszolgalati-munkatars.json").read_text())
-    nyers = json.loads((munka / "nyers/ugyfelszolgalati-munkatars.json").read_text())
+    adat = json.loads((munka / "public/data/ugyfelszolgalati-munkatars.json").read_text(encoding="utf-8"))
+    nyers = json.loads((munka / "nyers/ugyfelszolgalati-munkatars.json").read_text(encoding="utf-8"))
     # az összevonás nem torzítja az órákat
     for x, y in zip(orak(adat["feladatok"]), orak(nyers["feladatok_nyers"])):
         assert x == pytest.approx(y, abs=0.05)
     assert adat["adatVerzio"] == "2026-Q4"
     assert set(adat["fekek"]) == {"fizikai", "felelosseg", "szabalyozas", "bizalom"}
 
-    kereso = json.loads((munka / "public/data/kereso.json").read_text())
+    kereso = json.loads((munka / "public/data/kereso.json").read_text(encoding="utf-8"))
     assert [k["slug"] for k in kereso] == ["ugyfelszolgalati-munkatars", "villanyszerelo"]
 
-    seed = (munka / "seed.sql").read_text()
+    seed = (munka / "seed.sql").read_text(encoding="utf-8")
     assert seed.startswith("-- Generálta") and seed.rstrip().endswith("COMMIT;")
     assert "ON CONFLICT (slug) DO UPDATE" in seed
     assert seed.count("INSERT INTO feladat") == sum(
-        len(json.loads(p.read_text())["feladatok"]) for p in (munka / "public/data").glob("*.json")
+        len(json.loads(p.read_text(encoding="utf-8"))["feladatok"]) for p in (munka / "public/data").glob("*.json")
         if p.name != "kereso.json")
 
     # a frontend pontozása beolvassa a kimenetet
     if shutil.which("node") and SCORING.exists():
-        kod = (f"import {{ szamolProfil }} from '{SCORING.as_posix()}';"
+        kod = (f"import {{ szamolProfil }} from '{SCORING.as_uri()}';"
                f"const m = JSON.parse(require('fs').readFileSync('{(munka / 'public/data/villanyszerelo.json').as_posix()}','utf8'));"
                "const p = szamolProfil(m); console.log(JSON.stringify({tipus:p.tipus, ossz:p.orak.kivalthato+p.orak.felgyorsul+p.orak.emberi}));")
-        (munka / "check.mts").write_text(kod.replace("require('fs')", "(await import('node:fs'))"))
-        ki = subprocess.run(["node", "--experimental-strip-types", str(munka / "check.mts")],
-                            capture_output=True, text=True, check=True).stdout
+        (munka / "check.mts").write_text(kod.replace("require('fs')", "(await import('node:fs'))"), encoding="utf-8")
+        futas = subprocess.run(["node", "--experimental-strip-types", str(munka / "check.mts")],
+                               capture_output=True, text=True, encoding="utf-8")
+        assert futas.returncode == 0, f"Node hiba:\n{futas.stderr}"
+        ki = futas.stdout
         eredmeny = json.loads(ki.strip().splitlines()[-1])
         assert eredmeny["ossz"] == 40
         assert eredmeny["tipus"] == "Védett"
@@ -190,7 +192,7 @@ def test_claude_hibas_valasz_ujraprobalas(tmp_path, monkeypatch):
     pipeline.main(["--mappa", str(munka), "csoportosit", "--csak", "ugyfelszolgalati-munkatars"])
 
     assert hivasok[0] is None and "nem pontosan egyszer" in hivasok[1]
-    a = json.loads((munka / "atnezes/ugyfelszolgalati-munkatars.json").read_text())
+    a = json.loads((munka / "atnezes/ugyfelszolgalati-munkatars.json").read_text(encoding="utf-8"))
     assert [g["csatorna"] for g in a["csoportok"]] == ["irasos", "telefon", None]
     assert a["csoportok"][2]["emberi_mag"] is True
 

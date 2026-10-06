@@ -72,7 +72,7 @@ def beolvas(utvonal: str | Path) -> pd.DataFrame:
     if p.suffix.lower() in {".xlsx", ".xls"}:
         return pd.read_excel(p, dtype=str).fillna("")
     sep = "\t" if p.suffix.lower() in {".txt", ".tsv"} else ","
-    return pd.read_csv(p, sep=sep, dtype=str, keep_default_na=False)
+    return pd.read_csv(p, sep=sep, dtype=str, keep_default_na=False, encoding="utf-8-sig")
 
 
 def oszlop(df: pd.DataFrame, jeloltek: list[str], kotelezo: bool = True) -> str | None:
@@ -590,6 +590,10 @@ def export(args) -> None:
 
 def main(argv: list[str] | None = None) -> None:
     global GYOKER
+    # Windows-on a konzol/átirányítás alapkódolása nem UTF-8; a → ⚠ ✓ jelek miatt kényszerítjük
+    for folyam in (sys.stdout, sys.stderr):
+        if hasattr(folyam, "reconfigure"):
+            folyam.reconfigure(encoding="utf-8", errors="replace")
     p = argparse.ArgumentParser(description="AI-Munkaprofil adatpipeline")
     p.add_argument("--mappa", default=str(GYOKER),
                    help="Munkamappa (nyers/, atnezes/, claude_cache/, public/data/, seed.sql helye)")
