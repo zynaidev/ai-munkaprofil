@@ -7,6 +7,8 @@ Három lépés:
   2. csoportosit Claude a nyers feladatokat 4–7 magyar feladattá vonja össze, fékeket és
                  teendő-szöveget javasol → atnezes/<slug>.json  (KÉZI ÁTNÉZÉSRE)
   3. export      átnézett fájlokból → public/data/<slug>.json, public/data/kereso.json, seed.sql
+  0. felvesz     (opcionális, skálázáshoz) KSH FEOR-08 lista → munkakorok.javaslat.csv
+                 SOC-javaslattal, aliasokkal, többes számmal – lásd felvesz.py és skalazas.md
 
 Minden szám Pythonban számolódik; Claude csak csoportosít és fogalmaz.
 Az összevonás a végső órákat nem torzítja: a csoportértékek súlyozott átlagok,
@@ -32,6 +34,8 @@ import sys
 from pathlib import Path
 
 import pandas as pd
+
+import felvesz
 
 GYOKER = Path(__file__).resolve().parent
 ALAP_MODELL = os.environ.get("MUNKAPROFIL_MODELL", "claude-sonnet-5-5")
@@ -116,6 +120,7 @@ def betolt_munkakorok(utvonal: Path) -> list[dict]:
             "isco_kod": r.get("isco_kod", "").strip() or None,
             "soc_kodok": [k.strip() for k in r["onet_soc_kodok"].split(";") if k.strip()],
             "heti_ora": float(r.get("heti_ora") or 40),
+            "tobbes": r.get("tobbes", "").strip() or None,
             "indexelheto": str(r.get("indexelheto", "")).strip().lower() in {"true", "1", "igen"},
         })
     return munkakorok
@@ -486,6 +491,7 @@ def csoportosit(args) -> None:
             "slug": nyers["slug"], "nev": nyers["nev"], "aliasok": nyers["aliasok"],
             "feor_kod": nyers["feor_kod"], "isco_kod": nyers["isco_kod"], "soc_kodok": nyers["soc_kodok"],
             "heti_ora": nyers["heti_ora"], "indexelheto": nyers["indexelheto"],
+            "tobbes": nyers.get("tobbes"),
             "fekek": c["fekek"],
             "teendo_szoveg": c["teendo_szoveg"],
             "csoportok": [{"leiras": g["leiras"], "task_idk": [str(i) for i in g["task_idk"]],
@@ -543,6 +549,8 @@ def export(args) -> None:
             "indexelheto": a["indexelheto"],
             "adatVerzio": args.verzio,
         }
+        if a.get("tobbes"):
+            adat["tobbes"] = a["tobbes"]
         (kimenet / f"{a['slug']}.json").write_text(json.dumps(adat, ensure_ascii=False, separators=(",", ":")),
                                                    encoding="utf-8")
         kereso.append({"slug": a["slug"], "nev": a["nev"], "aliasok": a["aliasok"]})
@@ -615,6 +623,20 @@ def main(argv: list[str] | None = None) -> None:
     c.add_argument("--nincs-claude", action="store_true", help="Claude nélküli tartalék-csoportosítás")
     c.set_defaults(fn=csoportosit)
 
+    v = al.add_parser("felvesz", help="Munkakörök felvétele a KSH FEOR-08 listából (munkakorok.csv)")
+    v.add_argument("--feor", required=True, help="KSH FEOR-08 lista (.xlsx / .csv)")
+    v.add_argument("--feor-szint", type=int, default=4, help="Hány jegyű kódokat vegyen fel (alap: 4)")
+    v.add_argument("--feor-isco", help="FEOR-08 → ISCO-08 megfeleltetés (KSH)")
+    v.add_argument("--isco-soc", help="ISCO-08 → SOC 2010 megfeleltetés (BLS)")
+    v.add_argument("--onet-feladatok", help="O*NET Task Statements (a 'Title' oszlop kell a jelöltekhez)")
+    v.add_argument("--meglevo", help="Meglévő munkakorok.csv – a sorai változatlanul megmaradnak")
+    v.add_argument("--kimenet", default=None, help="Alapból: <mappa>/munkakorok.javaslat.csv")
+    v.add_argument("--biztos-kuszob", type=float, default=0.75, help="E fölött a státusz 'auto' (alap: 0,75)")
+    v.add_argument("--limit", type=int, help="Csak az első N új sor (próbához)")
+    v.add_argument("--nincs-claude", action="store_true", help="Claude nélkül: csak keresztkapcsolat")
+    v.add_argument("--modell", default=ALAP_MODELL)
+    v.set_defaults(fn=lambda a: felvesz.felvesz(a, GYOKER, beolvas, oszlop, figyel))
+
     x = al.add_parser("export", help="Frontend JSON-ok és seed.sql")
     x.add_argument("--verzio", required=True, help="Adatverzió, pl. 2026-Q4")
     x.add_argument("--kimenet", help="Alapból: <mappa>/public/data")
@@ -625,6 +647,8 @@ def main(argv: list[str] | None = None) -> None:
     args = p.parse_args(argv)
     GYOKER = Path(args.mappa).resolve()
     GYOKER.mkdir(parents=True, exist_ok=True)
+    if args.parancs == "felvesz":
+        args.kimenet = args.kimenet or str(GYOKER / "munkakorok.javaslat.csv")
     if args.parancs == "export":
         args.kimenet = args.kimenet or str(GYOKER / "public" / "data")
         args.seed = args.seed or str(GYOKER / "seed.sql")
