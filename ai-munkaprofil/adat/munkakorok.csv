@@ -1,0 +1,31 @@
+slug,nev,aliasok,feor_kod,isco_kod,onet_soc_kodok,heti_ora,indexelheto
+ugyfelszolgalati-munkatars,Ügyfélszolgálati munkatárs,ügyfélszolgálatos;call center;ügyfélszolgálati ügyintéző,,,43-4051.00,40,true
+irodai-asszisztens,Irodai asszisztens,asszisztens;titkárnő;adminisztrátor,,,43-6014.00;43-9061.00,40,false
+adatrogzito,Adatrögzítő,adatrögzítési munkatárs;adatbevivő,,,43-9021.00,40,true
+recepcios,Recepciós,recepciós munkatárs;front office,,,43-4171.00,40,false
+konyvelo,Könyvelő,könyvelési munkatárs;mérlegképes könyvelő,,,13-2011.00;43-3031.00,40,true
+berszamfejto,Bérszámfejtő,bérügyi munkatárs;payroll,,,43-3051.00,40,false
+hr-munkatars,HR-munkatárs,HR-es;humánerőforrás;toborzó,,,13-1071.00,40,true
+ertekesitesi-asszisztens,Értékesítési asszisztens,sales asszisztens;értékesítési ügyintéző,,,41-4012.00,40,false
+beszerzo,Beszerző,beszerzési munkatárs;purchasing,,,13-1023.00,40,false
+irodavezeto,Irodavezető,office manager,,,43-1011.00,40,false
+szoftverfejleszto,Szoftverfejlesztő,programozó;fejlesztő;developer,,,15-1252.00,40,true
+marketinges,Marketinges,marketing munkatárs;marketing specialista;online marketinges,,,13-1161.00,40,true
+grafikus,Grafikus,grafikai tervező;designer,,,27-1024.00,40,true
+ujsagiro,Újságíró,riporter;szerkesztő;tartalomíró,,,27-3023.00,40,false
+fordito,Fordító,tolmács;fordító-tolmács,,,27-3091.00,40,true
+jogasz,Jogász,ügyvéd;jogtanácsos,,,23-1011.00,40,true
+penzugyi-elemzo,Pénzügyi elemző,befektetési elemző;controller,,,13-2051.00,40,false
+projektmenedzser,Projektmenedzser,PM;projektvezető,,,13-1082.00,40,false
+tanar,Tanár,középiskolai tanár;pedagógus,,,25-2031.00,40,true
+webfejleszto,Webfejlesztő,frontend fejlesztő;weboldal készítő,,,15-1254.00,40,false
+villanyszerelo,Villanyszerelő,villamossági szerelő;elektromos szerelő,,,47-2111.00,40,false
+apolo,Ápoló,nővér;szakápoló,,,29-1141.00,40,false
+fodrasz,Fodrász,hajstylist;kozmetikus,,,39-5012.00,40,false
+szakacs,Szakács,konyhai dolgozó;séf,,,35-2014.00,40,false
+raktaros,Raktáros,komissiózó;raktári dolgozó,,,53-7065.00,40,false
+gepkocsivezeto,Gépkocsivezető,sofőr;kamionsofőr;teherautó-sofőr,,,53-3032.00,40,false
+elado,Eladó,bolti eladó;pénztáros;eladótér,,,41-2031.00,40,false
+vizvezetek-szerelo,Vízvezeték-szerelő,víz-gáz szerelő;vízszerelő,,,47-2152.00,40,false
+epitoipari-munkas,Építőipari munkás,segédmunkás;kőműves segéd,,,47-2061.00,40,false
+orvos,Orvos,háziorvos;doktor,,,29-1215.00,40,false
