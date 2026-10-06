@@ -15,6 +15,20 @@ const nextConfig: NextConfig = {
     "/_not-found": ["./public/data/*.json"], // a lábléc adatverziója
     "/api/visszajelzes": ["./public/data/*.json"], // az adatverzió a payloadban
   },
+  // Biztonsági fejlécek minden útvonalra (middleware/proxy nélkül)
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "X-Frame-Options", value: "DENY" },
+          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;
