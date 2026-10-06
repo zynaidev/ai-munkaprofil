@@ -1,0 +1,12 @@
+# Függőségek és build-kimenet: a konténerben újraépülnek
+node_modules
+.next
+
+# Python pipeline nyers forrásfájlokkal (nagy, nem része a Next buildnek)
+adat/
+
+# Verziókezelés, titkok, dokumentáció
+.git
+.env*
+docs/
+*.md
