@@ -17,7 +17,7 @@ Magyar nyelvű, nyilvános webes eszköz: a felhasználó beírja a munkakörét
 5. **Minden felhasználói szöveg magyar**, tegező, a `landing-copy.md` szerint. Ne találj ki statisztikát vagy százalékot a copyba.
 6. **Teljesítmény:** a munkakör-oldalakon a kliens csak az adott munkakör JSON-ját (kb. 1 KB) és a kereső indexét tölti. Nincs nehéz chart-könyvtár; a sávokat sima CSS-sel rajzold. Cél: Lighthouse Performance ≥ 95 mobilon.
 7. **SEO:** csak az `indexelheto: true` munkakörök indexelhetők, a többi oldal `noindex, follow`.
-8. **Titkok** (`N8N_WEBHOOK_URL`, `N8N_WEBHOOK_SECRET`, `ANTHROPIC_API_KEY`) csak szerveroldalon, környezeti változóból. Soha ne kerüljenek kliens-bundle-be (`NEXT_PUBLIC_` előtag tilos rájuk).
+8. **Titkok** csak szerveroldalon, környezeti változóból; soha ne kerüljenek a repóba vagy a kliens-bundle-be (`NEXT_PUBLIC_` előtag tilos rájuk). Az app szerveroldali titka: `VISSZAJELZES_WEBHOOK_URL` (a visszajelzéseket fogadó n8n webhook). Az `ANTHROPIC_API_KEY`-t csak az `adat/` mappa Python pipeline-ja használja, az app nem. A `N8N_WEBHOOK_URL` és a `N8N_WEBHOOK_SECRET` tervezett, a jövőbeli lead-űrlaphoz.
 
 ## Visszajelzés-végpont
 - `POST /api/visszajelzes`: „nincs találat” (a beírt munkakörnév) és „Egyezik ez a tapasztalatoddal?” (slug, szint, igen/nem). A logika a `lib/visszajelzes.ts` (tisztítás, érvényesítés) és a `lib/visszajelzesKezelo.ts` (végpont), mindkettő tesztelve; a `route.ts` csak a beállításokat adja.
