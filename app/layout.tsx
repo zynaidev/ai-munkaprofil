@@ -1,29 +1,29 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bricolage_Grotesque } from "next/font/google";
+import Lablec from "@/components/Lablec";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Címbetű; a törzsszöveg rendszerbetű (gyorsabb betöltés)
+const cimBetu = Bricolage_Grotesque({
+  variable: "--font-cim",
   subsets: ["latin", "latin-ext"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin", "latin-ext"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "AI-Munkaprofil",
-  description: "Írd be a munkaköröd, és megkapod az AI-Munkaprofilod.",
+  title: {
+    default: "AI-Munkaprofil",
+    template: "%s | AI-Munkaprofil",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="hu"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="hu" className={`${cimBetu.variable} h-full antialiased`}>
+      <body className="flex min-h-full flex-col">
+        <div className="flex-1">{children}</div>
+        <Lablec adatVerzio="fejlesztői" />
+      </body>
     </html>
   );
 }

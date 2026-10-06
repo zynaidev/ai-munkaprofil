@@ -1,26 +1,142 @@
 @import "tailwindcss";
 
+/* ───────── Arculat: minden szín és betűméret itt állítható ───────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  color-scheme: light;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Felületek és szöveg */
+  --szin-hatter: #f5f3ee;
+  --szin-felulet: #fffdf8;
+  --szin-szoveg: #14161b;
+  --szin-halvany: #4a4f5c;
+  --szin-vonal: #d6d0c3;
+  --szin-mezo-keret: #7a7f8c; /* űrlapmezők kerete: min. 3:1 kontraszt */
+
+  /* Kiemelőszín (gombok, linkek, fókusz) */
+  --szin-kiemelo: #3a37c8;
+  --szin-kiemelo-hover: #2e2ba6;
+  --szin-kiemelo-szoveg: #ffffff;
+  --szin-kiemelo-halvany: #e7e6fa;
+  --szin-fokusz: #3a37c8;
+
+  /* Profiltípusok */
+  --szin-atalakulo: #b93c0b;
+  --szin-felerosodo: #3a37c8;
+  --szin-kevert: #8a5d00;
+  --szin-vedett: #0d7265;
+
+  /* Záró sáv (sötét blokk) */
+  --szin-sav-hatter: #14161b;
+  --szin-sav-szoveg: #f5f3ee;
+  --szin-sav-halvany: #b8bcc7;
+
+  --szin-hiba: #a12a1a;
+  --szin-hiba-hatter: #fbe9e5;
+
+  /* Betűméretek (mobil-első, folyékony skála) */
+  --meret-xs: 0.8125rem;
+  --meret-sm: 0.9375rem;
+  --meret-base: 1.0625rem;
+  --meret-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem);
+  --meret-xl: clamp(1.5rem, 1.3rem + 1vw, 2.125rem);
+  --meret-hero: clamp(2.5rem, 1.7rem + 4vw, 4.75rem);
+
+  /* Betűtípusok: a címbetű (--font-cim) a layoutban töltődik, a törzsszöveg rendszerbetű */
+  --font-torzs: ui-sans-serif, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --sugar: 0.875rem;
+  --erintes-min: 2.75rem; /* 44 px */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    color-scheme: dark;
+
+    --szin-hatter: #0f1115;
+    --szin-felulet: #171a21;
+    --szin-szoveg: #eeece6;
+    --szin-halvany: #a9aebb;
+    --szin-vonal: #2c313c;
+    --szin-mezo-keret: #767c8a;
+
+    --szin-kiemelo: #9a9cff;
+    --szin-kiemelo-hover: #b7b8ff;
+    --szin-kiemelo-szoveg: #0f1115;
+    --szin-kiemelo-halvany: #23244a;
+    --szin-fokusz: #b7b8ff;
+
+    --szin-atalakulo: #ff9a62;
+    --szin-felerosodo: #9a9cff;
+    --szin-kevert: #e8b43c;
+    --szin-vedett: #3fd0bb;
+
+    --szin-sav-hatter: #1d2029;
+    --szin-sav-szoveg: #eeece6;
+    --szin-sav-halvany: #b3b8c4;
+
+    --szin-hiba: #ffb4a6;
+    --szin-hiba-hatter: #3a1712;
   }
 }
 
+/* Tailwind-osztályok a fenti változókra (pl. bg-hatter, text-halvany, text-hero) */
+@theme inline {
+  --color-hatter: var(--szin-hatter);
+  --color-felulet: var(--szin-felulet);
+  --color-szoveg: var(--szin-szoveg);
+  --color-halvany: var(--szin-halvany);
+  --color-vonal: var(--szin-vonal);
+  --color-mezo-keret: var(--szin-mezo-keret);
+  --color-kiemelo: var(--szin-kiemelo);
+  --color-kiemelo-hover: var(--szin-kiemelo-hover);
+  --color-kiemelo-szoveg: var(--szin-kiemelo-szoveg);
+  --color-kiemelo-halvany: var(--szin-kiemelo-halvany);
+  --color-atalakulo: var(--szin-atalakulo);
+  --color-felerosodo: var(--szin-felerosodo);
+  --color-kevert: var(--szin-kevert);
+  --color-vedett: var(--szin-vedett);
+  --color-sav-hatter: var(--szin-sav-hatter);
+  --color-sav-szoveg: var(--szin-sav-szoveg);
+  --color-sav-halvany: var(--szin-sav-halvany);
+  --color-hiba: var(--szin-hiba);
+  --color-hiba-hatter: var(--szin-hiba-hatter);
+
+  --text-xs: var(--meret-xs);
+  --text-sm: var(--meret-sm);
+  --text-base: var(--meret-base);
+  --text-lg: var(--meret-lg);
+  --text-xl: var(--meret-xl);
+  --text-hero: var(--meret-hero);
+
+  --radius-doboz: var(--sugar);
+  --spacing-erintes: var(--erintes-min);
+
+  --font-sans: var(--font-torzs);
+  --font-display: var(--font-cim), var(--font-torzs);
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--szin-hatter);
+  color: var(--szin-szoveg);
+  font-size: var(--meret-base);
+  line-height: 1.6;
+}
+
+:focus-visible {
+  outline: 3px solid var(--szin-fokusz);
+  outline-offset: 3px;
+}
+
+/* A sötét záró sávban a fókuszkeret világos maradjon */
+.sav :focus-visible {
+  outline-color: var(--szin-sav-szoveg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }
