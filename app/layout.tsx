@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist_Mono, Instrument_Sans, Inter } from "next/font/google";
 import Fejlec from "@/components/Fejlec";
 import Lablec from "@/components/Lablec";
+import { oldalUrl } from "@/lib/seo";
 import "./globals.css";
 
 // Csak a ténylegesen használt súlyok
@@ -28,6 +29,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(oldalUrl()), // kanonikus és OG-URL-ek alapja (NEXT_PUBLIC_SITE_URL)
   title: {
     default: "AI-Munkaprofil",
     template: "%s | AI-Munkaprofil",

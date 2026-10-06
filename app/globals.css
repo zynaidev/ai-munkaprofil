@@ -42,6 +42,7 @@
 
   /* Betűméretek */
   --meret-h1: clamp(36px, 6vw, 64px);
+  --meret-tipus: clamp(48px, 11vw, 104px); /* a profiltípus neve az eredményoldalon */
   --meret-h2: clamp(28px, 4vw, 44px);
   --meret-h3: 1.25rem;
   --meret-lead: clamp(18px, 1.1rem + 0.25vw, 20px);
@@ -81,6 +82,9 @@
   --text-h1: var(--meret-h1);
   --text-h1--line-height: 1.05;
   --text-h1--letter-spacing: -0.03em;
+  --text-tipus: var(--meret-tipus);
+  --text-tipus--line-height: 1;
+  --text-tipus--letter-spacing: -0.035em;
   --text-h2: var(--meret-h2);
   --text-h2--line-height: 1.1;
   --text-h2--letter-spacing: -0.025em;

@@ -157,6 +157,8 @@ export default function Home() {
                 );
               })}
             </ol>
+            {/* Sima <a>: a next/link kliens-JS-t hozna (CLAUDE.md 6.) */}
+            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
             <a
               href="/modszertan"
               className="mt-10 inline-flex min-h-11 items-center gap-1 font-medium text-accent underline decoration-accent-30 underline-offset-[6px] transition-colors hover:decoration-accent"
