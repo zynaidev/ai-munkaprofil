@@ -11,7 +11,7 @@ export default function Fejlec() {
         {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
         <a href="/" className="inline-flex min-h-11 items-center">
           {/* unoptimized: 3,7 KB-os, már WebP; nincs szükség a /_next/image optimalizálóra */}
-          <Image src="/brand/ZynAI_logo_light.webp" alt="ZynAI" width={90} height={30} priority unoptimized className="h-[30px] w-auto" />
+          <Image src="/brand/ZynAI_logo_light.webp" alt="ZynAI" width={180} height={60} priority unoptimized className="h-8 w-auto lg:h-9 xl:h-[42px] 2xl:h-[46px]" />
         </a>
         <a
           href={zynaiUrl("/", "fejlec")}

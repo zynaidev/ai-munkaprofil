@@ -83,17 +83,19 @@ export default function Home() {
       {/* Négy típus */}
       <section aria-labelledby="tipusok-cim" className={`${szekcio} bg-alt`}>
         <Container>
-          <div className="belep mx-auto max-w-5xl">
-            <SectionLabel sorszam="01">A típusok</SectionLabel>
-            <h2 id="tipusok-cim" className={`mt-5 ${h2}`}>
-              Te melyik típus vagy?
-            </h2>
+          <div className="mx-auto max-w-5xl">
+            <div className="belep">
+              <SectionLabel sorszam="01">A típusok</SectionLabel>
+              <h2 id="tipusok-cim" className={`mt-5 ${h2}`}>
+                Te melyik típus vagy?
+              </h2>
+            </div>
             {/* A négy szint emelkedő sorrendben (1 → 4); név, leírás, szín: lib/tipusok.ts */}
             <ol className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
               {SZINTEK.map((t) => (
                 <li
                   key={t.kulcs}
-                  className="tipus-kartya relative rounded-2xl border border-hairline bg-elevated p-6 transition-colors duration-300 hover:border-accent-30"
+                  className="tipus-kartya rounded-2xl border border-hairline bg-elevated p-6 transition-colors duration-300 hover:border-accent-30"
                 >
                   <p className="font-mono text-cimke tracking-[0.14em] text-secondary uppercase">{t.szint}. szint</p>
                   <h3 className="mt-3 flex items-center gap-3 font-display text-h3 font-medium text-primary">

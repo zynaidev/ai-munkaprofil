@@ -201,22 +201,6 @@ body {
   background-color: var(--szin-emberi);
 }
 
-/* Típuskártya: felül 1 px-es lime csík, hoveren kinő */
-.tipus-kartya::before {
-  content: "";
-  position: absolute;
-  top: -1px;
-  left: 1.5rem;
-  width: 2.5rem;
-  height: 1px;
-  background: var(--accent);
-  transition: left 0.4s ease, width 0.4s ease;
-}
-.tipus-kartya:hover::before {
-  left: 0;
-  width: 100%;
-}
-
 /* ───────── Mozgás: csak CSS, és csak ha a felhasználó nem kérte a kikapcsolását ───────── */
 @keyframes alahuzas {
   from { transform: scaleX(0); }
@@ -272,11 +256,11 @@ body {
       animation-timeline: view();
       animation-range: entry 0% entry 35%;
     }
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .tipus-kartya::before {
-    transition: none;
+    /* Típuskártyák: mind ugyanúgy, egyenként lépnek be (a második sor természetesen később) */
+    .tipus-kartya {
+      animation: belep linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 40%;
+    }
   }
 }

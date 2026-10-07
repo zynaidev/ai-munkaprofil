@@ -16,7 +16,7 @@ export default function Lablec({ becsles = true }: { becsles?: boolean }) {
     <footer className="border-t border-hairline bg-elevated">
       <Container className="py-10 text-kicsi leading-[1.8] text-secondary">
         <a href={zynaiUrl("/", "lablec-logo")} className="mb-2 inline-flex min-h-11 items-center">
-          <Image src="/brand/ZynAI_logo_light.webp" alt="ZynAI" width={90} height={30} unoptimized className="h-[30px] w-auto" />
+          <Image src="/brand/ZynAI_logo_light.webp" alt="ZynAI" width={180} height={60} unoptimized className="h-8 w-auto lg:h-9 xl:h-[42px] 2xl:h-[46px]" />
         </a>
         <p>
           Készítette a ZynAI · AI-integráció magyar KKV-knak ·{" "}
