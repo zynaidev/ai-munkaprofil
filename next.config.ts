@@ -7,10 +7,10 @@ const nextConfig: NextConfig = {
     "*": ["./adat/**/*"],
   },
   // A standalone buildbe kerüljenek be a futásidőben fájlból olvasott adatok:
-  // munkakör-JSON-ok (ISR-oldalak, sitemap) és az OG-kép betűi.
+  // munkakör-JSON-ok (ISR-oldalak, sitemap) és az OG-kép betűi és logója.
   outputFileTracingIncludes: {
     "/\\[slug\\]": ["./public/data/*.json"],
-    "/\\[slug\\]/opengraph-image": ["./public/data/*.json", "./assets/fonts/*.ttf"],
+    "/\\[slug\\]/opengraph-image": ["./public/data/*.json", "./assets/fonts/*.ttf", "./public/brand/ZynAI_logo_light.png"],
     "/sitemap.xml": ["./public/data/kereso.json"],
     "/_not-found": ["./public/data/*.json"], // a lábléc adatverziója
     "/api/visszajelzes": ["./public/data/*.json"], // az adatverzió a payloadban

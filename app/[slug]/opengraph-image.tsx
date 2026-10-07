@@ -25,6 +25,22 @@ export function generateStaticParams() {
 const betu = (fajl: string) => readFile(path.join(process.cwd(), "assets/fonts", fajl));
 const betuk = Promise.all([betu("InstrumentSans-Medium.ttf"), betu("Inter-Regular.ttf"), betu("Inter-Medium.ttf")]);
 
+// A ZynAI-logó (PNG, mert a Satori nem támogat WebP-t) data URI-ként. Ha a fájl hiányzik, null: az OG-kép logó nélkül
+// (szöveges jelzéssel) is elkészül, egy hiányzó asset nem törheti el az összes oldal megosztási képét.
+const LOGO_UTVONAL = "public/brand/ZynAI_logo_light.png";
+const LOGO_MERET = { width: 180, height: 60 }; // natív méret, nincs nagyítás
+let logoCache: string | null = null;
+async function logo(): Promise<string | null> {
+  if (logoCache) return logoCache;
+  try {
+    const adat = await readFile(path.join(process.cwd(), LOGO_UTVONAL));
+    logoCache = `data:image/png;base64,${adat.toString("base64")}`;
+    return logoCache;
+  } catch {
+    return null;
+  }
+}
+
 // Mintázatok a sávhoz (mint a weboldalon: csíkos / pöttyös / tömör)
 const MINTA = {
   kivalthato: {
@@ -48,6 +64,7 @@ export default async function OgKep({ params }: { params: Promise<{ slug: string
   const reszek = ogSavReszek(profil.orak);
   const domain = new URL(oldalUrl()).host;
   const [instrument, interRegular, interMedium] = await betuk;
+  const logoAdat = await logo();
 
   const kategoriak = [
     { kulcs: "kivalthato", ora: profil.orak.kivalthato, felirat: reszek[0] },
@@ -73,10 +90,15 @@ export default async function OgKep({ params }: { params: Promise<{ slug: string
       >
         {/* Felső rész: logó, felcím, szint, típus */}
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ display: "flex", fontFamily: "Instrument Sans", fontSize: 34, letterSpacing: "-0.02em" }}>
-            <span>Zyn</span>
-            <span style={{ color: P.lime }}>AI</span>
-          </div>
+          {logoAdat ? (
+            // eslint-disable-next-line @next/next/no-img-element -- a Satori-nak sima <img> kell
+            <img src={logoAdat} alt="ZynAI" {...LOGO_MERET} />
+          ) : (
+            <div style={{ display: "flex", fontFamily: "Instrument Sans", fontSize: 34, letterSpacing: "-0.02em" }}>
+              <span>Zyn</span>
+              <span style={{ color: P.lime }}>AI</span>
+            </div>
+          )}
 
           <div style={{ display: "flex", marginTop: 44, fontSize: 36, fontWeight: 500, color: P.szoveg }}>{profil.nev}</div>
 
