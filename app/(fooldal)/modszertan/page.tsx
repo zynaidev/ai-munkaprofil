@@ -10,14 +10,14 @@ import { SZORZO } from "@/lib/finomitas";
 import { ora, tizedes } from "@/lib/format";
 import { zynaiUrl } from "@/lib/linkek";
 import { KONSTANSOK, szamolProfil, type Munkakor } from "@/lib/scoring";
+import { statikusMeta } from "@/lib/seo";
 import { SZINTEK, TIPUSOK } from "@/lib/tipusok";
 
-export const metadata: Metadata = {
-  title: "Módszertan",
-  description:
-    "Honnan jönnek a számok? Mit mérünk, honnan vesszük az adatot, hogyan számolunk, és mit nem tud a modell.",
-  alternates: { canonical: "/modszertan" },
-};
+export const metadata: Metadata = statikusMeta(
+  "/modszertan",
+  "Módszertan",
+  "Honnan jönnek a számok? Mit mérünk, honnan vesszük az adatot, hogyan számolunk, és mit nem tud a modell.",
+);
 
 // A szint eldöntése (lib/scoring.ts profilTipus), közérthetően, számok nélkül. A küszöbök csak a kódban vannak.
 const DONTES = [

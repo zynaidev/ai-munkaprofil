@@ -1,5 +1,6 @@
 // AI-Munkaprofil – SEO- és megosztási szövegek (landing-copy.md 4–5. fejezet). Tiszta függvények.
 // Szándékosan nincs benne Next.js-specifikus import, hogy node:test alatt is fusson.
+import type { Metadata } from 'next';
 import type { Profil } from './scoring.ts';
 import { TIPUSOK } from './tipusok.ts';
 
@@ -55,4 +56,26 @@ export function ogLeiras(p: Pick<Profil, 'hetiOra' | 'orak'>): string {
 export function oldalUrl(env: string | undefined = process.env.NEXT_PUBLIC_SITE_URL): string {
   const url = env?.trim().replace(/\/+$/, '');
   return url || ALAP_URL;
+}
+
+const OG_FOOLDAL_KEP = '/brand/og-fooldal.png';
+
+// A statikus oldalak (/, /modszertan, /adatkezeles) közös metaadata: canonical, Open Graph, Twitter-kártya.
+// Az útvonalak relatívak, a teljes URL-t a metadataBase (NEXT_PUBLIC_SITE_URL) adja.
+export function statikusMeta(path: string, title: string, description: string): Metadata {
+  return {
+    title,
+    description,
+    alternates: { canonical: path },
+    openGraph: {
+      type: 'website',
+      locale: 'hu_HU',
+      siteName: OLDALNEV,
+      url: path,
+      title,
+      description,
+      images: [{ url: OG_FOOLDAL_KEP, width: 1200, height: 630, alt: `${OLDALNEV}: Elveszi az AI a munkádat?` }],
+    },
+    twitter: { card: 'summary_large_image', title, description, images: [OG_FOOLDAL_KEP] },
+  };
 }

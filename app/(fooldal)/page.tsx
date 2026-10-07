@@ -6,13 +6,14 @@ import Kereso from "@/components/Kereso";
 import PrimaryCta from "@/components/PrimaryCta";
 import SectionLabel from "@/components/SectionLabel";
 import { zynaiUrl } from "@/lib/linkek";
+import { statikusMeta } from "@/lib/seo";
 import { SZINTEK } from "@/lib/tipusok";
 
-export const metadata: Metadata = {
-  title: "Elveszi az AI a munkádat?",
-  description:
-    "Nem egy riogató százalékot kapsz. Megmutatjuk, hogy a heti 40 órádból mennyit vesz át az AI, mennyit gyorsít fel, és mi marad a te dolgod – kutatási adatok alapján.",
-};
+export const metadata: Metadata = statikusMeta(
+  "/",
+  "Elveszi az AI a munkádat?",
+  "Nem egy riogató százalékot kapsz. Megmutatjuk, hogy a heti 40 órádból mennyit vesz át az AI, mennyit gyorsít fel, és mi marad a te dolgod – kutatási adatok alapján.",
+);
 
 const LEPESEK = [
   {

@@ -1,7 +1,8 @@
 // Futtatás: npm test
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { metaLeiras, nevelo, ogCim, ogLeiras, oldalUrl, seoCim, TARGYESET } from './seo.ts';
+import { readFileSync, statSync } from 'node:fs';
+import { metaLeiras, nevelo, ogCim, ogLeiras, oldalUrl, seoCim, statikusMeta, TARGYESET } from './seo.ts';
 import { getIndexelhetoSlugok, getMunkakor } from './data.ts';
 import { szamolProfil } from './scoring.ts';
 import { TIPUSOK } from './tipusok.ts';
@@ -78,4 +79,46 @@ test('oldal-URL: záró perjel nélkül, alapértelmezés localhost', () => {
   assert.equal(oldalUrl(' https://ai-munkaprofil.zynai.hu '), 'https://ai-munkaprofil.zynai.hu');
   assert.equal(oldalUrl(''), 'http://localhost:3000');
   assert.equal(oldalUrl(undefined), 'http://localhost:3000');
+});
+
+const OG_KEP = 'public/brand/og-fooldal.png';
+
+test('a kezdőoldali OG-kép valódi PNG, 1200×630, 300 KB alatt', () => {
+  const fajl = readFileSync(OG_KEP);
+  assert.deepEqual([...fajl.subarray(0, 8)], [0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a], 'PNG-aláírás');
+  assert.equal(fajl.subarray(12, 16).toString('latin1'), 'IHDR');
+  assert.equal(fajl.readUInt32BE(16), 1200, 'szélesség');
+  assert.equal(fajl.readUInt32BE(20), 630, 'magasság');
+  assert.ok(statSync(OG_KEP).size < 300 * 1024, 'legfeljebb 300 KB');
+});
+
+test('statikusMeta: cím, leírás, canonical, Open Graph és Twitter-kártya', () => {
+  const m = statikusMeta('/modszertan', 'Módszertan', 'Honnan jönnek a számok?');
+  assert.equal(m.title, 'Módszertan');
+  assert.equal(m.description, 'Honnan jönnek a számok?');
+  assert.equal(m.alternates?.canonical, '/modszertan');
+  const og = m.openGraph as Record<string, unknown>;
+  assert.equal(og.siteName, 'AI-Munkaprofil');
+  assert.equal(og.locale, 'hu_HU');
+  assert.equal(og.type, 'website');
+  assert.equal(og.url, '/modszertan');
+  assert.equal(og.title, 'Módszertan');
+  assert.equal(og.description, 'Honnan jönnek a számok?');
+  const kep = (og.images as Record<string, unknown>[])[0];
+  assert.equal(kep.url, '/brand/og-fooldal.png');
+  assert.equal(kep.width, 1200);
+  assert.equal(kep.height, 630);
+  assert.ok(typeof kep.alt === 'string' && kep.alt.length > 0, 'alt');
+  const tw = m.twitter as Record<string, unknown>;
+  assert.equal(tw.card, 'summary_large_image');
+  assert.equal(tw.title, 'Módszertan');
+  assert.equal(tw.description, 'Honnan jönnek a számok?');
+  assert.deepEqual(tw.images, ['/brand/og-fooldal.png']);
+});
+
+test('statikusMeta: a kezdőoldal útvonala „/”, nincs beégetett domain', () => {
+  const m = statikusMeta('/', 'Cím', 'Leírás');
+  assert.equal(m.alternates?.canonical, '/');
+  assert.equal((m.openGraph as Record<string, unknown>).url, '/');
+  assert.doesNotMatch(JSON.stringify(m), /https?:\/\//);
 });

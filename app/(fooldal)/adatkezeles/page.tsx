@@ -6,12 +6,13 @@ import type { ReactNode } from "react";
 import Container from "@/components/Container";
 import SectionLabel from "@/components/SectionLabel";
 import Szekcio from "@/components/Szekcio";
+import { statikusMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Adatkezelési tájékoztató",
-  description: "Milyen adatot kezel az AI-Munkaprofil, ki az adatkezelő, és milyen jogaid vannak.",
-  alternates: { canonical: "/adatkezeles" },
-};
+export const metadata: Metadata = statikusMeta(
+  "/adatkezeles",
+  "Adatkezelési tájékoztató",
+  "Milyen adatot kezel az AI-Munkaprofil, ki az adatkezelő, és milyen jogaid vannak.",
+);
 
 // A tájékoztató hatályba lépésének napja – egyetlen helyen; módosításkor itt kell átírni.
 const HATALYOS_DATUM = "2026. október 7.";
