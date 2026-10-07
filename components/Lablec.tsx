@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { adatVerzioFelirat, getAdatVerzio } from "@/lib/data";
 import { zynaiUrl } from "@/lib/linkek";
 import Container from "./Container";
@@ -14,6 +15,9 @@ export default function Lablec({ becsles = true }: { becsles?: boolean }) {
   return (
     <footer className="border-t border-hairline bg-elevated">
       <Container className="py-10 text-kicsi leading-[1.8] text-secondary">
+        <a href={zynaiUrl("/", "lablec-logo")} className="mb-2 inline-flex min-h-11 items-center">
+          <Image src="/brand/ZynAI_logo_light.webp" alt="ZynAI" width={90} height={30} unoptimized className="h-[30px] w-auto" />
+        </a>
         <p>
           Készítette a ZynAI · AI-integráció magyar KKV-knak ·{" "}
           <a href={zynaiUrl("/", "lablec")} className={link}>
