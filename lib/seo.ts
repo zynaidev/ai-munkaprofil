@@ -60,7 +60,7 @@ export function oldalUrl(env: string | undefined = process.env.NEXT_PUBLIC_SITE_
 
 const OG_FOOLDAL_KEP = '/brand/og-fooldal.png';
 
-// A statikus oldalak (/, /modszertan, /adatkezeles) közös metaadata: canonical, Open Graph, Twitter-kártya.
+// A statikus oldalak (/, /modszertan) közös metaadata: canonical, Open Graph, Twitter-kártya.
 // Az útvonalak relatívak, a teljes URL-t a metadataBase (NEXT_PUBLIC_SITE_URL) adja.
 export function statikusMeta(path: string, title: string, description: string): Metadata {
   return {

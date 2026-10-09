@@ -34,7 +34,6 @@ app/
   [slug]/page.tsx          eredményoldal
   [slug]/opengraph-image.tsx
   modszertan/page.tsx
-  adatkezeles/page.tsx
   api/besorol/route.ts
   api/lead/route.ts
   api/visszajelzes/route.ts  visszajelzés-végpont (az egyetlen dinamikus útvonal az OG-képen kívül)

@@ -30,9 +30,8 @@ export default function Lablec({ becsles = true }: { becsles?: boolean }) {
           <a href="/modszertan" className={link}>
             Módszertan
           </a>
-          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-          <a href="/adatkezeles" className={link}>
-            Adatkezelés
+          <a href="https://zynai.hu/adatvedelem" className={link}>
+            Adatkezelési tájékoztató
           </a>
         </nav>
         <p className="mt-2 text-xs">
